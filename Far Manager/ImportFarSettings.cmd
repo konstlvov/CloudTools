@@ -1,0 +1,1 @@
+.\Far.exe /import config.farconfig
