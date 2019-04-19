@@ -131,6 +131,8 @@ local prop_Area = {
   UserMenu   = function() return MacroCallFar(0)==14 end,
   ShellAutoCompletion = function()  return MacroCallFar(0)==15 end,
   DialogAutoCompletion = function() return MacroCallFar(0)==16 end,
+  Grabber    = function() return MacroCallFar(0)==17 end,
+  Desktop    = function() return MacroCallFar(0)==18 end,
 }
 
 local prop_APanel = {
@@ -354,12 +356,39 @@ Plugin = {
 }
 --------------------------------------------------------------------------------
 
+local function SetPath(whatpanel,path,filename)
+  local function IsAbsolutePath(path) return path:lower()==far.ConvertPath(path):lower() end
+  whatpanel=(whatpanel==0 or not whatpanel) and 1 or 0
+  local current=panel.GetPanelDirectory(nil,whatpanel) or {}
+  current.Name=path
+  local result=panel.SetPanelDirectory(nil,whatpanel,IsAbsolutePath(path) and path or current)
+  if result and type(filename)=='string' then
+    local info=panel.GetPanelInfo(nil,whatpanel)
+    if info then
+      filename=filename:lower()
+      for ii=1,info.ItemsNumber do
+        local item=panel.GetPanelItem(nil,whatpanel,ii)
+        if not item then break end
+        if filename==item.FileName:lower() then
+          panel.RedrawPanel(nil,whatpanel,{TopPanelItem=1,CurrentItem=ii})
+          break
+        end
+      end
+    end
+  end
+  return result
+end
+
 Panel = {
   FAttr     = function(...) return MacroCallFar(0x80C22, ...) end,
   FExist    = function(...) return MacroCallFar(0x80C24, ...) end,
   Item      = function(...) return MacroCallFar(0x80C28, ...) end,
   Select    = function(...) return MacroCallFar(0x80C27, ...) end,
-  SetPath   = function(...) return MacroCallFar(0x80C23, ...) end,
+  SetPath   = function(...)
+    local status,res=pcall(SetPath,...)
+    if status then return res end
+    return false
+  end,
   SetPos    = function(...) return MacroCallFar(0x80C25, ...) end,
   SetPosIdx = function(...) return MacroCallFar(0x80C26, ...) end,
 }
@@ -504,37 +533,52 @@ end
 function mf.mdelete (key, name, location)
   checkarg(key, 1, "string")
   checkarg(name, 2, "string")
+  local ret = false
   local obj = far.CreateSettings(nil, location=="local" and "PSL_LOCAL" or "PSL_ROAMING")
-  local subkey = obj:OpenSubkey(0, key)
-  if subkey then
-    obj:Delete(subkey, name~="*" and name or nil)
+  if obj then
+    local subkey = obj:OpenSubkey(0, key)
+    ret = (subkey or false) and obj:Delete(subkey, name~="*" and name or nil)
+    obj:Free()
   end
-  obj:Free()
+  return ret
 end
 
 function mf.msave (key, name, value, location)
   checkarg(key, 1, "string")
   checkarg(name, 2, "string")
+  local ret = false
   local str = serialize(value)
   if str then
     local obj = far.CreateSettings(nil, location=="local" and "PSL_LOCAL" or "PSL_ROAMING")
-    local subkey = obj:CreateSubkey(0, key)
-    obj:Set(subkey, name, F.FST_DATA, str)
-    obj:Free()
+    if obj then
+      local subkey = obj:CreateSubkey(0, key)
+      ret = (subkey or false) and obj:Set(subkey, name, F.FST_DATA, str)
+      obj:Free()
+    end
   end
+  return ret
 end
 
 function mf.mload (key, name, location)
   checkarg(key, 1, "string")
   checkarg(name, 2, "string")
+  local val, err = nil, nil
   local obj = far.CreateSettings(nil, location=="local" and "PSL_LOCAL" or "PSL_ROAMING")
-  local subkey = obj:OpenSubkey(0, key)
-  local chunk = subkey and obj:Get(subkey, name, F.FST_DATA)
-  obj:Free()
-  if chunk then
-    return assert(loadstring(chunk))()
+  if obj then
+    local subkey = obj:OpenSubkey(0, key)
+    if subkey then
+      local chunk = obj:Get(subkey, name, F.FST_DATA)
+      if chunk then val = assert(loadstring(chunk))()
+      else err = "method Get() failed"
+      end
+    else
+      err = "method OpenSubkey() failed"
+    end
+    obj:Free()
+  else
+    err = "far.CreateSettings() failed"
   end
-  return nil
+  return val, err
 end
 --------------------------------------------------------------------------------
 

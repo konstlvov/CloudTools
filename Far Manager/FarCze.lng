@@ -1,6 +1,6 @@
 ﻿.Language=Czech,Czech (Čeština)
 
-//Version: 3.0 build 5000
+//Version: 3.0 build 5354
 
 //[MYes]
 "Ano"
@@ -264,9 +264,9 @@
 ""
 //[MCtrlAltShiftF11]
 ""
+//End of functional keys
 //[MCtrlAltShiftF12]
 ""
-//End of functional keys
 
 //[MHistoryTitle]
 "Historie"
@@ -309,8 +309,6 @@
 "Ukládat historii &zobrazení a úprav"
 //[MConfigRegisteredTypes]
 "Používat typy souborů regi&strované ve Windows"
-//[MConfigCloseCDGate]
-"Automatické př&ipojení CD jednotek"
 //[MConfigUpdateEnvironment]
 "Automaticky aktualizovat proměnné prostředí"
 //[MConfigElevation]
@@ -321,6 +319,23 @@
 "na čtení"
 //[MConfigElevationUsePrivileges]
 "použít další privilegia"
+// need translation:
+//[MConfigSortingCollation]
+"Sorting collation:"
+// need translation:
+//[MConfigSortingOrdinal]
+"ordinal"
+// need translation:
+//[MConfigSortingInvariant]
+"invariant"
+// need translation:
+//[MConfigSortingLinguistic]
+"linguistic"
+// need translation:
+//[MConfigSortingDigitsAsNumbers]
+"Treat digits as numbers"
+//[MConfigSortingCase]
+"&Rozlišovat velikost písmen"
 //[MConfigAutoSave]
 "Automaticky ukládat &nastavení"
 
@@ -385,7 +400,7 @@
 "Zobrazovat sta&vový řádek"
 // need translation:
 //[MConfigDetailedJunction]
-"Determine Volume Mount point"
+"Detect volume mount &points"
 //[MConfigShowTotal]
 "Zobrazovat &informace o velikosti souborů"
 //[MConfigShowFree]
@@ -398,10 +413,6 @@
 "Zobrazovat písmeno &módu řazení"
 //[MConfigShowDotsInRoot]
 "Zobrazovat \"..\" v kořenových adresářích"
-//[MConfigHighlightColumnSeparator]
-"Zvýrazňovat oddělovače sloupců"
-//[MConfigDoubleGlobalColumnSeparator]
-"Dvojité oddělovače hlavních sloupců"
 
 //[MConfigInterfaceTitle]
 "Nastavení rozhraní"
@@ -427,6 +438,9 @@
 "Zobrazit indikátor celkového průběhu ma&zání"
 //[MConfigPgUpChangeDisk]
 "Použít Ctrl+Pg&Up pro změnu jednotky"
+// need translation:
+//[MConfigUseVirtualTerminalForRendering]
+"Use Virtual Terminal for rendering"
 //[MConfigClearType]
 "Použít &ClearType (pomalejší)"
 // need translation:
@@ -526,8 +540,6 @@
 // need translation:
 //[MConfigInfoPanelUNTitle]
 "&User name format"
-//[MConfigInfoPanelUNUnknown]
-"Výchozí"
 // need translation:
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Fully Qualified Domain Name"
@@ -577,7 +589,7 @@
 //[MViewConfigExternalCommand]
 "&Příkaz prohlížeče:"
 //[MViewConfigInternal]
-" Interní prohlížeč "
+"Interní prohlížeč"
 //[MViewConfigSavePos]
 "&Ukládat pozici v souboru"
 //[MViewConfigSaveShortPos]
@@ -586,6 +598,12 @@
 "Uložit &kódovou stránku u souboru"
 //[MViewConfigSaveWrapMode]
 "Uložit &režim zalomení"
+// need translation:
+//[MViewConfigSaveViewMode]
+"Save view mode"
+// need translation:
+//[MViewConfigDetectDumpMode]
+"Detect dump view mode"
 //[MViewAutoDetectCodePage]
 "&Automaticky detekovat kódovou stránku"
 //[MViewConfigTabSize]
@@ -613,7 +631,7 @@
 //[MEditConfigEditorCommand]
 "&Příkaz editoru:"
 //[MEditConfigInternal]
-" Interní editor "
+"Interní editor"
 //[MEditConfigExpandTabsTitle]
 "Rozšířit ta&bulátory mezerami"
 
@@ -718,8 +736,6 @@
 "Vytvořit &link"
 //[MCopyDlgTotal]
 "Celkem"
-//[MCopyScanning]
-"Načítání adresářů..."
 //[MCopyPrepareSecury]
 "Nastavuji přístupová práva..."
 //[MCopyUseFilter]
@@ -728,21 +744,21 @@
 "Filt&r"
 
 //[MCopyFile]
-"Kopírovat"
+"Kopírovat {0} {1}:"
 //[MMoveFile]
-"Přejmenovat nebo přesunout"
+"Přejmenovat nebo přesunout {0} {1}:"
 //[MLinkFile]
-"Vytvořit link na"
+"Vytvořit link na {0} {1}:"
 //[MCopyFiles]
-"Kopírovat {0} polož{1}"
+"Kopírovat {0} polož{1} {2}:"
 //[MMoveFiles]
-"Přejmenovat nebo přesunout {0} polož{1}"
+"Přejmenovat nebo přesunout {0} polož{1} {2}:"
 //[MLinkFiles]
-"Vytvořit link na {0} polož{1}"
+"Vytvořit link na {0} polož{1} {2}:"
 //[MCMLTargetTO]
-" d&o:"
+"d&o"
 //[MCMLTargetIN]
-" &v:"
+"&v"
 //[MCMLItems0]
 "u"
 //[MCMLItemsA]
@@ -1146,13 +1162,16 @@
 //[MDefaultCP]
 "Výchozí"
 
-//[MEditGoToLine]
-"Jít na pozici"
+//[MGoTo]
+"Jdi na"
+// need translation:
+//[MGoToHex]
+"&Hex value"
 
 //[MFolderShortcutsTitle]
 "Adresářové zkratky"
 //[MFolderShortcutBottom]
-"Změnit: Del,Ins,Shift+Ins,F4"
+"Změnit: Del,Ins,F4"
 //[MFolderShortcutBottomSub]
 "Změnit: Del,Ins,F4"
 //[MShortcutNone]
@@ -1380,10 +1399,10 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-//[MEditF8DOS]
-"OEM"
 // End of functional keys (Editor)
 // it's a F8 another text
+//[MEditF8DOS]
+"OEM"
 
 //Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MSingleEditF1]
@@ -1592,10 +1611,10 @@
 ""
 //[MSingleEditCtrlAltShiftF12]
 ""
-//[MSingleEditF8DOS]
-"OEM"
 // End of functional keys (Single Editor)
 // it's a F8 another text
+//[MSingleEditF8DOS]
+"OEM"
 
 //[MEditSaveAs]
 "Uložit soubor &jako"
@@ -1635,7 +1654,7 @@
 "správně přečíst se zvolenou kódovou stránkou."
 // need translation:
 //[MEditorReloadCPWarnLost1]
-"File has to be reloaded to change codepage."
+"File has to be reloaded to change code page."
 // need translation:
 //[MEditorReloadCPWarnLost2]
 "All unsaved changes will be lost."
@@ -1665,8 +1684,6 @@
 "Přepnutí na kódovou stránku Unicode {0} není podporované"
 //[MEditorCPNotSupported]
 "Kódová stránka {0} není podporovaná ve vašem systému"
-//[MEditorCPNotDetected]
-"Kódová stránka nebyla detekována"
 
 //[MColumnName]
 "Název"
@@ -1752,13 +1769,14 @@
 "P"
 //[MListEb]
 "E"
+{3} replacement field can receive a sum of files & folders
 // need translation:
 //[MListFileSize]
-" Bytes: {0}, files: {1}, folders: {2} "
+"Bytes: {0}, files: {1}, folders: {2}"
 //[MListFileSizeStatus]
-" {0} ({1}/{2}) {3} {4} "
+"{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-" {0} volných bytů "
+"{0} volných bytů"
 
 //[MDirInfoViewTitle]
 "Zobrazit"
@@ -1815,9 +1833,9 @@
 //Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MViewF1]
 "Nápověda"
+// this is another text for F2
 //[MViewF2]
 "Zalomit"
-// this is another text for F2
 //[MViewF3]
 "Konec"
 //[MViewF4]
@@ -2029,9 +2047,9 @@
 //[MViewF4Dump]
 "Výpis"
 // this is another text for F8
+// end of functional keys (Viewer)
 //[MViewF8DOS]
 "OEM"
-// end of functional keys (Viewer)
 
 //Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MSingleViewF1]
@@ -2247,9 +2265,9 @@
 //[MSingleViewF4Text]
 "Text"
 // this is another text for F4
+// end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "OEM"
-// end of functional keys (Single Viewer)
 //[MViewMode]
 "Režim zobrazení"
 //[MInViewer]
@@ -2357,14 +2375,7 @@
 "&Storno"
 
 //[MFindFound]
-" Souborů: {0}, adresářů: {1} "
-
-//[MFindFileFolder]
-"Adresář"
-//[MFindFileSymLink]
-"Link"
-//[MFindFileJunction]
-"Křížení"
+"Souborů: {0}, adresářů: {1}"
 
 //[MFindFileAdvancedTitle]
 "Pokročilé nastavení vyhledávání souborů"
@@ -2394,6 +2405,7 @@
 "Ctrl+H, Del, Ins, F4"
 //[MGetCodePageBottomShortTitle]
 "Ctrl+H, Del, F4"
+// need translation:
 //[MGetCodePageEditCodePageName]
 "Upravit název kódové stránky"
 //[MGetCodePageResetCodePageName]
@@ -2423,13 +2435,13 @@
 //[MHighlightTransparentMarkChar]
 "průh&ledný"
 //[MHighlightColors]
-" Barva názvů souborů (\"černá na černé\" - výchozí barva) "
+"Barva názvů souborů (\"černá na černé\" - výchozí barva)"
 //[MHighlightFileName1]
-"&1. Normální soubor            "
+"&1. Normální soubor"
 //[MHighlightFileName2]
-"&3. Vybraný soubor             "
+"&3. Vybraný soubor"
 //[MHighlightFileName3]
-"&5. Soubor pod kurzorem        "
+"&5. Soubor pod kurzorem"
 //[MHighlightFileName4]
 "&7. Vybraný soubor pod kurzorem"
 //[MHighlightMarking1]
@@ -2440,10 +2452,8 @@
 "&6. Označení"
 //[MHighlightMarking4]
 "&8. Označení"
-//[MHighlightExample1]
-"║filename.ext │"
-//[MHighlightExample2]
-"║ filename.ext│"
+//[MHighlightExample]
+"filename.ext"
 //[MHighlightContinueProcessing]
 "Pokračovat ve zpracová&ní"
 
@@ -2468,7 +2478,7 @@
 //[MInfoUserAccessLevelUnknown]
 "Neznámý"
 //[MInfoDiskTitle]
-" Disk "
+"Disk"
 //[MInfoRemovable]
 "Vyměnitelný"
 //[MInfoFixed]
@@ -2506,7 +2516,7 @@
 //[MInfoDiskNumber]
 "Sériové číslo"
 //[MInfoMemory]
-" Paměť "
+"Paměť"
 //[MInfoMemoryLoad]
 "Obsazení paměti"
 //[MInfoMemoryInstalled]
@@ -2524,13 +2534,13 @@
 //[MInfoPageFileFree]
 "Stránkovací soubor volný"
 //[MInfoDescription]
-" Popis "
+"Popis"
 //[MInfoDizAbsent]
 "Soubor s popisem adresáře chybí"
 //[MInfoPlugin]
-" Modul "
+"Modul"
 //[MInfoPowerStatus]
-" Stav napájení"
+"Stav napájení"
 //[MInfoPowerStatusAC]
 "Stav síťového napájení"
 //[MInfoPowerStatusACOffline]
@@ -2810,10 +2820,6 @@
 "Nejdřív zobrazit vy&brané"
 //[MMenuSortDirectoriesFirst]
 "Nejdří&ve zobrazit adresáře"
-//[MMenuSortUseNumeric]
-"Použít čí&selné řazení"
-//[MMenuSortUseCaseSensitive]
-"Nejdříve velká a pak malá písmena"
 //[MMaskGroupBottom]
 "Změnit: Ins, Del, F4, F7, Ctrl+R"
 //[MMaskGroupName]
@@ -2928,10 +2934,13 @@
 "Možnosti menu změny jednotky"
 //[MChangeDriveShowDiskType]
 "Zobrazit typ disku"
-//[MChangeDriveShowNetworkName]
-"Zobrazit síťový &název/cestu SUBST/název VHD"
+//[MChangeDriveShowPath]
+"Zobrazit síťový &název / cestu SUBST / název VHD"
 //[MChangeDriveShowLabel]
 "Zobrazit název disku"
+// need translation:
+//[MChangeDriveShowLabelUseShell]
+"Use shell name"
 //[MChangeDriveShowFileSystem]
 "Zobrazit ty&p souborového systému"
 //[MChangeDriveShowSize]
@@ -2953,13 +2962,11 @@
 "Del,Shift+Del,F3,F4,F9"
 
 //[MSearchFileTitle]
-" Hledat "
+"Hledat"
 //[MCannotCreateListFile]
 "Nelze vytvořit soubor se seznamem"
 //[MCannotCreateListTemp]
 "(nelze vytvořit dočasný soubor pro seznam)"
-//[MCannotCreateListWrite]
-"(nelze zapsat data do souboru)"
 
 //[MDragFiles]
 "{0} souborů"
@@ -3021,22 +3028,21 @@
 "Unknown reparse point"
 //[MQuickViewNoData]
 "(data nejsou k dispozici)"
-//[MQuickViewContains]
-"Obsah:"
 //[MQuickViewFolders]
-"Adresáře           "
+"Adresáře:"
 //[MQuickViewFiles]
-"Soubory            "
+"Soubory:"
 //[MQuickViewBytes]
-"Velikost souborů   "
+"Velikost souborů:"
 //[MQuickViewAllocated]
-"Alokovaná velikost "
+"Alokovaná velikost:"
 //[MQuickViewCluster]
-"Velikost svazku    "
+"Velikost svazku:"
 //[MQuickViewSlack]
-"Mrtvé místo        "
+"Mrtvé místo:"
+// need translation:
 //[MQuickViewMFTOverhead]
-"MFT overhead       "
+"MFT overhead:"
 
 //[MSetAttrTitle]
 "Atributy"
@@ -3367,6 +3373,14 @@
 "&Popředí"
 //[MSetColorBackground]
 "Po&zadí"
+
+// 3 characters max
+//[MSetColorForeRGB]
+"&RGB"
+
+// 3 characters max
+//[MSetColorBackRGB]
+"R&GB"
 //[MSetColorForeTransparent]
 "Průhlednos&t"
 //[MSetColorBackTransparent]
@@ -3942,51 +3956,18 @@
 
 //[MRightCtrl]
 "PravýCtrl"
-
-//[MViewerGoTo]
-"Jdi na"
-//[MGoToPercent]
-"&Procent"
-//[MGoToHex]
-"&Hex offset"
-//[MGoToDecimal]
-"&Desítkový offset"
 //[MExcTrappedException]
 "Vyskytla se výjimka"
-//[MExcRAccess]
-"Porušení přístupu (čtení z {0})"
-//[MExcWAccess]
-"Porušení přístupu (zápis na {0})"
-//[MExcEAccess]
-"Porušení přístupu (spuštění na {0})"
-//[MExcOutOfBounds]
-"Pole mimo hranice"
-//[MExcDivideByZero]
-"Dělení nulou"
-//[MExcStackOverflow]
-"Přetečení zásobníku"
-//[MExcBreakPoint]
-"Výjimka přerušení"
-//[MExcFloatDivideByZero]
-"Dělení nulou v pohyblivé čárce"
-//[MExcFloatOverflow]
-"Přetečení při operaci v pohyblivé čárce"
-//[MExcFloatStackOverflow]
-"Prázdný nebo plný zásobník v pohyblivé čárce"
-//[MExcFloatUnderflow]
-"Podtečení při operaci v pohyblivé čárce"
-//[MExcBadInstruction]
-"Neplatná instrukce"
-//[MExcDatatypeMisalignment]
-"Chyba zarovnání"
-//[MExcCplusPlus]
-"C++ výjimka"
-//[MExcUnknown]
-"Neznámá výjimka"
 //[MExcException]
 "Výjimka:"
+// need translation:
+//[MExcDetails]
+"Details:"
 //[MExcAddress]
 "Adresa:"
+// need translation:
+//[MExcSource]
+"Source:"
 //[MExcFunction]
 "Funkce:"
 //[MExcModule]
@@ -4025,7 +4006,7 @@
 //[MHelpTitle]
 "Nápověda"
 //[MHelpActivatorURL]
-"Tento odkaz spouští externí aplikaci:"
+"Tento odkaz spouští externí aplikaci"
 //[MHelpActivatorFormat]
 "s parametrem:"
 //[MHelpActivatorQ]
@@ -4885,9 +4866,9 @@
 
 //[MKeyESCWasPressed]
 "Operace byla přerušena"
-//[MDoYouWantToStopWork]
+//[MDoYouWantToCancel]
 "Opravdu chcete operaci stornovat?"
-//[MDoYouWantToStopWork2]
+//[MDoYouWantToContinue]
 "Pokračovat v práci?"
 
 //[MCheckingFileInPlugin]
@@ -5048,10 +5029,25 @@
 "editován"
 //[MObjectLockedReasonOpened]
 "otevřený"
+// need translation:
+//[MObjectLockedAndMore]
+"and {0} more processes."
 //[MObjectLockedSwitchTo]
 "Přepnout na"
 //[MObjectLockedClose]
 "Zavřít soubor"
+// need translation:
+//[MObjectLockedReasonSessionMismatch]
+"One or more processes are running in another Terminal Services session."
+// need translation:
+//[MObjectLockedReasonCriticalProcess]
+"One or more processes are critical processes."
+// need translation:
+//[MObjectLockedReasonCriticalService]
+"One or more services are critical services."
+// need translation:
+//[MObjectLockedReasonDetectedSelf]
+"The file is opened by the current process."
 //[MProblemDb]
 "Problém s konfigurací DB"
 //[MShowConfigFolders]
@@ -5277,9 +5273,9 @@
 ""
 //[MKeyRAlt]
 ""
+// keys end
 //[MKeyAlt]
 ""
-// keys end
 
 //[MNewFileName]
 "?Nový soubor?"

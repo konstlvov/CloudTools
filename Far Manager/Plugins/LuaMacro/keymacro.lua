@@ -6,6 +6,7 @@ local MacroInit, MacroStep = Shared.MacroInit, Shared.MacroStep
 local pack, loadmacro, utils = Shared.pack, Shared.loadmacro, Shared.utils
 local MacroCallFar = Shared.MacroCallFar
 local FarMacroCallToLua = Shared.FarMacroCallToLua
+local GetLastParseError = Shared.GetLastParseError
 Shared = nil
 
 local F = far.Flags
@@ -52,7 +53,8 @@ local NewMacroRecord do
     m_key    = -1,  -- назначенная клавиша
     m_textkey= nil, -- текстовое представление назначенной клавиши
     m_value  = nil, -- значение, хранимое исполняющимся макросом
-    m_handle = nil  -- хэндл исполняющегося макроса
+    m_handle = nil, -- хэндл исполняющегося макроса
+    m_area   = nil  -- макрообласть, из которой стартовал макрос
   }
   local meta = { __index=MacroRecord }
 
@@ -62,9 +64,11 @@ local NewMacroRecord do
   function MacroRecord:SetHandle(handle) self.m_handle=handle end
   function MacroRecord:GetValue() return self.m_value end
   function MacroRecord:SetValue(val) self.m_value=val end
+  function MacroRecord:GetStartArea() return self.m_area end
 
   NewMacroRecord = function (MacroId, Flags, Key, TextKey)
-    return setmetatable({m_id=MacroId, m_flags=Flags, m_key=Key, m_textkey=TextKey }, meta)
+    return setmetatable({m_id=MacroId, m_flags=Flags, m_key=Key, m_textkey=TextKey,
+                         m_area=far.MacroGetArea() }, meta)
   end
 end
 --------------------------------------------------------------------------------
@@ -199,7 +203,7 @@ function KeyMacro.mmode (Action, Value)     -- N=MMode(Action[,Value])
       far.Text() -- M#2389: mmode(1,x): вывод на экран включается/отключается не вовремя
     end
   elseif Action==2 then -- get MacroRecord flags
-    result = bor(lshift(flags,8), 0xFF)
+    result = bor(lshift(flags,8), TopMacro:GetStartArea())
   end
   return result
 end
@@ -279,6 +283,9 @@ local function GetInputFromMacro()
       OldCurState:RemoveCurMacro()
       if not GetCurMacro() then
         Import.RestoreMacroChar()
+      end
+      for k = #macro,1,-1 do -- exit handlers
+        macro[k]()
       end
     elseif r1 == MPRT_PLUGINCALL then
       KeyMacro.CallPlugin(r2, true)
@@ -406,6 +413,15 @@ function KeyMacro.CallPlugin (Params, AsyncCall)
   return Result
 end
 
+function KeyMacro.AddExitHandler (func)
+  if type(func) == "function" then
+    local TopMacro = GetTopMacro()
+    if TopMacro then
+      TopMacro[#TopMacro+1] = func
+    end
+  end
+end
+
 local OP_ISEXECUTING              = 1
 local OP_ISDISABLEOUTPUT          = 2
 local OP_HISTORYDISABLEMASK       = 3
@@ -416,6 +432,7 @@ local OP_POSTNEWMACRO             = 7
 local OP_SETMACROVALUE            = 8
 local OP_GETINPUTFROMMACRO        = 9
 local OP_TRYTOPOSTMACRO           = 10
+local OP_GETLASTERROR             = 11
 
 function KeyMacro.Dispatch (opcode, ...)
   local p1 = (...)
@@ -437,12 +454,12 @@ function KeyMacro.Dispatch (opcode, ...)
   elseif opcode == OP_ISPOSTMACROENABLED then
     return not (IsExecuting() and GetCurMacro()) and 1 or 0
   elseif opcode == OP_POSTNEWMACRO then -- from API MacroControl(MSSC_POST)
-    local Lang,Code,Flags,AKey = ...
+    local Lang,Code,Flags,AKey,onlyCheck = ...
     local f1,f2 = loadmacro(Lang,Code)
     if f1 then
       CurState.MacroQueue:add(NewMacroRecord({ f1,f2,HasFunction=true },Flags,AKey))
       return true
-    else
+    elseif not onlyCheck then
       ErrMsg(f2, Msg.MMacroParseErrorTitle)
     end
   elseif opcode == OP_SETMACROVALUE then
@@ -450,6 +467,8 @@ function KeyMacro.Dispatch (opcode, ...)
     if m then m:SetValue(p1) end
   elseif opcode == OP_TRYTOPOSTMACRO then
     return TryToPostMacro(...)
+  elseif opcode == OP_GETLASTERROR then
+    return GetLastParseError()
   end
 end
 

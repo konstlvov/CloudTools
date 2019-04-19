@@ -1,6 +1,6 @@
 ﻿.Language=Polish,Polish (Polski)
 
-//Version: 3.0 build 5000
+//Version: 3.0 build 5354
 
 //[MYes]
 "Tak"
@@ -266,9 +266,9 @@
 ""
 //[MCtrlAltShiftF11]
 ""
+//End of functional keys
 //[MCtrlAltShiftF12]
 ""
-//End of functional keys
 
 //[MHistoryTitle]
 "Historia"
@@ -312,8 +312,6 @@
 "Zapisz historię podglądu i &edycji"
 //[MConfigRegisteredTypes]
 "Użyj zare&jestrowanych typów Windows"
-//[MConfigCloseCDGate]
-"&Montuj CD automatycznie"
 // need translation:
 //[MConfigUpdateEnvironment]
 "Automatic update of environment variables"
@@ -329,6 +327,23 @@
 // need translation:
 //[MConfigElevationUsePrivileges]
 "use additional privileges"
+// need translation:
+//[MConfigSortingCollation]
+"Sorting collation:"
+// need translation:
+//[MConfigSortingOrdinal]
+"ordinal"
+// need translation:
+//[MConfigSortingInvariant]
+"invariant"
+// need translation:
+//[MConfigSortingLinguistic]
+"linguistic"
+// need translation:
+//[MConfigSortingDigitsAsNumbers]
+"Treat digits as numbers"
+//[MConfigSortingCase]
+"&Uwzględnij wielkość liter"
 //[MConfigAutoSave]
 "Automatycznie &zapisuj ustawienia"
 
@@ -395,7 +410,7 @@
 "Wyświetl &linię statusu"
 // need translation:
 //[MConfigDetailedJunction]
-"Determine Volume Mount point"
+"Detect volume mount &points"
 //[MConfigShowTotal]
 "Wyświetl &całkowitą informację o plikach"
 //[MConfigShowFree]
@@ -406,14 +421,9 @@
 "Wyświetl ilość &ekranów w tle"
 //[MConfigShowSortMode]
 "Wyświetl l&iterę trybu sortowania"
+// need translation:
 //[MConfigShowDotsInRoot]
 "Show \"..\" in root folders"
-// need translation:
-//[MConfigHighlightColumnSeparator]
-"Highlight column separators"
-// need translation:
-//[MConfigDoubleGlobalColumnSeparator]
-"Double global column separators"
 
 //[MConfigInterfaceTitle]
 "Ustawienia interfejsu"
@@ -441,8 +451,11 @@
 //[MConfigPgUpChangeDisk]
 "Użyj Ctrl+Pg&Up do zmiany napędu"
 // need translation:
+//[MConfigUseVirtualTerminalForRendering]
+"Use Virtual Terminal for rendering"
+// need translation:
 //[MConfigClearType]
-"ClearType friendly redraw (can be slow)"
+"ClearType-friendly redraw (can be slow)"
 // need translation:
 //[MConfigSetConsoleIcon]
 "Set console icon"
@@ -517,7 +530,7 @@
 
 // need translation:
 //[MConfigAutoCompleteShowList]
-"&Show list"
+"&Show a list"
 
 // need translation:
 //[MConfigAutoCompleteModalList]
@@ -525,7 +538,7 @@
 
 // need translation:
 //[MConfigAutoCompleteAutoAppend]
-"&Append first matched item"
+"&Append the first matched item"
 
 // need translation:
 //[MConfigInfoPanelTitle]
@@ -559,9 +572,6 @@
 // need translation:
 //[MConfigInfoPanelUNTitle]
 "&User name format"
-// need translation:
-//[MConfigInfoPanelUNUnknown]
-"Default"
 // need translation:
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Fully Qualified Domain Name"
@@ -620,17 +630,23 @@
 //[MViewConfigExternalCommand]
 "&Polecenie:"
 //[MViewConfigInternal]
-" Podgląd wbudowany "
+"Podgląd wbudowany"
 //[MViewConfigSavePos]
 "&Zapamiętaj pozycję w pliku"
 //[MViewConfigSaveShortPos]
 "Zapisz z&akładki"
 // need translation:
 //[MViewConfigSaveCodepage]
-"Save file &codepage"
+"Save file &code page"
 // need translation:
 //[MViewConfigSaveWrapMode]
 "Save w&rap mode"
+// need translation:
+//[MViewConfigSaveViewMode]
+"Save view mode"
+// need translation:
+//[MViewConfigDetectDumpMode]
+"Detect dump view mode"
 //[MViewAutoDetectCodePage]
 "Rozpozn&aj tablicę znaków"
 //[MViewConfigTabSize]
@@ -662,7 +678,7 @@
 //[MEditConfigEditorCommand]
 "&Polecenie:"
 //[MEditConfigInternal]
-" Edytor wbudowany "
+"Edytor wbudowany"
 //[MEditConfigExpandTabsTitle]
 "Zamiana znaków &tabulacji:"
 
@@ -770,8 +786,6 @@
 "Create &link"
 //[MCopyDlgTotal]
 "Razem"
-//[MCopyScanning]
-"Przeszukuję katalogi..."
 //[MCopyPrepareSecury]
 "Ustawianie praw dostępu..."
 //[MCopyUseFilter]
@@ -780,24 +794,24 @@
 "Filt&r"
 
 //[MCopyFile]
-"Skopiuj"
+"Skopiuj {0} {1}:"
 //[MMoveFile]
-"Zmień nazwę lub przenieś"
+"Zmień nazwę lub przenieś {0} {1}:"
 // need translation:
 //[MLinkFile]
-"Create link to"
+"Create link to {0} {1}:"
 //[MCopyFiles]
-"Skopiuj {0} plików{1}"
+"Skopiuj {0} plików{1} {2}:"
 //[MMoveFiles]
-"Zmień nazwę lub przenieś {0} plików{1}"
+"Zmień nazwę lub przenieś {0} plików{1} {2}:"
 // need translation:
 //[MLinkFiles]
-"Create links to {0} item{1}"
+"Create links to {0} item{1} {2}:"
 //[MCMLTargetTO]
-" d&o:"
+"d&o"
 // need translation:
 //[MCMLTargetIN]
-" &in:"
+"&in"
 //[MCMLItems0]
 ""
 //[MCMLItemsA]
@@ -1218,13 +1232,15 @@
 //[MDefaultCP]
 "Default"
 
-//[MEditGoToLine]
-"Idź do linii"
+//[MGoTo]
+"Idź do"
+//[MGoToHex]
+"&Szesnastkowo"
 
 //[MFolderShortcutsTitle]
 "Skróty katalogów"
 //[MFolderShortcutBottom]
-"Edycja: Del,Ins,Shift+Ins,F4"
+"Edycja: Del,Ins,F4"
 //[MFolderShortcutBottomSub]
 "Edycja: Del,Ins,F4"
 //[MShortcutNone]
@@ -1454,10 +1470,10 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-//[MEditF8DOS]
-"CP-1250"
 // End of functional keys (Editor)
 // it's a F8 another text
+//[MEditF8DOS]
+"CP-1250"
 
 //Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MSingleEditF1]
@@ -1666,10 +1682,10 @@
 ""
 //[MSingleEditCtrlAltShiftF12]
 ""
-//[MSingleEditF8DOS]
-"CP 1250"
 // End of functional keys (Single Editor)
 // it's a F8 another text
+//[MSingleEditF8DOS]
+"CP 1250"
 
 //[MEditSaveAs]
 "Zapisz plik &jako"
@@ -1709,10 +1725,10 @@
 "File contains characters that cannot be"
 // need translation:
 //[MEditorLoadCPWarn2]
-"correctly read using selected codepage."
+"correctly read using selected code page."
 // need translation:
 //[MEditorReloadCPWarnLost1]
-"File has to be reloaded to change codepage."
+"File has to be reloaded to change code page."
 // need translation:
 //[MEditorReloadCPWarnLost2]
 "All unsaved changes will be lost."
@@ -1721,13 +1737,13 @@
 "Editor contains characters that cannot be"
 // need translation:
 //[MEditorSaveCPWarn2]
-"correctly saved using selected codepage."
+"correctly saved using selected code page."
 // need translation:
 //[MEditorSwitchCPWarn1]
 "Editor contains characters that cannot be"
 // need translation:
 //[MEditorSwitchCPWarn2]
-"correctly translated using selected codepage [{0}]"
+"correctly translated using selected code page [{0}]"
 // need translation:
 //[MEditorSwitchCPConfirm]
 "Continue?"
@@ -1743,19 +1759,16 @@
 "Show"
 // need translation:
 //[MEditorSwitchUnicodeCPDisabled]
-"Unicode codepage switch is not supported"
+"Unicode code page switch is not supported"
 // need translation:
 //[MEditorTryReloadFile]
-"You can reload file using custom codepage (ShiftF4)"
+"You can reload file using custom code page (ShiftF4)"
 // need translation:
 //[MEditorSwitchToUnicodeCPDisabled]
-"Switch to unicode codepage {0} is not supported"
+"Switch to unicode code page {0} is not supported"
 // need translation:
 //[MEditorCPNotSupported]
-"Codepage {0} is not supported in your system"
-// need translation:
-//[MEditorCPNotDetected]
-"Cannot determine the codepage"
+"Code page {0} is not supported in your system"
 
 //[MColumnName]
 "Nazwa"
@@ -1848,13 +1861,14 @@
 "P"
 //[MListEb]
 "E"
+{3} replacement field can receive a sum of files & folders
 // need translation:
 //[MListFileSize]
-" Bytes: {0}, files: {1}, folders: {2} "
+"Bytes: {0}, files: {1}, folders: {2}"
 //[MListFileSizeStatus]
-" {0} ({1}/{2}) {3} {4} "
+"{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-" {0} wolnych bajtów "
+"{0} wolnych bajtów"
 
 //[MDirInfoViewTitle]
 "Podgląd"
@@ -1911,9 +1925,9 @@
 //Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MViewF1]
 "Pomoc"
+// this is another text for F2
 //[MViewF2]
 "Zawiń"
-// this is another text for F2
 //[MViewF3]
 "Koniec"
 //[MViewF4]
@@ -2127,9 +2141,9 @@
 //[MViewF4Dump]
 "Dump"
 // this is another text for F8
+// end of functional keys (Viewer)
 //[MViewF8DOS]
 "CP 1250"
-// end of functional keys (Viewer)
 
 //Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MSingleViewF1]
@@ -2345,9 +2359,9 @@
 //[MSingleViewF4Text]
 "Tekst"
 // this is another text for F4
+// end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "CP 1250"
-// end of functional keys (Single Viewer)
 // need translation:
 //[MViewMode]
 "View mode"
@@ -2456,14 +2470,7 @@
 "&Anuluj"
 
 //[MFindFound]
-" Plików: {0}, folderów: {1} "
-
-//[MFindFileFolder]
-"Katalog"
-//[MFindFileSymLink]
-"LinkSym"
-//[MFindFileJunction]
-"Dowiązania"
+"Plików: {0}, folderów: {1}"
 
 //[MFindFileAdvancedTitle]
 "Zaawansowane opcje wyszukiwania"
@@ -2500,7 +2507,7 @@
 "Ctrl+H, Del, F4"
 // need translation:
 //[MGetCodePageEditCodePageName]
-"Edit code page name"
+"Rename the code page"
 // need translation:
 //[MGetCodePageResetCodePageName]
 "&Reset"
@@ -2529,15 +2536,15 @@
 //[MHighlightTransparentMarkChar]
 "prze&zroczyste"
 //[MHighlightColors]
-" Kolory nazw plików (domyślny - \"czarny na czarnym\") "
+"Kolory nazw plików (domyślny - \"czarny na czarnym\")"
 //[MHighlightFileName1]
-"&1. Nazwa pliku bez zaznaczenia    "
+"&1. Nazwa pliku bez zaznaczenia"
 //[MHighlightFileName2]
-"&3. Zaznaczenie                    "
+"&3. Zaznaczenie"
 //[MHighlightFileName3]
-"&5. Nazwa pliku pod kursorem       "
+"&5. Nazwa pliku pod kursorem"
 //[MHighlightFileName4]
-"&7. Zaznaczony plik pod kursorem   "
+"&7. Zaznaczony plik pod kursorem"
 //[MHighlightMarking1]
 "&2. Zaznaczenie"
 //[MHighlightMarking2]
@@ -2546,10 +2553,8 @@
 "&6. Zaznaczenie"
 //[MHighlightMarking4]
 "&8. Zaznaczenie"
-//[MHighlightExample1]
-"║nazwa.roz    │"
-//[MHighlightExample2]
-"║ nazwa.roz   │"
+//[MHighlightExample]
+"nazwa.roz"
 //[MHighlightContinueProcessing]
 "K&ontynuuj przetwarzanie"
 
@@ -2581,7 +2586,7 @@
 //[MInfoUserAccessLevelUnknown]
 "Unknown"
 //[MInfoDiskTitle]
-" Dysk "
+"Dysk"
 //[MInfoRemovable]
 "Wyjmowalny"
 //[MInfoFixed]
@@ -2621,7 +2626,7 @@
 //[MInfoDiskNumber]
 "Numer seryjny"
 //[MInfoMemory]
-" Pamięć "
+"Pamięć"
 //[MInfoMemoryLoad]
 "Użycie pamięci"
 // need translation:
@@ -2642,14 +2647,14 @@
 //[MInfoPageFileFree]
 "Free paging file"
 //[MInfoDescription]
-" Opis "
+"Opis"
 //[MInfoDizAbsent]
 "Plik opisu katalogu nie istnieje"
 //[MInfoPlugin]
-" Plugin "
+"Plugin"
 // need translation:
 //[MInfoPowerStatus]
-" Power Status"
+"Power Status"
 // need translation:
 //[MInfoPowerStatusAC]
 "AC power status"
@@ -2967,11 +2972,6 @@
 // need translation:
 //[MMenuSortDirectoriesFirst]
 "Sho&w directories first"
-//[MMenuSortUseNumeric]
-"Sortuj num&erycznie"
-// need translation:
-//[MMenuSortUseCaseSensitive]
-"Sortuj uwzględniając wielkość liter"
 //[MMaskGroupBottom]
 "Edycja: Ins, Del, F4, F7, Ctrl+R"
 //[MMaskGroupName]
@@ -3094,11 +3094,14 @@
 //[MChangeDriveShowDiskType]
 "Show disk type"
 // need translation:
-//[MChangeDriveShowNetworkName]
-"Show &network name/SUBST path/VHD name"
+//[MChangeDriveShowPath]
+"Show &network name / SUBST path / VHD name"
 // need translation:
 //[MChangeDriveShowLabel]
 "Show disk &label"
+// need translation:
+//[MChangeDriveShowLabelUseShell]
+"Use shell name"
 // need translation:
 //[MChangeDriveShowFileSystem]
 "Show &file system type"
@@ -3127,13 +3130,11 @@
 "Del,Shift+Del,F3,F4,F9"
 
 //[MSearchFileTitle]
-" Szukaj "
+"Szukaj"
 //[MCannotCreateListFile]
 "Nie mogę utworzyć listy plików"
 //[MCannotCreateListTemp]
 "(nie można utworzyć pliku tymczasowego dla listy)"
-//[MCannotCreateListWrite]
-"(nie można zapisać danych do pliku)"
 
 //[MDragFiles]
 "{0} plików"
@@ -3195,24 +3196,22 @@
 "Unknown reparse point"
 //[MQuickViewNoData]
 "(dane niedostępne)"
-//[MQuickViewContains]
-"Zawiera:"
 //[MQuickViewFolders]
-"Katalogi            "
+"Katalogi:"
 //[MQuickViewFiles]
-"Pliki               "
+"Pliki:"
 //[MQuickViewBytes]
-"Rozmiar plików      "
+"Rozmiar plików:"
 // need translation:
 //[MQuickViewAllocated]
-"Allocated size   "
+"Allocated size:"
 //[MQuickViewCluster]
-"Rozmiar klastra     "
+"Rozmiar klastra:"
 //[MQuickViewSlack]
-"Przestrzeń stracona "
+"Przestrzeń stracona:"
 // need translation:
 //[MQuickViewMFTOverhead]
-"MFT overhead        "
+"MFT overhead:"
 
 //[MSetAttrTitle]
 "Atrybuty"
@@ -3380,7 +3379,7 @@
 //[MSetColorPanelScrollbar]
 "Suwak"
 //[MSetColorPanelScreensNumber]
-"Ilość ekranów w tle "
+"Ilość ekranów w tle"
 
 //[MSetColorDialogNormal]
 "Tekst zwykły"
@@ -3397,7 +3396,7 @@
 //[MSetColorDialogTextInput]
 "Wpisywany tekst"
 //[MSetColorDialogUnchangedTextInput]
-"Niezmieniony wpisywany tekst "
+"Niezmieniony wpisywany tekst"
 //[MSetColorDialogSelectedTextInput]
 "Zaznaczony wpisywany tekst"
 //[MSetColorDialogEditDisabled]
@@ -3409,7 +3408,7 @@
 //[MSetColorDialogHighlightedButtons]
 "Podświetlone przyciski"
 //[MSetColorDialogSelectedHighlightedButtons]
-"Wybrane podświetlone przyciski "
+"Wybrane podświetlone przyciski"
 // need translation:
 //[MSetColorDialogDefaultButton]
 "Default button"
@@ -3463,7 +3462,7 @@
 //[MSetColorMenuHighlighted]
 "Podświetlony tekst"
 //[MSetColorMenuSelectedHighlighted]
-"Wybrany podświetlony tekst "
+"Wybrany podświetlony tekst"
 //[MSetColorMenuDisabled]
 "Tekst nieaktywny"
 // need translation:
@@ -3492,7 +3491,7 @@
 //[MSetColorHMenuHighlighted]
 "Podświetlony tekst"
 //[MSetColorHMenuSelectedHighlighted]
-"Wybrany podświetlony tekst "
+"Wybrany podświetlony tekst"
 
 //[MSetColorKeyBarNumbers]
 "Numery klawiszy"
@@ -3544,7 +3543,7 @@
 //[MSetColorHelpReference]
 "Odniesienie"
 //[MSetColorHelpSelectedReference]
-"Wybrane odniesienie "
+"Wybrane odniesienie"
 //[MSetColorHelpBox]
 "Ramka"
 //[MSetColorHelpBoxTitle]
@@ -3563,6 +3562,14 @@
 "&Pierwszy plan"
 //[MSetColorBackground]
 "&Tło"
+
+// 3 characters max
+//[MSetColorForeRGB]
+"&RGB"
+
+// 3 characters max
+//[MSetColorBackRGB]
+"R&GB"
 //[MSetColorForeTransparent]
 "P&rzezroczyste"
 //[MSetColorBackTransparent]
@@ -4165,53 +4172,20 @@
 
 //[MRightCtrl]
 "PrawyCtrl"
-
-//[MViewerGoTo]
-"Idź do"
-//[MGoToPercent]
-"&Procent"
-//[MGoToHex]
-"Pozycja (&szesnastkowo)"
-//[MGoToDecimal]
-"Pozycja (&dziesiętnie)"
 //[MExcTrappedException]
 "Wystąpił wyjątek"
-//[MExcRAccess]
-"Błąd dostępu (odczyt z {0})"
-//[MExcWAccess]
-"Błąd dostępu (zapis do {0})"
-//[MExcEAccess]
-"Błąd dostępu (wykonanie w {0})"
-//[MExcOutOfBounds]
-"Przekroczenie granic tabeli"
-//[MExcDivideByZero]
-"Dzielenie przez zero"
-//[MExcStackOverflow]
-"Przepełnienie stosu"
-//[MExcBreakPoint]
-"Wyjątek punktu przerwania"
-//[MExcFloatDivideByZero]
-"Błąd zmiennoprzecinkowego dzielenia przez zero"
-//[MExcFloatOverflow]
-"Przepełnienie przy operacji zmiennnoprzecinkowej"
-//[MExcFloatStackOverflow]
-"Stos operacji zmiennoprzecinkowych pusty lub pełny"
-//[MExcFloatUnderflow]
-"Błąd niedomiaru przy operacji zmiennoprzecinkowej"
-//[MExcBadInstruction]
-"Błędna instrukcja"
-//[MExcDatatypeMisalignment]
-"Błąd ustawienia"
-//[MExcCplusPlus]
-"C++ wyjątek"
-//[MExcUnknown]
-"Nieznany wyjątek"
 // need translation:
 //[MExcException]
 "Exception:"
 // need translation:
+//[MExcDetails]
+"Details:"
+// need translation:
 //[MExcAddress]
 "Address:"
+// need translation:
+//[MExcSource]
+"Source:"
 // need translation:
 //[MExcFunction]
 "Function:"
@@ -4255,7 +4229,7 @@
 //[MHelpTitle]
 "Pomoc"
 //[MHelpActivatorURL]
-"To wywołanie uruchomi aplikację zewnętrzną:"
+"To wywołanie uruchomi aplikację zewnętrzną"
 //[MHelpActivatorFormat]
 "z parametrem:"
 //[MHelpActivatorQ]
@@ -5115,10 +5089,10 @@
 
 //[MKeyESCWasPressed]
 "Operacja została przerwana"
-//[MDoYouWantToStopWork]
+//[MDoYouWantToCancel]
 "Czy naprawdę chcesz ją anulować?"
-//[MDoYouWantToStopWork2]
-"Kontynuować? "
+//[MDoYouWantToContinue]
+"Kontynuować?"
 
 //[MCheckingFileInPlugin]
 "Plugin sprawdza plik"
@@ -5309,11 +5283,26 @@
 //[MObjectLockedReasonOpened]
 "opened"
 // need translation:
+//[MObjectLockedAndMore]
+"and {0} more processes."
+// need translation:
 //[MObjectLockedSwitchTo]
 "Switch to"
 // need translation:
 //[MObjectLockedClose]
 "Close file"
+// need translation:
+//[MObjectLockedReasonSessionMismatch]
+"One or more processes are running in another Terminal Services session."
+// need translation:
+//[MObjectLockedReasonCriticalProcess]
+"One or more processes are critical processes."
+// need translation:
+//[MObjectLockedReasonCriticalService]
+"One or more services are critical services."
+// need translation:
+//[MObjectLockedReasonDetectedSelf]
+"The file is opened by the current process."
 // need translation:
 //[MProblemDb]
 "Problem configuration DB"
@@ -5541,9 +5530,9 @@
 ""
 //[MKeyRAlt]
 ""
+// keys end
 //[MKeyAlt]
 ""
-// keys end
 
 //[MNewFileName]
 "?Nowy plik?"

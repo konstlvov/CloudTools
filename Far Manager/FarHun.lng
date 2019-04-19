@@ -1,6 +1,6 @@
 ﻿.Language=Hungarian,Hungarian (Magyar)
 
-//Version: 3.0 build 5000
+//Version: 3.0 build 5354
 
 //[MYes]
 "Igen"
@@ -266,9 +266,9 @@
 ""
 //[MCtrlAltShiftF11]
 ""
+//End of functional keys
 //[MCtrlAltShiftF12]
 ""
-//End of functional keys
 
 //[MHistoryTitle]
 "Parancs előzmények"
@@ -312,8 +312,6 @@
 "Nézőke és &szerkesztő előzmények mentése"
 //[MConfigRegisteredTypes]
 "&Windows reg. fájltípusok használata"
-//[MConfigCloseCDGate]
-"CD tálca a&utomatikus behúzása"
 // need translation:
 //[MConfigUpdateEnvironment]
 "Automatic update of environment variables"
@@ -329,6 +327,23 @@
 // need translation:
 //[MConfigElevationUsePrivileges]
 "use additional privileges"
+// need translation:
+//[MConfigSortingCollation]
+"Sorting collation:"
+// need translation:
+//[MConfigSortingOrdinal]
+"ordinal"
+// need translation:
+//[MConfigSortingInvariant]
+"invariant"
+// need translation:
+//[MConfigSortingLinguistic]
+"linguistic"
+// need translation:
+//[MConfigSortingDigitsAsNumbers]
+"Treat digits as numbers"
+//[MConfigSortingCase]
+"&Nagy/kisbetű érz."
 //[MConfigAutoSave]
 "B&eállítások automatikus mentése"
 
@@ -395,7 +410,7 @@
 "Á&llapotsor mutatva"
 // need translation:
 //[MConfigDetailedJunction]
-"Determine Volume Mount point"
+"Detect volume mount &points"
 //[MConfigShowTotal]
 "Fájl össze&s információja mutatva"
 //[MConfigShowFree]
@@ -406,14 +421,9 @@
 "&Háttérképernyők száma mutatva"
 //[MConfigShowSortMode]
 "Rendezési mó&d betűjele mutatva"
+// need translation:
 //[MConfigShowDotsInRoot]
 "Show \"..\" in root folders"
-// need translation:
-//[MConfigHighlightColumnSeparator]
-"Highlight column separators"
-// need translation:
-//[MConfigDoubleGlobalColumnSeparator]
-"Double global column separators"
 
 //[MConfigInterfaceTitle]
 "Kezelőfelület beállítások"
@@ -441,8 +451,11 @@
 //[MConfigPgUpChangeDisk]
 "A Ctrl+Pg&Up meghajtót vált"
 // need translation:
+//[MConfigUseVirtualTerminalForRendering]
+"Use Virtual Terminal for rendering"
+// need translation:
 //[MConfigClearType]
-"ClearType friendly redraw (can be slow)"
+"ClearType-friendly redraw (can be slow)"
 // need translation:
 //[MConfigSetConsoleIcon]
 "Set console icon"
@@ -517,7 +530,7 @@
 
 // need translation:
 //[MConfigAutoCompleteShowList]
-"&Show list"
+"&Show a list"
 
 // need translation:
 //[MConfigAutoCompleteModalList]
@@ -525,7 +538,7 @@
 
 // need translation:
 //[MConfigAutoCompleteAutoAppend]
-"&Append first matched item"
+"&Append the first matched item"
 
 // need translation:
 //[MConfigInfoPanelTitle]
@@ -559,9 +572,6 @@
 // need translation:
 //[MConfigInfoPanelUNTitle]
 "&User name format"
-// need translation:
-//[MConfigInfoPanelUNUnknown]
-"Default"
 // need translation:
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Fully Qualified Domain Name"
@@ -619,17 +629,23 @@
 //[MViewConfigExternalCommand]
 "Nézőke &parancs:"
 //[MViewConfigInternal]
-" Belső nézőke "
+"Belső nézőke"
 //[MViewConfigSavePos]
 "&Fájlpozíció mentése"
 //[MViewConfigSaveShortPos]
 "Könyv&jelzők mentése"
 // need translation:
 //[MViewConfigSaveCodepage]
-"Save file &codepage"
+"Save file &code page"
 // need translation:
 //[MViewConfigSaveWrapMode]
 "Save w&rap mode"
+// need translation:
+//[MViewConfigSaveViewMode]
+"Save view mode"
+// need translation:
+//[MViewConfigDetectDumpMode]
+"Detect dump view mode"
 //[MViewAutoDetectCodePage]
 "&Kódlap automatikus felismerése"
 //[MViewConfigTabSize]
@@ -660,7 +676,7 @@
 //[MEditConfigEditorCommand]
 "&Szerkesztő parancs:"
 //[MEditConfigInternal]
-" Belső szerkesztő "
+"Belső szerkesztő"
 //[MEditConfigExpandTabsTitle]
 "&Tabulátorból szóközök:"
 
@@ -767,8 +783,6 @@
 "Create &link"
 //[MCopyDlgTotal]
 "Összesen"
-//[MCopyScanning]
-"Mappák olvasása..."
 //[MCopyPrepareSecury]
 "Hozzáférési jogok alkalmazása..."
 //[MCopyUseFilter]
@@ -777,25 +791,25 @@
 "S&zűrő"
 
 //[MCopyFile]
-"Másolása"
+"Másolása {0} {1}:"
 // need translation:
 //[MMoveFile]
-"átnevezése-mozgatása"
+"átnevezése-mozgatása {0} {1}:"
 // need translation:
 //[MLinkFile]
-"Create link to"
+"Create link to {0} {1}:"
 //[MCopyFiles]
-" {0} elem másolása{1}"
+"{0} elem másolása{1} {2}:"
 //[MMoveFiles]
-" {0} elem átnevezése-mozgatása{1}"
+"{0} elem átnevezése-mozgatása{1} {2}:"
 // need translation:
 //[MLinkFiles]
-"Create links to {0} item{1}"
+"Create links to {0} item{1} {2}:"
 //[MCMLTargetTO]
-" ide:"
+"ide"
 // need translation:
 //[MCMLTargetIN]
-" &in:"
+"&in"
 //[MCMLItems0]
 ""
 //[MCMLItemsA]
@@ -1212,13 +1226,15 @@
 //[MDefaultCP]
 "Default"
 
-//[MEditGoToLine]
-"Sorra ugrás"
+//[MGoTo]
+"Ugrás"
+//[MGoToHex]
+"&Hexában"
 
 //[MFolderShortcutsTitle]
 "Mappa gyorsbillentyűk"
 //[MFolderShortcutBottom]
-"Szerk.: Del,Ins,Shift+Ins,F4"
+"Szerk.: Del,Ins,F4"
 //[MFolderShortcutBottomSub]
 "Szerk.: Del,Ins,F4"
 //[MShortcutNone]
@@ -1448,10 +1464,10 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-//[MEditF8DOS]
-"OEM"
 // End of functional keys (Editor)
 // it's a F8 another text
+//[MEditF8DOS]
+"OEM"
 
 //Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MSingleEditF1]
@@ -1660,10 +1676,10 @@
 ""
 //[MSingleEditCtrlAltShiftF12]
 ""
-//[MSingleEditF8DOS]
-"OEM"
 // End of functional keys (Single Editor)
 // it's a F8 another text
+//[MSingleEditF8DOS]
+"OEM"
 
 //[MEditSaveAs]
 "Fá&jl mentése, mint:"
@@ -1703,10 +1719,10 @@
 "File contains characters that cannot be"
 // need translation:
 //[MEditorLoadCPWarn2]
-"correctly read using selected codepage."
+"correctly read using selected code page."
 // need translation:
 //[MEditorReloadCPWarnLost1]
-"File has to be reloaded to change codepage."
+"File has to be reloaded to change code page."
 // need translation:
 //[MEditorReloadCPWarnLost2]
 "All unsaved changes will be lost."
@@ -1715,13 +1731,13 @@
 "Editor contains characters that cannot be"
 // need translation:
 //[MEditorSaveCPWarn2]
-"correctly saved using selected codepage."
+"correctly saved using selected code page."
 // need translation:
 //[MEditorSwitchCPWarn1]
 "Editor contains characters that cannot be"
 // need translation:
 //[MEditorSwitchCPWarn2]
-"correctly translated using selected codepage [{0}]"
+"correctly translated using selected code page [{0}]"
 // need translation:
 //[MEditorSwitchCPConfirm]
 "Continue?"
@@ -1737,19 +1753,16 @@
 "Show"
 // need translation:
 //[MEditorSwitchUnicodeCPDisabled]
-"Unicode codepage switch is not supported"
+"Unicode code page switch is not supported"
 // need translation:
 //[MEditorTryReloadFile]
-"You can reload file using custom codepage (ShiftF4)"
+"You can reload file using custom code page (ShiftF4)"
 // need translation:
 //[MEditorSwitchToUnicodeCPDisabled]
-"Switch to unicode codepage {0} is not supported"
+"Switch to unicode code page {0} is not supported"
 // need translation:
 //[MEditorCPNotSupported]
-"Codepage {0} is not supported in your system"
-// need translation:
-//[MEditorCPNotDetected]
-"Cannot determine the codepage"
+"Code page {0} is not supported in your system"
 
 //[MColumnName]
 "Név"
@@ -1791,9 +1804,9 @@
 "???"
 
 //[MListUp]
-"  Fel  "
+"Fel"
 //[MListFolder]
-" Mappa "
+"Mappa"
 //[MListSymlink]
 "SzimLnk"
 //[MListJunction]
@@ -1840,13 +1853,14 @@
 "P"
 //[MListEb]
 "E"
+{3} replacement field can receive a sum of files & folders
 // need translation:
 //[MListFileSize]
-" Bytes: {0}, files: {1}, folders: {2} "
+"Bytes: {0}, files: {1}, folders: {2}"
 //[MListFileSizeStatus]
-" {0} ({1}/{2}) {3} {4} "
+"{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-" {0} szabad bájt "
+"{0} szabad bájt"
 
 //[MDirInfoViewTitle]
 "Vizsgálat"
@@ -1903,9 +1917,9 @@
 //Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MViewF1]
 "Súgó"
+// this is another text for F2
 //[MViewF2]
 "SorTör"
-// this is another text for F2
 //[MViewF3]
 "Kilép"
 //[MViewF4]
@@ -2119,9 +2133,9 @@
 //[MViewF4Dump]
 "Dump"
 // this is another text for F8
+// end of functional keys (Viewer)
 //[MViewF8DOS]
 "OEM"
-// end of functional keys (Viewer)
 
 //Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MSingleViewF1]
@@ -2337,9 +2351,9 @@
 //[MSingleViewF4Text]
 "Szöveg"
 // this is another text for F4
+// end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "OEM"
-// end of functional keys (Single Viewer)
 // need translation:
 //[MViewMode]
 "View mode"
@@ -2448,14 +2462,7 @@
 "&Mégsem"
 
 //[MFindFound]
-" Fájlt: {0}, mappát: {1} "
-
-//[MFindFileFolder]
-"Mappa"
-//[MFindFileSymLink]
-"SzimLnk"
-//[MFindFileJunction]
-"Csomópt"
+"Fájlt: {0}, mappát: {1}"
 
 //[MFindFileAdvancedTitle]
 "Fájlkeresés haladó beállításai"
@@ -2488,7 +2495,7 @@
 "Ctrl+H, Del, F4"
 // need translation:
 //[MGetCodePageEditCodePageName]
-"Edit code page name"
+"Rename the code page"
 // need translation:
 //[MGetCodePageResetCodePageName]
 "&Reset"
@@ -2517,15 +2524,15 @@
 //[MHighlightTransparentMarkChar]
 "át&látszó"
 //[MHighlightColors]
-" Fájlnév színek (feketén fekete = alapértelmezett szín) "
+"Fájlnév színek (feketén fekete = alapértelmezett szín)"
 //[MHighlightFileName1]
-"&1. Normál fájlnév                  "
+"&1. Normál fájlnév"
 //[MHighlightFileName2]
-"&3. Kijelölt fájlnév                "
+"&3. Kijelölt fájlnév"
 //[MHighlightFileName3]
-"&5. Kurzor alatti fájlnév           "
+"&5. Kurzor alatti fájlnév"
 //[MHighlightFileName4]
-"&7. Kurzor alatti kijelölt fájlnév  "
+"&7. Kurzor alatti kijelölt fájlnév"
 //[MHighlightMarking1]
 "&2. Jelölő kar.:"
 //[MHighlightMarking2]
@@ -2534,10 +2541,8 @@
 "&6. Jelölő kar.:"
 //[MHighlightMarking4]
 "&8. Jelölő kar.:"
-//[MHighlightExample1]
-"║fájlneve.kit │"
-//[MHighlightExample2]
-"║ fájlneve.kit│"
+//[MHighlightExample]
+"fájlneve.kit"
 //[MHighlightContinueProcessing]
 "Folyamatos f&eldolgozás"
 
@@ -2569,7 +2574,7 @@
 //[MInfoUserAccessLevelUnknown]
 "Unknown"
 //[MInfoDiskTitle]
-" Lemez "
+"Lemez"
 //[MInfoRemovable]
 "Kivehető"
 //[MInfoFixed]
@@ -2609,7 +2614,7 @@
 //[MInfoDiskNumber]
 "Sorozatszám"
 //[MInfoMemory]
-" Memória "
+"Memória"
 //[MInfoMemoryLoad]
 "Használt memória"
 // need translation:
@@ -2630,14 +2635,14 @@
 //[MInfoPageFileFree]
 "Free paging file"
 //[MInfoDescription]
-" Megjegyzés "
+"Megjegyzés"
 //[MInfoDizAbsent]
 "Mappa megjegyzésfájl nincs"
 //[MInfoPlugin]
-" Plugin "
+"Plugin"
 // need translation:
 //[MInfoPowerStatus]
-" Power Status"
+"Power Status"
 // need translation:
 //[MInfoPowerStatusAC]
 "AC power status"
@@ -2953,11 +2958,6 @@
 // need translation:
 //[MMenuSortDirectoriesFirst]
 "Sho&w directories first"
-//[MMenuSortUseNumeric]
-"N&umerikus rendezés"
-// need translation:
-//[MMenuSortUseCaseSensitive]
-"Nagy/kisbetű érzékeny rendezés"
 //[MMaskGroupBottom]
 "Szerk.: Ins, Del, F4, F7, Ctrl+R"
 //[MMaskGroupName]
@@ -3079,11 +3079,14 @@
 //[MChangeDriveShowDiskType]
 "Show disk type"
 // need translation:
-//[MChangeDriveShowNetworkName]
-"Show &network name/SUBST path/VHD name"
+//[MChangeDriveShowPath]
+"Show &network name / SUBST path / VHD name"
 // need translation:
 //[MChangeDriveShowLabel]
 "Show disk &label"
+// need translation:
+//[MChangeDriveShowLabelUseShell]
+"Use shell name"
 // need translation:
 //[MChangeDriveShowFileSystem]
 "Show &file system type"
@@ -3112,13 +3115,11 @@
 "Del,Shift+Del,F3,F4,F9"
 
 //[MSearchFileTitle]
-" Keresés "
+"Keresés"
 //[MCannotCreateListFile]
 "A listafájl nem hozható létre"
 //[MCannotCreateListTemp]
 "(a lista átmeneti fájl nem hozható létre)"
-//[MCannotCreateListWrite]
-"(a fájlba nem írható adat)"
 
 //[MDragFiles]
 "{0} fájl"
@@ -3180,24 +3181,22 @@
 "Unknown reparse point"
 //[MQuickViewNoData]
 "(adat nem elérhető)"
-//[MQuickViewContains]
-"Tartalma:"
 //[MQuickViewFolders]
-"Mappák száma     "
+"Mappák száma:"
 //[MQuickViewFiles]
-"Fájlok száma     "
+"Fájlok száma:"
 //[MQuickViewBytes]
-"Fájlok mérete    "
+"Fájlok mérete:"
 // need translation:
 //[MQuickViewAllocated]
-"Allocated size   "
+"Allocated size:"
 //[MQuickViewCluster]
-"Klaszterméret    "
+"Klaszterméret:"
 //[MQuickViewSlack]
-"Meddő terület    "
+"Meddő terület:"
 // need translation:
 //[MQuickViewMFTOverhead]
-"MFT overhead        "
+"MFT overhead:"
 
 //[MSetAttrTitle]
 "Attribútumok"
@@ -3542,6 +3541,14 @@
 "&Előtér"
 //[MSetColorBackground]
 "&Háttér"
+
+// 3 characters max
+//[MSetColorForeRGB]
+"&RGB"
+
+// 3 characters max
+//[MSetColorBackRGB]
+"R&GB"
 //[MSetColorForeTransparent]
 "Átlá&tszó"
 //[MSetColorBackTransparent]
@@ -3979,7 +3986,7 @@
 //[MReadingTitleFiles]
 "Panelek frissítése"
 //[MReadingFiles]
-" {0} fájl olvasása"
+"{0} fájl olvasása"
 //[MOperationNotCompleted]
 "A művelet félbeszakadt"
 
@@ -4136,53 +4143,20 @@
 
 //[MRightCtrl]
 "JobbCtrl"
-
-//[MViewerGoTo]
-"Ugrás"
-//[MGoToPercent]
-"&Százalékban"
-//[MGoToHex]
-"&Hexában"
-//[MGoToDecimal]
-"&Decimálisan"
 //[MExcTrappedException]
 "Kivétel történt"
-//[MExcRAccess]
-"Hozzáférési jogsértés (olvasás {0} címről)"
-//[MExcWAccess]
-"Hozzáférési jogsértés (írás {0} címre)"
-//[MExcEAccess]
-"Hozzáférési jogsértés (végrehajtás {0} címen)"
-//[MExcOutOfBounds]
-"A tömb határait meghaladta"
-//[MExcDivideByZero]
-"Nullával osztás"
-//[MExcStackOverflow]
-"Verem túlcsordulás"
-//[MExcBreakPoint]
-"Törésponti kivétel"
-//[MExcFloatDivideByZero]
-"Lebegőpontos szám osztása nullával"
-//[MExcFloatOverflow]
-"Lebegőpontos művelet túlcsordulás"
-//[MExcFloatStackOverflow]
-"Lebegőpont verem üres vagy megtelt"
-//[MExcFloatUnderflow]
-"Lebegőpontos művelet alulcsordulás"
-//[MExcBadInstruction]
-"Érvénytelen utasítás"
-//[MExcDatatypeMisalignment]
-"Adattípus illesztési hiba"
-//[MExcCplusPlus]
-"C++ kivétel"
-//[MExcUnknown]
-"Ismeretlen kivétel"
 // need translation:
 //[MExcException]
 "Exception:"
 // need translation:
+//[MExcDetails]
+"Details:"
+// need translation:
 //[MExcAddress]
 "Address:"
+// need translation:
+//[MExcSource]
+"Source:"
 // need translation:
 //[MExcFunction]
 "Function:"
@@ -4194,7 +4168,7 @@
 "Terminate Far"
 // need translation:
 //[MExcUnload]
-"Unload plugin "
+"Unload plugin"
 // need translation:
 //[MExcStack]
 "Stack"
@@ -4226,7 +4200,7 @@
 //[MHelpTitle]
 "Súgó"
 //[MHelpActivatorURL]
-"A hivatkozás által indított program:"
+"A hivatkozás által indított program"
 //[MHelpActivatorFormat]
 "Paraméterei:"
 //[MHelpActivatorQ]
@@ -5086,9 +5060,9 @@
 
 //[MKeyESCWasPressed]
 "A műveletet megszakította"
-//[MDoYouWantToStopWork]
+//[MDoYouWantToCancel]
 "Valóban le akarja állítani?"
-//[MDoYouWantToStopWork2]
+//[MDoYouWantToContinue]
 "Folytatja?"
 
 //[MCheckingFileInPlugin]
@@ -5280,11 +5254,26 @@
 //[MObjectLockedReasonOpened]
 "opened"
 // need translation:
+//[MObjectLockedAndMore]
+"and {0} more processes."
+// need translation:
 //[MObjectLockedSwitchTo]
 "Switch to"
 // need translation:
 //[MObjectLockedClose]
 "Close file"
+// need translation:
+//[MObjectLockedReasonSessionMismatch]
+"One or more processes are running in another Terminal Services session."
+// need translation:
+//[MObjectLockedReasonCriticalProcess]
+"One or more processes are critical processes."
+// need translation:
+//[MObjectLockedReasonCriticalService]
+"One or more services are critical services."
+// need translation:
+//[MObjectLockedReasonDetectedSelf]
+"The file is opened by the current process."
 // need translation:
 //[MProblemDb]
 "Problem configuration DB"
@@ -5512,9 +5501,9 @@
 ""
 //[MKeyRAlt]
 ""
+// keys end
 //[MKeyAlt]
 ""
-// keys end
 
 //[MNewFileName]
 "?Új fájl?"

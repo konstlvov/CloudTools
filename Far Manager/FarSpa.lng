@@ -1,6 +1,6 @@
 ﻿.Language=Spanish,Spanish (Español)
 
-//Version: 3.0 build 5000
+//Version: 3.0 build 5354
 
 //[MYes]
 "Si"
@@ -264,9 +264,9 @@
 ""
 //[MCtrlAltShiftF11]
 ""
+//End of functional keys
 //[MCtrlAltShiftF12]
 ""
-//End of functional keys
 
 //[MHistoryTitle]
 "Historial"
@@ -308,8 +308,6 @@
 "Guardar historial de &visor y editor"
 //[MConfigRegisteredTypes]
 "Usar extensiones &registradas de Windows"
-//[MConfigCloseCDGate]
-"CD\DVD\BD-ROM: automontar unidad"
 //[MConfigUpdateEnvironment]
 "Actualización automática de variables de entorno"
 //[MConfigElevation]
@@ -320,6 +318,18 @@
 "para lectura"
 //[MConfigElevationUsePrivileges]
 "usar privilegios adicionales"
+//[MConfigSortingCollation]
+"Ordenamiento de colación:"
+//[MConfigSortingOrdinal]
+"ordinal"
+//[MConfigSortingInvariant]
+"invariante"
+//[MConfigSortingLinguistic]
+"lingüístico"
+//[MConfigSortingDigitsAsNumbers]
+"Tratar dígitos como números"
+//[MConfigSortingCase]
+"Sensible min./ma&y."
 //[MConfigAutoSave]
 "Auto&guardar configuración"
 
@@ -385,11 +395,7 @@
 //[MConfigShowSortMode]
 "Mostrar letra para &modo de orden"
 //[MConfigShowDotsInRoot]
-"Mostrar \"
-//[MConfigHighlightColumnSeparator]
-"Resaltar separador de columnas"
-//[MConfigDoubleGlobalColumnSeparator]
-"Separador de columna doble"
+"Mostrar \"..\" en directorio raíz"
 
 //[MConfigInterfaceTitle]
 "Configuración de interfaz"
@@ -415,6 +421,9 @@
 "Mostrar indicador de progreso de borrado total"
 //[MConfigPgUpChangeDisk]
 "Usar Ctrl+Pg&Up para cambiar unidad"
+// need translation:
+//[MConfigUseVirtualTerminalForRendering]
+"Use Virtual Terminal for rendering"
 //[MConfigClearType]
 "Limpiar rediseño (puede ser lento)"
 //[MConfigSetConsoleIcon]
@@ -503,8 +512,6 @@
 "DNS calificado"
 //[MConfigInfoPanelUNTitle]
 "Formato nombre de &usuario"
-//[MConfigInfoPanelUNUnknown]
-"Por defecto"
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Nombre dominio completamente calificado"
 //[MConfigInfoPanelUNSamCompatible]
@@ -546,7 +553,7 @@
 //[MViewConfigExternalCommand]
 "Comando &visor:"
 //[MViewConfigInternal]
-" Visor interno "
+"Visor interno"
 //[MViewConfigSavePos]
 "&Guardar posición de archivo"
 //[MViewConfigSaveShortPos]
@@ -555,6 +562,12 @@
 "Guardar página de &códigos de archivo"
 //[MViewConfigSaveWrapMode]
 "Guardar modo de ajuste de línea"
+// need translation:
+//[MViewConfigSaveViewMode]
+"Save view mode"
+// need translation:
+//[MViewConfigDetectDumpMode]
+"Detect dump view mode"
 //[MViewAutoDetectCodePage]
 "&Autodetectar página de códigos"
 //[MViewConfigTabSize]
@@ -581,7 +594,7 @@
 //[MEditConfigEditorCommand]
 "Comando &editor:"
 //[MEditConfigInternal]
-" Editor interno "
+"Editor interno"
 //[MEditConfigExpandTabsTitle]
 "E&xpandir tabulación a espacios"
 
@@ -684,8 +697,6 @@
 "Crear en&lace"
 //[MCopyDlgTotal]
 "Total"
-//[MCopyScanning]
-"Explorando directorios..."
 //[MCopyPrepareSecury]
 "Aplicando derechos de acceso..."
 //[MCopyUseFilter]
@@ -694,21 +705,21 @@
 "Fi&ltro"
 
 //[MCopyFile]
-"Copiar"
+"Copiar {0} {1}:"
 //[MMoveFile]
-"Renombrar o mover"
+"Renombrar o mover {0} {1}:"
 //[MLinkFile]
-"Crear enlace a"
+"Crear enlace a {0} {1}:"
 //[MCopyFiles]
-"Copiar {0} ítem{1}"
+"Copiar {0} ítem{1} {2}:"
 //[MMoveFiles]
-"Renombrar o mover {0} ítem{1}"
+"Renombrar o mover {0} ítem{1} {2}:"
 //[MLinkFiles]
-"Crear enlaces a {0} ítem{1}"
+"Crear enlaces a {0} ítem{1} {2}:"
 //[MCMLTargetTO]
-" &a:"
+"&a"
 //[MCMLTargetIN]
-" en:"
+"en"
 //[MCMLItems0]
 ""
 //[MCMLItemsA]
@@ -1101,13 +1112,15 @@
 //[MDefaultCP]
 "Por defecto"
 
-//[MEditGoToLine]
-"Ir a posición"
+//[MGoTo]
+"Ir a"
+//[MGoToHex]
+"&Hexa"
 
 //[MFolderShortcutsTitle]
 "Atajos a directorios"
 //[MFolderShortcutBottom]
-"Editar: Del,Ins,Shift+Ins,F4"
+"Editar: Del,Ins,F4"
 //[MFolderShortcutBottomSub]
 "Editar: Del,Ins,F4"
 //[MShortcutNone]
@@ -1334,10 +1347,10 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-//[MEditF8DOS]
-"OEM"
 // End of functional keys (Editor)
 // it's a F8 another text
+//[MEditF8DOS]
+"OEM"
 
 //Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MSingleEditF1]
@@ -1546,10 +1559,10 @@
 ""
 //[MSingleEditCtrlAltShiftF12]
 ""
-//[MSingleEditF8DOS]
-"OEM"
 // End of functional keys (Single Editor)
 // it's a F8 another text
+//[MSingleEditF8DOS]
+"OEM"
 
 //[MEditSaveAs]
 "Guardar archivo &como"
@@ -1617,8 +1630,6 @@
 "Cambio a página de códigos unicode {0} no está soportado"
 //[MEditorCPNotSupported]
 "Página de códigos {0} no está soportado en su sistema"
-//[MEditorCPNotDetected]
-"No se pudo determinar página de códigos"
 
 //[MColumnName]
 "Nombre"
@@ -1703,12 +1714,13 @@
 "P"
 //[MListEb]
 "E"
+{3} replacement field can receive a sum of files & folders
 //[MListFileSize]
-" Bytes: {0}, archivos: {1}, carpetas: {2} "
+"Bytes: {0}, archivos: {1}, carpetas: {2}"
 //[MListFileSizeStatus]
-" {0} ({1}/{2}) {3} {4} "
+"{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-" {0} bytes libres "
+"{0} bytes libres"
 
 //[MDirInfoViewTitle]
 "Ver"
@@ -1765,9 +1777,9 @@
 //Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MViewF1]
 "Ayuda"
+// this is another text for F2
 //[MViewF2]
 "Divide"
-// this is another text for F2
 //[MViewF3]
 "Salir"
 //[MViewF4]
@@ -1979,9 +1991,9 @@
 //[MViewF4Dump]
 "Volcar"
 // this is another text for F8
+// end of functional keys (Viewer)
 //[MViewF8DOS]
 "OEM"
-// end of functional keys (Viewer)
 
 //Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MSingleViewF1]
@@ -2197,9 +2209,9 @@
 //[MSingleViewF4Text]
 "Texto"
 // this is another text for F4
+// end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "OEM"
-// end of functional keys (Single Viewer)
 //[MViewMode]
 "Modo de visualización"
 //[MInViewer]
@@ -2303,14 +2315,7 @@
 "&Cancelar"
 
 //[MFindFound]
-" Archivos: {0}, directorios: {1} "
-
-//[MFindFileFolder]
-" DIR  "
-//[MFindFileSymLink]
-"EnlSimb"
-//[MFindFileJunction]
-"Empalme"
+"Archivos: {0}, directorios: {1}"
 
 //[MFindFileAdvancedTitle]
 "Opciones avanzada de búsqueda de archivo"
@@ -2340,6 +2345,7 @@
 "Ctrl+H, Del, Ins, F4"
 //[MGetCodePageBottomShortTitle]
 "Ctrl+H, Del, F4"
+// need translation:
 //[MGetCodePageEditCodePageName]
 "Editar nombre de página de códigos"
 //[MGetCodePageResetCodePageName]
@@ -2369,13 +2375,13 @@
 //[MHighlightTransparentMarkChar]
 "tra&nsparente"
 //[MHighlightColors]
-" Colores de archivos (\"
+"Colores de archivos (\"negro en negro\" - color por defecto)"
 //[MHighlightFileName1]
-"&1. Normal                  "
+"&1. Normal"
 //[MHighlightFileName2]
-"&3. Seleccionado            "
+"&3. Seleccionado"
 //[MHighlightFileName3]
-"&5. Bajo cursor             "
+"&5. Bajo cursor"
 //[MHighlightFileName4]
 "&7. Seleccionado bajo cursor"
 //[MHighlightMarking1]
@@ -2386,10 +2392,8 @@
 "&6. Marcado"
 //[MHighlightMarking4]
 "&8. Marcado"
-//[MHighlightExample1]
-"║nombre.ext  │"
-//[MHighlightExample2]
-"║ nombre.ext │"
+//[MHighlightExample]
+"nombre.ext"
 //[MHighlightContinueProcessing]
 "Contin&uar procesando"
 
@@ -2414,7 +2418,7 @@
 //[MInfoUserAccessLevelUnknown]
 "Desconocido"
 //[MInfoDiskTitle]
-" Disco "
+"Disco"
 //[MInfoRemovable]
 "Removible"
 //[MInfoFixed]
@@ -2452,7 +2456,7 @@
 //[MInfoDiskNumber]
 "Número de serie"
 //[MInfoMemory]
-" Memoria "
+"Memoria"
 //[MInfoMemoryLoad]
 "Carga en memoria"
 //[MInfoMemoryInstalled]
@@ -2470,13 +2474,13 @@
 //[MInfoPageFileFree]
 "Archivo de paginación libre"
 //[MInfoDescription]
-" Descripción "
+"Descripción"
 //[MInfoDizAbsent]
 "Archivo descripción del directorio está ausente"
 //[MInfoPlugin]
-" Complemento "
+"Complemento"
 //[MInfoPowerStatus]
-" Estado de encendido"
+"Estado de encendido"
 //[MInfoPowerStatusAC]
 "Estado encendido AC"
 //[MInfoPowerStatusACOffline]
@@ -2756,10 +2760,6 @@
 "Mostrar seleccionados primero"
 //[MMenuSortDirectoriesFirst]
 "Mostrar directorios primero"
-//[MMenuSortUseNumeric]
-"Usar orden num&érico"
-//[MMenuSortUseCaseSensitive]
-"Usar orden sensible min./may."
 //[MMaskGroupBottom]
 "Editar: Ins, Del, F4, F7, Ctrl+R"
 //[MMaskGroupName]
@@ -2873,10 +2873,13 @@
 "Cambiar opciones de menú de unidades"
 //[MChangeDriveShowDiskType]
 "Mostrar &tipo de disco"
-//[MChangeDriveShowNetworkName]
-"Mostrar nombre/SUBST ruta/VHD de nombre de &red"
+//[MChangeDriveShowPath]
+"Mostrar nombre / SUBST ruta / VHD de nombre de &red"
 //[MChangeDriveShowLabel]
 "Mostrar etiqueta de disco"
+// need translation:
+//[MChangeDriveShowLabelUseShell]
+"Use shell name"
 //[MChangeDriveShowFileSystem]
 "Mostrar sistema de archivos"
 //[MChangeDriveShowSize]
@@ -2897,13 +2900,11 @@
 "Del,Shift+Del,F3,F4,F9"
 
 //[MSearchFileTitle]
-" Buscar "
+"Buscar"
 //[MCannotCreateListFile]
 "No se puede crear archivo de lista"
 //[MCannotCreateListTemp]
 "(no se puede crear archivo temporal para lista)"
-//[MCannotCreateListWrite]
-"(no se puede escribir datos en el archivo)"
 
 //[MDragFiles]
 "{0} archivos"
@@ -2963,22 +2964,20 @@
 "Punto de análisis desconocido"
 //[MQuickViewNoData]
 "(dato no disponible)"
-//[MQuickViewContains]
-"Contiene:"
 //[MQuickViewFolders]
-"Directorios      "
+"Directorios:"
 //[MQuickViewFiles]
-"Archivos         "
+"Archivos:"
 //[MQuickViewBytes]
-"Tamaño archivos  "
+"Tamaño archivos:"
 //[MQuickViewAllocated]
-"Tamaño alojado   "
+"Tamaño alojado:"
 //[MQuickViewCluster]
-"Tamaño cluster   "
+"Tamaño cluster:"
 //[MQuickViewSlack]
-"Desperdiciado    "
+"Desperdiciado:"
 //[MQuickViewMFTOverhead]
-"Gasto adicional MFT "
+"Gasto adicional MFT:"
 
 //[MSetAttrTitle]
 "Atributos"
@@ -3306,6 +3305,14 @@
 "&Caracteres"
 //[MSetColorBackground]
 "&Fondo"
+
+// 3 characters max
+//[MSetColorForeRGB]
+"&RGB"
+
+// 3 characters max
+//[MSetColorBackRGB]
+"R&GB"
 //[MSetColorForeTransparent]
 "&Transparente"
 //[MSetColorBackTransparent]
@@ -3366,7 +3373,7 @@
 //[MPluginsManagerPF]
 "Procesado de &prefijo"
 //[MPluginConfirmationTitle]
-" Selección de complemento "
+"Selección de complemento"
 //[MMenuPluginStdAssociation]
 "Asociación normal"
 
@@ -3710,7 +3717,7 @@
 //[MCfgDizListNames]
 "Nombres de &listas de descripción delimitado con comas:"
 //[MCfgDizSetHidden]
-"Poner atributo "
+"Poner atributo"
 //[MCfgDizROUpdate]
 "&Actualizar archivo descripción de sólo lectura"
 //[MCfgDizStartPos]
@@ -3873,51 +3880,16 @@
 
 //[MRightCtrl]
 "CtrlDrcho"
-
-//[MViewerGoTo]
-"Ir a:"
-//[MGoToPercent]
-"&Porcentaje"
-//[MGoToHex]
-"Dirección &hexa"
-//[MGoToDecimal]
-"Dirección &decimal"
 //[MExcTrappedException]
 "Error de excepción"
-//[MExcRAccess]
-"Violación de acceso (leído desde {0})"
-//[MExcWAccess]
-"Violación de acceso (escrito a {0})"
-//[MExcEAccess]
-"Violación de acceso (ejecutado en {0})"
-//[MExcOutOfBounds]
-"Array out of bounds"
-//[MExcDivideByZero]
-"División por cero"
-//[MExcStackOverflow]
-"Stack overflow"
-//[MExcBreakPoint]
-"Excepción de punto de quiebre"
-//[MExcFloatDivideByZero]
-"Punto flotante dividido por cero"
-//[MExcFloatOverflow]
-"Operación de punto flotante desbordada"
-//[MExcFloatStackOverflow]
-"Pila de punto flotante vacía o llena"
-//[MExcFloatUnderflow]
-"Operación de punto flotante underflow"
-//[MExcBadInstruction]
-"Instrucción ilegal"
-//[MExcDatatypeMisalignment]
-"Falta de alineamiento"
-//[MExcCplusPlus]
-"Excepción de C++"
-//[MExcUnknown]
-"Excepción desconocida"
 //[MExcException]
 "Excepción:"
+//[MExcDetails]
+"Detalles:"
 //[MExcAddress]
 "Dirección:"
+//[MExcSource]
+"Origen:"
 //[MExcFunction]
 "Función:"
 //[MExcModule]
@@ -3956,7 +3928,7 @@
 //[MHelpTitle]
 "Ayuda"
 //[MHelpActivatorURL]
-"Esta referencia inicia la aplicación externa:"
+"Esta referencia inicia una aplicación externa"
 //[MHelpActivatorFormat]
 "con parámetro:"
 //[MHelpActivatorQ]
@@ -4616,7 +4588,7 @@
 //[MKBTreeF6]
 "RenMov"
 //[MKBTreeF7]
-"CrDIR "
+"CrDIR"
 //[MKBTreeF8]
 "Borrar"
 //[MKBTreeF9]
@@ -4815,10 +4787,10 @@
 
 //[MKeyESCWasPressed]
 "Operación ha sido interrumpida"
-//[MDoYouWantToStopWork]
+//[MDoYouWantToCancel]
 "Desea realmente cancelar la operación?"
-//[MDoYouWantToStopWork2]
-"Continuar trabajo? "
+//[MDoYouWantToContinue]
+"Continuar trabajo?"
 
 //[MCheckingFileInPlugin]
 "El archivo está siendo chequeado por el complemento"
@@ -4975,10 +4947,20 @@
 "editado"
 //[MObjectLockedReasonOpened]
 "abierto"
+//[MObjectLockedAndMore]
+"y {0} procesos mas."
 //[MObjectLockedSwitchTo]
 "Cambiar a"
 //[MObjectLockedClose]
 "Cerrar archivo"
+//[MObjectLockedReasonSessionMismatch]
+"Uno o más procesos están corriendo en otra sesión de Servicios de Terminal."
+//[MObjectLockedReasonCriticalProcess]
+"Uno o más procesos son procesos críticos."
+//[MObjectLockedReasonCriticalService]
+"Uno o más servicios son servicios críticos."
+//[MObjectLockedReasonDetectedSelf]
+"El archivo está abierto por el proceso actual."
 //[MProblemDb]
 "Problema de configuración DB"
 //[MShowConfigFolders]
@@ -5202,9 +5184,9 @@
 ""
 //[MKeyRAlt]
 ""
+// keys end
 //[MKeyAlt]
 ""
-// keys end
 
 //[MNewFileName]
 "?Nuevo Archivo?"

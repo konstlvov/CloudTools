@@ -45,7 +45,8 @@ local function TestArea (area, msg)
 end
 
 function MT.test_areas()
-  Keys "AltIns"              TestArea "Other"      Keys "Esc"
+  Keys "AltIns"              TestArea "Grabber"    Keys "Esc"
+  Keys "F12 0"               TestArea "Desktop"    Keys "F12 1"
   Keys "ShiftF4 CtrlY Enter" TestArea "Editor"     Keys "Esc"
   Keys "F7"                  TestArea "Dialog"     Keys "Esc"
   Keys "Alt?"                TestArea "Search"     Keys "Esc"
@@ -81,6 +82,8 @@ function MT.test_areas()
   assert(Area.UserMenu             ==false)
   assert(Area.ShellAutoCompletion  ==false)
   assert(Area.DialogAutoCompletion ==false)
+  assert(Area.Grabber              ==false)
+  assert(Area.Desktop              ==false)
 end
 
 local function test_mf_akey()
@@ -293,7 +296,7 @@ end
 
 local function test_mf_fsplit()
   local path="C:\\Program Files\\Far\\Far.exe"
-  assert(mf.fsplit(path,0x01)=="C:\\")
+  assert(mf.fsplit(path,0x01)=="C:")
   assert(mf.fsplit(path,0x02)=="\\Program Files\\Far\\")
   assert(mf.fsplit(path,0x04)=="Far")
   assert(mf.fsplit(path,0x08)==".exe")
@@ -883,9 +886,7 @@ local function test_Far_GetConfig()
     "Panel.Layout.SortMode", "boolean",
     "Panel.Layout.StatusLine", "boolean",
     "Panel.Layout.TotalInfo", "boolean",
-    "Panel.Left.CaseSensitiveSort", "boolean",
     "Panel.Left.DirectoriesFirst", "boolean",
-    "Panel.Left.NumericSort", "boolean",
     "Panel.Left.SelectedFirst", "boolean",
     "Panel.Left.ShortNames", "boolean",
     "Panel.Left.SortGroups", "boolean",
@@ -894,9 +895,7 @@ local function test_Far_GetConfig()
     "Panel.Left.Type", "integer",
     "Panel.Left.ViewMode", "integer",
     "Panel.Left.Visible", "boolean",
-    "Panel.Right.CaseSensitiveSort", "boolean",
     "Panel.Right.DirectoriesFirst", "boolean",
-    "Panel.Right.NumericSort", "boolean",
     "Panel.Right.SelectedFirst", "boolean",
     "Panel.Right.ShortNames", "boolean",
     "Panel.Right.SortGroups", "boolean",
@@ -1373,8 +1372,10 @@ end
 local function test_RegexControl()
   local L = win.Utf8ToUtf16
   local pat = "([bc]+)"
+  local pat2 = "([bc]+)|(zz)"
   local rep = "%1%1"
   local R = regex.new(pat)
+  local R2 = regex.new(pat2)
 
   local fr,to,cap
   local str, nfound, nrep
@@ -1390,6 +1391,16 @@ local function test_RegexControl()
   assert(fr==2 and to==3 and cap=="bc")
   fr,to,cap = R:findW(L"abc")
   assert(fr==2 and to==3 and cap==L"bc")
+
+  fr,to,cap = regex.exec("abc", pat2)
+  assert(fr==2 and to==3 and #cap==4 and cap[1]==2 and cap[2]==3 and cap[3]==false and cap[4]==false)
+  fr,to,cap = regex.execW(L"abc", pat2)
+  assert(fr==2 and to==3 and #cap==4 and cap[1]==2 and cap[2]==3 and cap[3]==false and cap[4]==false)
+
+  fr,to,cap = R2:exec("abc")
+  assert(fr==2 and to==3 and #cap==4 and cap[1]==2 and cap[2]==3 and cap[3]==false and cap[4]==false)
+  fr,to,cap = R2:execW(L"abc")
+  assert(fr==2 and to==3 and #cap==4 and cap[1]==2 and cap[2]==3 and cap[3]==false and cap[4]==false)
 
   assert(regex.match("abc", pat)=="bc")
   assert(regex.matchW(L"abc", pat)==L"bc")

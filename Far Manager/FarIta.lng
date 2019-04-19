@@ -1,6 +1,6 @@
 ﻿.Language=Italian,Italian (Italiano)
 
-//Version: 3.0 build 5000
+//Version: 3.0 build 5354
 
 //[MYes]
 "&Si"
@@ -64,15 +64,15 @@
 
 //functional keys - 6 characters max
 //[MF1]
-"Aiuto "
+"Aiuto"
 //[MF2]
 "MenuUt"
 //[MF3]
-"Vista "
+"Vista"
 //[MF4]
-"Edita "
+"Edita"
 //[MF5]
-"Copia "
+"Copia"
 //[MF6]
 "RinSpo"
 //[MF7]
@@ -86,7 +86,7 @@
 //[MF11]
 "PlugIN"
 //[MF12]
-"Video "
+"Video"
 
 //[MShiftF1]
 "Compri"
@@ -95,9 +95,9 @@
 //[MShiftF3]
 "ArcCmd"
 //[MShiftF4]
-"Edita "
+"Edita"
 //[MShiftF5]
-"Copia "
+"Copia"
 //[MShiftF6]
 "Rinomi"
 //[MShiftF7]
@@ -105,7 +105,7 @@
 //[MShiftF8]
 "Elimin"
 //[MShiftF9]
-"Salva "
+"Salva"
 //[MShiftF10]
 "Ultimo"
 //[MShiftF11]
@@ -118,19 +118,19 @@
 //[MAltF2]
 "Destra"
 //[MAltF3]
-"Vista "
+"Vista"
 //[MAltF4]
-"Edita "
+"Edita"
 //[MAltF5]
 "Stampa"
 //[MAltF6]
-"Linka "
+"Linka"
 //[MAltF7]
-"Cerca "
+"Cerca"
 //[MAltF8]
 "Storia"
 //[MAltF9]
-"Video "
+"Video"
 //[MAltF10]
 "Albero"
 //[MAltF11]
@@ -195,9 +195,9 @@
 //[MCtrlShiftF2]
 ""
 //[MCtrlShiftF3]
-"Vista "
+"Vista"
 //[MCtrlShiftF4]
-"Edita "
+"Edita"
 //[MCtrlShiftF5]
 ""
 //[MCtrlShiftF6]
@@ -264,9 +264,9 @@
 ""
 //[MCtrlAltShiftF11]
 ""
+//End of functional keys
 //[MCtrlAltShiftF12]
 ""
-//End of functional keys
 
 //[MHistoryTitle]
 "Cronologia"
@@ -308,8 +308,6 @@
 "Salva Elenco Files Già &Visti/Editati"
 //[MConfigRegisteredTypes]
 "Usa &Associazioni Di Sistema Per I Files"
-//[MConfigCloseCDGate]
-"Carica Automaticamente &CD/DVD"
 //[MConfigUpdateEnvironment]
 "Aggiorna Varia&bili Ambiente Automaticamente"
 //[MConfigElevation]
@@ -320,11 +318,23 @@
 "Per La Lettura"
 //[MConfigElevationUsePrivileges]
 "Usa Permessi Aggiuntivi"
+//[MConfigSortingCollation]
+"Ordinamento Collation:"
+//[MConfigSortingOrdinal]
+"Ordinale"
+//[MConfigSortingInvariant]
+"Invariante"
+//[MConfigSortingLinguistic]
+"Linguistico"
+//[MConfigSortingDigitsAsNumbers]
+"Tratta Cifre Come Numeri"
+//[MConfigSortingCase]
+"&Minuscole/MAIUSCOLE"
 //[MConfigAutoSave]
 "Salvataggio A&utomatico Impostazioni"
 
 //[MConfigTreeTitle]
-"Impostazioni  Albero"
+"Impostazioni ► Albero"
 //[MConfigTreeAutoChange]
 "&Cambia Automaticamente"
 //[MConfigTreeLabelMinFolder]
@@ -339,19 +349,17 @@
 "Percordi Di Rete"
 //[MConfigTreeLabelRemovableDisk]
 "Dischi Rimovibili"
-// need translation:
 //[MConfigTreeLabelCDDisk]
-"optical drives"
+"Dischi Ottici"
 //[MConfigTreeLabelExceptPath]
 "Non Creare File Per I Seguenti Oggetti:"
-// need translation:
 //[MConfigTreeLabelSaveLocalPath]
-"Path for local, removale and optical drives:"
+"Percorso Locale Per Supporti Ottici/Rimovibili:"
 //[MConfigTreeLabelSaveNetPath]
 "Modo Per Unità Di Rete E Percorsi:"
 
 //[MConfigPanelTitle]
-"Impostazione  Dei Pannelli"
+"Impostazione ► Dei Pannelli"
 //[MConfigHidden]
 "Mostra Files &Nascosti"
 //[MConfigHighlight]
@@ -388,13 +396,9 @@
 "Mostra Lettera Per Ordi&namento"
 //[MConfigShowDotsInRoot]
 "Mostra \"..\" Nella Cartella Principale"
-//[MConfigHighlightColumnSeparator]
-"Evidenzia Separatori Di Colonna"
-//[MConfigDoubleGlobalColumnSeparator]
-"Raddoppia Globalmente Il Separatore Colonna"
 
 //[MConfigInterfaceTitle]
-"Impostazioni  Interfaccia"
+"Impostazioni ► Interfaccia"
 //[MConfigClock]
 "&Orologio Nei Pannelli"
 //[MConfigViewerEditorClock]
@@ -417,6 +421,8 @@
 "Mostra Indicatore Di Cancella&zione"
 //[MConfigPgUpChangeDisk]
 "Usa [CTRL-Pag&Su] Per Cambiare Unità"
+//[MConfigUseVirtualTerminalForRendering]
+"Usa Terminale Virtuale Per Il Rendering"
 //[MConfigClearType]
 "Modalità ClearT&ype (può rallentare)"
 //[MConfigSetConsoleIcon]
@@ -427,7 +433,7 @@
 "Opzioni Barra Della &Finestra Far"
 
 //[MConfigDlgSetsTitle]
-"Impostazioni  Finestre Di Dialogo"
+"Impostazioni ► Finestre Di Dialogo"
 //[MConfigDialogsEditHistory]
 "Cronologia Dei &Dati Inseriti"
 //[MConfigDialogsEditBlock]
@@ -442,7 +448,7 @@
 "Chiudi &Finestra Se Clicchi Fuori Col Mouse"
 
 //[MConfigVMenuTitle]
-"Impostazioni  Menu"
+"Impostazioni ► Menu"
 //[MConfigVMenuLBtnClick]
 "Tasto Sinistro Clicca Fuori Menu"
 //[MConfigVMenuRBtnClick]
@@ -457,7 +463,7 @@
 "Fai Niente"
 
 //[MConfigCmdlineTitle]
-"Impostazioni  Linea Comando"
+"Impostazioni ► Linea Comando"
 //[MConfigCmdlineEditBlock]
 "&Blocchi Persistenti"
 //[MConfigCmdlineDelRemovesBlocks]
@@ -472,7 +478,7 @@
 "A&mministratore"
 
 //[MConfigAutoCompleteTitle]
-"Impostazioni  AutoCompletamento"
+"Impostazioni ► AutoCompletamento"
 
 //[MConfigAutoCompleteShowList]
 "&Mostra Lista"
@@ -484,7 +490,7 @@
 "&Accoda Primo Oggetto Corrispondente"
 
 //[MConfigInfoPanelTitle]
-"Impostazioni  Panello Info"
+"Impostazioni ► Panello Info"
 //[MConfigInfoPanelCNTitle]
 "Formato Nome Co&mputer"
 //[MConfigInfoPanelCNPhysicalNetBIOS]
@@ -505,12 +511,10 @@
 "DNS Qualificato"
 //[MConfigInfoPanelUNTitle]
 "&Formato Nome Utente"
-//[MConfigInfoPanelUNUnknown]
-"Default"
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Nome Dominio Completo"
 //[MConfigInfoPanelUNSamCompatible]
-"Sam Compatibile"
+"SAM Compatibile"
 //[MConfigInfoPanelUNDisplay]
 "Visualizza Nome"
 //[MConfigInfoPanelUNUniqueId]
@@ -542,7 +546,7 @@
 "&Stato Energetico"
 
 //[MViewConfigTitle]
-"Impostazioni  Visualizzatore"
+"Impostazioni ► Visualizzatore"
 //[MViewConfigExternalF3]
 "Usa Visualizzatore Esterno [F3] Invece Di [Alt-F3]"
 //[MViewConfigExternalCommand]
@@ -557,6 +561,10 @@
 "Salva &Tabella Caratteri"
 //[MViewConfigSaveWrapMode]
 "Salva Stato Di &A Capo Automatico"
+//[MViewConfigSaveViewMode]
+"Salva Modo Vista"
+//[MViewConfigDetectDumpMode]
+"Rileva Modo Vista Dump"
 //[MViewAutoDetectCodePage]
 "Autorile&va Tabella Caratteri"
 //[MViewConfigTabSize]
@@ -577,7 +585,7 @@
 "Auto Riposiziona Dialogo Di &Ricerca"
 
 //[MEditConfigTitle]
-"Impostazioni  Editor"
+"Impostazioni ► Editor"
 //[MEditConfigEditorF4]
 "Usa Editor Esterno Per F4 Invece Di Alt+F4"
 //[MEditConfigEditorCommand]
@@ -686,8 +694,6 @@
 "Crea &Link"
 //[MCopyDlgTotal]
 "Totale"
-//[MCopyScanning]
-"Scansione Direcories..."
 //[MCopyPrepareSecury]
 "Impostazione Permessi..."
 //[MCopyUseFilter]
@@ -696,21 +702,21 @@
 "&Filtro"
 
 //[MCopyFile]
-"Copia"
+"Copia {0} {1}:"
 //[MMoveFile]
-"Rinomina O Muovi"
+"Rinomina O Muovi {0} {1}:"
 //[MLinkFile]
-"Crea Link"
+"Crea Link {0} {1}:"
 //[MCopyFiles]
-"Copia {0} Oggett{1}"
+"Copia {0} Oggett{1} {2}:"
 //[MMoveFiles]
-"Rinomina O Muovi {0} Oggett{1}"
+"Rinomina O Muovi {0} Oggett{1} {2}:"
 //[MLinkFiles]
-"Creazione Link {0} Oggett{1}"
+"Creazione Link {0} Oggett{1} {2}:"
 //[MCMLTargetTO]
-" &In:"
+"&In"
 //[MCMLTargetIN]
-" &In:"
+"&In"
 //[MCMLItems0]
 ""
 //[MCMLItemsA]
@@ -753,9 +759,9 @@
 //[MCopyCancel]
 "&Annulla"
 //[MCopyDecrypt]
-"upd:Decrypt"
+"Decripta"
 //[MCopyDecryptAll]
-"upd:Decrypt all"
+"Decripta Tutti"
 
 //[MCopyCannotCreateLink]
 "Non Posso Creare Il Collegamento"
@@ -856,7 +862,6 @@
 
 //[MCopyFilesTotalInfo]
 "Files:"
-// need translation:
 //[MCopyBytesTotalInfo]
 "Bytes:"
 //[MCopyMoving]
@@ -922,18 +927,14 @@
 "Le Cartelle Seguenti Verranno Distrutti:"
 //[MRecycleFolderConfirm]
 "Le Cartelle Seguenti Verranno Spostate Nel Cestino:"
-// need translation:
 //[MRecycleFolderConfirmDeleteLink1]
-"Folder contains symbolic links."
-// need translation:
+"La Cartella Contiene Link Simbolici"
 //[MRecycleFolderConfirmDeleteLink2]
-"To prevent the loss of their content when clearing Recyle Bin"
-// need translation:
+"Per Prevenire Perdite Di Dati Durante Lo Svuotamento Del Cestino"
 //[MRecycleFolderConfirmDeleteLink3]
-"those links will be broken now."
-// need translation:
+"Questi Collegamenti Saranno Disattivati"
 //[MRecycleFolderConfirmDeleteLink4]
-"It would be impossible to restore them later."
+"Sarà Impossibile Ripristinarli In Seguito"
 //[MDeleteWipe]
 "Distruzione"
 //[MDeleteRecycle]
@@ -1052,12 +1053,10 @@
 "Ricerca"
 //[MEditSearchFor]
 "Ricerca &Di"
-// need translation:
 //[MEditSearchPickWord]
-"Word"
-// need translation:
+"Parola"
 //[MEditSearchPickSelection]
-"Selection"
+"Selezione"
 //[MEditSearchCase]
 "&Minuscole/MAIUSCOLE"
 //[MEditSearchWholeWords]
@@ -1110,13 +1109,15 @@
 //[MDefaultCP]
 "Default"
 
-//[MEditGoToLine]
-"Vai Alla Linea"
+//[MGoTo]
+"Vai A"
+//[MGoToHex]
+"&Esadecimale"
 
 //[MFolderShortcutsTitle]
 "Collegamento Cartelle"
 //[MFolderShortcutBottom]
-"Edita: [DEL] [INS] [SHIFT-INS] [F4]"
+"Edita: [DEL] [INS] [F4]"
 //[MFolderShortcutBottomSub]
 "Edita: [DEL] [INS] [F4]"
 //[MShortcutNone]
@@ -1138,19 +1139,19 @@
 
 //functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MEditF1]
-"Aiuto "
+"Aiuto"
 //[MEditF2]
-"Salva "
+"Salva"
 //[MEditF3]
 ""
 //[MEditF4]
-" Esci "
+"Esci"
 //[MEditF5]
 ""
 //[MEditF6]
-"Vista "
+"Vista"
 //[MEditF7]
-"Cerca "
+"Cerca"
 //[MEditF8]
 "ANSI"
 //[MEditF9]
@@ -1160,7 +1161,7 @@
 //[MEditF11]
 "Plugin"
 //[MEditF12]
-"Video "
+"Video"
 
 //Editor: Shift
 //[MEditShiftF1]
@@ -1170,7 +1171,7 @@
 //[MEditShiftF3]
 ""
 //[MEditShiftF4]
-"Edita "
+"Edita"
 //[MEditShiftF5]
 ""
 //[MEditShiftF6]
@@ -1204,9 +1205,9 @@
 //[MEditAltF7]
 "Preced"
 //[MEditAltF8]
-"Vai A "
+"Vai A"
 //[MEditAltF9]
-"Video "
+"Video"
 //[MEditAltF10]
 ""
 //[MEditAltF11]
@@ -1343,10 +1344,10 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-//[MEditF8DOS]
-"OEM"
 // End of functional keys (Editor)
 // it's a F8 another text
+//[MEditF8DOS]
+"OEM"
 
 //Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MSingleEditF1]
@@ -1555,10 +1556,10 @@
 ""
 //[MSingleEditCtrlAltShiftF12]
 ""
-//[MSingleEditF8DOS]
-"OEM"
 // End of functional keys (Single Editor)
 // it's a F8 another text
+//[MSingleEditF8DOS]
+"OEM"
 
 //[MEditSaveAs]
 "Sal&va Il File Come"
@@ -1626,8 +1627,6 @@
 "Il Cambio In Unicode {0} Non è Supportato"
 //[MEditorCPNotSupported]
 "La Codifica {0} Non è Supportata Nel Tuo Sistema"
-//[MEditorCPNotDetected]
-"Non Riesco A Determinare Il Tipo Di Codifica"
 
 //[MColumnName]
 "Nome"
@@ -1665,7 +1664,7 @@
 "???"
 
 //[MListUp]
-" Su "
+"↑Su↑"
 //[MListFolder]
 "Cartel"
 //[MListSymlink]
@@ -1692,9 +1691,8 @@
 "DEDUP"
 //[MListNFS]
 "NFS"
-// need translation:
 //[MListPlaceholder]
-"Placeholder"
+"Segnaposto"
 //[MListUnknownReparsePoint]
 "?Symlink?"
 //[MListBrackets]
@@ -1713,13 +1711,13 @@
 "P"
 //[MListEb]
 "E"
-// need translation:
+{3} replacement field can receive a sum of files & folders
 //[MListFileSize]
-" Bytes: {0}, files: {1}, folders: {2} "
+"Bytes: {0}, Files: {1}, Cartelle: {2}"
 //[MListFileSizeStatus]
-" {0} ({1}/{2}) {3} {4} "
+"{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-" {0} Bytes Liberi "
+"{0} Bytes Liberi"
 
 //[MDirInfoViewTitle]
 "Vista"
@@ -1776,9 +1774,9 @@
 //Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MViewF1]
 "Aiuto!"
+// this is another text for F2
 //[MViewF2]
 "DeBord"
-// this is another text for F2
 //[MViewF3]
 "Esci"
 //[MViewF4]
@@ -1808,7 +1806,7 @@
 //[MViewShiftF3]
 ""
 //[MViewShiftF4]
-" Modo "
+"Modo"
 //[MViewShiftF5]
 ""
 //[MViewShiftF6]
@@ -1842,9 +1840,9 @@
 //[MViewAltF7]
 "Preced"
 //[MViewAltF8]
-"Vai A "
+"Vai A"
 //[MViewAltF9]
-"Video "
+"Video"
 //[MViewAltF10]
 ""
 //[MViewAltF11]
@@ -1990,9 +1988,9 @@
 //[MViewF4Dump]
 "Dump"
 // this is another text for F8
+// end of functional keys (Viewer)
 //[MViewF8DOS]
 "OEM"
-// end of functional keys (Viewer)
 
 //Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MSingleViewF1]
@@ -2208,9 +2206,9 @@
 //[MSingleViewF4Text]
 "Testo"
 // this is another text for F4
+// end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "OEM"
-// end of functional keys (Single Viewer)
 //[MViewMode]
 "Visualizza"
 //[MInViewer]
@@ -2314,14 +2312,7 @@
 "&Annulla"
 
 //[MFindFound]
-" Files: {0}, Cartelle: {1} "
-
-//[MFindFileFolder]
-"Cartella"
-//[MFindFileSymLink]
-"Link-Simb"
-//[MFindFileJunction]
-"Giunzione"
+"Files: {0}, Cartelle: {1}"
 
 //[MFindFileAdvancedTitle]
 "Opzioni Avanzate Ricerca File"
@@ -2380,13 +2371,13 @@
 //[MHighlightTransparentMarkChar]
 "Traspare&nte"
 //[MHighlightColors]
-" Colore File (\"nero su nero\" - colore base) "
+"Colore File (\"nero su nero\" - colore base)"
 //[MHighlightFileName1]
-"&1. Nome File Normale                "
+"&1. Nome File Normale"
 //[MHighlightFileName2]
-"&3. Nome File Selezionato            "
+"&3. Nome File Selezionato"
 //[MHighlightFileName3]
-"&5. Nome File File Sotto Il Cursore  "
+"&5. Nome File File Sotto Il Cursore"
 //[MHighlightFileName4]
 "&7. File Evidenziato Sotto Il Cursore"
 //[MHighlightMarking1]
@@ -2397,10 +2388,8 @@
 "&6. Marca"
 //[MHighlightMarking4]
 "&8. Marca"
-//[MHighlightExample1]
-"║nome.ext │"
-//[MHighlightExample2]
-"║ nome.ext│"
+//[MHighlightExample]
+"nome.ext"
 //[MHighlightContinueProcessing]
 "&Continua L'Elaborazione"
 
@@ -2463,7 +2452,7 @@
 //[MInfoDiskNumber]
 "Numero Seriale"
 //[MInfoMemory]
-"[ Memoria ]"
+"Memoria"
 //[MInfoMemoryLoad]
 "Memoria Occupata"
 //[MInfoMemoryInstalled]
@@ -2481,13 +2470,13 @@
 //[MInfoPageFileFree]
 "File Swap Libero"
 //[MInfoDescription]
-"[ Descrizione ]"
+"Descrizione"
 //[MInfoDizAbsent]
 "Descrizione Cartelle Assente!"
 //[MInfoPlugin]
-" Plugin "
+"Plugin"
 //[MInfoPowerStatus]
-"[ Stato Energetico ]"
+"Stato Energetico ]"
 //[MInfoPowerStatusAC]
 "Stato Alimentazione"
 //[MInfoPowerStatusACOffline]
@@ -2666,49 +2655,49 @@
 "Lista Periferiche &USB"
 
 //[MMenuSystemSettings]
-" &Sistema"
+"► &Sistema"
 //[MMenuPanelSettings]
-" &Pannelli"
+"► &Pannelli"
 //[MMenuTreeSettings]
-" &Albero Cartelle"
+"► &Albero Cartelle"
 //[MMenuInterface]
-" &Interfaccia"
+"► &Interfaccia"
 //[MMenuLanguages]
-" &Lingua"
+"► &Lingua"
 //[MMenuPluginsConfig]
-" Pl&ug-In"
+"► Pl&ug-In"
 //[MMenuPluginsManagerSettings]
-" &Gestore Plug-In"
+"► &Gestore Plug-In"
 //[MMenuDialogSettings]
-" &Finestre"
+"► &Finestre"
 //[MMenuVMenuSettings]
-" Imposta &Menu"
+"► Imposta &Menu"
 //[MMenuCmdlineSettings]
-" P&rompt Dei Commandi"
+"► P&rompt Dei Commandi"
 //[MMenuAutoCompleteSettings]
-" Au&tocompletamento"
+"► Au&tocompletamento"
 //[MMenuInfoPanelSettings]
-" Pa&nnello Informazioni"
+"► Pa&nnello Informazioni"
 //[MMenuMaskGroups]
-" Masc&here Filtri"
+"► Masc&here Filtri"
 //[MMenuConfirmation]
-" C&onferme"
+"► C&onferme"
 //[MMenuFilePanelModes]
-" Modi Di &Visualizzazione"
+"► Modi Di &Visualizzazione"
 //[MMenuFileDescriptions]
-" &Descrizioni Files"
+"► &Descrizioni Files"
 //[MMenuFolderInfoFiles]
-" D&escrizioni Cartelle"
+"► D&escrizioni Cartelle"
 //[MMenuViewer]
-" Visuali&zzatore Interno"
+"► Visuali&zzatore Interno"
 //[MMenuEditor]
-" Editor In&terno"
+"► Editor In&terno"
 //[MMenuCodePages]
-" Codifica Caratteri"
+"► Codifica Caratteri"
 //[MMenuColors]
-" Colori Far"
+"► Colori Far"
 //[MMenuFilesHighlighting]
-" Colori Files"
+"► Colori Files"
 //[MMenuSaveSetup]
 "• Salva Le Impostazioni"
 //[MMenuTogglePanelRight]
@@ -2717,18 +2706,18 @@
 "Cambia Unità"
 
 //[MMenuLeftTitle]
-" &Sinistra"
+"◄ &Sinistra"
 //[MMenuFilesTitle]
-" &Archivi"
+"▼ &Archivi"
 //[MMenuCommandsTitle]
-" &Comandi"
+"▼ &Comandi"
 //[MMenuOptionsTitle]
-" &Opzioni"
+"▼ &Opzioni"
 //[MMenuRightTitle]
-"&Destra "
+"&Destra ►"
 
 //[MMenuSortTitle]
-" Ordina Per..."
+"► Ordina Per..."
 //[MMenuSortByName]
 "Nome"
 //[MMenuSortByExt]
@@ -2767,10 +2756,6 @@
 "Prima I Selezionati [Shift-F1&2]"
 //[MMenuSortDirectoriesFirst]
 "&Mostra Le Cartelle Per Prime"
-//[MMenuSortUseNumeric]
-"&Usa Ordinamento Numerico"
-//[MMenuSortUseCaseSensitive]
-"Usa Ordinamento MAIUSC/minuscole"
 //[MMaskGroupBottom]
 "Edita: [INS] [DEL] [F4] [F7] [Ctrl-R]"
 //[MMaskGroupName]
@@ -2787,13 +2772,13 @@
 "Totale: {0}"
 
 //[MChangeDriveTitle]
-" Unità"
+"► Unità"
 //[MChangeDriveRemovable]
-"Removibile "
+"Removibile"
 //[MChangeDriveFixed]
 "Disco Fisso"
 //[MChangeDriveNetwork]
-"Coll. Rete "
+"Coll. Rete"
 //[MChangeDriveDisconnectedNetwork]
 "Disconnesso"
 //[MChangeDriveCDROM]
@@ -2830,9 +2815,8 @@
 "Non Posso Disconnettermi Da {0}:"
 //[MChangeDriveCannotDelSubst]
 "Non Posso Eliminare Un Drive SUBST {0}"
-// need translation:
 //[MChangeDriveCannotDetach]
-"Cannot detach virtual disk {0}"
+"Non Posso Scollegare Disco Virtuale {0}"
 //[MChangeDriveOpenFiles]
 "Se Non Chiudete I Files Aperti, I Dati Potrebbero Esser Persi!"
 
@@ -2883,17 +2867,19 @@
 "Opzioni Per Il Cambio Unità"
 //[MChangeDriveShowDiskType]
 "Mostra Tipo &Disco"
-//[MChangeDriveShowNetworkName]
-"Mostra Nome &Rete/SUBST/VHD"
+//[MChangeDriveShowPath]
+"Mostra Nome &Rete / SUBST / VHD"
 //[MChangeDriveShowLabel]
 "Mostra &Etichetta"
+// need translation:
+//[MChangeDriveShowLabelUseShell]
+"Use shell name"
 //[MChangeDriveShowFileSystem]
 "Mostra &File System"
 //[MChangeDriveShowSize]
 "Mostra Dimensio&ne"
-// need translation:
 //[MChangeDriveShowSizeFloat]
-"Show size as a decimal fraction"
+"Mostra Dimensione Come Frazione Decimale"
 //[MChangeDriveShowRemovableDrive]
 "Mostra Parametri Disc&hi USB"
 //[MChangeDriveShowPlugins]
@@ -2908,13 +2894,11 @@
 "[Canc] [Shift-Canc] [F3] [F4] [F9]"
 
 //[MSearchFileTitle]
-" Ricerca "
+"Ricerca"
 //[MCannotCreateListFile]
 "Non Posso Creare La Lista Dei Files"
 //[MCannotCreateListTemp]
 "(Non Posso Creare Il File Temporaneo Per La Lista)"
-//[MCannotCreateListWrite]
-"(Non Posso Scrivere I Dati Nel File)"
 
 //[MDragFiles]
 "{0} Files"
@@ -2968,29 +2952,26 @@
 "DEDUP"
 //[MQuickViewNFS]
 "NFS"
-// need translation:
 //[MQuickViewPlaceholder]
-"Placeholder"
+"Segnaposto"
 //[MQuickViewUnknownReparsePoint]
 "Punto Reparse Ignoto"
 //[MQuickViewNoData]
-"(dati sconosciuti) "
-//[MQuickViewContains]
-"Contenente:"
+"(dati sconosciuti)"
 //[MQuickViewFolders]
-"Cartelle           "
+"Cartelle:"
 //[MQuickViewFiles]
-"Files              "
+"Files:"
 //[MQuickViewBytes]
-"Dimensione Files   "
+"Dimensione Files:"
 //[MQuickViewAllocated]
-"Dim. Allocata      "
+"Dim. Allocata:"
 //[MQuickViewCluster]
-"Dimensione Culster "
+"Dimensione Culster:"
 //[MQuickViewSlack]
-"Dimensione Reale   "
+"Dimensione Reale:"
 //[MQuickViewMFTOverhead]
-"Perdita Spazio MFT "
+"Perdita Spazio MFT:"
 
 //[MSetAttrTitle]
 "Attributi"
@@ -3009,7 +2990,7 @@
 //[MSetAttrDfsTargets]
 "Destinazioni DFS"
 //[MSetAttrUnknownJunction]
-"(dati sconosciuti) "
+"(dati sconosciuti)"
 //[MSetAttrRO]
 "&Sola-Lettura"
 //[MSetAttrArchive]
@@ -3034,12 +3015,10 @@
 "P&unto Di Reparse"
 //[MSetAttrVirtual]
 "&Virtuale"
-// need translation:
 //[MSetAttrIntegrityStream]
-"Integrity stream"
-// need translation:
+"Integrità Flusso"
 //[MSetAttrNoScrubData]
-"No scrub data"
+"Nessun Dato Scrub"
 //[MSetAttrSubfolders]
 "Elabora Sott&o Cartelle"
 //[MSetAttrOwner]
@@ -3320,6 +3299,14 @@
 "&PrimoPiano"
 //[MSetColorBackground]
 "&Sfondo"
+
+// 3 characters max
+//[MSetColorForeRGB]
+"&RGB"
+
+// 3 characters max
+//[MSetColorBackRGB]
+"R&GB"
 //[MSetColorForeTransparent]
 "&Trasparente"
 //[MSetColorBackTransparent]
@@ -3639,9 +3626,8 @@
 "&Descrizione:"
 //[MEditMenuConfirmation]
 "Salva I Cambiamenti?"
-// need translation:
 //[MEditMenuError]
-"Cannot update menu"
+"Non Posso Aggiornare Il Menu"
 
 //[MViewerTitle]
 "Visualizzatore"
@@ -3887,51 +3873,16 @@
 
 //[MRightCtrl]
 "CtrlDestra"
-
-//[MViewerGoTo]
-"Vai A "
-//[MGoToPercent]
-"&Percentuale"
-//[MGoToHex]
-"Posizione &Esadecimale"
-//[MGoToDecimal]
-"Posizione &Decimale"
 //[MExcTrappedException]
 "Eccezione Interna"
-//[MExcRAccess]
-"Violazione Accesso (Lettura {0})"
-//[MExcWAccess]
-"Violazione Accesso (Scrittura {0})"
-//[MExcEAccess]
-"Violazione Accesso (Esecuzione {0})"
-//[MExcOutOfBounds]
-"Array Fuori Dimensione"
-//[MExcDivideByZero]
-"Divisione Per Zero"
-//[MExcStackOverflow]
-"Sconfinamento Dello Stack"
-//[MExcBreakPoint]
-"Interruzione Di Eccezione"
-//[MExcFloatDivideByZero]
-"Floating-point (Divisione Per Zero)"
-//[MExcFloatOverflow]
-"Floating-point (Operazione overflow)"
-//[MExcFloatStackOverflow]
-"Floating-point (Stack Pieno O Vuoto)"
-//[MExcFloatUnderflow]
-"Floating-point (Operazione underflow)"
-//[MExcBadInstruction]
-"Istruzione Non Valida"
-//[MExcDatatypeMisalignment]
-"Allineamento Fallito"
-//[MExcCplusPlus]
-"C++ errore"
-//[MExcUnknown]
-"Errore Sconosciuto"
 //[MExcException]
 "Eccezione:"
+//[MExcDetails]
+"Dettagli:"
 //[MExcAddress]
 "Indirizzo:"
+//[MExcSource]
+"Origine:"
 //[MExcFunction]
 "Funzione:"
 //[MExcModule]
@@ -3940,10 +3891,8 @@
 "Termina FAR"
 //[MExcUnload]
 "Scarica Plugin"
-// need translation:
 //[MExcStack]
 "Stack"
-// need translation:
 //[MExcMinidump]
 "Minidump"
 
@@ -3970,7 +3919,7 @@
 //[MHelpTitle]
 "Aiuto"
 //[MHelpActivatorURL]
-"Questa Voce Avvia Una Applicazione Esterna:"
+"Questa Voce Avvia Una Applicazione Esterna"
 //[MHelpActivatorFormat]
 "Con Il Parametro:"
 //[MHelpActivatorQ]
@@ -4301,9 +4250,8 @@
 ""
 //[MInfoCtrlF11]
 ""
-// need translation:
 //[MInfoCtrlF12]
-"Mode"
+"Modo"
 
 // InfoPanel KeyBar AltShiftF1-12
 //[MInfoAltShiftF1]
@@ -4830,9 +4778,9 @@
 
 //[MKeyESCWasPressed]
 "Operazione Interrotta"
-//[MDoYouWantToStopWork]
+//[MDoYouWantToCancel]
 "Vuoi Veramente Interrottmperla?"
-//[MDoYouWantToStopWork2]
+//[MDoYouWantToContinue]
 "Continua Il Lavoro?"
 
 //[MCheckingFileInPlugin]
@@ -4923,12 +4871,10 @@
 "Non In &Linea"
 //[MFileFilterAttrVirtual]
 "&Virtuale"
-// need translation:
 //[MFileFilterAttrIntegrityStream]
-"Integrity stream"
-// need translation:
+"Integrità Flusso"
 //[MFileFilterAttrNoScrubData]
-"No scrub data"
+"Dati Scrub Mancanti"
 //[MFileFilterReset]
 "&Resetta"
 //[MFileFilterCancel]
@@ -4980,9 +4926,8 @@
 "Non Richiedere Per Questa Sessione"
 //[MCompletionHistoryTitle]
 "Cronologia"
-// need translation:
 //[MCompletionEnvironmentTitle]
-"Environment"
+"Ambiente"
 //[MCompletionFilesTitle]
 "Files"
 //[MObjectLockedReason]
@@ -4993,20 +4938,28 @@
 "modifi"
 //[MObjectLockedReasonOpened]
 "aperto"
+//[MObjectLockedAndMore]
+"e {0} altri processi"
 //[MObjectLockedSwitchTo]
 "Vai A"
 //[MObjectLockedClose]
 "Chiudi File"
+//[MObjectLockedReasonSessionMismatch]
+"Uno O Più Processi Sono In Esecuzione In Altre Sessioni Di Terminali"
+//[MObjectLockedReasonCriticalProcess]
+"Uno O Più Processi Sono Processi Critici"
+//[MObjectLockedReasonCriticalService]
+"Uno O Più Servizi Sono Servizi Critici"
+//[MObjectLockedReasonDetectedSelf]
+"Il File E' Aperto Dal Processo Corrente"
 //[MProblemDb]
 "Problema Al dBase Di Configurazione"
 //[MShowConfigFolders]
 "Mostra Cartella Configurazione"
-// need translation:
 //[MBadLanguageFile]
-"Incorrect language file"
-// need translation:
+"File Di Lingua Errato"
 //[MLanguageStringNotFound]
-"String {0} not found"
+"Stringa {0} Non Trovata"
 // keys
 //[MKeyLaunchMediaSelect]
 ""
@@ -5222,9 +5175,9 @@
 ""
 //[MKeyRAlt]
 ""
+// keys end
 //[MKeyAlt]
 ""
-// keys end
 
 //[MNewFileName]
 "* Nuovo File *"

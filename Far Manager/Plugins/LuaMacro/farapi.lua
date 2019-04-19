@@ -680,11 +680,9 @@ static const /*PANELINFOFLAGS*/ uint32_t
 	PFLAGS_USESORTGROUPS      = 0x0000000000000008,
 	PFLAGS_SELECTEDFIRST      = 0x0000000000000010,
 	PFLAGS_REALNAMES          = 0x0000000000000020,
-	PFLAGS_NUMERICSORT        = 0x0000000000000040,
 	PFLAGS_PANELLEFT          = 0x0000000000000080,
 	PFLAGS_DIRECTORIESFIRST   = 0x0000000000000100,
 	PFLAGS_USECRC32           = 0x0000000000000200,
-	PFLAGS_CASESENSITIVESORT  = 0x0000000000000400,
 	PFLAGS_PLUGIN             = 0x0000000000000800,
 	PFLAGS_VISIBLE            = 0x0000000000001000,
 	PFLAGS_FOCUS              = 0x0000000000002000,
@@ -787,7 +785,6 @@ enum FILE_CONTROL_COMMANDS
 	FCTL_SETCMDLINESELECTION        = 15,
 	FCTL_GETCMDLINESELECTION        = 16,
 	FCTL_CHECKPANELSEXIST           = 17,
-	FCTL_SETNUMERICSORT             = 18,
 	FCTL_GETUSERSCREEN              = 19,
 	FCTL_ISACTIVEPANEL              = 20,
 	FCTL_GETPANELITEM               = 21,
@@ -802,7 +799,6 @@ enum FILE_CONTROL_COMMANDS
 	FCTL_SETDIRECTORIESFIRST        = 30,
 	FCTL_GETPANELFORMAT             = 31,
 	FCTL_GETPANELHOSTFILE           = 32,
-	FCTL_SETCASESENSITIVESORT       = 33,
 	FCTL_GETPANELPREFIX             = 34,
 	FCTL_SETACTIVEPANEL             = 35,
 };
@@ -1908,6 +1904,8 @@ typedef void (__stdcall *FARSTDLOCALSTRUPR)(wchar_t *s1);
 typedef void (__stdcall *FARSTDLOCALSTRLWR)(wchar_t *s1);
 typedef int (__stdcall *FARSTDLOCALSTRICMP)(const wchar_t *s1,const wchar_t *s2);
 typedef int (__stdcall *FARSTDLOCALSTRNICMP)(const wchar_t *s1,const wchar_t *s2,intptr_t n);
+typedef unsigned __int64 (__stdcall *FARSTDFARCLOCK)();
+typedef int (__stdcall *FARSTDCOMPARESTRINGS)(const wchar_t*Str1, size_t Size1, const wchar_t* Str2, size_t Size2);
 
 typedef unsigned __int64 PROCESSNAME_FLAGS;
 static const /*PROCESSNAME_FLAGS*/ uint32_t
@@ -2057,6 +2055,8 @@ typedef struct FarStandardFunctions
 	FARGETREPARSEPOINTINFO     GetReparsePointInfo;
 	FARGETCURRENTDIRECTORY     GetCurrentDirectory;
 	FARFORMATFILESIZE          FormatFileSize;
+	FARSTDFARCLOCK             FarClock;
+	FARSTDCOMPARESTRINGS       CompareStrings;
 } FARSTANDARDFUNCTIONS;
 
 struct PluginStartupInfo

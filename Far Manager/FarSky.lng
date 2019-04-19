@@ -1,6 +1,6 @@
 ﻿.Language=Slovak,Slovak (Slovenčina)
 
-//Version: 3.0 build 5000
+//Version: 3.0 build 5354
 
 //[MYes]
 "Áno"
@@ -264,9 +264,9 @@
 ""
 //[MCtrlAltShiftF11]
 ""
+//End of functional keys
 //[MCtrlAltShiftF12]
 ""
-//End of functional keys
 
 //[MHistoryTitle]
 "História"
@@ -308,8 +308,6 @@
 "Ukladať históriu &zobrazení a úprav"
 //[MConfigRegisteredTypes]
 "Použiť typy súborov regi&strované vo Windows"
-//[MConfigCloseCDGate]
-"Automaticky pr&ipojiť jednotku CD"
 //[MConfigUpdateEnvironment]
 "Automaticky aktualizovať premenné prostredia"
 //[MConfigElevation]
@@ -320,6 +318,18 @@
 "na čítanie"
 //[MConfigElevationUsePrivileges]
 "použiť ďalšie privilégiá"
+//[MConfigSortingCollation]
+"Spôsob triedenia:"
+//[MConfigSortingOrdinal]
+"poradový"
+//[MConfigSortingInvariant]
+"invariantný"
+//[MConfigSortingLinguistic]
+"slovný"
+//[MConfigSortingDigitsAsNumbers]
+"Považuj cifry za čísla"
+//[MConfigSortingCase]
+"&malé a VEĽKÉ"
 //[MConfigAutoSave]
 "Automaticky ukladať &nastavenia"
 
@@ -329,33 +339,24 @@
 "&Automaticky meniť priečinok"
 //[MConfigTreeLabelMinFolder]
 "&Minimálny počet priečinkov:"
-// need translation:
 //[MConfigTreeLabel1]
-"Store a file with folder structure for:"
-// need translation:
+"Ulož súbor aj s adresárovou štruktúrou pre:"
 //[MConfigTreeLabelLocalDisk]
-"local drives"
-// need translation:
+"lokálne disky"
 //[MConfigTreeLabelNetDisk]
-"network drives"
-// need translation:
+"sieťové disky"
 //[MConfigTreeLabelNetPath]
-"network paths"
-// need translation:
+"sieťové cesty"
 //[MConfigTreeLabelRemovableDisk]
-"removable drives"
-// need translation:
+"odpojiteľné disky"
 //[MConfigTreeLabelCDDisk]
-"optical drives"
-// need translation:
+"optické disky"
 //[MConfigTreeLabelExceptPath]
-"Don't create the file for following drives and paths:"
-// need translation:
+"Nevytvárať súbor pre nasledovné disky a cesty:"
 //[MConfigTreeLabelSaveLocalPath]
-"Path for local, removale and optical drives:"
-// need translation:
+"Cesta pre lokálne, odpojiteľné a optické disky:"
 //[MConfigTreeLabelSaveNetPath]
-"Path for network drives and paths:"
+"Cesta pre sieťové disky a cesty:"
 
 //[MConfigPanelTitle]
 "Nastavenie panelov"
@@ -381,9 +382,8 @@
 "Zobrazovať &názvy stĺpcov"
 //[MConfigShowStatus]
 "Zobrazovať sta&vový riadok"
-// need translation:
 //[MConfigDetailedJunction]
-"Determine Volume Mount point"
+"Lokalizuj &body pripojenia diskových zväzkov."
 //[MConfigShowTotal]
 "Zobrazovať &informácie o súboroch"
 //[MConfigShowFree]
@@ -396,10 +396,6 @@
 "Zobrazovať písmeno &módu triedenia"
 //[MConfigShowDotsInRoot]
 "Zobrazovať \"..\" v koreňových priečinkoch"
-//[MConfigHighlightColumnSeparator]
-"Zvýrazňovať oddeľovače stĺpcov"
-//[MConfigDoubleGlobalColumnSeparator]
-"Dvojité oddeľovače hlavných stĺpcov"
 
 //[MConfigInterfaceTitle]
 "Nastavenie rozhrania"
@@ -425,6 +421,9 @@
 "Zobraziť indikátor celkového priebehu ma&zania"
 //[MConfigPgUpChangeDisk]
 "Použiť Ctrl+Pg&Up na zmenu disku"
+// need translation:
+//[MConfigUseVirtualTerminalForRendering]
+"Use Virtual Terminal for rendering"
 //[MConfigClearType]
 "Použiť &ClearType (pomalšie)"
 //[MConfigSetConsoleIcon]
@@ -513,8 +512,6 @@
 "DNS fully-qualified"
 //[MConfigInfoPanelUNTitle]
 "Formát &užívateľského mena"
-//[MConfigInfoPanelUNUnknown]
-"Predvolené"
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Fully Qualified Domain Name"
 //[MConfigInfoPanelUNSamCompatible]
@@ -556,7 +553,7 @@
 //[MViewConfigExternalCommand]
 "&Príkaz zobrazovača:"
 //[MViewConfigInternal]
-" Interný zobrazovač "
+"Interný zobrazovač"
 //[MViewConfigSavePos]
 "Pamä&tať si pozíciu v súbore"
 //[MViewConfigSaveShortPos]
@@ -565,6 +562,12 @@
 "Uložiť tabuľku z&nakov súboru"
 //[MViewConfigSaveWrapMode]
 "Uložiť &režim zalomenia"
+// need translation:
+//[MViewConfigSaveViewMode]
+"Save view mode"
+// need translation:
+//[MViewConfigDetectDumpMode]
+"Detect dump view mode"
 //[MViewAutoDetectCodePage]
 "&Automaticky zistiť tabuľku znakov"
 //[MViewConfigTabSize]
@@ -591,7 +594,7 @@
 //[MEditConfigEditorCommand]
 "&Príkaz editora:"
 //[MEditConfigInternal]
-" Interný editor "
+"Interný editor"
 //[MEditConfigExpandTabsTitle]
 "Rozšíriť ta&bulátory medzerami"
 
@@ -694,8 +697,6 @@
 "Vytvor prepo&jenie"
 //[MCopyDlgTotal]
 "Spolu"
-//[MCopyScanning]
-"Načítavam priečinky..."
 //[MCopyPrepareSecury]
 "Aplikujem prístupové práva..."
 //[MCopyUseFilter]
@@ -704,21 +705,21 @@
 "Filte&r"
 
 //[MCopyFile]
-"Kopírovať"
+"Kopírovať {0} {1}:"
 //[MMoveFile]
-"Premenovať alebo presunúť"
+"Premenovať alebo presunúť {0} {1}:"
 //[MLinkFile]
-"Vytvoriť prepojenie na"
+"Vytvoriť prepojenie na {0} {1}:"
 //[MCopyFiles]
-"Kopírovať {0} polož{1}"
+"Kopírovať {0} polož{1} {2}:"
 //[MMoveFiles]
-"Premenovať alebo presunúť {0} polož{1}"
+"Premenovať alebo presunúť {0} polož{1} {2}:"
 //[MLinkFiles]
-"Vytvoriť prepojenia na {0} polož{1}"
+"Vytvoriť prepojenia na {0} polož{1} {2}:"
 //[MCMLTargetTO]
-" d&o:"
+"d&o"
 //[MCMLTargetIN]
-" &v:"
+"&v"
 //[MCMLItems0]
 "ku"
 //[MCMLItemsA]
@@ -761,9 +762,9 @@
 //[MCopyCancel]
 "&Zrušiť"
 //[MCopyDecrypt]
-"upd:Decrypt"
+"Dešifovať"
 //[MCopyDecryptAll]
-"upd:Decrypt all"
+"Dešifrovať všetko"
 
 //[MCopyCannotCreateLink]
 "Nemôžem vytvoriť symbolické prepojenie"
@@ -864,9 +865,8 @@
 
 //[MCopyFilesTotalInfo]
 "Súbory:"
-// need translation:
 //[MCopyBytesTotalInfo]
-"Bytes:"
+"Bytov:"
 //[MCopyMoving]
 "Presúvam súbor"
 //[MCopyCopying]
@@ -928,21 +928,16 @@
 "Nasledujúci priečinok bude zmazaný:"
 //[MWipeFolderConfirm]
 "Nasledujúci priečinok bude vymazaný:"
-// need translation:
 //[MRecycleFolderConfirm]
-"The following folder will be moved to the Recycle Bin:"
-// need translation:
+"Tento adresár bude presunutý do koša:"
 //[MRecycleFolderConfirmDeleteLink1]
-"Folder contains symbolic links."
-// need translation:
+"Adresár obsahuje symbolické linky."
 //[MRecycleFolderConfirmDeleteLink2]
-"To prevent the loss of their content when clearing Recyle Bin"
-// need translation:
+"Pre zabránenie straty obsahu z dôvodu čistenia koša"
 //[MRecycleFolderConfirmDeleteLink3]
-"those links will be broken now."
-// need translation:
+"budú tieto linky zrušené."
 //[MRecycleFolderConfirmDeleteLink4]
-"It would be impossible to restore them later."
+"Nebude možné ich potom obnoviť."
 //[MDeleteWipe]
 "Vymazať"
 //[MDeleteRecycle]
@@ -1061,12 +1056,10 @@
 "Hľadanie"
 //[MEditSearchFor]
 "&Hľadať"
-// need translation:
 //[MEditSearchPickWord]
-"Word"
-// need translation:
+"Slovo"
 //[MEditSearchPickSelection]
-"Selection"
+"Výber"
 //[MEditSearchCase]
 "&malé a VEĽKÉ"
 //[MEditSearchWholeWords]
@@ -1075,7 +1068,6 @@
 "Opačné h&ľadanie"
 //[MEditSearchRegexp]
 "Re&gulárne výrazy"
-// need translation:
 //[MEditSearchPreserveStyle]
 "&Zachovať štýl"
 //[MEditSearchSearch]
@@ -1120,13 +1112,15 @@
 //[MDefaultCP]
 "Východiskové"
 
-//[MEditGoToLine]
-"Ísť na pozíciu"
+//[MGoTo]
+"Ísť na"
+//[MGoToHex]
+"&Hexadecimálny posun"
 
 //[MFolderShortcutsTitle]
 "Skratky priečinkov"
 //[MFolderShortcutBottom]
-"Upraviť: Del,Ins,ShiftIns,F4"
+"Upraviť: Del,Ins,F4"
 //[MFolderShortcutBottomSub]
 "Upraviť: Del,Ins,F4"
 //[MShortcutNone]
@@ -1353,10 +1347,10 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-//[MEditF8DOS]
-"OEM"
 // End of functional keys (Editor)
 // it's a F8 another text
+//[MEditF8DOS]
+"OEM"
 
 //Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MSingleEditF1]
@@ -1565,10 +1559,10 @@
 ""
 //[MSingleEditCtrlAltShiftF12]
 ""
-//[MSingleEditF8DOS]
-"OEM"
 // End of functional keys (Single Editor)
 // it's a F8 another text
+//[MSingleEditF8DOS]
+"OEM"
 
 //[MEditSaveAs]
 "Uložiť súbor ako"
@@ -1606,12 +1600,10 @@
 "Súbor obsahuje znaky, ktoré sa nedajú"
 //[MEditorLoadCPWarn2]
 "správne prečítať so zvolenou tabuľkou znakov."
-// need translation:
 //[MEditorReloadCPWarnLost1]
-"File has to be reloaded to change codepage."
-// need translation:
+"Aby sa zmenila kódová stránka musí byť súbor nanovo načítaný."
 //[MEditorReloadCPWarnLost2]
-"All unsaved changes will be lost."
+"Neuložené zmeny budú stratené."
 //[MEditorSaveCPWarn1]
 "Editor obsahuje znaky, ktoré sa nedajú"
 //[MEditorSaveCPWarn2]
@@ -1638,8 +1630,6 @@
 "Prepínač na tabuľku Unicode {0} nie je podporovaný"
 //[MEditorCPNotSupported]
 "Tabuľka znakov {0} nie je podporovaná vo vašom systéme"
-//[MEditorCPNotDetected]
-"Nebola zistená tabuľka znakov"
 
 //[MColumnName]
 "Názov"
@@ -1704,9 +1694,8 @@
 "DEDUP"
 //[MListNFS]
 "NFS"
-// need translation:
 //[MListPlaceholder]
-"Placeholder"
+"Zástupca"
 //[MListUnknownReparsePoint]
 "?Prepojenie?"
 //[MListBrackets]
@@ -1725,13 +1714,13 @@
 "P"
 //[MListEb]
 "E"
-// need translation:
+{3} replacement field can receive a sum of files & folders
 //[MListFileSize]
-" Bytes: {0}, files: {1}, folders: {2} "
+"Bytov: {0}, súborov: {1}, adresárov: {2}"
 //[MListFileSizeStatus]
-" {0} ({1}/{2}) {3} {4} "
+"{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-" {0} voľných bajtov "
+"{0} voľných bajtov"
 
 //[MDirInfoViewTitle]
 "Zobraziť"
@@ -1788,9 +1777,9 @@
 //Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MViewF1]
 "Pomocník"
+// this is another text for F2
 //[MViewF2]
 "Zalomiť"
-// this is another text for F2
 //[MViewF3]
 "Koniec"
 //[MViewF4]
@@ -2002,9 +1991,9 @@
 //[MViewF4Dump]
 "Dump"
 // this is another text for F8
+// end of functional keys (Viewer)
 //[MViewF8DOS]
 "OEM"
-// end of functional keys (Viewer)
 
 //Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MSingleViewF1]
@@ -2220,9 +2209,9 @@
 //[MSingleViewF4Text]
 "Text"
 // this is another text for F4
+// end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "OEM"
-// end of functional keys (Single Viewer)
 //[MViewMode]
 "View mode"
 //[MInViewer]
@@ -2261,26 +2250,22 @@
 "ma&lé a VEĽKÉ písmená"
 //[MFindFileWholeWords]
 "&Celé slová"
-// need translation:
 //[MFindFileAllCodePages]
 "Všetky tabuľky znakov"
-// need translation:
 //[MFindFileSelectedCodePages]
-"Selected code pages"
+"Zvolené kódové stránky"
 //[MFindArchives]
 "Hľadať v a&rchívoch"
 //[MFindFolders]
 "Hľadať pr&iečinky"
 //[MFindSymLinks]
 "Hľadať v s&ymbol. prepoj."
-// need translation:
 //[MFindAlternateStreams]
-"Search in alternate streams"
+"Hľadanie v alternatívnych menách"
 //[MSearchForHex]
 "Hľadať &hex"
-// need translation:
 //[MSearchNotContaining]
-"Not containing"
+"Neobsahuje"
 //[MSearchWhere]
 "Zvoľte oblasť hľadania:"
 //[MSearchAllDisks]
@@ -2330,14 +2315,7 @@
 "&Storno"
 
 //[MFindFound]
-" Súborov: {0}, priečinkov: {1} "
-
-//[MFindFileFolder]
-"Priečinok"
-//[MFindFileSymLink]
-"Prepojenie"
-//[MFindFileJunction]
-"Kríženie"
+"Súborov: {0}, priečinkov: {1}"
 
 //[MFindFileAdvancedTitle]
 "Pokročilé nastavenie vyhľadávania súborov"
@@ -2396,13 +2374,13 @@
 //[MHighlightTransparentMarkChar]
 "prieh&ľadný"
 //[MHighlightColors]
-" Farba názvov súborov (\"čierna na čiernej\" - východisková) "
+"Farba názvov súborov (\"čierna na čiernej\" - východisková)"
 //[MHighlightFileName1]
-"&1. Normálny súbor            "
+"&1. Normálny súbor"
 //[MHighlightFileName2]
-"&3. Vybraný súbor             "
+"&3. Vybraný súbor"
 //[MHighlightFileName3]
-"&5. Súbor pod kurzorom        "
+"&5. Súbor pod kurzorom"
 //[MHighlightFileName4]
 "&7. Vybraný súbor pod kurzorom"
 //[MHighlightMarking1]
@@ -2413,10 +2391,8 @@
 "&6. Označenie"
 //[MHighlightMarking4]
 "&8. Označenie"
-//[MHighlightExample1]
-"║filename.ext │"
-//[MHighlightExample2]
-"║ filename.ext│"
+//[MHighlightExample]
+"filename.ext"
 //[MHighlightContinueProcessing]
 "Pokračovať v spracúva&ní"
 
@@ -2441,7 +2417,7 @@
 //[MInfoUserAccessLevelUnknown]
 "Neznámy"
 //[MInfoDiskTitle]
-" Disk "
+"Disk"
 //[MInfoRemovable]
 "Vymeniteľný"
 //[MInfoFixed]
@@ -2479,7 +2455,7 @@
 //[MInfoDiskNumber]
 "Sériové číslo"
 //[MInfoMemory]
-" Pamäť "
+"Pamäť"
 //[MInfoMemoryLoad]
 "Obsadenie pamäte"
 //[MInfoMemoryInstalled]
@@ -2497,13 +2473,13 @@
 //[MInfoPageFileFree]
 "Stránkovací súbor voľný"
 //[MInfoDescription]
-" Popis "
+"Popis"
 //[MInfoDizAbsent]
 "Chýba popisný súbor priečinka"
 //[MInfoPlugin]
-" Modul "
+"Modul"
 //[MInfoPowerStatus]
-" Stav napájania"
+"Stav napájania"
 //[MInfoPowerStatusAC]
 "Stav sieťového napájania"
 //[MInfoPowerStatusACOffline]
@@ -2617,9 +2593,8 @@
 "&Kopírovať"
 //[MMenuMove]
 "&Premenovať/Presunúť"
-// need translation:
 //[MMenuLink]
-"Link"
+"Linka"
 //[MMenuCreateFolder]
 "&Vytvoriť priečinok"
 //[MMenuDelete]
@@ -2784,11 +2759,6 @@
 "Najprv zobraziť vy&brané"
 //[MMenuSortDirectoriesFirst]
 "Najpr&v zobraziť priečinky"
-//[MMenuSortUseNumeric]
-"Použiť čí&selné triedenie"
-// need translation:
-//[MMenuSortUseCaseSensitive]
-"Triediť podľa malých a VEĽKÝCH písmen"
 //[MMaskGroupBottom]
 "Upraviť: Ins, Del, F4, F7, Ctrl+R"
 //[MMaskGroupName]
@@ -2848,18 +2818,15 @@
 "Nemôžem sa odpojiť od {0}"
 //[MChangeDriveCannotDelSubst]
 "Nemôžem zmazať substnutú jednotku {0}"
-// need translation:
 //[MChangeDriveCannotDetach]
-"Cannot detach virtual disk {0}"
+"Nemožno odpojiť virtuálny disk {0}"
 //[MChangeDriveOpenFiles]
 "Ak nezatvoríte otvorené súbory, môžete stratiť dáta"
 
-// need translation:
 //[MChangeSUBSTDisconnectDriveTitle]
-"Odpojenie virtuálneho zariadenia"
-// need translation:
+"Odstránenie virtuálneho zariadenia"
 //[MChangeSUBSTDisconnectDriveQuestion]
-"Odpojiť SUBST-disk {0}?"
+"Odstrániť SUBST-disk {0}?"
 //[MChangeVHDDisconnectDriveTitle]
 "Odpojenie virtuálneho disku"
 //[MChangeVHDDisconnectDriveQuestion]
@@ -2903,17 +2870,19 @@
 "Možnosti menu zmeny disku"
 //[MChangeDriveShowDiskType]
 "Zobraziť typ disku"
-//[MChangeDriveShowNetworkName]
-"Zobraziť sieťový &názov/cesta SUBST/názov VHD"
+//[MChangeDriveShowPath]
+"Zobraziť sieťový &názov / cesta SUBST / názov VHD"
 //[MChangeDriveShowLabel]
 "Zobraziť názov disk&u"
+// need translation:
+//[MChangeDriveShowLabelUseShell]
+"Use shell name"
 //[MChangeDriveShowFileSystem]
 "Zobraziť ty&p systému súborov"
 //[MChangeDriveShowSize]
 "Zobrazi&ť veľkosť"
-// need translation:
 //[MChangeDriveShowSizeFloat]
-"Show size as a decimal fraction"
+"Zobraz veľkosť ako zlomok desiatky"
 //[MChangeDriveShowRemovableDrive]
 "Zobraziť paramet&re vymeniteľnej jednotky"
 //[MChangeDriveShowPlugins]
@@ -2928,13 +2897,11 @@
 "Del,Shift+Del,F3,F4,F9"
 
 //[MSearchFileTitle]
-" Hľadať "
+"Hľadať"
 //[MCannotCreateListFile]
 "Nemôžem vytvoriť súbor so zoznamom"
 //[MCannotCreateListTemp]
 "(nemôžem vytvoriť dočasný súbor pre zoznam)"
-//[MCannotCreateListWrite]
-"(nemôžem zapísať dáta do súboru)"
 
 //[MDragFiles]
 "{0} súborov"
@@ -2988,30 +2955,26 @@
 "DEDUP"
 //[MQuickViewNFS]
 "NFS"
-// need translation:
 //[MQuickViewPlaceholder]
-"Placeholder"
-// need translation:
+"Zástupca"
 //[MQuickViewUnknownReparsePoint]
-"Unknown reparse point"
+"Neznáme rozšírené informácie (ReparsePoint)"
 //[MQuickViewNoData]
 "(dáta nie sú k dispozícii)"
-//[MQuickViewContains]
-"Obsahuje:"
 //[MQuickViewFolders]
-"Priečinky         "
+"Priečinky:"
 //[MQuickViewFiles]
-"Súbory            "
+"Súbory:"
 //[MQuickViewBytes]
-"Veľkosť súborov   "
+"Veľkosť súborov:"
 //[MQuickViewAllocated]
-"Alokovaná veľkosť "
+"Alokovaná veľkosť:"
 //[MQuickViewCluster]
-"Veľkosť klastra   "
+"Veľkosť klastra:"
 //[MQuickViewSlack]
-"Mŕtve miesto      "
+"Mŕtve miesto:"
 //[MQuickViewMFTOverhead]
-"MFT overhead      "
+"MFT režijná veľkosť:"
 
 //[MSetAttrTitle]
 "Atribúty"
@@ -3027,9 +2990,8 @@
 "Prepojenie:"
 //[MSetAttrVolMount]
 "Zväzok:"
-// need translation:
 //[MSetAttrDfsTargets]
-"DFS Targets"
+"DFS ciele"
 //[MSetAttrUnknownJunction]
 "(dáta nie sú k dispozícii)"
 //[MSetAttrRO]
@@ -3056,12 +3018,10 @@
 "Reparse point"
 //[MSetAttrVirtual]
 "Virtuálny"
-// need translation:
 //[MSetAttrIntegrityStream]
-"Integrity stream"
-// need translation:
+"Integrita dát"
 //[MSetAttrNoScrubData]
-"No scrub data"
+"Žiadne dáta pre skener integrity dát"
 //[MSetAttrSubfolders]
 "Spracovať aj po&dpriečinky"
 //[MSetAttrOwner]
@@ -3342,6 +3302,14 @@
 "&Popredie"
 //[MSetColorBackground]
 "Po&zadie"
+
+// 3 characters max
+//[MSetColorForeRGB]
+"&RGB"
+
+// 3 characters max
+//[MSetColorBackRGB]
+"R&GB"
 //[MSetColorForeTransparent]
 "Priehľadnos&ť"
 //[MSetColorBackTransparent]
@@ -3371,9 +3339,8 @@
 "Pre&rušenie operácie"
 //[MSetConfirmRemoveConnection]
 "Odpojenie &sieťovej jednotky"
-// need translation:
 //[MSetConfirmRemoveSUBST]
-"Odpojenie d&isku SUBST"
+"Odstránenie d&isku SUBST"
 //[MSetConfirmDetachVHD]
 "Odpojenie virtuálneho disku"
 //[MSetConfirmRemoveHotPlug]
@@ -3662,9 +3629,8 @@
 "&Názov:"
 //[MEditMenuConfirmation]
 "Uložiť zmeny?"
-// need translation:
 //[MEditMenuError]
-"Cannot update menu"
+"Nemožno aktualizovať menu"
 
 //[MViewerTitle]
 "Zobrazovač"
@@ -3702,22 +3668,18 @@
 "Nemôžem nájsť reťazec"
 //[MViewSearchCannotFindHex]
 "Nemôžem nájsť sekvenciu bajtov"
-// need translation:
 //[MViewSearchEod]
-"End of the document reached"
+"Dosiahnutý koniec dokumentu"
 //[MViewSearchFromBegin]
 "Pokračovať v hľadaní od začiatku dokumentu?"
-// need translation:
 //[MViewSearchBod]
-"Begin of the document reached"
+"Dosiahnutý začiatok dokumentu"
 //[MViewSearchFromEnd]
 "Pokračovať v hľadaní od konca dokumentu?"
-// need translation:
 //[MViewSearchCycle]
-"The Whole document scanned"
-// need translation:
+"Celý dokument prehľadaný"
 //[MViewSearchRepeat]
-"Repeat the search in the document?"
+"Zopakovať hľadanie v dokumente?"
 
 //[MPrintTitle]
 "Tlač"
@@ -3914,51 +3876,16 @@
 
 //[MRightCtrl]
 "PravýCtrl"
-
-//[MViewerGoTo]
-"Ísť na"
-//[MGoToPercent]
-"&Percent"
-//[MGoToHex]
-"&Hex offset"
-//[MGoToDecimal]
-"&Desiatkový offset"
 //[MExcTrappedException]
 "Vyskytla sa výnimka"
-//[MExcRAccess]
-"Neplatná adresa (čítanie z {0})"
-//[MExcWAccess]
-"Neplatná adresa (zápis na {0})"
-//[MExcEAccess]
-"Neplatná adresa (spustenie na {0})"
-//[MExcOutOfBounds]
-"Pole mimo hranice"
-//[MExcDivideByZero]
-"Delenie nulou"
-//[MExcStackOverflow]
-"Pretečenie zásobníka"
-//[MExcBreakPoint]
-"Výnimka prerušenia"
-//[MExcFloatDivideByZero]
-"Delenie nulou v pohyblivej čiarke"
-//[MExcFloatOverflow]
-"Pretečenie pri operácii s pohyblivou čiarkou"
-//[MExcFloatStackOverflow]
-"Prázdny alebo plný zásobník v pohyblivej čiarke"
-//[MExcFloatUnderflow]
-"Podtečenie pri operácii s pohyblivou čiarkou"
-//[MExcBadInstruction]
-"Neplatná inštrukcia"
-//[MExcDatatypeMisalignment]
-"Chyba zarovnania"
-//[MExcCplusPlus]
-"C++ výnimka"
-//[MExcUnknown]
-"Neznáma výnimka"
 //[MExcException]
 "Výnimka:"
+//[MExcDetails]
+"Detaily:"
 //[MExcAddress]
 "Adresa:"
+//[MExcSource]
+"Zdroje:"
 //[MExcFunction]
 "Funkcia:"
 //[MExcModule]
@@ -3967,12 +3894,10 @@
 "Ukončiť FAR"
 //[MExcUnload]
 "Zatvoriť modul"
-// need translation:
 //[MExcStack]
-"Stack"
-// need translation:
+"Halda"
 //[MExcMinidump]
-"Minidump"
+"Minivýpis"
 
 //[MNetUserName]
 "Meno užívateľa"
@@ -3997,7 +3922,7 @@
 //[MHelpTitle]
 "Pomocník"
 //[MHelpActivatorURL]
-"Tento odkaz spúšťa externú aplikáciu:"
+"Tento odkaz spúšťa externú aplikáciu"
 //[MHelpActivatorFormat]
 "s parametrom:"
 //[MHelpActivatorQ]
@@ -4328,9 +4253,8 @@
 ""
 //[MInfoCtrlF11]
 ""
-// need translation:
 //[MInfoCtrlF12]
-"Mode"
+"Režim"
 
 // InfoPanel KeyBar AltShiftF1-12
 //[MInfoAltShiftF1]
@@ -4857,9 +4781,9 @@
 
 //[MKeyESCWasPressed]
 "Operácia bola prerušená"
-//[MDoYouWantToStopWork]
+//[MDoYouWantToCancel]
 "Chcete operáciu zrušiť?"
-//[MDoYouWantToStopWork2]
+//[MDoYouWantToContinue]
 "Pokračovať v práci?"
 
 //[MCheckingFileInPlugin]
@@ -4950,12 +4874,10 @@
 "O&ffline"
 //[MFileFilterAttrVirtual]
 "Virtuálny"
-// need translation:
 //[MFileFilterAttrIntegrityStream]
-"Integrity stream"
-// need translation:
+"Integrita dát"
 //[MFileFilterAttrNoScrubData]
-"No scrub data"
+"Žiadne dáta pre skener integrity dát"
 //[MFileFilterReset]
 "Reset"
 //[MFileFilterCancel]
@@ -5007,9 +4929,8 @@
 "Nepýtať sa znova v aktuálnej relácii"
 //[MCompletionHistoryTitle]
 "História"
-// need translation:
 //[MCompletionEnvironmentTitle]
-"Environment"
+"Prostredie"
 //[MCompletionFilesTitle]
 "Súbory"
 //[MObjectLockedReason]
@@ -5020,20 +4941,28 @@
 "sa upravuje"
 //[MObjectLockedReasonOpened]
 "je otvorený"
+//[MObjectLockedAndMore]
+"a {0} procesov."
 //[MObjectLockedSwitchTo]
 "Prepnúť na"
 //[MObjectLockedClose]
 "Zatvoriť súbor"
+//[MObjectLockedReasonSessionMismatch]
+"Jeden, alebo viac procesov je spustených v inom sedení Terminal Services."
+//[MObjectLockedReasonCriticalProcess]
+"Jeden, alebo viac procesov je kritických."
+//[MObjectLockedReasonCriticalService]
+"Jeden, alebo viac servisov je kritických."
+//[MObjectLockedReasonDetectedSelf]
+"Súbor je otvorený aktuálnym procesom."
 //[MProblemDb]
 "Problém s konfiguráciou DB"
 //[MShowConfigFolders]
 "Zobraziť konfiguračné priečinky"
-// need translation:
 //[MBadLanguageFile]
-"Incorrect language file"
-// need translation:
+"Nesprávny jazykový súbor"
 //[MLanguageStringNotFound]
-"String {0} not found"
+"Reťazec {0} nenájdený"
 // keys
 //[MKeyLaunchMediaSelect]
 ""
@@ -5249,9 +5178,9 @@
 ""
 //[MKeyRAlt]
 ""
+// keys end
 //[MKeyAlt]
 ""
-// keys end
 
 //[MNewFileName]
 "?Nový súbor?"

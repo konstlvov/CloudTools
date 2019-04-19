@@ -1,6 +1,6 @@
 ﻿.Language=Russian,Russian (Русский)
 
-//Version: 3.0 build 5000
+//Version: 3.0 build 5354
 
 //[MYes]
 "Да"
@@ -264,9 +264,9 @@
 ""
 //[MCtrlAltShiftF11]
 ""
+//End of functional keys
 //[MCtrlAltShiftF12]
 ""
-//End of functional keys
 
 //[MHistoryTitle]
 "История команд"
@@ -308,8 +308,6 @@
 "Сохранять историю п&росмотра и редактора"
 //[MConfigRegisteredTypes]
 "Использовать стандартные &типы файлов"
-//[MConfigCloseCDGate]
-"Автоматически монтироват&ь CDROM"
 //[MConfigUpdateEnvironment]
 "Автообновл&ение переменных окружения"
 //[MConfigElevation]
@@ -320,6 +318,18 @@
 "для &чтения"
 //[MConfigElevationUsePrivileges]
 "исп&ользовать дополнительные привилегии"
+//[MConfigSortingCollation]
+"Сортировочное сравнение:"
+//[MConfigSortingOrdinal]
+"порядковое"
+//[MConfigSortingInvariant]
+"инвариантное"
+//[MConfigSortingLinguistic]
+"лингвистическое"
+//[MConfigSortingDigitsAsNumbers]
+"Трактовать цифры как числа"
+//[MConfigSortingCase]
+"&Учитывать регистр"
 //[MConfigAutoSave]
 "Автозапись кон&фигурации"
 
@@ -386,10 +396,6 @@
 "Показывать букву режима сор&тировки"
 //[MConfigShowDotsInRoot]
 "Показывать \"..\" в корневых каталогах"
-//[MConfigHighlightColumnSeparator]
-"Подсвечивать разделители колонок"
-//[MConfigDoubleGlobalColumnSeparator]
-"Удваивать глобальные разделители колонок"
 
 //[MConfigInterfaceTitle]
 "Настройки интерфейса"
@@ -415,6 +421,8 @@
 "Показывать общий индикатор &удаления"
 //[MConfigPgUpChangeDisk]
 "Использовать Ctrl+PgUp для в&ыбора диска"
+//[MConfigUseVirtualTerminalForRendering]
+"Использовать Virtual Terminal для рендеринга"
 //[MConfigClearType]
 "Перер&исовка с поддержкой ClearType (может быть медленной)"
 //[MConfigSetConsoleIcon]
@@ -503,8 +511,6 @@
 "Полное DNS имя"
 //[MConfigInfoPanelUNTitle]
 "Формат вывода имени &пользователя"
-//[MConfigInfoPanelUNUnknown]
-"По умолчанию"
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Полностью определённое имя домена"
 //[MConfigInfoPanelUNSamCompatible]
@@ -542,11 +548,11 @@
 //[MViewConfigTitle]
 "Программа просмотра"
 //[MViewConfigExternalF3]
-"Запускать внешнюю программу просмотра по F3 вместо Alt+F3"
+"Запускать вне&шнюю программу просмотра по F3 вместо Alt+F3"
 //[MViewConfigExternalCommand]
 "&Команда просмотра:"
 //[MViewConfigInternal]
-" Встроенная программа просмотра "
+"Встроенная программа просмотра"
 //[MViewConfigSavePos]
 "&Сохранять позицию файла"
 //[MViewConfigSaveShortPos]
@@ -555,6 +561,10 @@
 "Сохранять ко&довую страницу файла"
 //[MViewConfigSaveWrapMode]
 "Сохранять &режим переноса"
+//[MViewConfigSaveViewMode]
+"Сохранять р&ежим просмотра"
+//[MViewConfigDetectDumpMode]
+"Автов&ыбор дамп-режима просмотра"
 //[MViewAutoDetectCodePage]
 "&Автоопределение кодовой страницы"
 //[MViewConfigTabSize]
@@ -581,7 +591,7 @@
 //[MEditConfigEditorCommand]
 "&Команда редактирования:"
 //[MEditConfigInternal]
-" Встроенный редактор "
+"Встроенный редактор"
 //[MEditConfigExpandTabsTitle]
 "Преобразовывать &табуляцию:"
 
@@ -684,8 +694,6 @@
 "&Создать ссылку"
 //[MCopyDlgTotal]
 "Всего"
-//[MCopyScanning]
-"Сканирование папок..."
 //[MCopyPrepareSecury]
 "Применение прав доступа..."
 //[MCopyUseFilter]
@@ -694,21 +702,21 @@
 "&Фильтр"
 
 //[MCopyFile]
-"Копировать"
+"Копировать {0} {1}:"
 //[MMoveFile]
-"Переименовать или перенести"
+"Переименовать или перенести {0} {1}:"
 //[MLinkFile]
-"Создать ссылку на"
+"Создать ссылку на {0} {1}:"
 //[MCopyFiles]
-"Копировать {0} элемент{1}"
+"Копировать {0} элемент{1} {2}:"
 //[MMoveFiles]
-"Переименовать или перенести {0} элемент{1}"
+"Переименовать или перенести {0} элемент{1} {2}:"
 //[MLinkFiles]
-"Создать ссылки на {0} элемент{1}"
+"Создать ссылки на {0} элемент{1} {2}:"
 //[MCMLTargetTO]
-" &в:"
+"&в"
 //[MCMLTargetIN]
-" &в:"
+"&в"
 //[MCMLItems0]
 ""
 //[MCMLItemsA]
@@ -906,9 +914,9 @@
 "ов"
 
 //[MDeleteFolderTitle]
-"Удаление папки "
+"Удаление папки"
 //[MWipeFolderTitle]
-"Уничтожение папки "
+"Уничтожение папки"
 //[MDeleteFilesTitle]
 "Удаление файлов"
 //[MWipeFilesTitle]
@@ -1101,13 +1109,15 @@
 //[MDefaultCP]
 "По умолчанию"
 
-//[MEditGoToLine]
+//[MGoTo]
 "Перейти"
+//[MGoToHex]
+"16-ричное &значение"
 
 //[MFolderShortcutsTitle]
 "Ссылки на папки"
 //[MFolderShortcutBottom]
-"Редактирование: Del,Ins,Shift+Ins,F4"
+"Редактирование: Del,Ins,F4"
 //[MFolderShortcutBottomSub]
 "Редактирование: Del,Ins,F4"
 //[MShortcutNone]
@@ -1334,10 +1344,10 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-//[MEditF8DOS]
-"OEM"
 // End of functional keys (Editor)
 // it's a F8 another text
+//[MEditF8DOS]
+"OEM"
 
 //Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
 //[MSingleEditF1]
@@ -1546,10 +1556,10 @@
 ""
 //[MSingleEditCtrlAltShiftF12]
 ""
-//[MSingleEditF8DOS]
-"OEM"
 // End of functional keys (Single Editor)
 // it's a F8 another text
+//[MSingleEditF8DOS]
+"OEM"
 
 //[MEditSaveAs]
 "Сохранить &файл как"
@@ -1617,8 +1627,6 @@
 "Переключение на юникодную кодовую страницу {0} не поддерживается"
 //[MEditorCPNotSupported]
 "Кодовая страница {0} не поддерживается вашей системой"
-//[MEditorCPNotDetected]
-"Не удалось определить кодовую страницу"
 
 //[MColumnName]
 "Имя"
@@ -1703,12 +1711,13 @@
 "П"
 //[MListEb]
 "Э"
+{3} replacement field can receive a sum of files & folders
 //[MListFileSize]
-" Байт: {0}, файлов: {1}, папок: {2} "
+"Байт: {0}, файлов: {1}, папок: {2}"
 //[MListFileSizeStatus]
-" {0} ({1}/{2}) {3} {4} "
+"{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-" {0} байт свободно "
+"{0} байт свободно"
 
 //[MDirInfoViewTitle]
 "Просмотр"
@@ -1765,9 +1774,9 @@
 //Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MViewF1]
 "Помощь"
+// this is another text for F2
 //[MViewF2]
 "Сверн"
-// this is another text for F2
 //[MViewF3]
 "Выход"
 //[MViewF4]
@@ -1979,9 +1988,9 @@
 //[MViewF4Dump]
 "Дамп"
 // this is another text for F8
+// end of functional keys (Viewer)
 //[MViewF8DOS]
 "OEM"
-// end of functional keys (Viewer)
 
 //Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
 //[MSingleViewF1]
@@ -2197,9 +2206,9 @@
 //[MSingleViewF4Text]
 "Текст"
 // this is another text for F4
+// end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "OEM"
-// end of functional keys (Single Viewer)
 //[MViewMode]
 "Режим просмотра"
 //[MInViewer]
@@ -2303,19 +2312,12 @@
 "Отм&ена"
 
 //[MFindFound]
-" Файлов: {0}, папок: {1} "
-
-//[MFindFileFolder]
-"Папка"
-//[MFindFileSymLink]
-"Ссылка"
-//[MFindFileJunction]
-"Связь"
+"Файлов: {0}, папок: {1}"
 
 //[MFindFileAdvancedTitle]
 "Дополнительные параметры поиска"
 //[MFindFileSearchFirst]
-"Проводить поиск в &первых:"
+"Искать только в &первых:"
 //[MFindFileSearchOutputFormat]
 "&Формат вывода:"
 //[MFindAlternateModeTypes]
@@ -2341,7 +2343,7 @@
 //[MGetCodePageBottomShortTitle]
 "Ctrl+H, Del, F4"
 //[MGetCodePageEditCodePageName]
-"Изменить имя кодовой страницы"
+"Переименование кодовой страницы"
 //[MGetCodePageResetCodePageName]
 "&Сбросить"
 
@@ -2369,13 +2371,13 @@
 //[MHighlightTransparentMarkChar]
 "прозра&чный"
 //[MHighlightColors]
-" Цвета файлов (\"чёрный на чёрном\" - цвет по умолчанию) "
+"Цвета файлов (\"чёрный на чёрном\" - цвет по умолчанию)"
 //[MHighlightFileName1]
-"&1. Обычное имя файла                "
+"&1. Обычное имя файла"
 //[MHighlightFileName2]
-"&3. Помеченное имя файла             "
+"&3. Помеченное имя файла"
 //[MHighlightFileName3]
-"&5. Имя файла под курсором           "
+"&5. Имя файла под курсором"
 //[MHighlightFileName4]
 "&7. Помеченное под курсором имя файла"
 //[MHighlightMarking1]
@@ -2386,10 +2388,8 @@
 "&6. Пометка"
 //[MHighlightMarking4]
 "&8. Пометка"
-//[MHighlightExample1]
-"║filename.ext │"
-//[MHighlightExample2]
-"║ filename.ext│"
+//[MHighlightExample]
+"filename.ext"
 //[MHighlightContinueProcessing]
 "Продолжать &обработку"
 
@@ -2414,7 +2414,7 @@
 //[MInfoUserAccessLevelUnknown]
 "Неизвестно"
 //[MInfoDiskTitle]
-" Диск "
+"Диск"
 //[MInfoRemovable]
 "Сменный"
 //[MInfoFixed]
@@ -2452,7 +2452,7 @@
 //[MInfoDiskNumber]
 "Серийный номер"
 //[MInfoMemory]
-" Память "
+"Память"
 //[MInfoMemoryLoad]
 "Используется"
 //[MInfoMemoryInstalled]
@@ -2470,13 +2470,13 @@
 //[MInfoPageFileFree]
 "Файл подкачки (свободно)"
 //[MInfoDescription]
-" Описание "
+"Описание"
 //[MInfoDizAbsent]
 "Файл описания папки отсутствует"
 //[MInfoPlugin]
-" Плагин "
+"Плагин"
 //[MInfoPowerStatus]
-" Питание "
+"Питание"
 //[MInfoPowerStatusAC]
 "Подключения к сети"
 //[MInfoPowerStatusACOffline]
@@ -2756,10 +2756,6 @@
 "Помеченные &файлы вперёд"
 //[MMenuSortDirectoriesFirst]
 "&Каталоги вперёд"
-//[MMenuSortUseNumeric]
-"&Числовая сортировка"
-//[MMenuSortUseCaseSensitive]
-"Прописные буквы раньше строчных"
 //[MMaskGroupBottom]
 "Редактирование: Ins, Del, F4, F7, Ctrl+R"
 //[MMaskGroupName]
@@ -2871,10 +2867,12 @@
 "Настройка меню выбора диска"
 //[MChangeDriveShowDiskType]
 "Показывать &тип диска"
-//[MChangeDriveShowNetworkName]
-"Показывать &сетевое имя/путь SUBST/имя VHD"
+//[MChangeDriveShowPath]
+"Показывать &сетевое имя / путь SUBST / имя VHD"
 //[MChangeDriveShowLabel]
 "Показывать &метку диска"
+//[MChangeDriveShowLabelUseShell]
+"Использовать имя оболочки"
 //[MChangeDriveShowFileSystem]
 "Показывать тип &файловой системы"
 //[MChangeDriveShowSize]
@@ -2895,13 +2893,11 @@
 "Del,Shift+Del,F3,F4,F9"
 
 //[MSearchFileTitle]
-" Поиск "
+"Поиск"
 //[MCannotCreateListFile]
 "Ошибка создания списка файлов"
 //[MCannotCreateListTemp]
 "(невозможно создать временный файл для списка)"
-//[MCannotCreateListWrite]
-"(невозможно записать данные в файл)"
 
 //[MDragFiles]
 "{0} файлов"
@@ -2961,22 +2957,20 @@
 "Неизвестная точка повторного анализа"
 //[MQuickViewNoData]
 "(нет данных)"
-//[MQuickViewContains]
-"Содержит:"
 //[MQuickViewFolders]
-"Папок               "
+"Папок:"
 //[MQuickViewFiles]
-"Файлов              "
+"Файлов:"
 //[MQuickViewBytes]
-"Размер файлов       "
+"Размер файлов:"
 //[MQuickViewAllocated]
-"Выделенный размер   "
+"Выделенный размер:"
 //[MQuickViewCluster]
-"Размер кластера     "
+"Размер кластера:"
 //[MQuickViewSlack]
-"Остатки кластеров   "
+"Остатки кластеров:"
 //[MQuickViewMFTOverhead]
-"Занято MFT          "
+"Занято MFT:"
 
 //[MSetAttrTitle]
 "Атрибуты"
@@ -3304,6 +3298,14 @@
 "&Текст"
 //[MSetColorBackground]
 "&Фон"
+
+// 3 characters max
+//[MSetColorForeRGB]
+"&RGB"
+
+// 3 characters max
+//[MSetColorBackRGB]
+"R&GB"
 //[MSetColorForeTransparent]
 "&Прозрачный"
 //[MSetColorBackTransparent]
@@ -3870,51 +3872,16 @@
 
 //[MRightCtrl]
 "ПравыйCtrl"
-
-//[MViewerGoTo]
-"Перейти"
-//[MGoToPercent]
-"&Процент"
-//[MGoToHex]
-"16-ричное &смещение"
-//[MGoToDecimal]
-"10-ичное с&мещение"
 //[MExcTrappedException]
 "Исключительная ситуация"
-//[MExcRAccess]
-"Нарушение доступа (чтение из {0})"
-//[MExcWAccess]
-"Нарушение доступа (запись в {0})"
-//[MExcEAccess]
-"Нарушение доступа (исполнение кода из {0})"
-//[MExcOutOfBounds]
-"Попытка доступа к элементу за границами массива"
-//[MExcDivideByZero]
-"Деление на нуль"
-//[MExcStackOverflow]
-"Переполнение стека"
-//[MExcBreakPoint]
-"Точка останова"
-//[MExcFloatDivideByZero]
-"Деление на нуль при операции с плавающей точкой"
-//[MExcFloatOverflow]
-"Переполнение при операции с плавающей точкой"
-//[MExcFloatStackOverflow]
-"Стек регистров сопроцессора полон или пуст"
-//[MExcFloatUnderflow]
-"Потеря точности при операции с плавающей точкой"
-//[MExcBadInstruction]
-"Недопустимая инструкция"
-//[MExcDatatypeMisalignment]
-"Попытка доступа к невыравненным данным"
-//[MExcCplusPlus]
-"C++ исключение"
-//[MExcUnknown]
-"Неизвестное исключение"
 //[MExcException]
 "Исключение:"
+//[MExcDetails]
+"Подробности:"
 //[MExcAddress]
 "Адрес:"
+//[MExcSource]
+"Источник:"
 //[MExcFunction]
 "Функция:"
 //[MExcModule]
@@ -3951,7 +3918,7 @@
 //[MHelpTitle]
 "Помощь"
 //[MHelpActivatorURL]
-"Эта ссылка запускает внешнее приложение:"
+"Эта ссылка запускает внешнее приложение"
 //[MHelpActivatorFormat]
 "с параметром:"
 //[MHelpActivatorQ]
@@ -4810,9 +4777,9 @@
 
 //[MKeyESCWasPressed]
 "Действие было прервано"
-//[MDoYouWantToStopWork]
+//[MDoYouWantToCancel]
 "Вы действительно хотите отменить действие?"
-//[MDoYouWantToStopWork2]
+//[MDoYouWantToContinue]
 "Продолжить выполнение?"
 
 //[MCheckingFileInPlugin]
@@ -4970,10 +4937,20 @@
 "редактируется"
 //[MObjectLockedReasonOpened]
 "открыт"
+//[MObjectLockedAndMore]
+"и ещё {0} процессах"
 //[MObjectLockedSwitchTo]
 "Переключиться"
 //[MObjectLockedClose]
 "Закрыть файл"
+//[MObjectLockedReasonSessionMismatch]
+"Один или несколько процессов выполняются в другом сеансе служб терминалов."
+//[MObjectLockedReasonCriticalProcess]
+"Один или несколько процессов являются критическими процессами."
+//[MObjectLockedReasonCriticalService]
+"Одна или несколько служб являются критическими службами."
+//[MObjectLockedReasonDetectedSelf]
+"Файл открыт текущим процессом."
 //[MProblemDb]
 "Проблемы с БД настроек"
 //[MShowConfigFolders]
@@ -5197,9 +5174,9 @@
 ""
 //[MKeyRAlt]
 ""
+// keys end
 //[MKeyAlt]
 ""
-// keys end
 
 //[MNewFileName]
 "?Новый файл?"
