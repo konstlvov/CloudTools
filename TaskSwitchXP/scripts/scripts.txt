@@ -1,0 +1,37 @@
+TaskSwitchXP Pro 2.0 Help Scripts
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+These scripts will help you to set up some 'undocumented' TaskSwitchXP registry 
+settings. Usage:
+    1) close TaskSwitchXP configuration tool
+    2) double-click the script in Windows Explorer or run from command line:
+         >WScript //nologo JavaScript.js
+    3) confirm action
+    4) restart TaskSwitchXP to apply changes
+    5) have fun!
+
+
+1. ShowDelay Help Script
+========================
+
+When TaskSwitchXP is called, it will check if Alt+Tab is still being pressed 
+after some delay. If it isn't, TaskSwitchXP will just switch to the previous 
+app being used - otherwise, TaskSwitchXP will draw its own window with the 
+icons, preview, etc. This script sets TaskSwitchXP show delay to 100 or 0 ms.
+
+
+2. UnlockQ Help Script
+======================
+
+By default you can close selected applications by X or F4 shortcut keys. This 
+script locks/unlocks Q-key for closing applications. I've written this for Luke 
+Hamburg and all OS X users.
+
+
+3. WheelTab Help Script
+=======================
+
+This script enables/disables Opera style task switching. This feature allows 
+you to switch between tasks by mouse: simply scroll the mouse whell while 
+holding the right mouse button (TaskSwitchXP will switch to the selected task 
+once the right-button is released).

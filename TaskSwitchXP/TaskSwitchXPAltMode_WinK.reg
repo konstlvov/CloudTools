@@ -1,0 +1,4 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Alexander Avdonin\TaskSwitchXP\2.0]
+"AlternateAppListHotKey"=dword:0000084b
