@@ -1,0 +1,44 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\PrestoSoft\ExamDiff\Settings]
+"Tab Size"=dword:00000004
+"Ignore Blanks"=dword:00000000
+"Ignore Blank Changes"=dword:00000000
+"Ignore Leading Blanks"=dword:00000000
+"Ignore Trailing Blanks"=dword:00000000
+"Ignore Case"=dword:00000000
+"Force Text"=dword:00000000
+"Show Line Numbers"=dword:00000001
+"Show Differences Only"=dword:00000000
+"Show Listview Tooltips"=dword:00000001
+"Font Face Name"="Courier"
+"Font Height"=dword:fffffff3
+"Font Italic"=dword:00000000
+"Font Weihgt"=dword:00000190
+"Font Pitch"=dword:00000011
+"Window X"=dword:00000032
+"Window Y"=dword:00000032
+"Window CX"=dword:0000035a
+"Window Maximized"=dword:00000001
+"Window CY"=dword:0000029d
+"Vertical Split Size"=dword:00000273
+"Horizontal Split Size"=dword:000001ad
+"Added Color"=dword:00408000
+"Deleted Color"=dword:000000ff
+"Changed Color"=dword:00ff0000
+"Back Added Color"=dword:00c0c0c0
+"Back Deleted Color"=dword:00c0c0c0
+"Back Changed Color"=dword:00c0c0c0
+"Editor"="notepad.exe"
+"Arguments"="$FILE"
+"Enable Change Notifications"=dword:00000001
+"Recent Files"=dword:0000000a
+"Recent Strings"=dword:0000000a
+"Split Vertically"=dword:00000001
+"Compare Files"=dword:00000001
+"Active Page"=dword:00000001
+"Web Visited"=dword:00000000
+"Mail Visited"=dword:00000000
+"EDPro Visited"=dword:00000000
+"Font Charset"=dword:000000cc
+

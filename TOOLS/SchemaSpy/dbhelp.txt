@@ -1,0 +1,114 @@
+
+C:\TOOLS\SchemaSpy>set PATH=C:\Program Files\Java\jre6\bin;E:\Program Files\Graphviz2.26.3\bin;E:\oracle\product\10.2.0\db_1\bin;E:\OraHome92\jre\1.4.2\bin\client;E:\OraHome92\jre\1.4.2\bin;E:\OraHome92\bin;E:\OraClient10g_home1\bin;E:\OraClient10g_home1;C:\Program Files\Oracle\jre\1.1.8\bin;C:\PROGRA~1\Borland\Delphi5\Projects\Bpl;C:\PROGRA~1\Borland\Delphi5\Bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;E:\Program Files\Microsoft SDK\Bin;C:\Program Files\Sybase\Shared\win32;E:\klvov_documents\my_shortcuts;E:\Program Files\Borland\Delphi7\Bin;E:\Program Files\Borland\Delphi7\Projects\Bpl;E:\Program Files\Microsoft Visual Studio 8\VC\bin;E:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\TOOLS;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Subversion\bin;C:\Program Files\GnuWin32\bin;C:\Program Files\SlikSvn\bin\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;E:\Program Files\Graphviz2.26.3\bin 
+
+C:\TOOLS\SchemaSpy>rem java -jar schemaSpy_5.0.0.jar -t mssql -host LVOVK -db Leader_78 -o e:\temp\ss -u sa -p sa -port 1433 
+
+C:\TOOLS\SchemaSpy>java -jar schemaSpy_5.0.0.jar -dbhelp 
+SchemaSpy generates an HTML representation of a database schema's relationships.
+
+Built-in database types and their required connection parameters:
+ db2:
+  IBM DB2 with the 'App' Driver
+   -db   	database name
+ db2net:
+  IBM DB2 with the Type 4 'Net' Driver
+   -host   	database host
+   -port   	port on database host
+   -db   	database name
+ db2zos:
+  IBM DB2 for z/OS with the 'App' Driver
+   -db   	database name
+ derby:
+  Derby Embedded Server
+   -db   	path to database
+ derbynet:
+  Derby Network Server
+   -host   	hostname[:port] host where database resides with optional port
+   -db   	database name
+ firebird:
+  Firebird
+   -host   	hostname[:port] (possibly just localhost)
+   -db   	database name
+ hsqldb:
+  HSQLDB Server
+   -host   	hostname[:port] (possibly just localhost)
+   -db 
+ informix:
+  InformixSQL
+   -host   	hostname and port
+   -db   	database name
+   -server   	database server
+ jtds:
+  Microsoft SQL Server JTDS
+   -host   	database server host
+   -port   	database port on host
+   -db   	database name
+ maxdb:
+  MaxDB
+   -host   	Name of the computer on which the database instance is running
+   -db   	Name of database instance
+ mssql:
+  Microsoft SQL Server
+   -host   	database server host
+   -port   	database port on host
+   -db   	database name
+ mssql-jtds:
+  jTDS JDBC Driver for Microsoft SQL 2000/2005 Server 
+   -host   	database server host 
+   -port   	database port on host 
+   -db   	database name  
+ mssql05:
+  Microsoft SQL Server 2005
+   -host   	database server host
+   -port   	database port on host
+   -db   	database name
+ mssql05-jtds:
+  jTDS JDBC Driver for Microsoft SQL 2000/2005 Server 
+   -host   	database server host 
+   -port   	database port on host 
+   -db   	database name  
+ mysql:
+  MySQL
+   -host   	hostname[:port] host where database resides with optional port
+   -db   	database name
+ ora:
+  Oracle with OCI8 Driver
+   -db   	database name (from TNSNAMES.ORA)
+ orathin:
+  Oracle with Thin Driver
+   -host   	database host
+   -port   	port on database host
+   -db   	database SID as known on host
+ pgsql:
+  PostgreSQL
+   -host   	hostname[:port] (possibly just localhost)
+   -db   	database name
+ sqlite:
+  SQLite
+   -db   	path to database or :memory:
+ sybase:
+  Sybase Server (jdbc3)
+   -host   	database server host
+   -port   	database port on host
+   -db   	database name
+ sybase2:
+  Sybase Server (jdbc2)
+   -host   	database server host
+   -port   	database port on host
+   -db   	database name
+ teradata:
+  Teradata
+   -db   	database name
+   -port   	?????
+ udbt4:
+  DB2 UDB Type 4 Driver
+   -host   	database host
+   -port   	port on database host
+   -db   	database name
+
+You can use your own database types by specifying the filespec of a .properties file with -t.
+Grab one out of schemaSpy_5.0.0.jar and modify it to suit your needs.
+
+Sample usage using the default database type (implied -t ora):
+ java -jar schemaSpy.jar -db mydb -s myschema -u devuser -p password -o output
+
