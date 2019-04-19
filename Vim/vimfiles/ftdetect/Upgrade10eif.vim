@@ -1,0 +1,1 @@
+au BufRead,BufNewFile Upgrade(10).eif		setlocal statusline=%!MyStatusLine()

@@ -1,0 +1,1 @@
+au BufRead,BufNewFile *.java		silent execute ":e ++enc=utf-8"

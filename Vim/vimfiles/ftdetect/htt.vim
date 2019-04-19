@@ -1,0 +1,1 @@
+au BufRead,BufNewFile *.htt        set filetype=html

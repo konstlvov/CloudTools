@@ -1,0 +1,1 @@
+au BufRead,BufNewFile *.xtt        set filetype=xml

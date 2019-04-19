@@ -1,0 +1,555 @@
+set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+" klvov: мои настройки
+set nobackup
+set nowritebackup
+set noswapfile
+set nowrap
+set nostartofline
+set noundofile
+let $LANG='EN'
+" Почему же я раньше не переключил enc на utf-8! После этого Vim стал понимать регистр русских букв
+" (при поиске и в командах типа U, u)
+set enc=utf-8
+set fenc=cp1251
+set fileencodings=cp1251,utf-8,ucs-bom,default,latin1
+" каталог для swap-файлов
+set directory=$TEMP
+" start Vim in maximized window
+au GUIEnter * simalt ~x
+" установить keymap, чтобы по Ctrl+^ переключался на русский и обратно
+set keymap=russian-jcukenwin
+" по умолчанию - латинская раскладка
+set iminsert=0
+" по умолчанию - латинская раскладка при поиске
+set imsearch=0
+" игнорировать регистр при поиске
+set ic
+" подсвечивать поиск
+set hls
+" инкрементальный поиск
+set is
+" ширина текста
+" set textwidth=76 " так отформатировано на lib.ru
+set textwidth=100 " у нас в БСС решили пока так
+" минимальная высота окна пусть будет 0 (по умолчанию - 1)
+set winminheight=0
+" установить шрифт Consolas
+set guifont=consolas:h8:cRUSSIAN
+set printfont=consolas:h8:cRUSSIAN
+" настраиваю для работы с русскими словами (чтобы w, b, * понимали
+" русские слова)
+set iskeyword=@,48-57,_,192-255
+" не надо показывать панель инструментов - толку от нее нет, а место
+" занимает
+set go-=T
+" то же для меню
+set go-=m
+" не надо начинать поиск с начала документа, после того, как достигнут
+" конец (и наоборот)
+set nowrapscan
+" выключить отображение колонки фолдинга по умолчанию
+set foldcolumn=0
+" автоматически перечитывать файл, если он был изменен в другом приложении
+set autoread
+
+"в визуальном режиме заменять выделение содержимым регистра "", не изменяя этого регистра
+"таким образом, можно несколько раз вставить один и тот же текст.
+vnoremap p "_dP
+
+" klvov: по звездочке не прыгать на следующее найденное, а просто подсветить
+" старая версия - все равно может прыгать по тексту и сбивать позицию
+nnoremap * *N
+
+" выключить подсветку: пока повешу на Ctrl-F8, а вообще хочу на Ctrl-8
+nnoremap <C-F8> :noh<CR>
+
+" в визуальном режиме по команде * подсвечивать выделение
+vnoremap * y :execute ":let @/=@\""<CR> :execute "set hlsearch"<CR>
+
+" переключать на другой буфер, даже если в текущем буфере есть несохраненные изменения
+set hidden
+
+" по Alt+0 показать окно навигации по функциям
+nnoremap <A-0> :TlistToggle<CR>
+
+" по Alt-1 редактировать текущее слово
+nnoremap <M-1> ciw
+
+" по Alt-t открыть новую вкладку
+nnoremap <M-t> :tabnew<CR>
+
+"показывать только имена файлов в заголовках вкладок
+set guitablabel=%t
+
+"BEGIN БСС Северо-Запад SECTION
+
+function! LeaveBaseName() range
+  pyfile $VIM\vimfiles\python\LeaveBaseName.py
+endfunction
+
+"установить величину отступа 2 и всегда вставлять пробелы, а не табы
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+function! SaveRunCommand()
+  execute "silent update"
+  " Три уровня закавычивания: одинарная кавычка - аргумент execute,
+  " двойная кавычка - аргумент system, и \" - аргумент cmd.exe /c
+  " Upd. Три уровня надо для Vim 7.3 - следующая строка предназначена для Vim 7.3
+  " execute 'echo system("\"cd ..\\USER && nmake\"")'
+  " Upd. Для Vim 7.4 надо два уровня - следующая строка предназначена для Vim 7.4
+  " execute 'echo system("cd ..\\USER && nmake")'
+  execute 'echo system("cmd /c build.cmd | iconv -f CP1251 -t UTF-8")'
+endfunction
+nnoremap <F9> :call SaveRunCommand()<CR>
+inoremap <F9> <Esc>:call SaveRunCommand()<CR>
+
+function! NMakeMake()
+  execute "silent update"
+  execute 'echo system("\"cd ..\\USER && nmake make\"")'
+endfunction
+
+function! NMakeFull()
+  execute "silent update"
+  execute 'echo system("\"cd ..\\USER && nmake full\"")'
+endfunction
+
+function! MakeTags()
+  execute "silent update"
+  execute "echo system('ctags --recurse=yes --language-force=Pascal ABS Admin Crypto Operations Packages Phone Plugins Print rts Schemes SN20 SQL test upgrade Utils')"
+endfunction
+
+function! NMakeComplete()
+  execute "silent update"
+  " works, but blocks Vim window until build process finishes
+  "execute 'echo system("\"cd ..\\USER && nmake complete\"")'
+  " starts build process in separate window
+  execute '!start cmd /c "cd ..\\USER && nmake complete && cd ..\\SOURCE && ctags --recurse=yes --language-force=Pascal ABS Admin Crypto Operations Packages Phone Plugins Print rts Schemes SN20 SQL test upgrade Utils && pause" '
+endfunction
+nnoremap <C-F9> :call NMakeComplete()<CR>
+
+function! ReplaceBackslashesWithSlashes(inp)
+  return substitute(a:inp, "\\", "\/", "g")
+endfunction
+
+let pascal_delphi=1
+
+iab qfi q.FieldByName('').AsInteger<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab qff q.FieldByName('').AsFloat<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab qfs q.FieldByName('').AsString<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab qfd q.FieldByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab ffi Form.Fields.FieldByName('').AsInteger<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab fff Form.Fields.FieldByName('').AsFloat<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab ffs Form.Fields.FieldByName('').AsString<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab ffd Form.Fields.FieldByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab ift if then<CR>begin<Left><Left><Left><Left><Left><Backspace><End><CR>end;<Left><Left><Left><Left><Backspace>
+iab pbs q.ParamByName('').AsString<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab pbi q.ParamByName('').AsInteger<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab pbf q.ParamByName('').AsFloat<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab pbd q.ParamByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+iab sm vShowMessage();<Left><Left>
+iab mbe MessageBox(ErrMsg, 'Ошибка', mbOK or mbIconHand);
+iab ffc Form.FindComponent('')<Left><Left>
+" iab ff Form.Fields.
+iab ffmt Fmt.Format('')<Left><Left>
+iab fdoc {**<CR><DESCRIBE FUNCTION HERE><CR>@author k.lvov<CR>@param <DESCRIBE PARAM HERE><CR>@return <DESCRIBE RETURN VALUE HERE><CR>*}<Left><Left>
+iab cst try raise('call stack'); except vShowMessage(Exception.CallStack); end;<Esc>^
+iab jsfunc function(){}<Left>
+
+iab tpltest 
+\<Home>procedure Test_<TESTNAME>(path : string);
+\<CR><Home>begin
+\<CR><Home>  TestHeader('Test_<TESTNAME>', path);
+\<CR><Home>  CheckEquals('expected', 'actual', '');
+\<CR><Home>end;<Home><Esc>
+
+iab tplsuite 
+\<Home>procedure TestSuite_<SUITENAME>(path: string);
+\<CR><Home>begin
+\<CR><Home>  TestSuiteHeader('TestSuite_<SUITENAME>', path);
+\<CR><Home>  //try TestExample1(path); except TestCatchException; end;
+\<CR><Home>end;<Home><Esc>
+
+iab getq 
+\<Home>try
+\<CR><Home>  q := ma_GetQuery_v0('select * from MyTable');
+\<CR><Home>  while q.Next do
+\<CR><Home>  begin
+\<CR><Home>  end;
+\<CR><Home>finally
+\<CR><Home>  FreeObject(q);
+\<CR><Home>end;<Home><Esc>
+
+iab tfe 
+\<Home>try
+\<CR><Home>finally
+\<CR><Home>  //FreeObject(q);
+\<CR><Home>end;<Home><Esc>
+
+function! Sql2Bls() range
+  for i in range(a:firstline, a:lastline)
+    " заменить одиночный апостроф на двойной
+    let src = substitute(getline(i), "'", "''", "g")
+    if i == a:firstline
+      let repl = "  '" . src . " '"
+    elseif i == a:lastline
+      let repl = "+ '" . src . "';"
+    else
+      let repl = "+ '" . src . " '"
+    endif
+    call setline(i, repl)
+  endfor
+endfunction
+
+function! XttMake() range
+  for i in range(a:firstline, a:lastline)
+    let src = getline(i)
+    call setline(i, '<'.src.'>[['.src.']]</'.src.'>')
+  endfor
+endfunction
+
+function! AuthMake() range
+  for i in range(a:firstline, a:lastline)
+    let src = getline(i)
+    if i == a:firstline
+      let repl = '<tr><td class="aut-h-l">CAPTION</td><td><xsl:value-of select="'.src.'" /></td></tr>'
+    else
+      let repl = '<tr><td class="aut-h">CAPTION</td><td><xsl:value-of select="'.src.'" /></td></tr>'
+    endif
+    call setline(i, repl)
+  endfor
+endfunction
+
+function! Xml2CSharp() range
+  for i in range(a:firstline, a:lastline)
+    " эскейпить кавычки
+    let src = substitute(getline(i), '"', '\\"', "g")
+    if i == a:firstline
+      let repl = '  "' . src . ' "'
+    elseif i == a:lastline
+      let repl = '+ "' . src . '";'
+    else
+      let repl = '+ "' . src . ' "'
+    endif
+    call setline(i, repl)
+  endfor
+endfunction
+
+function! Bls2Sql() range
+  for i in range(a:firstline, a:lastline)
+    " заменить двойной апостроф на одиночный
+    let src = substitute(getline(i), "''", "'", "g")
+    if i == a:firstline
+      let repl = substitute(src, "^\\s*'\\(.*\\) '$", "\\1", "g")
+    elseif i == a:lastline
+      let repl = substitute(src, "^\\s*+\\s\\+'\\(.*\\)';$", "\\1", "g")
+    else
+      let repl = substitute(src, "^\\s*+\\s\\+'\\(.*\\) '$", "\\1", "g")
+    endif
+    call setline(i, repl)
+  endfor                               
+endfunction
+
+function! Strings2Delphi() range
+  for i in range(a:firstline, a:lastline)
+    let src = getline(i)
+    " заменить одиночный апостроф на двойной
+    let src = substitute(src, "'", "''", "g")
+    if i == a:firstline
+      let repl = "'" . src . "'+#13+#10"
+    elseif i == a:lastline
+      let repl = "+ '" . src . "'+#13+#10;"
+    else
+      let repl = "+ '" . src . "'+#13+#10"
+    endif
+    call setline(i, repl)
+  endfor
+endfunction
+
+function! Strings2DelphiRevert() range
+  for i in range(a:firstline, a:lastline)
+    let src = getline(i)
+    " заменить двойной апостроф на одиночный
+    let src = substitute(src, "''", "'", "g")
+    if i == a:firstline
+      let repl = substitute(src, "^\\s*'\\(.*\\)'+#13+#10$", "\\1", "g")
+    elseif i == a:lastline
+      let repl = substitute(src, "^\\s*+\\s\\+'\\(.*\\)'+#13+#10;$", "\\1", "g")
+    else
+      let repl = substitute(src, "^\\s*+\\s\\+'\\(.*\\)'+#13+#10$", "\\1", "g")
+    endif
+    call setline(i, repl)
+  endfor                               
+endfunction
+
+vnoremap ,q :call Sql2Bls()<CR>
+vnoremap ,Q :call Bls2Sql()<CR>
+vnoremap ,d :call Strings2Delphi()<CR>
+vnoremap ,D :call Strings2DelphiRevert()<CR>
+
+vnoremap ,f :!tidy -q -i -xml -raw -w 5000<CR>
+
+" Поднять текущий файл в Explorer
+function! Exup()
+  execute 'silent !start explorer /select, '.shellescape(expand('%:p'), 1)
+endfunction
+nnoremap <M-e> :call Exup()<CR>
+
+" поднимает диалог коммита файлов в svn (сейчас на корне модели)
+function! SvnCommit()
+  execute 'silent update'
+  execute 'silent !start cmd.exe /c C:\\BSRetail\\svn_commit_all.cmd'
+  " на текущем файле:
+  " execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:commit /notempfile /path:'.shellescape(expand('%:p'), 1)
+  " на текущей директории (?) - не разобрался пока как сделать
+  " execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:commit /notempfile /path:.'
+endfunction
+nnoremap <M-c> :call SvnCommit()<CR>
+
+" вызывает svn update на корне модели
+function! SvnUpdate()
+  execute 'silent update'
+  execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:update /notempfile /path:..'
+endfunction
+nnoremap <M-u> :call SvnUpdate()<CR>
+
+" Исполнить python'овский скрипт
+function! ExecPython()
+  execute 'silent update'
+  execute "echo system('python.exe ".shellescape(expand('%:p'), 1)."')"
+  " execute "echo system('python.exe ".shellescape(expand('%:p'), 1)." | iconv -f CP1251 -t UTF-8')"
+endfunction
+nnoremap <M-p> :call ExecPython()<CR>
+
+function! ExecJS()
+  execute 'silent update'
+  let ffp = shellescape(expand('%:p'), 1) " file full path
+  " with .js files this works:
+  " execute "echo system('cscript.exe ".ffp." | iconv -f CP866 -t UTF-8')"
+  execute "echo system('node.exe ".ffp." | iconv -f UTF-8 -t UTF-8')"
+endfunction
+nnoremap <M-j> :call ExecJS()<CR>
+
+function! ExecHaskell()
+  execute 'silent update'
+  " execute "echo system('C:\\Users\\lvov_k\\CloudTools\\ghc-8.2.2\\bin\\runhaskell.exe ".shellescape(expand('%:p'), 1)."| iconv -f CP866 -t UTF-8')"
+  let current_dir = shellescape(expand('%:p:h'))
+  let file_full_path = shellescape(expand('%:p'), 1)
+  echo "about to pass following string to runhaskell.exe: ".file_full_path
+  execute "echo system('cd /D ".current_dir." && runhaskell.exe ".file_full_path." | iconv -f CP866 -t UTF-8')"
+endfunction
+nnoremap <M-h> :call ExecHaskell()<CR>
+
+function! OpenFileInSublime()
+  execute 'silent update'
+  execute 'silent !start D:\SublimeText2\sublime_text.exe '.shellescape(expand('%:p'), 1).':'.getpos('.')[1].':'.getpos('.')[2]
+endfunction
+nnoremap <M-s> :call OpenFileInSublime()<CR>
+
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+nnoremap <M-y> :let @*=expand("%:p")<CR>
+
+"END БСС Северо-Запад SECTION
+
+" Использовать сочетания клавиш для комментирования/раскомментирования визуальных блоков
+vnoremap ,# :s/^/#/<CR>
+vnoremap ,/ :s/^/\/\//<CR>
+vnoremap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>
+
+"по F2 инвертировать значение опции 'wrap'
+nnoremap <F2> :execute RotateWrap()<CR>
+function! RotateWrap()
+    let wrap_status = &wrap
+    if wrap_status == 0
+        echo "set wrap"
+        return ":set wrap"
+    else
+        echo "set nowrap"
+        return ":set nowrap"
+    endif
+endfunction
+
+" по аккорду <C-Y> заменять слово под курсором на содержимое регистра "
+" (при этом содержание самого регистра " не изменяется)
+nnoremap <S-Y> "_diwPb
+nnoremap <C-Y> yiw
+
+" по Alt-5 изменять хвост текущего слова
+nnoremap <M-5> cw
+
+" закрывать окно плагина TagList после выбота тэга
+let Tlist_Close_On_Select = 1
+" не показывать тэги для неактивных буферов
+let Tlist_File_Fold_Auto_Close = 1
+" переходить сразу в открытое окно плагина TagList
+let Tlist_GainFocus_On_ToggleOpen = 1
+" использовать компактный формат списка тэгов (?)
+" let Tlist_Compact_Format = 1
+" уширить окно со списком тэгов, чтобы помещались длинные имена
+let Tlist_WinWidth = 50
+
+" <F12> - buffer explorer plugin
+" map <F12> :BufExplorer<CR>
+" <F12> - Fuzzy finder plugin
+map <F12> :FufBuffer<CR>
+" <C-F12> - Fuzzy finder plugin (search for tags)
+map <C-F12> :FufCoverageFile<CR>
+
+" <F8> File encoding for open
+" ucs-2le - MS Windows unicode encoding
+map <F8>    :execute RotateEnc()<CR>
+vmap <F8>    <C-C><F8>
+imap <F8>    <C-O><F8>
+function! RotateEnc()
+	if !exists("b:encindex")
+	  let b:encindex = 0
+	endif
+  let y = -1
+  while y == -1
+    let encstring = "#utf-8#8bit-cp866#cp1251#ucs-2le#koi8-r#"
+    let x = match(encstring,"#",b:encindex)
+    let y = match(encstring,"#",x+1)
+    let b:encindex = x+1
+    if y == -1
+      let b:encindex = 0
+    else
+      let str = strpart(encstring,x+1,y-x-1)
+      silent execute ":e ++enc=".str
+      echo "Screen encoding: " . &encoding . ", file encoding: " . &fileencoding . ". File opened with ++enc=" . str
+    endif
+  endwhile
+endfunction
+
+set diffexpr=MyDiff()
+function! MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+let javaScript_fold = 1
+
+" Protect large files from sourcing and other overhead.
+" Files become read only
+if !exists("my_auto_commands_loaded")
+  let my_auto_commands_loaded = 1
+  " Large files are > 10M
+  " Set options:
+  " eventignore+=FileType (no syntax highlighting etc
+  " assumes FileType always on)
+  " noswapfile (save copy of file)
+  " bufhidden=unload (save memory when other file is viewed)
+  " buftype=nowritefile (is read-only)
+  " undolevels=-1 (no undo possible)
+  let g:LargeFile = 1024 * 1024 * 10
+  augroup LargeFile
+    autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
+    augroup END
+  endif
+colorscheme klvov
+
+" Утянул с http://stackoverflow.com/questions/4503748/remove-everything-except-regex-match-in-vim
+"" Remove all text except what matches the current search result. Will put each
+"" match on its own line. This is the opposite of :%s///g (which clears all
+"" instances of the current search).
+function! ClearAllButMatches() range
+    let is_whole_file = a:firstline == 1 && a:lastline == line('$')
+    let old_c = @c
+    let @c=""
+    exec a:firstline .','. a:lastline .'sub//\=setreg("C", submatch(0), "l")/g'
+    exec a:firstline .','. a:lastline .'delete _'
+    put! c
+    "" I actually want the above to replace the whole selection with c, but I'll
+    "" settle for removing the blank line that's left when deleting the file
+    "" contents.
+    if is_whole_file
+        $delete _
+    endif
+    let @c = old_c
+endfunction
+
+" для редактирования Upgrade(10).eif
+" включается командой :set stl=%!MyStatusLine()
+function! MyStatusLine()
+  let cp = col(".")
+  let currentLine = getline(".")
+  " let len = strlen(currentLine)
+  let i = 0
+  let sepsBeforeCursorCount = 0
+  while i < cp - 1
+    let symbol = currentLine[i]
+    if symbol == "|"
+      let sepsBeforeCursorCount += 1
+    endif
+    let i += 1
+  endwhile
+  if sepsBeforeCursorCount == 0
+    return "Autokey"
+  elseif sepsBeforeCursorCount == 1
+    return "BackupData"
+  elseif sepsBeforeCursorCount == 2
+    return "Description"
+  elseif sepsBeforeCursorCount == 3
+    return "ImportData"
+  elseif sepsBeforeCursorCount == 4
+    return "ImportStructure"
+  elseif sepsBeforeCursorCount == 5
+    return "IndexFields"
+  elseif sepsBeforeCursorCount == 6
+    return "NtClearRoot"
+  elseif sepsBeforeCursorCount == 7
+    return "OperationResult"
+  elseif sepsBeforeCursorCount == 8
+    return "ParentFor"
+  elseif sepsBeforeCursorCount == 9
+    return "ReCreate"
+  elseif sepsBeforeCursorCount == 10
+    return "StructureName"
+  elseif sepsBeforeCursorCount == 11
+    return "StructureType"
+  elseif sepsBeforeCursorCount == 12
+    return "SubstFields"
+  elseif sepsBeforeCursorCount == 13
+    return "UpdateFound"
+  elseif sepsBeforeCursorCount == 14
+    return "UseTransit"
+  endif
+endfunction
+
+" заменяет содержимое текущего буфера на список недавно использованных файлов
+" затем их можно открывать, в режиме визуального выделения выделив полный путь к файлу и как обычно
+" по Ctrl-W gf
+function! Mrufiles()
+  execute "redir @a"
+  execute "silent oldfiles"
+  execute "redir END"
+  normal! ggdG
+  normal! gg0"aP
+endfunction
+
+execute "cd C:\\BSRetail\\SOURCE"
+set titlestring=%F%m%y%{&fileencoding}

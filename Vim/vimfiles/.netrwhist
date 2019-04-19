@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='D:/models/packages'
+let g:netrw_dirhist_2='C:/models/RussiaRetUpgrades/BuildConf'
+let g:netrw_dirhist_3='C:/BSRetail/SOURCE/Utils'
+let g:netrw_dirhist_4='C:/BSRetail/SOURCE/ABS'
+let g:netrw_dirhist_5='C:/BSRetail/SOURCE/Admin'
+let g:netrw_dirhist_6='C:/BSRetail/SOURCE/Crypto'
