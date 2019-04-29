@@ -294,6 +294,9 @@ vnoremap ,D :call Strings2DelphiRevert()<CR>
 
 vnoremap ,f :!tidy -q -i -xml -raw -w 5000<CR>
 
+" Отформатировать JSON: сработает только когда enc=utf-8 и fenc=utf-8 тоже
+vnoremap ,j :! jq . \| iconv -f UTF-8 -t CP1251<CR>
+
 " Поднять текущий файл в Explorer
 function! Exup()
   execute 'silent !start explorer /select, '.shellescape(expand('%:p'), 1)
@@ -358,9 +361,9 @@ nnoremap <M-y> :let @*=expand("%:p")<CR>
 "END БСС Северо-Запад SECTION
 
 " Использовать сочетания клавиш для комментирования/раскомментирования визуальных блоков
-vnoremap ,# :s/^/#/<CR>
-vnoremap ,/ :s/^/\/\//<CR>
-vnoremap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>
+vnoremap ,# :s/^/#/<CR>:noh<CR>
+vnoremap ,/ :s/^/\/\//<CR>:noh<CR>
+vnoremap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>:noh<CR>
 
 "по F2 инвертировать значение опции 'wrap'
 nnoremap <F2> :execute RotateWrap()<CR>
