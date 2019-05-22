@@ -1,4 +1,4 @@
 В User environment variables надо добавить
 
-CLOUDTOOLS=C:\Users\k.lvov\CloudTools
+CLOUDTOOLS=C:\Users\%USERNAME%\CloudTools
 PATH=%CLOUDTOOLS%\TOOLS
