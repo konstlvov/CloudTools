@@ -1,6 +1,6 @@
 ﻿.Language=German,German (Deutsch)
 
-//Version: 3.0 build 5354
+//Version: 3.0 build 5400
 
 //[MYes]
 "Ja"
@@ -1047,14 +1047,17 @@
 "Wollen Sie die Datei überschreiben?"
 //[MEditSaving]
 "Speichere die Datei"
+// Up to 3 characters
 // need translation:
 //[MEditStatusLine]
-"Zeile"
+"Zei"
+// Up to 3 characters
 // need translation:
 //[MEditStatusCol]
-"Spal"
+"Spl"
+// Up to 2 characters
 //[MEditStatusChar]
-"Symbol"
+"Sm"
 
 //[MEditRSH]
 "ist eine schreibgeschützte Datei"
@@ -3271,9 +3274,8 @@
 // need translation:
 //[MSetColorMenuGrayed]
 "Grayed text"
-// need translation:
 //[MSetColorMenuSelectedGrayed]
-"Selected grayed text"
+"Zaznaczony nieaktywny tekst"
 //[MSetColorMenuBox]
 "Rahmen"
 //[MSetColorMenuTitle]
@@ -3709,8 +3711,10 @@
 "Betrachter"
 //[MViewerCannotOpenFile]
 "Kann Datei nicht öffnen"
+// Up to 3 characters
+// need translation:
 //[MViewerStatusCol]
-"Spalte"
+"Spl"
 
 //[MViewSearchTitle]
 "Durchsuchen"

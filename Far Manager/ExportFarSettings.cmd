@@ -1,1 +1,0 @@
-.\Far.exe /export config.farconfig

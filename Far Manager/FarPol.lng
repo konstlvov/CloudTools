@@ -1,6 +1,6 @@
 ﻿.Language=Polish,Polish (Polski)
 
-//Version: 3.0 build 5354
+//Version: 3.0 build 5400
 
 //[MYes]
 "Tak"
@@ -18,7 +18,6 @@
 
 //[MCancel]
 "Anuluj"
-// need translation:
 //[MReset]
 "&Reset"
 //[MRetry]
@@ -61,7 +60,7 @@
 //[MQuit]
 "Zakończ"
 //[MAskQuit]
-"Czy chcesz zakończyć pracę z FARem?"
+"Czy chcesz wyjść z FAR'a"
 
 //functional keys - 6 characters max
 //[MF1]
@@ -69,7 +68,7 @@
 //[MF2]
 "Menu"
 //[MF3]
-"Zobacz"
+"Podgląd"
 //[MF4]
 "Edytuj"
 //[MF5]
@@ -85,7 +84,7 @@
 //[MF10]
 "Koniec"
 //[MF11]
-"Plugin"
+"Wtyczki"
 //[MF12]
 "Ekran"
 
@@ -119,7 +118,7 @@
 //[MAltF2]
 "Prawy"
 //[MAltF3]
-"Zobacz"
+"Podgląd"
 //[MAltF4]
 "Edytuj"
 //[MAltF5]
@@ -147,9 +146,8 @@
 "Nazwa"
 //[MCtrlF4]
 "Rozsz"
-// need translation:
 //[MCtrlF5]
-"Write"
+"Zapis"
 //[MCtrlF6]
 "Rozm"
 //[MCtrlF7]
@@ -183,7 +181,7 @@
 //[MAltShiftF8]
 ""
 //[MAltShiftF9]
-"KonfPl"
+"KonfWt"
 //[MAltShiftF10]
 ""
 //[MAltShiftF11]
@@ -273,10 +271,9 @@
 //[MHistoryTitle]
 "Historia"
 //[MFolderHistoryTitle]
-"Historia katalogów"
-// need translation:
+"Historia folderów"
 //[MViewHistoryTitle]
-"Historia podglądu plików"
+"Historia podglądu i edycji plików"
 //[MViewHistoryIsCreate]
 "Utworzyć plik?"
 //[MHistoryView]
@@ -301,87 +298,65 @@
 "Kopiuj pliki otwarte do zap&isu"
 //[MConfigScanJunction]
 "Skanuj linki s&ymboliczne"
-// need translation:
 //[MConfigSmartFolderMonitor]
-"Update panels only when Far is active"
+"&Aktualizuj panele tylko gdy FAR jest aktywny"
 //[MConfigSaveHistory]
 "Zapisz historię &poleceń"
 //[MConfigSaveFoldersHistory]
-"Zapisz historię &katalogów"
+"Zapisz historię &folderów"
 //[MConfigSaveViewHistory]
 "Zapisz historię podglądu i &edycji"
 //[MConfigRegisteredTypes]
 "Użyj zare&jestrowanych typów Windows"
-// need translation:
 //[MConfigUpdateEnvironment]
-"Automatic update of environment variables"
-// need translation:
+"Automa&tyczna aktualizacja zmiennych systemowych"
 //[MConfigElevation]
-"request administrator rights:"
-// need translation:
+"wymagane uprawnienia administratora:"
 //[MConfigElevationModify]
-"for modification"
-// need translation:
+"do modyfikacji"
 //[MConfigElevationRead]
-"for read"
-// need translation:
+"do odczytu"
 //[MConfigElevationUsePrivileges]
-"use additional privileges"
-// need translation:
+"użyj dodatkowych uprawnień"
 //[MConfigSortingCollation]
-"Sorting collation:"
-// need translation:
+"Sposoby sortowania:"
 //[MConfigSortingOrdinal]
-"ordinal"
-// need translation:
+"porządkowo"
 //[MConfigSortingInvariant]
-"invariant"
-// need translation:
+"bez ustawień regionalnych"
 //[MConfigSortingLinguistic]
-"linguistic"
-// need translation:
+"językowo"
 //[MConfigSortingDigitsAsNumbers]
-"Treat digits as numbers"
+"Traktuj &cyfry jak liczby"
 //[MConfigSortingCase]
-"&Uwzględnij wielkość liter"
+"Uwzględnij wielkość &liter"
 //[MConfigAutoSave]
 "Automatycznie &zapisuj ustawienia"
 
-// need translation:
 //[MConfigTreeTitle]
-"Tree settings"
+"Ustawienia drzewa"
 //[MConfigTreeAutoChange]
-"&Automatycznie zmieniaj katalog"
-// need translation:
+"&Automatycznie zmieniaj folder"
 //[MConfigTreeLabelMinFolder]
-"&Minimum number of folders:"
-// need translation:
+"&Minimalna liczba folderów:"
 //[MConfigTreeLabel1]
-"Store a file with folder structure for:"
-// need translation:
+"Zapisz plik ze strukturą folderów dla:"
 //[MConfigTreeLabelLocalDisk]
-"local drives"
-// need translation:
+"dysków lokalnych"
 //[MConfigTreeLabelNetDisk]
-"network drives"
-// need translation:
+"dysków sieciowych"
 //[MConfigTreeLabelNetPath]
-"network paths"
-// need translation:
+"ścieżek sieciowych"
 //[MConfigTreeLabelRemovableDisk]
-"removable drives"
-// need translation:
+"dysków wyjmowalnych"
 //[MConfigTreeLabelCDDisk]
-"optical drives"
-// need translation:
+"napędów optycznych"
 //[MConfigTreeLabelExceptPath]
-"Don't create the file for following drives and paths:"
-// need translation:
+"Nie twórz plików dla poniższych dysków i ścieżek:"
 //[MConfigTreeLabelSaveLocalPath]
-"Path for local, removale and optical drives:"
-// need translation:
+"Ścieżka dla dysków lokalnych, wyjmowalnych i optycznych:"
 //[MConfigTreeLabelSaveNetPath]
-"Path for network drives and paths:"
+"Ścieżka dla dysków i ścieżek sieciowych:"
 
 //[MConfigPanelTitle]
 "Ustawienia panelu"
@@ -391,11 +366,10 @@
 "W&yróżniaj pliki"
 //[MConfigSelectFolders]
 "Zaznaczaj katalo&gi"
-// need translation:
 //[MConfigRightClickSelect]
-"Right click selects files"
+"Pr&awy klik zaznacza pliki"
 //[MConfigSortFolderExt]
-"Sortuj nazwy katalogów wg r&ozszerzeń"
+"Sortuj nazwy folderów wg r&ozszerzeń"
 //[MConfigReverseSort]
 "Włącz &możliwość odwrotnego sortowania"
 //[MConfigAutoUpdateLimit]
@@ -403,27 +377,25 @@
 //[MConfigAutoUpdateLimit2]
 "jeśli zawierają więcej obiektów niż"
 //[MConfigAutoUpdateRemoteDrive]
-"Auto&odświeżanie dysków sieciowych"
+"Autoodświeżanie dysków &sieciowych"
 //[MConfigShowColumns]
 "Wyświetl tytuły &kolumn"
 //[MConfigShowStatus]
 "Wyświetl &linię statusu"
-// need translation:
 //[MConfigDetailedJunction]
-"Detect volume mount &points"
+"Wykrywaj &punkty montowania wolumenów"
 //[MConfigShowTotal]
 "Wyświetl &całkowitą informację o plikach"
 //[MConfigShowFree]
-"Wyświetl ilość &wolnego miejsca"
+"Wyświetl &ilość wolnego miejsca"
 //[MConfigShowScrollbar]
 "Wyświetl &suwak"
 //[MConfigShowScreensNumber]
-"Wyświetl ilość &ekranów w tle"
+"Wyświetl &ilość ekranów w tle"
 //[MConfigShowSortMode]
-"Wyświetl l&iterę trybu sortowania"
-// need translation:
+"Wyświetl li&terę trybu sortowania"
 //[MConfigShowDotsInRoot]
-"Show \"..\" in root folders"
+"Pokaż \"&..\" w głównych folderach"
 
 //[MConfigInterfaceTitle]
 "Ustawienia interfejsu"
@@ -444,27 +416,21 @@
 //[MConfigCopyTotal]
 "Pokaż &całkowity postęp kopiowania"
 //[MConfigCopyTimeRule]
-"Pokaż informację o c&zasie kopiowania"
-// need translation:
+"Pokaż informację &o czasie kopiowania"
 //[MConfigDeleteTotal]
-"Show total delete progress indicator"
+"Pok&aż całkowity postęp usuwania"
 //[MConfigPgUpChangeDisk]
 "Użyj Ctrl+Pg&Up do zmiany napędu"
-// need translation:
 //[MConfigUseVirtualTerminalForRendering]
-"Use Virtual Terminal for rendering"
-// need translation:
+"Użyj &Terminalu Wirtualnego do renderowania"
 //[MConfigClearType]
-"ClearType-friendly redraw (can be slow)"
-// need translation:
+"&Rysowanie zgodne z ClearType (może być wolniejsze)"
 //[MConfigSetConsoleIcon]
-"Set console icon"
-// need translation:
+"Ustaw iko&nę konsoli"
 //[MConfigSetAdminConsoleIcon]
-"Alternate for Administrator"
-// need translation:
+"Inna dla Administratora"
 //[MConfigTitleAddons]
-"Far window title addons:"
+"Okno tytułowe &FAR:"
 
 //[MConfigDlgSetsTitle]
 "Ustawienia okien dialogowych"
@@ -473,160 +439,116 @@
 //[MConfigDialogsEditBlock]
 "&Trwałe bloki podczas edycji"
 //[MConfigDialogsDelRemovesBlocks]
-"&Del usuwa blok podczas edycji"
+"&DEL usuwa blok podczas edycji"
 //[MConfigDialogsAutoComplete]
 "&Autouzupełnianie podczas edycji"
 //[MConfigDialogsEULBsClear]
-"&Backspace usuwa nie zmieniony tekst"
+"&BACKSPACE usuwa nie zmieniony tekst"
 //[MConfigDialogsMouseButton]
 "&Kliknięcie myszy poza oknem zamyka je"
 
-// need translation:
 //[MConfigVMenuTitle]
-"Menu settings"
-// need translation:
+"Ustawienia menu"
 //[MConfigVMenuLBtnClick]
-"Left mouse click outside a menu"
-// need translation:
+"Kliknięcie lewym przyciskiem myszy poza menu"
 //[MConfigVMenuRBtnClick]
-"Right mouse click outside a menu"
-// need translation:
+"Kliknięcie prawym przyciskiem myszy poza menu"
 //[MConfigVMenuMBtnClick]
-"Middle mouse click outside a menu"
-// need translation:
+"Kliknięcie środkowym przyciskiem myszy poza menu"
 //[MConfigVMenuClickCancel]
-"Cancel menu"
-// need translation:
+"Anuluj menu"
 //[MConfigVMenuClickApply]
-"Execute selected item"
-// need translation:
+"Uruchom wybraną opcję"
 //[MConfigVMenuClickIgnore]
-"Do nothing"
+"Nic nie rób"
 
-// need translation:
 //[MConfigCmdlineTitle]
-"Command line settings"
-// need translation:
+"Ustawienia &linii poleceń"
 //[MConfigCmdlineEditBlock]
-"Persistent blocks"
-// need translation:
+"&Trwałe bloki"
 //[MConfigCmdlineDelRemovesBlocks]
-"Del removes blocks"
-// need translation:
+"Usuwaj bloki klawiszem &DEL"
 //[MConfigCmdlineAutoComplete]
-"AutoComplete"
+"&AutoUzupełnianie"
 //[MConfigCmdlineUsePromptFormat]
 "Wy&gląd znaku zachęty linii poleceń"
-// need translation:
 //[MConfigCmdlineUseHomeDir]
-"Use &home dir"
-// need translation:
+"&Użyj folderu domowego"
 //[MConfigCmdlinePromptFormatAdmin]
 "Administrator"
 
-// need translation:
 //[MConfigAutoCompleteTitle]
-"AutoComplete settings"
+"Ustawienie AutoUzupełniania"
 
-// need translation:
 //[MConfigAutoCompleteShowList]
-"&Show a list"
+"&Pokaż listę"
 
-// need translation:
 //[MConfigAutoCompleteModalList]
-"&Modal mode"
+"Tryb &modalny"
 
-// need translation:
 //[MConfigAutoCompleteAutoAppend]
-"&Append the first matched item"
+"&Dołącz piewrszy pasujący element"
 
-// need translation:
 //[MConfigInfoPanelTitle]
-"InfoPanel settings"
-// need translation:
+"Ustawienia panelu informacyjnego"
 //[MConfigInfoPanelCNTitle]
-"Computer &name format"
-// need translation:
+"Format nazwy &komputera"
 //[MConfigInfoPanelCNPhysicalNetBIOS]
-"Physical NetBIOS"
-// need translation:
+"Fizyczna nazwa z NetBIOS"
 //[MConfigInfoPanelCNPhysicalDnsHostname]
-"Physical DNS hostname"
-// need translation:
+"Fizyczna nazwa z DNS"
 //[MConfigInfoPanelCNPhysicalDnsDomain]
-"Physical DNS domain"
-// need translation:
+"Fizyczna domena z DNS"
 //[MConfigInfoPanelCNPhysicalDnsFullyQualified]
-"Physical DNS fully-qualified"
+"Fizyczny DNS (FQDN)"
 //[MConfigInfoPanelCNNetBIOS]
 "NetBIOS"
-// need translation:
 //[MConfigInfoPanelCNDnsHostname]
-"DNS hostname"
-// need translation:
+"Nazwa z DNS"
 //[MConfigInfoPanelCNDnsDomain]
-"DNS domain"
-// need translation:
+"Domena z DNS"
 //[MConfigInfoPanelCNDnsFullyQualified]
-"DNS fully-qualified"
-// need translation:
+"Wpis z DNS (FQDN)"
 //[MConfigInfoPanelUNTitle]
-"&User name format"
-// need translation:
+"Format nazwy &użytkownika"
 //[MConfigInfoPanelUNFullyQualifiedDN]
-"Fully Qualified Domain Name"
-// need translation:
+"Pełna nazwa domenowa (FQDN)"
 //[MConfigInfoPanelUNSamCompatible]
-"Sam Compatible"
-// need translation:
+"Zgodna z SAM"
 //[MConfigInfoPanelUNDisplay]
-"Display Name"
-// need translation:
+"Nazwa wyświetlana"
 //[MConfigInfoPanelUNUniqueId]
-"Unique Id"
-// need translation:
+"Unikalne ID"
 //[MConfigInfoPanelUNCanonical]
-"Canonical Name"
-// need translation:
+"Nazwa kanoniczna (z domeny)"
 //[MConfigInfoPanelUNUserPrincipal]
-"User Principial Name"
-// need translation:
+"Nazwa zalogowanego użytkownika (UPN)"
 //[MConfigInfoPanelUNServicePrincipal]
-"Service Principal"
-// need translation:
+"Główna usługa"
 //[MConfigInfoPanelUNDnsDomain]
-"DNS Domain"
-// need translation:
+"Domena DNS"
 //[MConfigInfoPanelShowPowerStatus]
-"Show &power status"
-// need translation:
+"Pokaż status &zasilania"
 //[MConfigInfoPanelShowCDInfo]
-"Show &CD drive parameters"
+"Pokaż parametry dysku &CD"
 
-// need translation:
 //[MMenuInfoShowModeTitle]
-"Show Info"
-// need translation:
+"Pokaż Info"
 //[MMenuInfoShowModeDisk]
-"&Disk"
-// need translation:
+"&Dysk"
 //[MMenuInfoShowModeMemory]
-"&Memory"
-// need translation:
+"&Pamięć"
 //[MMenuInfoShowModeDirDiz]
-"&Description"
-// need translation:
+"&Opis"
 //[MMenuInfoShowModePluginDiz]
-"Plu&gin panel"
-// need translation:
+"Panel &wtyczek"
 //[MMenuInfoShowModePower]
-"&Power status"
+"Status &zasilania"
 
 //[MViewConfigTitle]
-"Podgląd"
-// need translation:
+"Ustawienia podglądu plików"
 //[MViewConfigExternalF3]
-"Use external viewer for F3 instead of Alt+F3"
+"Użyj zewnętrznego podglądu pod klawiszem F3 zamiast Alt+F3"
 //[MViewConfigExternalCommand]
 "&Polecenie:"
 //[MViewConfigInternal]
@@ -635,20 +557,16 @@
 "&Zapamiętaj pozycję w pliku"
 //[MViewConfigSaveShortPos]
 "Zapisz z&akładki"
-// need translation:
 //[MViewConfigSaveCodepage]
-"Save file &code page"
-// need translation:
+"Zapisz &stronę kodową pliku"
 //[MViewConfigSaveWrapMode]
-"Save w&rap mode"
-// need translation:
+"Zapisz zawi&janie wierszy"
 //[MViewConfigSaveViewMode]
-"Save view mode"
-// need translation:
+"Zapisz t&ryb podglądu"
 //[MViewConfigDetectDumpMode]
-"Detect dump view mode"
+"Wykryj sposób podglądu"
 //[MViewAutoDetectCodePage]
-"Rozpozn&aj tablicę znaków"
+"Rozpozn&aj stronę kodową pliku"
 //[MViewConfigTabSize]
 "Rozmiar &tabulatora"
 //[MViewConfigScrollbar]
@@ -657,24 +575,19 @@
 "Pokaż strzał&ki przewijania"
 //[MViewConfigPersistentSelection]
 "T&rwałe zaznaczenie"
-// need translation:
 //[MViewConfigDefaultCodePage]
-"Default code page:"
-// need translation:
+"Domyślna strona kodowa:"
 //[MViewConfigMaxLineSize]
-"Maximum line width"
-// need translation:
+"Maksymalna szerokość linii"
 //[MViewConfigVisible0x00]
-"Visible '\\0'"
-// need translation:
+"Widoczne '\\0'"
 //[MViewConfigEditAutofocus]
-"Search dialog auto-focus"
+"Auto-focus okna szukania"
 
 //[MEditConfigTitle]
-"Edytor"
-// need translation:
+"Ustawienia edytora"
 //[MEditConfigEditorF4]
-"Use external editor for F4 instead of Alt+F4"
+"Użyj zewnętrznego edytora pod klawiszem F4 zamiast Alt+F4"
 //[MEditConfigEditorCommand]
 "&Polecenie:"
 //[MEditConfigInternal]
@@ -692,39 +605,35 @@
 "T&rwałe bloki"
 
 //[MEditConfigDelRemovesBlocks]
-"&Del usuwa bloki"
+"&DEL usuwa bloki"
 //[MEditConfigAutoIndent]
 "Automatyczne &wcięcia"
 //[MEditConfigSavePos]
 "&Zapamiętaj pozycję kursora w pliku"
 //[MEditConfigSaveShortPos]
-"Zapisz &zakładki"
+"Z&apisz zakładki"
 //[MEditCursorBeyondEnd]
 "&Kursor za końcem linii"
 //[MEditAutoDetectCodePage]
 "Rozpozn&aj tablicę znaków"
-// need translation:
 //[MEditShareWrite]
-"Allow editing files opened for &writing"
+"Z&ezwól na edycję plików otwartych do zapisu"
 //[MEditLockROFileModification]
-"Nie edytuj plików tylko do odczytu"
+"&Nie edytuj plików tylko do odczytu"
 //[MEditWarningBeforeOpenROFile]
 "&Ostrzeż przed otwieraniem plików tylko do odczytu"
 //[MEditConfigTabSize]
 "Rozmiar ta&bulatora"
 //[MEditConfigScrollbar]
 "Pokaż &pasek przewijania"
-// need translation:
 //[MEditShowWhiteSpace]
-"Show white space"
+"Pokaż &białe znaki"
 //[MEditConfigSelFound]
 "W&ybierz znalezione"
-// need translation:
 //[MEditConfigCursorAtEnd]
-"Cursor at the end"
-// need translation:
+"Kursor na końcu bloku"
 //[MEditConfigDefaultCodePage]
-"Default code page:"
+"Domyślna strona kodowa:"
 
 //[MSaveSetupTitle]
 "Zapisz ustawienia"
@@ -733,7 +642,7 @@
 //[MSaveSetupAsk2]
 "bieżące ustawienia?"
 //[MSaveSetup]
-"Zapisz"
+"&Zapisz"
 
 //[MCopyDlgTitle]
 "Kopiuj"
@@ -760,15 +669,15 @@
 //[MLinkType]
 "&Typ linku:"
 //[MLinkTypeJunction]
-"directory &junction"
+"&Link do folderu"
 //[MLinkTypeHardlink]
-"link &trwały"
+"Link &trwały"
 //[MLinkTypeSymlink]
-"link symboliczny"
+"Link symboliczny"
 //[MLinkTypeSymlinkFile]
-"link symboliczny (do &pliku)"
+"Link symboliczny (do &pliku)"
 //[MLinkTypeSymlinkDirectory]
-"link symboliczny (do &folderu)"
+"Link symboliczny (do &folderu)"
 //[MCopySymLinkContents]
 "&Kopiuj zawartość linków symbolicznych"
 //[MCopyMultiActions]
@@ -781,9 +690,8 @@
 "&Anuluj"
 //[MCopyDlgRename]
 "&Zmień nazwę"
-// need translation:
 //[MCopyDlgLink]
-"Create &link"
+"Utwórz &link"
 //[MCopyDlgTotal]
 "Razem"
 //[MCopyPrepareSecury]
@@ -797,27 +705,24 @@
 "Skopiuj {0} {1}:"
 //[MMoveFile]
 "Zmień nazwę lub przenieś {0} {1}:"
-// need translation:
 //[MLinkFile]
-"Create link to {0} {1}:"
+"Utwórz link do {0} {1}:"
 //[MCopyFiles]
-"Skopiuj {0} plików{1} {2}:"
+"Skopiuj {0} plik{1} {2}:"
 //[MMoveFiles]
-"Zmień nazwę lub przenieś {0} plików{1} {2}:"
-// need translation:
+"Zmień nazwę lub przenieś {0} plik{1} {2}:"
 //[MLinkFiles]
-"Create links to {0} item{1} {2}:"
+"Utwórz linki do {0} plik{1} {2}:"
 //[MCMLTargetTO]
 "d&o"
-// need translation:
 //[MCMLTargetIN]
-"&in"
+"&w"
 //[MCMLItems0]
 ""
 //[MCMLItemsA]
-"s"
+"i"
 //[MCMLItemsS]
-"s"
+"ów"
 
 //[MCopyIncorrectTargetList]
 "Błędna lista wynikowa"
@@ -831,16 +736,16 @@
 "Nie mogę odnaleźć pliku"
 
 //[MCannotCopyFolderToItself1]
-"Nie można skopiować katalogu"
+"Nie można skopiować folderu"
 //[MCannotCopyFolderToItself2]
 "do niego samego"
 
 //[MCopyCannotCreateFolder]
-"Nie udało się utworzyć katalogu"
+"Nie udało się utworzyć folderu"
 //[MCopyCannotChangeFolderAttr]
 "Nie udało się ustawić atrybutów folderu"
 //[MCopyCannotRenameFolder]
-"Nie udało się zmienić nazwy katalogu"
+"Nie udało się zmienić nazwy folderu"
 //[MCopyIgnore]
 "&Ignoruj"
 //[MCopyIgnoreAll]
@@ -868,11 +773,11 @@
 //[MCopyCannotCreateVolMount]
 "Błąd montowania napędu"
 //[MCopyMountVolFailed]
-"Nie udało się zamontować woluminu '{0}'"
+"Błąd montowania wolumenu '{0}'"
 //[MCopyMountVolFailed2]
-"w '{0}' nie udało się"
+"w '{0}'"
 //[MCopyMountName]
-"Disk_"
+"Dysk_"
 
 //[MCannotCopyFileToItself1]
 "Nie można skopiować pliku"
@@ -888,15 +793,12 @@
 //[MCopyStream4]
 "Nie wszystkie dane zostaną zachowane."
 
-// need translation:
 //[MCopyDirectoryOrFile]
-"Does it specify a folder name or file name?"
-// need translation:
+"Czy zawiera nazwę folderu lub pliku?"
 //[MCopyDirectoryOrFileDirectory]
 "Folder"
-// need translation:
 //[MCopyDirectoryOrFileFile]
-"File"
+"Plik"
 
 //[MCopyFileExist]
 "Plik już istnieje"
@@ -912,19 +814,16 @@
 "&Dołącz"
 //[MCopyResume]
 "Ponó&w"
-// need translation:
 //[MCopyRename]
-"R&ename"
+"Zmień &nazwę"
 //[MCopyCancelOvr]
 "&Anuluj"
 //[MCopyRememberChoice]
 "&Zapamiętaj ustawienia"
-// need translation:
 //[MCopyRenameTitle]
-"Rename"
-// need translation:
+"Zmień nazwę"
 //[MCopyRenameText]
-"&New name:"
+"&Nowa nazwa:"
 
 //[MCopyFileRO]
 "Ten plik jest tylko-do-odczytu"
@@ -959,19 +858,18 @@
 //[MCopyReadError]
 "Nie mogę odczytać danych z"
 //[MCopyWriteError]
-"Nie mogę zapisać danych do"
+"Nie mogę zapisać danych do:"
 
 //[MCopyFilesTotalInfo]
 "Plików:"
-// need translation:
 //[MCopyBytesTotalInfo]
-"Bytes:"
+"Bajtów:"
 //[MCopyMoving]
 "Przenoszę plik"
 //[MCopyCopying]
 "Kopiuję plik"
 //[MCopyTo]
-"do"
+"do:"
 
 //[MCopyErrorDiskFull]
 "Dysk pełny. Włóż następny"
@@ -979,13 +877,13 @@
 //[MDeleteTitle]
 "Usuń"
 //[MAskDeleteFolder]
-"Czy chcesz wymazać katalog"
+"Czy chcesz usunąć folder"
 //[MAskDeleteFile]
 "Czy chcesz usunąć plik"
 //[MAskDelete]
 "Czy chcesz usunąć"
 //[MAskDeleteRecycleFolder]
-"Czy chcesz przenieść katalog do Kosza"
+"Czy chcesz przenieść folder do Kosza"
 //[MAskDeleteRecycleFile]
 "Czy chcesz przenieść plik do Kosza"
 //[MAskDeleteRecycle]
@@ -993,7 +891,7 @@
 //[MDeleteWipeTitle]
 "Wymaż"
 //[MAskWipeFolder]
-"Czy chcesz wymazać katalog"
+"Czy chcesz wymazać folder"
 //[MAskWipeFile]
 "Czy chcesz wymazać plik"
 //[MAskWipe]
@@ -1001,7 +899,7 @@
 //[MDeleteLinkTitle]
 "Usuń link"
 //[MAskDeleteLink]
-"jest linkiem do"
+"jest linkiem do:"
 //[MAskDeleteLinkFolder]
 "folder"
 //[MAskDeleteLinkFile]
@@ -1027,32 +925,26 @@
 "Następujący folder zostanie usunięty:"
 //[MWipeFolderConfirm]
 "Następujący folder zostanie wymazany:"
-// need translation:
 //[MRecycleFolderConfirm]
-"The following folder will be moved to the Recycle Bin:"
-// need translation:
+"Następujący folder zostanie przeniesiony do Kosza:"
 //[MRecycleFolderConfirmDeleteLink1]
-"Folder contains symbolic links."
-// need translation:
+"Folder zawiera linki symboliczne."
 //[MRecycleFolderConfirmDeleteLink2]
-"To prevent the loss of their content when clearing Recyle Bin"
-// need translation:
+"Aby zapobiec utracie ich zawartości przy czyszczeniu Kosza"
 //[MRecycleFolderConfirmDeleteLink3]
-"those links will be broken now."
-// need translation:
+"linki zostaną teraz przerwane."
 //[MRecycleFolderConfirmDeleteLink4]
-"It would be impossible to restore them later."
+"Nie będzie można ich później przywrócić."
 //[MDeleteWipe]
 "Wymaż"
-// need translation:
 //[MDeleteRecycle]
-"Move"
+"Przenieś"
 //[MDeleteFileDelete]
 "&Usuń"
 //[MDeleteFileWipe]
 "&Wymaż"
 //[MDeleteFileAll]
-"&wszystkie"
+"&Wszystkie"
 //[MDeleteFileSkip]
 "&Omiń"
 //[MDeleteFileSkipAll]
@@ -1067,9 +959,9 @@
 "Usuwam"
 
 //[MDeleting]
-"Usuwam plik/katalog"
+"Usuwam plik/folder"
 //[MDeletingWiping]
-"Wymazuję plik/katalog"
+"Wymazuję plik/folder"
 
 //[MDeleteRO]
 "Ten plik jest tylko do odczytu"
@@ -1088,7 +980,7 @@
 //[MCannotDeleteFile]
 "Nie mogę usunąć pliku"
 //[MCannotDeleteFolder]
-"Nie mogę usunąć katalogu"
+"Nie mogę usunąć folderu"
 //[MDeleteRetry]
 "&Ponów"
 //[MDeleteSkip]
@@ -1097,12 +989,10 @@
 "Pomiń &wszystkie"
 //[MDeleteCancel]
 "&Anuluj"
-// need translation:
 //[MCannotRecycleFile]
-"Cannot move file to the Recycle Bin"
-// need translation:
+"Nie mogę przenieść pliku do Kosza"
 //[MCannotRecycleFolder]
-"Cannot move folder to the Recycle Bin"
+"Nie mogę przenieść folderu do Kosza"
 
 //[MCannotGetSecurity]
 "Nie mogę pobrać praw dostępu dla"
@@ -1123,12 +1013,10 @@
 "Nie mogę otworzyć pliku"
 //[MEditReading]
 "Czytam plik"
-// need translation:
 //[MEditAskSave]
-"Plik został zmodyfikowany. Save?"
-// need translation:
+"Plik został zmodyfikowany. Zapisać?"
 //[MEditAskSaveExt]
-"Plik został zmieniony przez inny program. Save?"
+"Plik został zmieniony przez inny program. Zapisać?"
 //[MEditBtnSaveAs]
 "Zapisz &jako..."
 
@@ -1140,21 +1028,20 @@
 "Czy chcesz go nadpisać?"
 //[MEditSaving]
 "Zapisuję plik"
-// need translation:
+// Up to 3 characters
 //[MEditStatusLine]
-"linia"
-// need translation:
+"Lin"
+// Up to 3 characters
 //[MEditStatusCol]
-"kolumna"
-// need translation:
+"Kol"
+// Up to 2 characters
 //[MEditStatusChar]
-"Ch"
+"Zn"
 
 //[MEditRSH]
 "jest plikiem tylko do odczytu"
-// need translation:
 //[MEditFileGetSizeError]
-"File size could not be determined."
+"Nie mogę określić wielkości pliku."
 //[MEditFileLong]
 "ma wielkość {0},"
 //[MEditFileLong2]
@@ -1169,29 +1056,24 @@
 "Szukaj"
 //[MEditSearchFor]
 "&Znajdź"
-// need translation:
 //[MEditSearchPickWord]
-"Word"
-// need translation:
+"Słowo"
 //[MEditSearchPickSelection]
-"Selection"
+"Zaznaczenie"
 //[MEditSearchCase]
 "&Uwzględnij wielkość liter"
 //[MEditSearchWholeWords]
 "Tylko całe słowa"
 //[MEditSearchReverse]
 "Szukaj w &odwrotnym kierunku"
-// need translation:
 //[MEditSearchRegexp]
-"Re&gular expressions"
-// need translation:
+"Wyrażenie &regularne"
 //[MEditSearchPreserveStyle]
 "&Zachowaj styl"
 //[MEditSearchSearch]
 "&Szukaj"
-// need translation:
 //[MEditSearchAll]
-"&All"
+"&Wszystko"
 //[MEditSearchCancel]
 "&Anuluj"
 
@@ -1204,9 +1086,8 @@
 
 //[MEditSearchingFor]
 "Szukam"
-// need translation:
 //[MEditSearchStatistics]
-"Occurrences: {0}, lines: {1}"
+"Wystąpień: {0}, linii: {1}"
 //[MEditFindAllMenuFooter]
 "F1, F5, Ctrl+Enter, Ctrl+Up/Down, Add"
 //[MEditNotFound]
@@ -1228,9 +1109,8 @@
 "&Otwórz/utwórz plik:"
 //[MEditOpenAutoDetect]
 "Wykryj automatycznie"
-// need translation:
 //[MDefaultCP]
-"Default"
+"Domyślna"
 
 //[MGoTo]
 "Idź do"
@@ -1238,7 +1118,7 @@
 "&Szesnastkowo"
 
 //[MFolderShortcutsTitle]
-"Skróty katalogów"
+"Skróty folderów"
 //[MFolderShortcutBottom]
 "Edycja: Del,Ins,F4"
 //[MFolderShortcutBottomSub]
@@ -1246,16 +1126,13 @@
 //[MShortcutNone]
 "<brak>"
 //[MShortcutPlugin]
-"<plugin>"
-// need translation:
+"<wtyczka>"
 //[MFSShortcutName]
-"Title:"
-// need translation:
+"Nazwa:"
 //[MFSShortcutPath]
-"Path:"
+"Ścieżka:"
 //[MFSShortcutPluginFile]
 "Plik:"
-// need translation:
 //[MFSShortcutPluginData]
 "Data:"
 //[MNeedNearPath]
@@ -1275,7 +1152,7 @@
 //[MEditF5]
 ""
 //[MEditF6]
-"Zobacz"
+"Podgląd"
 //[MEditF7]
 "Szukaj"
 //[MEditF8]
@@ -1285,7 +1162,7 @@
 //[MEditF10]
 "Koniec"
 //[MEditF11]
-"Plugin"
+"Wtyczki"
 //[MEditF12]
 "Ekran"
 
@@ -1305,7 +1182,7 @@
 //[MEditShiftF7]
 "Następ"
 //[MEditShiftF8]
-"Tabela"
+"StrKodowa"
 //[MEditShiftF9]
 ""
 //[MEditShiftF10]
@@ -1361,7 +1238,7 @@
 //[MEditCtrlF9]
 ""
 //[MEditCtrlF10]
-"GoFile"
+"IdźDoPliku"
 //[MEditCtrlF11]
 ""
 //[MEditCtrlF12]
@@ -1487,7 +1364,7 @@
 //[MSingleEditF5]
 ""
 //[MSingleEditF6]
-"Zobacz"
+"Podgląd"
 //[MSingleEditF7]
 "Szukaj"
 //[MSingleEditF8]
@@ -1497,7 +1374,7 @@
 //[MSingleEditF10]
 "Koniec"
 //[MSingleEditF11]
-"Plugin"
+"Wtyczki"
 //[MSingleEditF12]
 "Ekran"
 
@@ -1517,7 +1394,7 @@
 //[MSingleEditShiftF7]
 "Następ"
 //[MSingleEditShiftF8]
-"Tabela"
+"StrKodowa"
 //[MSingleEditShiftF9]
 ""
 //[MSingleEditShiftF10]
@@ -1549,7 +1426,7 @@
 //[MSingleEditAltF10]
 ""
 //[MSingleEditAltF11]
-"ZobHs"
+"ZobHis"
 //[MSingleEditAltF12]
 ""
 
@@ -1698,20 +1575,19 @@
 //[MEditSaveOriginal]
 "&Nie zmieniaj"
 //[MEditSaveDOS]
-"Format &Dos/Windows (CR LF)"
+"Format &DOS/Windows (CR LF)"
 //[MEditSaveUnix]
-"Format &Unix (LF)"
+"Format &UNIX (LF)"
 //[MEditSaveMac]
-"Format &Mac (CR)"
+"Format &MAC (CR)"
 //[MEditCannotSave]
 "Nie mogę zapisać pliku"
 //[MEditSavedChangedNonFile]
 "Plik został zmieniony, ale plik lub folder zawierający"
 //[MEditSavedChangedNonFile1]
 "Plik lub folder zawierający"
-// need translation:
 //[MEditSavedChangedNonFile2]
-"ten plik został przeniesiony lub usunięty. Save?"
+"ten plik został przeniesiony lub usunięty. Zapisać?"
 //[MEditNewPath1]
 "Ścieżka do edytowanego pliku nie istnieje,"
 //[MEditNewPath2]
@@ -1720,80 +1596,61 @@
 "Kontynuować?"
 //[MEditNewPlugin1]
 "Nazwa pliku do edycji nie może być pusta"
-// need translation:
 //[MEditorLoadCPWarn1]
-"File contains characters that cannot be"
-// need translation:
+"Plik zawiera znaki, które nie mogą być"
 //[MEditorLoadCPWarn2]
-"correctly read using selected code page."
-// need translation:
+"poprawnie odczytane w tej stronie kodowej."
 //[MEditorReloadCPWarnLost1]
-"File has to be reloaded to change code page."
-// need translation:
+"Plik zostanie przeładowany, aby zmienić stronę kodową."
 //[MEditorReloadCPWarnLost2]
-"All unsaved changes will be lost."
-// need translation:
+"Wszystkie niezapisane zmany zostaną utracone."
 //[MEditorSaveCPWarn1]
-"Editor contains characters that cannot be"
-// need translation:
+"Edytor zawiera znaki, które nie mogą być"
 //[MEditorSaveCPWarn2]
-"correctly saved using selected code page."
-// need translation:
+"poprawnie zapisane w wybranej stronie kodowej."
 //[MEditorSwitchCPWarn1]
-"Editor contains characters that cannot be"
-// need translation:
+"Edytor zawieta znaki, które nie mogą być"
 //[MEditorSwitchCPWarn2]
-"correctly translated using selected code page [{0}]"
-// need translation:
+"poprawnie przełumaczone w bieżącej stronie kodowej [{0}]"
 //[MEditorSwitchCPConfirm]
-"Continue?"
-// need translation:
+"Kontynuować?"
 //[MEditDataLostWarn]
-"During file editing some data were lost."
+"Podczas edycji pliku, część danych została utracona."
 //[MEditorSaveNotRecommended]
 "Odradzamy zapis pliku."
 //[MEditorSave]
 "Zapisz"
-// need translation:
 //[MEditorSaveCPWarnShow]
-"Show"
-// need translation:
+"Pokaż"
 //[MEditorSwitchUnicodeCPDisabled]
-"Unicode code page switch is not supported"
-// need translation:
+"Strona kodowa Unicode nie jest obsługiwana"
 //[MEditorTryReloadFile]
-"You can reload file using custom code page (ShiftF4)"
-// need translation:
+"Możesz przeładować plik, używając innej strony kodowej (ShiftF4)"
 //[MEditorSwitchToUnicodeCPDisabled]
-"Switch to unicode code page {0} is not supported"
-// need translation:
+"Przełączenie na stronę kodową Unicode {0} nie jest możliwe"
 //[MEditorCPNotSupported]
-"Code page {0} is not supported in your system"
+"Strona kodowa {0} nie jest obsługiwana przez Twój system"
 
 //[MColumnName]
 "Nazwa"
-// need translation:
 //[MColumnExtension]
-"Extension"
+"Rozszerzenie"
 //[MColumnSize]
 "Rozmiar"
-// need translation:
 //[MColumnAlocatedSize]
-"Allocated"
+"Przydzielone"
 //[MColumnDate]
 "Data"
 //[MColumnTime]
 "Czas"
-// need translation:
 //[MColumnWrited]
-"Write"
+"Zapis"
 //[MColumnCreated]
 "Utworzenie"
 //[MColumnAccessed]
 "Użycie"
-// need translation:
 //[MColumnChanged]
-"Change"
+"Zmiana"
 //[MColumnAttr]
 "Atrybuty"
 //[MColumnDescription]
@@ -1802,12 +1659,10 @@
 "Właściciel"
 //[MColumnMumLinks]
 "NmL"
-// need translation:
 //[MColumnNumStreams]
 "NmS"
-// need translation:
 //[MColumnStreamsSize]
-"StrmSz"
+"WlkStr"
 //[MColumnUnknown]
 "???"
 
@@ -1819,9 +1674,8 @@
 "LinkSym"
 //[MListJunction]
 "Dowiązania"
-// need translation:
 //[MListVolMount]
-"Volume"
+"Wolumen"
 //[MListDFS]
 "DFS"
 //[MListDFSR]
@@ -1840,9 +1694,8 @@
 "DEDUP"
 //[MListNFS]
 "NFS"
-// need translation:
 //[MListPlaceholder]
-"Placeholder"
+"Symbol zastępczy"
 //[MListUnknownReparsePoint]
 "?LinkSym?"
 //[MListBrackets]
@@ -1862,13 +1715,12 @@
 //[MListEb]
 "E"
 {3} replacement field can receive a sum of files & folders
-// need translation:
 //[MListFileSize]
-"Bytes: {0}, files: {1}, folders: {2}"
+"Bajtów: {0}, plików: {1}, folderów: {2}"
 //[MListFileSizeStatus]
 "{0} ({1}/{2}) {3} {4}"
 //[MListFreeSize]
-"{0} wolnych bajtów"
+"{0} bajtów wolnych"
 
 //[MDirInfoViewTitle]
 "Podgląd"
@@ -1885,11 +1737,11 @@
 //[MCompareTitle]
 "Porównaj"
 //[MCompareFilePanelsRequired1]
-"Aby porównać katalogi konieczne są"
+"Aby porównać foldery konieczne są"
 //[MCompareFilePanelsRequired2]
 "dwa zwykłe panele plików"
 //[MCompareSameFolders1]
-"Zawartość katalogów"
+"Zawartość folderów"
 //[MCompareSameFolders2]
 "wydaje się być identyczna"
 
@@ -1906,11 +1758,11 @@
 //[MFileAssocTitle]
 "Edytuj przypisania pliku"
 //[MFileAssocMasks]
-"&Maska pliku lub kilka masek oddzielonych przecinkami:"
+"&Maski plików oddzielonych przecinkami:"
 //[MFileAssocDescr]
 "&Opis przypisania:"
 //[MFileAssocExec]
-"Polecenie (po naciśnięciu &Enter):"
+"Polecenie (po &naciśnięciu Enter):"
 //[MFileAssocAltExec]
 "Polecenie (po naciśnięciu &Ctrl+PgDn):"
 //[MFileAssocView]
@@ -1945,7 +1797,7 @@
 //[MViewF10]
 "Koniec"
 //[MViewF11]
-"Pluginy"
+"Wtyczki"
 //[MViewF12]
 "Ekran"
 
@@ -1956,9 +1808,8 @@
 "ZawińS"
 //[MViewShiftF3]
 ""
-// need translation:
 //[MViewShiftF4]
-"Mode"
+"Tryb"
 //[MViewShiftF5]
 ""
 //[MViewShiftF6]
@@ -1966,7 +1817,7 @@
 //[MViewShiftF7]
 "Następ"
 //[MViewShiftF8]
-"Tabela"
+"StrKod"
 //[MViewShiftF9]
 ""
 //[MViewShiftF10]
@@ -2022,7 +1873,7 @@
 //[MViewCtrlF9]
 ""
 //[MViewCtrlF10]
-"DoPlik"
+"IdźDoPlik"
 //[MViewCtrlF11]
 ""
 //[MViewCtrlF12]
@@ -2132,14 +1983,13 @@
 //[MViewCtrlAltShiftF12]
 ""
 //[MViewF2Unwrap]
-"Unwrap"
+"NieZawij"
 // this is another text for F4
 //[MViewF4Text]
 "Tekst"
 // this is another text for F4
-// need translation:
 //[MViewF4Dump]
-"Dump"
+"Źródło"
 // this is another text for F8
 // end of functional keys (Viewer)
 //[MViewF8DOS]
@@ -2167,7 +2017,7 @@
 //[MSingleViewF10]
 "Koniec"
 //[MSingleViewF11]
-"Pluginy"
+"Wtyczki"
 //[MSingleViewF12]
 "Ekran"
 
@@ -2187,7 +2037,7 @@
 //[MSingleViewShiftF7]
 "Nast."
 //[MSingleViewShiftF8]
-"Tabela"
+"StrKod"
 //[MSingleViewShiftF9]
 ""
 //[MSingleViewShiftF10]
@@ -2362,9 +2212,8 @@
 // end of functional keys (Single Viewer)
 //[MSingleViewF8DOS]
 "CP 1250"
-// need translation:
 //[MViewMode]
-"View mode"
+"Tryb widoku"
 //[MInViewer]
 "podgląd"
 //[MInEditor]
@@ -2388,7 +2237,7 @@
 //[MFindFileTitle]
 "Znajdź plik"
 //[MFindFileMasks]
-"&Maska pliku lub kilka masek oddzielonych przecinkami:"
+"&Maski plików oddzielone przecinkami:"
 //[MFindFileText]
 "Zawierający &tekst:"
 //[MFindFileHex]
@@ -2396,31 +2245,27 @@
 //[MFindFileCodePage]
 "Użyj tablicy znaków:"
 //[MFindFileCodePageBottom]
-"Space, Ins"
+"Spacja, Ins"
 //[MFindFileCase]
 "&Uwzględnij wielkość liter"
 //[MFindFileWholeWords]
 "Tylko &całe słowa"
-// need translation:
 //[MFindFileAllCodePages]
 "Wszystkie zainstalowane"
-// need translation:
 //[MFindFileSelectedCodePages]
-"Selected code pages"
+"Wybrana strona kodowa"
 //[MFindArchives]
 "Szukaj w arc&hiwach"
 //[MFindFolders]
 "Szukaj &folderów"
 //[MFindSymLinks]
 "Szukaj w &linkach"
-// need translation:
 //[MFindAlternateStreams]
-"Search in alternate streams"
+"Szukaj w alternatywnych strumieniach"
 //[MSearchForHex]
 "Szukaj wartości &szesnastkowej"
-// need translation:
 //[MSearchNotContaining]
-"Not containing"
+"Nie zawierające"
 //[MSearchWhere]
 "Obszar wyszukiwania:"
 //[MSearchAllDisks]
@@ -2432,13 +2277,13 @@
 //[MSearchFromRootOfDrive]
 "Od &korzenia"
 //[MSearchFromRootFolder]
-"Od katalogu &głównego"
+"Od folderu &głównego"
 //[MSearchFromCurrent]
-"Od &bieżącego katalogu"
+"Od &bieżącego folderu"
 //[MSearchInCurrent]
-"&Tylko w bieżącym katalogu"
+"&Tylko w bieżącym folderze"
 //[MSearchInSelected]
-"W &zaznaczonych katalogach"
+"W &zaznaczonych folderach"
 //[MFindUseFilter]
 "&Filtruj"
 //[MFindUsingFilter]
@@ -2476,9 +2321,8 @@
 "Zaawansowane opcje wyszukiwania"
 //[MFindFileSearchFirst]
 "Szukaj wyłącznie w &pierwszych:"
-// need translation:
 //[MFindFileSearchOutputFormat]
-"&Output format:"
+"&Format wyjściowy:"
 //[MFindAlternateModeTypes]
 "&Typy kolumn"
 //[MFindAlternateModeWidths]
@@ -2489,26 +2333,20 @@
 
 //[MGetCodePageTitle]
 "Strony kodowe"
-// need translation:
 //[MGetCodePageSystem]
-"System"
-// need translation:
+"Systemowe"
 //[MGetCodePageUnicode]
 "Unicode"
-// need translation:
 //[MGetCodePageFavorites]
-"Favorites"
-// need translation:
+"Ulubione"
 //[MGetCodePageOther]
-"Other"
+"Pozostałe"
 //[MGetCodePageBottomTitle]
 "Ctrl+H, Del, Ins, F4"
 //[MGetCodePageBottomShortTitle]
 "Ctrl+H, Del, F4"
-// need translation:
 //[MGetCodePageEditCodePageName]
-"Rename the code page"
-// need translation:
+"Zmień nazwę strony kodowej"
 //[MGetCodePageResetCodePageName]
 "&Reset"
 
@@ -2562,29 +2400,22 @@
 "Informacja"
 //[MInfoCompName]
 "Nazwa komputera"
-// need translation:
 //[MInfoCompDescription]
-"Computer description"
+"Opis komputera"
 //[MInfoUserName]
 "Nazwa użytkownika"
-// need translation:
 //[MInfoUserDescription]
-"User description"
-// need translation:
+"Opis użytkownika"
 //[MInfoUserAccessLevel]
-"Access level"
-// need translation:
+"Poziom dostępu"
 //[MInfoUserAccessLevelGuest]
-"Guest"
-// need translation:
+"Gość"
 //[MInfoUserAccessLevelUser]
-"User"
-// need translation:
+"Użytkownik"
 //[MInfoUserAccessLevelAdministrator]
 "Administrator"
-// need translation:
 //[MInfoUserAccessLevelUnknown]
-"Unknown"
+"Nieznany"
 //[MInfoDiskTitle]
 "Dysk"
 //[MInfoRemovable]
@@ -2609,18 +2440,16 @@
 "RAM"
 //[MInfoSUBST]
 "Subst"
-// need translation:
 //[MInfoVirtual]
-"Virtual"
-// need translation:
+"Wirtualny"
 //[MInfoUnknown]
-"Unknown"
+"Nieznany"
 //[MInfoDisk]
 "dysk"
 //[MInfoDiskTotal]
 "Razem bajtów"
 //[MInfoDiskFree]
-"Wolnych bajtów"
+"Bajtów wolnych"
 //[MInfoDiskLabel]
 "Etykieta woluminu"
 //[MInfoDiskNumber]
@@ -2629,9 +2458,8 @@
 "Pamięć"
 //[MInfoMemoryLoad]
 "Użycie pamięci"
-// need translation:
 //[MInfoMemoryInstalled]
-"Installed memory"
+"Zainstalowana pamięć"
 //[MInfoMemoryTotal]
 "Całkowita pamięć"
 //[MInfoMemoryFree]
@@ -2640,72 +2468,55 @@
 "Całkowita wirtualna"
 //[MInfoVirtualFree]
 "Wolna wirtualna"
-// need translation:
 //[MInfoPageFileTotal]
-"Total paging file"
-// need translation:
+"Wielkość pliku stronicowania"
 //[MInfoPageFileFree]
-"Free paging file"
+"Wolne miejsce w pliku stronicowania"
 //[MInfoDescription]
 "Opis"
 //[MInfoDizAbsent]
-"Plik opisu katalogu nie istnieje"
+"Plik opisu folderu nie istnieje"
 //[MInfoPlugin]
-"Plugin"
-// need translation:
+"Wtyczka"
 //[MInfoPowerStatus]
-"Power Status"
-// need translation:
+"Status zasilania"
 //[MInfoPowerStatusAC]
-"AC power status"
-// need translation:
+"Zasilanie sieciowe"
 //[MInfoPowerStatusACOffline]
-"Offline"
-// need translation:
+"Wyłączone"
 //[MInfoPowerStatusACOnline]
-"Online"
+"Włączone"
 // need translation:
 //[MInfoPowerStatusACBackUp]
 "Backup power"
-// need translation:
 //[MInfoPowerStatusACUnknown]
-"Unknown"
-// need translation:
+"Nieznany"
 //[MInfoPowerStatusBCLifePercent]
-"Battery life percent"
-// need translation:
+"Procent naładowania baterii"
 //[MInfoPowerStatusBCLifePercentUnknown]
-"Unknown"
-// need translation:
+"Nieznany"
 //[MInfoPowerStatusBC]
-"Battery charge status"
-// need translation:
+"Stan ładowania baterii"
 //[MInfoPowerStatusBCHigh]
-"High"
-// need translation:
+"Wysoki"
 //[MInfoPowerStatusBCLow]
-"Low"
-// need translation:
+"Niski"
 //[MInfoPowerStatusBCCritical]
-"Critical"
-// need translation:
+"Krytyczny"
 //[MInfoPowerStatusBCCharging]
-"Charging"
-// need translation:
+"Ładowanie"
 //[MInfoPowerStatusBCNoSysBat]
-"No system battery"
-// need translation:
+"Brak baterii systemowej"
 //[MInfoPowerStatusBCUnknown]
-"Unknown"
+"Nieznany"
 // need translation:
 //[MInfoPowerStatusBCTimeRem]
 "Battery life time"
 // need translation:
 //[MInfoPowerStatusBCFullTimeRem]
 "Battery full time"
-// need translation:
 //[MInfoPowerStatusUnknown]
-"Unknown"
+"Nieznany"
 //[MAccessDenied]
 "Dostęp zabroniony"
 
@@ -2718,12 +2529,12 @@
 //[MCheckComspecVar]
 "Check COMSPEC environment variable"
 //[MScanningFolder]
-"Przeszukuję katalog"
+"Przeszukuję folder"
 
 //[MMakeFolderTitle]
-"Utwórz katalog"
+"Utwórz folder"
 //[MCreateFolder]
-"Nazwa katalogu:"
+"Nazwa folderu:"
 //[MMakeFolderLinkType]
 "Typ linku:"
 // need translation:
@@ -2741,7 +2552,7 @@
 //[MIncorrectDirList]
 "Błędna lista folderów"
 //[MCannotCreateFolder]
-"Nie mogę utworzyć katalogu"
+"Nie mogę utworzyć folderu"
 
 //[MMenuBriefView]
 "&Skrótowy"
@@ -2789,11 +2600,10 @@
 "&Kopiuj"
 //[MMenuMove]
 "&Zmień nazwę lub przenieś"
-// need translation:
 //[MMenuLink]
 "Link"
 //[MMenuCreateFolder]
-"U&twórz katalog"
+"U&twórz folder"
 //[MMenuDelete]
 "&Usuń"
 //[MMenuWipe]
@@ -2830,23 +2640,23 @@
 //[MMenuViewHistory]
 "Historia &podglądu plików"
 //[MMenuFoldersHistory]
-"Historia &katalogów"
+"Historia &folderów"
 //[MMenuSwapPanels]
 "Z&amień panele"
 //[MMenuTogglePanels]
 "&Włącz/Wyłącz panele"
 //[MMenuCompareFolders]
-"Porówna&j katalogi"
+"Porówna&j foldery"
 //[MMenuUserMenu]
 "Edytuj &menu użytkownika"
 //[MMenuFileAssociations]
 "Prz&ypisania plików"
 //[MMenuFolderShortcuts]
-"&Skróty katalogów"
+"&Skróty folderów"
 //[MMenuFilter]
 "&Filtr panelu plików"
 //[MMenuPluginCommands]
-"Pl&uginy"
+"W&tyczki"
 //[MMenuWindowsList]
 "L&ista ekranów"
 //[MMenuProcessList]
@@ -2858,52 +2668,44 @@
 "Ustawienia &systemowe"
 //[MMenuPanelSettings]
 "Ustawienia &panelu"
-// need translation:
 //[MMenuTreeSettings]
-"Tree settings"
+"Ustawienia drzewa"
 //[MMenuInterface]
 "Ustawienia &interfejsu"
 //[MMenuLanguages]
-"&Język"
+"&Język programu"
 //[MMenuPluginsConfig]
-"Konfiguracja p&luginów"
-// need translation:
+"Konfiguracj&a wtyczek"
 //[MMenuPluginsManagerSettings]
-"Plugins manager settings"
+"Ustawienia ma&nagera wtyczek"
 //[MMenuDialogSettings]
-"Ustawienia okna &dialogowego"
-// need translation:
+"Ustawienia okien &dialogowych"
 //[MMenuVMenuSettings]
-"Menu settings"
-// need translation:
+"Ustawienia &menu"
 //[MMenuCmdlineSettings]
-"Command line settings"
-// need translation:
+"Ustawienia linii poleceń"
 //[MMenuAutoCompleteSettings]
-"AutoComplete settings"
-// need translation:
+"&Ustawienie AutoUzupełniania"
 //[MMenuInfoPanelSettings]
-"Inf&oPanel settings"
-// need translation:
+"Ustawienia panelu in&formacyjnego"
 //[MMenuMaskGroups]
-"Groups of file masks"
+"Grupy masek plików"
 //[MMenuConfirmation]
 "P&otwierdzenia"
 //[MMenuFilePanelModes]
-"&Tryby wyświetlania panelu plików"
+"Try&by wyświetlania panelu plików"
 //[MMenuFileDescriptions]
 "Opis&y plików"
 //[MMenuFolderInfoFiles]
-"Pliki opisu &katalogu"
+"Pliki opisu &folderów"
 //[MMenuViewer]
 "Ustawienia pod&glądu"
 //[MMenuEditor]
 "Ustawienia &edytora"
-// need translation:
 //[MMenuCodePages]
-"Strony kodowe"
+"S&trony kodowe"
 //[MMenuColors]
-"Kolo&ry"
+"&Kolory"
 //[MMenuFilesHighlighting]
 "&Wyróżnianie plików"
 //[MMenuSaveSetup]
@@ -2927,51 +2729,43 @@
 //[MMenuSortTitle]
 "Sortuj według..."
 //[MMenuSortByName]
-"&nazwy"
+"&Nazwy"
 //[MMenuSortByExt]
-"ro&zszerzenia"
-// need translation:
+"R&ozszerzenia"
 //[MMenuSortByWrite]
-"&Write time"
+"Czasu &zapisu"
 //[MMenuSortBySize]
-"&rozmiaru"
+"&Rozmiaru"
 //[MMenuUnsorted]
-"&bez sortowania"
+"&Bez sortowania"
 //[MMenuSortByCreation]
-"czasu u&tworzenia"
+"Czasu u&tworzenia"
 //[MMenuSortByAccess]
-"czasu &użycia"
-// need translation:
+"Czasu &użycia"
 //[MMenuSortByChange]
-"Change time"
+"Czasu z&miany"
 //[MMenuSortByDiz]
-"&opisu"
+"Opi&su"
 //[MMenuSortByOwner]
-"&właściciela"
-// need translation:
+"&Właściciela"
 //[MMenuSortByAllocatedSize]
-"Allocated size"
+"&Przydzielonego miejsca"
 //[MMenuSortByNumLinks]
-"&liczby dowiązań"
-// need translation:
+"&Liczby dowiązań"
 //[MMenuSortByNumStreams]
-"Number of st&reams"
-// need translation:
+"L&iczby strumieni"
 //[MMenuSortByStreamsSize]
-"Si&ze of streams"
-// need translation:
+"Wi&elkości strumieni"
 //[MMenuSortByFullName]
-"&Full name"
-// need translation:
+"Pełnej nazw&y"
 //[MMenuSortByCustomData]
-"Cus&tom data"
+"Własne ustawieni&a"
 //[MMenuSortUseGroups]
-"użyj &grup sortowania"
+"Użyj &grup sortowania"
 //[MMenuSortSelectedFirst]
-"zazna&czone najpierw"
-// need translation:
+"Zazna&czone najpierw"
 //[MMenuSortDirectoriesFirst]
-"Sho&w directories first"
+"Najpierw &foldery"
 //[MMaskGroupBottom]
 "Edycja: Ins, Del, F4, F7, Ctrl+R"
 //[MMaskGroupName]
@@ -2980,9 +2774,8 @@
 "&Maska pliku lub kilka masek oddzielonych przecinkami:"
 //[MMaskGroupAskDelete]
 "Czy chcesz usunąć"
-// need translation:
 //[MMaskGroupRestore]
-"Do you wish to restore default mask sets?"
+"Chcesz przywrócić domyślne ustawienia masek?"
 //[MMaskGroupFindMask]
 "&Maska:"
 //[MMaskGroupTotal]
@@ -2996,9 +2789,8 @@
 "stały"
 //[MChangeDriveNetwork]
 "sieciowy"
-// need translation:
 //[MChangeDriveDisconnectedNetwork]
-"disconnected"
+"odłączony"
 //[MChangeDriveCDROM]
 "CD-ROM"
 //[MChangeDriveCD_RW]
@@ -3023,9 +2815,8 @@
 "RAM-dysk"
 //[MChangeDriveSUBST]
 "subst"
-// need translation:
 //[MChangeDriveVirtual]
-"virtual"
+"wirtualny"
 //[MChangeDriveLabelAbsent]
 "niedostępny"
 //[MChangeDriveCannotReadDisk]
@@ -3034,27 +2825,22 @@
 "Nie mogę odłączyć się od {0}"
 //[MChangeDriveCannotDelSubst]
 "Nie można usunąć dysku SUBST {0}"
-// need translation:
 //[MChangeDriveCannotDetach]
-"Cannot detach virtual disk {0}"
+"Nie mogę odłączyć dyski wirtualnego {0}"
 //[MChangeDriveOpenFiles]
 "Jeśli nie zamkniesz otwartych plików, możesz utracić dane"
 
-// need translation:
 //[MChangeSUBSTDisconnectDriveTitle]
 "Odłączanie napędu wirtualnego"
-// need translation:
 //[MChangeSUBSTDisconnectDriveQuestion]
 "Odłączyć dysk SUBST {0}?"
-// need translation:
 //[MChangeVHDDisconnectDriveTitle]
-"Virtual disk detaching"
-// need translation:
+"Odłączanie dysku wirtualnego"
 //[MChangeVHDDisconnectDriveQuestion]
-"Detach virtual disk {0}?"
+"Odłączanie dysku wirtualnego {0}?"
 
 //[MChangeHotPlugDisconnectDriveTitle]
-"Odłączanie urządzenia"
+"Odłączanie urządzenie"
 //[MChangeHotPlugDisconnectDriveQuestion]
 "Czy odłączyć urządzenie"
 //[MHotPlugDisks]
@@ -3087,45 +2873,32 @@
 "Trwa montowanie dysku..."
 //[MChangeCouldNotEjectMedia]
 "Nie można wysunąć dysku z napędu {0}:"
-// need translation:
 //[MChangeDriveConfigure]
-"Change Drive Menu Options"
-// need translation:
+"Opcje menu zmiany dysku"
 //[MChangeDriveShowDiskType]
-"Show disk type"
-// need translation:
+"Pokaż &typ dysku"
 //[MChangeDriveShowPath]
-"Show &network name / SUBST path / VHD name"
-// need translation:
+"Pokaż dyski &sieciowe / ścieżki SUBST / nazwy VHD"
 //[MChangeDriveShowLabel]
-"Show disk &label"
-// need translation:
+"Pokaż &etykietę dysku"
 //[MChangeDriveShowLabelUseShell]
-"Use shell name"
-// need translation:
+"Użyj nazwy z Windows"
 //[MChangeDriveShowFileSystem]
-"Show &file system type"
-// need translation:
+"Pokaż system &plików"
 //[MChangeDriveShowSize]
-"Show &size"
-// need translation:
+"Pokaż &pojemność"
 //[MChangeDriveShowSizeFloat]
-"Show size as a decimal fraction"
-// need translation:
+"Wielkość w jednostkach dziesiętnych"
 //[MChangeDriveShowRemovableDrive]
-"Show &removable drive parameters"
-// need translation:
+"Pok&aż parametry dysków wyjmowalnych"
 //[MChangeDriveShowPlugins]
-"Show &plugins"
-// need translation:
+"Pokaż &wtyczki"
 //[MChangeDriveSortPluginsByHotkey]
-"Sort plugins by hotkey"
-// need translation:
+"Sortuj wtyczki wg skrótów"
 //[MChangeDriveShowCD]
-"Show &CD drive parameters"
-// need translation:
+"Pokaż parametry napędów &CD"
 //[MChangeDriveShowNetworkDrive]
-"Show ne&twork drive parameters"
+"Pokaż parametry &dysków sieciowych"
 //[MChangeDriveMenuFooter]
 "Del,Shift+Del,F3,F4,F9"
 
@@ -3165,7 +2938,7 @@
 //[MQuickViewFolder]
 "Folder"
 //[MQuickViewJunction]
-"Powiązanie"
+"Dowiązanie"
 //[MQuickViewSymlink]
 "Link"
 //[MQuickViewVolMount]
@@ -3188,30 +2961,26 @@
 "DEDUP"
 //[MQuickViewNFS]
 "NFS"
-// need translation:
 //[MQuickViewPlaceholder]
-"Placeholder"
-// need translation:
+"Symbol zastępczy"
 //[MQuickViewUnknownReparsePoint]
-"Unknown reparse point"
+"Nieznany punkt powiązania"
 //[MQuickViewNoData]
 "(dane niedostępne)"
 //[MQuickViewFolders]
-"Katalogi:"
+"Foldery:"
 //[MQuickViewFiles]
 "Pliki:"
 //[MQuickViewBytes]
 "Rozmiar plików:"
-// need translation:
 //[MQuickViewAllocated]
-"Allocated size:"
+"Przydzielone miejsce:"
 //[MQuickViewCluster]
 "Rozmiar klastra:"
 //[MQuickViewSlack]
 "Przestrzeń stracona:"
-// need translation:
 //[MQuickViewMFTOverhead]
-"MFT overhead:"
+"Utracone miejsce MFT:"
 
 //[MSetAttrTitle]
 "Atrybuty"
@@ -3226,14 +2995,13 @@
 //[MSetAttrSymlink]
 "Link:"
 //[MSetAttrVolMount]
-"Punkt zamontowania:"
-// need translation:
+"Wolumen:"
 //[MSetAttrDfsTargets]
-"DFS Targets"
+"Cel DFS"
 //[MSetAttrUnknownJunction]
 "(dane niedostępne)"
 //[MSetAttrRO]
-"&Tylko do odczytu"
+"Tylko do &odczytu"
 //[MSetAttrArchive]
 "&Archiwalny"
 //[MSetAttrHidden]
@@ -3246,11 +3014,10 @@
 "Zaszy&frowany"
 //[MSetAttrNotIndexed]
 "Nie z&indeksowany"
-// need translation:
 //[MSetAttrSparse]
 "Sparse"
 //[MSetAttrTemp]
-"&Tymczasowy"
+"T&ymczasowy"
 //[MSetAttrOffline]
 "Offline"
 // need translation:
@@ -3258,53 +3025,44 @@
 "Reparse point"
 //[MSetAttrVirtual]
 "Wirtualny"
-// need translation:
 //[MSetAttrIntegrityStream]
-"Integrity stream"
+"Integralny strumień"
 // need translation:
 //[MSetAttrNoScrubData]
 "No scrub data"
 //[MSetAttrSubfolders]
-"Przetwarzaj &podkatalogi"
+"Przetwarzaj &podfoldery"
 //[MSetAttrOwner]
-"Właściciel:"
-// need translation:
+"Właścicie&l:"
 //[MSetAttrOwnerMultiple]
-"(multiple values)"
-// need translation:
+"(wiele wartości)"
 //[MSetAttrModification]
-"Last &write time:"
+"Czas &zapisu:"
 //[MSetAttrCreation]
 "Czas u&tworzenia:"
 //[MSetAttrLastAccess]
 "Czas ostatniego &dostępu:"
-// need translation:
 //[MSetAttrChange]
-"Change time:"
+"Zmień czas:"
 //[MSetAttrOriginal]
-"Wstaw &oryginalny"
+"Oryginal&ny"
 //[MSetAttrCurrent]
-"Wstaw &bieżący"
+"&Bieżący"
 //[MSetAttrBlank]
-"&Wyczyść"
+"Wy&czyść"
 //[MSetAttrSet]
 "Usta&w"
 
-// need translation:
 //[MSetAttrDateTitle1]
 "MM{0}DD{0}RRRRR"
-// need translation:
 //[MSetAttrDateTitle2]
 "DD{0}MM{0}RRRRR"
-// need translation:
 //[MSetAttrDateTitle3]
 "RRRRR{0}MM{0}DD"
-// need translation:
 //[MSetAttrTimeTitle]
 "gg{0}mm{0}ss{1}ms"
-// need translation:
 //[MSetAttrSystemDialog]
-"System properties"
+"Właściwości systemu"
 
 //[MSetAttrSetting]
 "Ustawiam atrybuty"
@@ -3314,14 +3072,12 @@
 "Nie mogę ustawić atrybutu SKOMPRESOWANY dla"
 //[MSetAttrEncryptedCannotFor]
 "Nie mogę ustawić atrybutu ZASZYFROWANY dla"
-// need translation:
 //[MSetAttrSparseCannotFor]
-"Cannot set attribute SPARSE for"
+"Nie mogę ustawić atrybutu SPARSE dla"
 //[MSetAttrTimeCannotFor]
 "Nie mogę ustawić czasu pliku dla"
-// need translation:
 //[MSetAttrOwnerCannotFor]
-"Cannot set owner for"
+"Nie mogę ustawić właściciela dla"
 
 //[MSetColorPanel]
 "&Panel"
@@ -3409,18 +3165,14 @@
 "Podświetlone przyciski"
 //[MSetColorDialogSelectedHighlightedButtons]
 "Wybrane podświetlone przyciski"
-// need translation:
 //[MSetColorDialogDefaultButton]
-"Default button"
-// need translation:
+"Domyślny przycisk"
 //[MSetColorDialogSelectedDefaultButton]
-"Selected default button"
-// need translation:
+"Zaznaczony domyślny przycisk"
 //[MSetColorDialogHighlightedDefaultButton]
-"Highlighted default button"
-// need translation:
+"Podświetlony domyślny przycisk"
 //[MSetColorDialogSelectedHighlightedDefaultButton]
-"Selected highlighted default button"
+"Zaznaczony podświetlony domyślny przycisk"
 //[MSetColorDialogListBoxControl]
 "Lista"
 //[MSetColorDialogComboBoxControl]
@@ -3440,12 +3192,10 @@
 "Ramka"
 //[MSetColorDialogListTitle]
 "Tytuł"
-// need translation:
 //[MSetColorDialogListGrayed]
-"Grayed list text"
-// need translation:
+"Nieaktywny tekst"
 //[MSetColorDialogSelectedListGrayed]
-"Selected grayed list text"
+"Zaznaczony nieaktywny tekst"
 //[MSetColorDialogListScrollBar]
 "Suwak"
 //[MSetColorDialogListArrows]
@@ -3465,9 +3215,8 @@
 "Wybrany podświetlony tekst"
 //[MSetColorMenuDisabled]
 "Tekst nieaktywny"
-// need translation:
 //[MSetColorMenuGrayed]
-"Grayed text"
+"Nieaktywny tekst"
 // need translation:
 //[MSetColorMenuSelectedGrayed]
 "Selected grayed text"
@@ -3480,7 +3229,7 @@
 //[MSetColorMenuArrows]
 "Znacznik długiego napisu"
 //[MSetColorMenuArrowsSelected]
-"Zaznaczone znacznik długiego napisu"
+"Zaznaczony znacznik długiego napisu"
 //[MSetColorMenuArrowsDisabled]
 "Nieaktywny znacznik długiego napisu"
 
@@ -3559,7 +3308,7 @@
 //[MSetColorTitle]
 "Kolor"
 //[MSetColorForeground]
-"&Pierwszy plan"
+"&Kolor"
 //[MSetColorBackground]
 "&Tło"
 
@@ -3577,9 +3326,9 @@
 //[MSetColorSample]
 "Tekst Tekst Tekst Tekst Tekst Tekst"
 //[MSetColorSet]
-"Ustaw"
+"&Ustaw"
 //[MSetColorCancel]
-"Anuluj"
+"&Anuluj"
 
 //[MSetConfirmTitle]
 "Potwierdzenia"
@@ -3587,63 +3336,51 @@
 "&Kopiowanie"
 //[MSetConfirmMove]
 "&Przenoszenie"
-// need translation:
 //[MSetConfirmRO]
-"&Overwrite and delete R/O files"
+"&Nadpisz i usuń pliki R/O"
 //[MSetConfirmDrag]
 "P&rzeciąganie i upuszczanie"
 //[MSetConfirmDelete]
 "&Usuwanie"
 //[MSetConfirmDeleteFolders]
-"Usuwanie &niepustych katalogów"
+"Usuwanie n&iepustych folderów"
 //[MSetConfirmEsc]
-"&Przerwanie operacji"
+"Przerw&anie operacji"
 //[MSetConfirmRemoveConnection]
 "Odłączenie dysku &sieciowego"
-// need translation:
 //[MSetConfirmRemoveSUBST]
-"Odłączenie dysku &SUBST"
-// need translation:
+"Odłączenie dysku SU&BST"
 //[MSetConfirmDetachVHD]
-"Detach virtual disk"
+"Odłącz dysk wir&tualny"
 //[MSetConfirmRemoveHotPlug]
-"Odłączanie urządzenia HotPlug"
+"Odłączanie urządzenia &HotPlug"
 //[MSetConfirmAllowReedit]
 "&Załaduj edytowany plik"
 //[MSetConfirmHistoryClear]
-"Czyszczenie &historii"
+"&Czyszczenie historii"
 //[MSetConfirmExit]
 "&Wyjście"
 
-// need translation:
 //[MPluginsManagerSettingsTitle]
-"Plugins manager settings"
-// need translation:
+"Ustawienia managera wtyczek"
 //[MPluginsManagerOEMPluginsSupport]
-"OEM plugins support"
+"Obsługa wtyczek w werji &OEM"
 //[MPluginsManagerScanSymlinks]
 "Skanuj linki s&ymboliczne"
-// need translation:
 //[MPluginsManagerOFP]
-"&File processing"
-// need translation:
+"&Przetwarzanie pliku"
 //[MPluginsManagerStdAssoc]
-"Show standard &association item"
-// need translation:
+"Pokaż &standardowe powiązanie"
 //[MPluginsManagerEvenOne]
-"Even if only &one plugin found"
-// need translation:
+"Nawet, gdy tylko &jedna wtyczka"
 //[MPluginsManagerSFL]
-"Search &results (SetFindList)"
-// need translation:
+"&Wyniki wyszukiwania (SetFindList)"
 //[MPluginsManagerPF]
-"&Prefix processing"
-// need translation:
+"P&rzetwarzanie przedrostków"
 //[MPluginConfirmationTitle]
-"Plugin selection"
-// need translation:
+"Wybór wtyczki"
 //[MMenuPluginStdAssociation]
-"Standard association"
+"Standardowe powiązanie"
 
 //[MFindFolderTitle]
 "Znajdź folder"
@@ -3652,7 +3389,7 @@
 //[MFolderTreeF1]
 "Pomoc"
 //[MFolderTreeF2]
-"Czytaj ponownie"
+"Odśwież"
 //[MFolderTreeF3]
 ""
 //[MFolderTreeF4]
@@ -3844,9 +3581,9 @@
 //[MTreeTitle]
 "Drzewo"
 //[MCannotSaveTree]
-"Nie mogę zapisać drzewa katalogów do pliku"
+"Nie mogę zapisać drzewa folderów do pliku"
 //[MReadingTree]
-"Odczytuję drzewo katalogów"
+"Odczytuję drzewo folderów"
 
 //[MUserMenuTitle]
 "Menu użytkownika"
@@ -3860,12 +3597,10 @@
 "Menu główne"
 
 // <...menu (User)>
-// need translation:
 //[MMainMenuUser]
-"User"
-// need translation:
+"Użytkownika"
 //[MMainMenuGlobal]
-"Global"
+"Globalne"
 //[MLocalMenuTitle]
 "Menu lokalne"
 //[MMainMenuBottomTitle]
@@ -3873,7 +3608,7 @@
 //[MAskDeleteMenuItem]
 "Czy usunąć pozycję menu"
 //[MAskDeleteSubMenuItem]
-"Czy usunąć podmenu"
+"Czy usunąć podmenu?"
 //[MUserMenuInvalidInputLabel]
 "Błędny format etykiety menu użytkownika"
 //[MUserMenuInvalidInputHotKey]
@@ -3901,19 +3636,18 @@
 "&Klawisz skrótu:"
 //[MEditSubmenuLabel]
 "&Etykieta:"
-// need translation:
 //[MEditMenuConfirmation]
-"Save changes?"
-// need translation:
+"Zapisać zmiany?"
 //[MEditMenuError]
-"Cannot update menu"
+"Nie mogę uaktualnić menu"
 
 //[MViewerTitle]
 "Podgląd"
 //[MViewerCannotOpenFile]
 "Nie mogę otworzyć pliku"
+// Up to 3 characters
 //[MViewerStatusCol]
-"Kolumna"
+"Kol"
 
 //[MViewSearchTitle]
 "Szukaj"
@@ -3926,12 +3660,11 @@
 //[MViewSearchCase]
 "&Uwzględnij wielkość liter"
 //[MViewSearchWholeWords]
-"Tylko całe słowa"
+"Tylko &całe słowa"
 //[MViewSearchReverse]
 "Szukaj w &odwrotnym kierunku"
-// need translation:
 //[MViewSearchRegexp]
-"Re&gular expressions"
+"Wyrażenie &regularne"
 //[MViewSearchSearch]
 "&Szukaj"
 //[MViewSearchCancel]
@@ -3945,22 +3678,18 @@
 "Nie mogę odnaleźć ciągu znaków"
 //[MViewSearchCannotFindHex]
 "Nie mogę odnaleźć bajtów"
-// need translation:
 //[MViewSearchEod]
-"End of the document reached"
+"Koniec dokumentu"
 //[MViewSearchFromBegin]
 "Kontynuować wyszukiwanie od początku dokumentu?"
-// need translation:
 //[MViewSearchBod]
-"Begin of the document reached"
+"Początek dokumentu"
 //[MViewSearchFromEnd]
 "Kontynuować wyszukiwanie od końca dokumentu?"
-// need translation:
 //[MViewSearchCycle]
-"The Whole document scanned"
-// need translation:
+"Przeszukany cały dokument"
 //[MViewSearchRepeat]
-"Repeat the search in the document?"
+"Powtórzyć szukanie w dokumencie?"
 
 //[MPrintTitle]
 "Drukuj"
@@ -3970,9 +3699,8 @@
 "Drukuj {0} pliki(ów) do"
 //[MPreparingForPrinting]
 "Przygotowuję plik(i) do drukowania"
-// need translation:
 //[MCannotEnumeratePrinters]
-"Cannot enumerate available printers list"
+"Nie mogę odczytać listy drukarek"
 //[MCannotOpenPrinter]
 "Nie mogę połączyć się z drukarką"
 //[MCannotPrint]
@@ -3986,7 +3714,7 @@
 //[MReadingDiz]
 "Odczytuję opisy plików"
 //[MCannotUpdateDiz]
-"Nie moge aktualizować opisów plików"
+"Nie mogę aktualizować opisów plików"
 //[MCannotUpdateRODiz]
 "Opis jest plikiem tylko do odczytu"
 
@@ -4008,16 +3736,15 @@
 "&Zawsze aktualizuj"
 //[MCfgDizAnsiByDefault]
 "&Otwieraj pliki w kodowaniu Windows"
-// need translation:
 //[MCfgDizSaveInUTF]
-"Save in UTF8"
+"Zapisz w UTF8"
 
 //[MReadingTitleFiles]
 "Aktualizacja panelu"
 //[MReadingFiles]
 "Czytam: {0} plików"
 //[MOperationNotCompleted]
-"Operacja nie doprowadzona do końca"
+"Operacja nie zakończona"
 
 //[MEditPanelModes]
 "Edytuj tryby wyświetlania paneli"
@@ -4041,14 +3768,14 @@
 //[MEditPanelModeAlignFolderExtensions]
 "Wyrównaj rozszerzenia &folderów"
 //[MEditPanelModeFoldersUpperCase]
-"Nazwy katalogów &WIELKIMI LITERAMI"
+"Nazwy folderów &WIELKIMI LITERAMI"
 //[MEditPanelModeFilesLowerCase]
 "&Nazwy plików małymi literami"
 //[MEditPanelModeUpperToLowerCase]
 "Wyświetl NAZWY_PLIKÓW &jako nazwy_plików"
 
 //[MSetFolderInfoTitle]
-"Pliki opisu katalogu"
+"Pliki opisu folderów"
 //[MSetFolderInfoNames]
 "Nazwy plików oddzielone przecinkami (znaki ? i * dopuszczalne)"
 
@@ -4067,9 +3794,9 @@
 "Wprowadź polecenie do przetworzenia wybranych plików"
 
 //[MPluginConfigTitle]
-"Konfiguracja pluginów"
+"Konfiguracja wtyczek"
 //[MPluginCommandsMenuTitle]
-"Dostępne pluginy"
+"Dostępne wtyczki"
 
 //[MPreparingList]
 "Przygotowuję listę plików"
@@ -4114,7 +3841,7 @@
 //[MMacroSettingsPassivePanel]
 "Panel &pasywny"
 //[MMacroSettingsPluginPanel]
-"Panel p&luginów"
+"Panel wtyczek"
 //[MMacroSettingsFolders]
 "Wykonaj dla &folderów"
 //[MMacroSettingsSelectionPresent]
@@ -4123,9 +3850,8 @@
 "Pusta &linia poleceń"
 //[MMacroSettingsSelectionBlockPresent]
 "Obecny &blok zaznaczenia"
-// need translation:
 //[MMacroPluginLuamacroNotLoaded]
-"Plugin LuaMacro is not loaded"
+"Wtyczka LuaMacro nie została wczytana"
 // need translation:
 //[MMacroRecordingIsDisabled]
 "Macro recording is disabled"
@@ -4136,39 +3862,30 @@
 "Edytowany tekst został zachowany w"
 
 //[MPluginHotKeyTitle]
-"Przypisz klawisz skrótu do pluginu"
+"Przypisz klawisz skrótu do wtyczki"
 //[MPluginHotKey]
 "Podaj klawisz skrótu (litera lub cyfra)"
-// need translation:
 //[MPluginInformation]
-"Plugin information"
-// need translation:
+"Informacje o wtyczce"
 //[MPluginModuleTitle]
-"&Title:"
-// need translation:
+"&Tytuł:"
 //[MPluginDescription]
-"&Description:"
-// need translation:
+"&Opis:"
 //[MPluginAuthor]
-"&Author:"
-// need translation:
+"&Autor:"
 //[MPluginVersion]
-"&Version:"
-// need translation:
+"&Wersja:"
 //[MPluginModulePath]
-"&Module path:"
-// need translation:
+"Ścieżka &modułu:"
 //[MPluginGUID]
-"Plugin &GUID:"
+"&GUID wtyczki:"
 // need translation:
 //[MPluginItemGUID]
 "Plugin &item GUID:"
-// need translation:
 //[MPluginPrefix]
-"Plugin &prefix:"
-// need translation:
+"&Przedrostek wtyczki:"
 //[MPluginHotKeyBottom]
-"F4 - ustaw klawisz skrótu, F3 - information"
+"F4 - ustaw klawisz skrótu, F3 - informacja"
 
 //[MRightCtrl]
 "PrawyCtrl"
@@ -4177,27 +3894,20 @@
 // need translation:
 //[MExcException]
 "Exception:"
-// need translation:
 //[MExcDetails]
-"Details:"
-// need translation:
+"Szczegóły:"
 //[MExcAddress]
-"Address:"
-// need translation:
+"Adres:"
 //[MExcSource]
-"Source:"
-// need translation:
+"Źródło:"
 //[MExcFunction]
-"Function:"
-// need translation:
+"Funkcja:"
 //[MExcModule]
-"Module:"
-// need translation:
+"Moduł:"
 //[MExcTerminate]
-"Terminate Far"
-// need translation:
+"Zamknięcie FAR"
 //[MExcUnload]
-"Unload plugin"
+"Wyłącz wtyczkę"
 // need translation:
 //[MExcStack]
 "Stack"
@@ -4214,14 +3924,13 @@
 "Nie udało się odczytać zawartości folderu"
 
 //[MPlgBadVers]
-"Do uruchomienia pluginu wymagana jest wyższa wersja FAR-a"
+"Do uruchomienia wtyczki wymagana jest wyższa wersja FAR-a"
 //[MPlgRequired]
-"Wymagana wersja Far-a to {0},"
+"Wymagana wersja FAR to {0},"
 //[MPlgRequired2]
-"bieżąca wersja Far-a: {0}."
-// need translation:
+"bieżąca wersja FAR: {0}."
 //[MPlgLoadPluginError]
-"Błąd ładowania modułu plugina"
+"Błąd ładowania modułu wtyczek"
 
 //[MCheckBox2State]
 "?"
@@ -4240,7 +3949,7 @@
 "Nie znaleziono tematu pomocy:"
 
 //[MPluginsHelpTitle]
-"Pomoc dla pluginów"
+"Pomoc dla wtyczek"
 //[MDocumentsHelpTitle]
 "Pomoc dla dokumentów"
 
@@ -4281,7 +3990,7 @@
 //[MHelpShiftF1]
 "Indeks"
 //[MHelpShiftF2]
-"Plugin"
+"Wtyczki"
 //[MHelpShiftF3]
 "Dokumenty"
 //[MHelpShiftF4]
@@ -5132,9 +4841,8 @@
 ">="
 //[MFileFilterSizeToSign]
 "<="
-// need translation:
 //[MFileHardLinksCount]
-"Has more than one hardlink"
+"Posiada więcej niż jeden twardy link"
 //[MFileFilterDate]
 "Da&ta/Czas:"
 // need translation:
@@ -5172,7 +4880,7 @@
 //[MFileFilterAttrE]
 "&Zaszyfrowany"
 //[MFileFilterAttrD]
-"&Katalog"
+"&Folder"
 //[MFileFilterAttrNI]
 "Nie z&indeksowany"
 //[MFileFilterAttrSparse]
@@ -5201,7 +4909,6 @@
 //[MBadFileSizeFormat]
 "Rozmiar pliku jest niepoprawny"
 
-// need translation:
 //[MFarTitleAddonsAdmin]
 "Administrator"
 // need translation:
@@ -5282,9 +4989,8 @@
 // need translation:
 //[MObjectLockedReasonOpened]
 "opened"
-// need translation:
 //[MObjectLockedAndMore]
-"and {0} more processes."
+"i {0} więcej procesów."
 // need translation:
 //[MObjectLockedSwitchTo]
 "Switch to"
@@ -5306,9 +5012,8 @@
 // need translation:
 //[MProblemDb]
 "Problem configuration DB"
-// need translation:
 //[MShowConfigFolders]
-"Show configuration folders"
+"Pokaż foldery konfiguracyjne"
 // need translation:
 //[MBadLanguageFile]
 "Incorrect language file"
