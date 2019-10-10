@@ -1,2 +1,2 @@
-au BufRead,BufNewFile *.txt		set formatoptions=tq
-au BufRead,BufNewFile *.txt		set textwidth=100
+au BufRead,BufNewFile *.txt		set formatoptions=tq|
+                                      \ set textwidth=100
