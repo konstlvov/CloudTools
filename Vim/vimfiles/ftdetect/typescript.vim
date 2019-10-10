@@ -1,4 +1,3 @@
 " use `set filetype` to override default filetype=xml for *.ts files
-autocmd BufNewFile,BufRead *.ts  set filetype=typescript
-" use `setfiletype` to not override any other plugins like ianks/vim-tsx
-autocmd BufNewFile,BufRead *.tsx setfiletype typescript
+autocmd BufNewFile,BufRead *.ts,*.tsx set filetype=typescript|
+                               \ silent execute ":e ++enc=utf-8"
