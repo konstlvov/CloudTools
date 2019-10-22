@@ -10,6 +10,7 @@ set noswapfile
 set nowrap
 set nostartofline
 set noundofile
+set nofixeol
 let $LANG='EN'
 " ѕочему же € раньше не переключил enc на utf-8! ѕосле этого Vim стал понимать регистр русских букв
 " (при поиске и в командах типа U, u)
