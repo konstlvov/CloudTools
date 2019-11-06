@@ -1,0 +1,6 @@
+<GUPOptions>
+    <Proxy>
+        <server>http://fishfarm.abr.loc</server>
+        <port>8080</port>
+    </Proxy>
+</GUPOptions>
