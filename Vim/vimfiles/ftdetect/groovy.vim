@@ -1,0 +1,1 @@
+au BufRead,BufNewFile *.groovy		silent execute ":e ++enc=utf-8"
