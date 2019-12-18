@@ -293,7 +293,11 @@ vnoremap ,Q :call Bls2Sql()<CR>
 vnoremap ,d :call Strings2Delphi()<CR>
 vnoremap ,D :call Strings2DelphiRevert()<CR>
 
-vnoremap ,f :!tidy -q -i -xml -raw -w 5000<CR>
+" отформатировать XML: сработает только, когда fenc=cp1251 (было)
+" vnoremap ,f :!tidy -q -i -xml -raw -w 5000<CR>
+
+" Отформатировать XML: сработает только когда enc=utf-8 и fenc=utf-8 тоже
+vnoremap ,f :!tidy -q -i -xml -utf8 -w 5000 \| iconv -f UTF-8 -t CP1251<CR>
 
 " Отформатировать JSON: сработает только когда enc=utf-8 и fenc=utf-8 тоже
 vnoremap ,j :! jq . \| iconv -f UTF-8 -t CP1251<CR>
