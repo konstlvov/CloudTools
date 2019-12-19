@@ -3,7 +3,7 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-" klvov: мои настройки
+" klvov: РјРѕРё РЅР°СЃС‚СЂРѕР№РєРё
 set nobackup
 set nowritebackup
 set noswapfile
@@ -12,98 +12,98 @@ set nostartofline
 set noundofile
 set nofixeol
 let $LANG='EN'
-" Почему же я раньше не переключил enc на utf-8! После этого Vim стал понимать регистр русских букв
-" (при поиске и в командах типа U, u)
+" РџРѕС‡РµРјСѓ Р¶Рµ СЏ СЂР°РЅСЊС€Рµ РЅРµ РїРµСЂРµРєР»СЋС‡РёР» enc РЅР° utf-8! РџРѕСЃР»Рµ СЌС‚РѕРіРѕ Vim СЃС‚Р°Р» РїРѕРЅРёРјР°С‚СЊ СЂРµРіРёСЃС‚СЂ СЂСѓСЃСЃРєРёС… Р±СѓРєРІ
+" (РїСЂРё РїРѕРёСЃРєРµ Рё РІ РєРѕРјР°РЅРґР°С… С‚РёРїР° U, u)
 set enc=utf-8
-set fenc=cp1251
-set fileencodings=cp1251,utf-8,ucs-bom,default,latin1
-" каталог для swap-файлов
+set fenc=utf-8
+set fileencodings=utf-8,cp1251,ucs-bom,default,latin1
+" РєР°С‚Р°Р»РѕРі РґР»СЏ swap-С„Р°Р№Р»РѕРІ
 set directory=$TEMP
 " start Vim in maximized window
 au GUIEnter * simalt ~x
-" установить keymap, чтобы по Ctrl+^ переключался на русский и обратно
+" СѓСЃС‚Р°РЅРѕРІРёС‚СЊ keymap, С‡С‚РѕР±С‹ РїРѕ Ctrl+^ РїРµСЂРµРєР»СЋС‡Р°Р»СЃСЏ РЅР° СЂСѓСЃСЃРєРёР№ Рё РѕР±СЂР°С‚РЅРѕ
 set keymap=russian-jcukenwin
-" по умолчанию - латинская раскладка
+" РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ - Р»Р°С‚РёРЅСЃРєР°СЏ СЂР°СЃРєР»Р°РґРєР°
 set iminsert=0
-" по умолчанию - латинская раскладка при поиске
+" РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ - Р»Р°С‚РёРЅСЃРєР°СЏ СЂР°СЃРєР»Р°РґРєР° РїСЂРё РїРѕРёСЃРєРµ
 set imsearch=0
-" игнорировать регистр при поиске
+" РёРіРЅРѕСЂРёСЂРѕРІР°С‚СЊ СЂРµРіРёСЃС‚СЂ РїСЂРё РїРѕРёСЃРєРµ
 set ic
-" подсвечивать поиск
+" РїРѕРґСЃРІРµС‡РёРІР°С‚СЊ РїРѕРёСЃРє
 set hls
-" инкрементальный поиск
+" РёРЅРєСЂРµРјРµРЅС‚Р°Р»СЊРЅС‹Р№ РїРѕРёСЃРє
 set is
-" ширина текста
-" set textwidth=76 " так отформатировано на lib.ru
-set textwidth=100 " у нас в БСС решили пока так
-" минимальная высота окна пусть будет 0 (по умолчанию - 1)
+" С€РёСЂРёРЅР° С‚РµРєСЃС‚Р°
+" set textwidth=76 " С‚Р°Рє РѕС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРѕ РЅР° lib.ru
+set textwidth=100 " Сѓ РЅР°СЃ РІ Р‘РЎРЎ СЂРµС€РёР»Рё РїРѕРєР° С‚Р°Рє
+" РјРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹СЃРѕС‚Р° РѕРєРЅР° РїСѓСЃС‚СЊ Р±СѓРґРµС‚ 0 (РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ - 1)
 set winminheight=0
-" установить шрифт Consolas
+" СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С€СЂРёС„С‚ Consolas
 set guifont=consolas:h8:cRUSSIAN
 set printfont=consolas:h8:cRUSSIAN
-" настраиваю для работы с русскими словами (чтобы w, b, * понимали
-" русские слова)
+" РЅР°СЃС‚СЂР°РёРІР°СЋ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ СЂСѓСЃСЃРєРёРјРё СЃР»РѕРІР°РјРё (С‡С‚РѕР±С‹ w, b, * РїРѕРЅРёРјР°Р»Рё
+" СЂСѓСЃСЃРєРёРµ СЃР»РѕРІР°)
 set iskeyword=@,48-57,_,192-255
-" не надо показывать панель инструментов - толку от нее нет, а место
-" занимает
+" РЅРµ РЅР°РґРѕ РїРѕРєР°Р·С‹РІР°С‚СЊ РїР°РЅРµР»СЊ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ - С‚РѕР»РєСѓ РѕС‚ РЅРµРµ РЅРµС‚, Р° РјРµСЃС‚Рѕ
+" Р·Р°РЅРёРјР°РµС‚
 set go-=T
-" то же для меню
+" С‚Рѕ Р¶Рµ РґР»СЏ РјРµРЅСЋ
 set go-=m
-" не надо начинать поиск с начала документа, после того, как достигнут
-" конец (и наоборот)
+" РЅРµ РЅР°РґРѕ РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє СЃ РЅР°С‡Р°Р»Р° РґРѕРєСѓРјРµРЅС‚Р°, РїРѕСЃР»Рµ С‚РѕРіРѕ, РєР°Рє РґРѕСЃС‚РёРіРЅСѓС‚
+" РєРѕРЅРµС† (Рё РЅР°РѕР±РѕСЂРѕС‚)
 set nowrapscan
-" выключить отображение колонки фолдинга по умолчанию
+" РІС‹РєР»СЋС‡РёС‚СЊ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РєРѕР»РѕРЅРєРё С„РѕР»РґРёРЅРіР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 set foldcolumn=0
-" автоматически перечитывать файл, если он был изменен в другом приложении
+" Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµС‡РёС‚С‹РІР°С‚СЊ С„Р°Р№Р», РµСЃР»Рё РѕРЅ Р±С‹Р» РёР·РјРµРЅРµРЅ РІ РґСЂСѓРіРѕРј РїСЂРёР»РѕР¶РµРЅРёРё
 set autoread
 
-"в визуальном режиме заменять выделение содержимым регистра "", не изменяя этого регистра
-"таким образом, можно несколько раз вставить один и тот же текст.
+"РІ РІРёР·СѓР°Р»СЊРЅРѕРј СЂРµР¶РёРјРµ Р·Р°РјРµРЅСЏС‚СЊ РІС‹РґРµР»РµРЅРёРµ СЃРѕРґРµСЂР¶РёРјС‹Рј СЂРµРіРёСЃС‚СЂР° "", РЅРµ РёР·РјРµРЅСЏСЏ СЌС‚РѕРіРѕ СЂРµРіРёСЃС‚СЂР°
+"С‚Р°РєРёРј РѕР±СЂР°Р·РѕРј, РјРѕР¶РЅРѕ РЅРµСЃРєРѕР»СЊРєРѕ СЂР°Р· РІСЃС‚Р°РІРёС‚СЊ РѕРґРёРЅ Рё С‚РѕС‚ Р¶Рµ С‚РµРєСЃС‚.
 vnoremap p "_dP
 
-" klvov: по звездочке не прыгать на следующее найденное, а просто подсветить
-" старая версия - все равно может прыгать по тексту и сбивать позицию
+" klvov: РїРѕ Р·РІРµР·РґРѕС‡РєРµ РЅРµ РїСЂС‹РіР°С‚СЊ РЅР° СЃР»РµРґСѓСЋС‰РµРµ РЅР°Р№РґРµРЅРЅРѕРµ, Р° РїСЂРѕСЃС‚Рѕ РїРѕРґСЃРІРµС‚РёС‚СЊ
+" СЃС‚Р°СЂР°СЏ РІРµСЂСЃРёСЏ - РІСЃРµ СЂР°РІРЅРѕ РјРѕР¶РµС‚ РїСЂС‹РіР°С‚СЊ РїРѕ С‚РµРєСЃС‚Сѓ Рё СЃР±РёРІР°С‚СЊ РїРѕР·РёС†РёСЋ
 nnoremap * *N
 
-" выключить подсветку: пока повешу на Ctrl-F8, а вообще хочу на Ctrl-8
+" РІС‹РєР»СЋС‡РёС‚СЊ РїРѕРґСЃРІРµС‚РєСѓ: РїРѕРєР° РїРѕРІРµС€Сѓ РЅР° Ctrl-F8, Р° РІРѕРѕР±С‰Рµ С…РѕС‡Сѓ РЅР° Ctrl-8
 nnoremap <C-F8> :noh<CR>
 
-" в визуальном режиме по команде * подсвечивать выделение
+" РІ РІРёР·СѓР°Р»СЊРЅРѕРј СЂРµР¶РёРјРµ РїРѕ РєРѕРјР°РЅРґРµ * РїРѕРґСЃРІРµС‡РёРІР°С‚СЊ РІС‹РґРµР»РµРЅРёРµ
 vnoremap * y :execute ":let @/=@\""<CR> :execute "set hlsearch"<CR>
 
-" переключать на другой буфер, даже если в текущем буфере есть несохраненные изменения
+" РїРµСЂРµРєР»СЋС‡Р°С‚СЊ РЅР° РґСЂСѓРіРѕР№ Р±СѓС„РµСЂ, РґР°Р¶Рµ РµСЃР»Рё РІ С‚РµРєСѓС‰РµРј Р±СѓС„РµСЂРµ РµСЃС‚СЊ РЅРµСЃРѕС…СЂР°РЅРµРЅРЅС‹Рµ РёР·РјРµРЅРµРЅРёСЏ
 set hidden
 
-" по Alt+0 показать окно навигации по функциям
+" РїРѕ Alt+0 РїРѕРєР°Р·Р°С‚СЊ РѕРєРЅРѕ РЅР°РІРёРіР°С†РёРё РїРѕ С„СѓРЅРєС†РёСЏРј
 nnoremap <A-0> :TlistToggle<CR>
 
-" по Alt-1 редактировать текущее слово
+" РїРѕ Alt-1 СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ С‚РµРєСѓС‰РµРµ СЃР»РѕРІРѕ
 nnoremap <M-1> ciw
 
-" по Alt-t открыть новую вкладку
+" РїРѕ Alt-t РѕС‚РєСЂС‹С‚СЊ РЅРѕРІСѓСЋ РІРєР»Р°РґРєСѓ
 nnoremap <M-t> :tabnew<CR>
 
-"показывать только имена файлов в заголовках вкладок
+"РїРѕРєР°Р·С‹РІР°С‚СЊ С‚РѕР»СЊРєРѕ РёРјРµРЅР° С„Р°Р№Р»РѕРІ РІ Р·Р°РіРѕР»РѕРІРєР°С… РІРєР»Р°РґРѕРє
 set guitablabel=%t
 
-"BEGIN БСС Северо-Запад SECTION
+"BEGIN Р‘РЎРЎ РЎРµРІРµСЂРѕ-Р—Р°РїР°Рґ SECTION
 
 function! LeaveBaseName() range
   pyfile $VIM\vimfiles\python\LeaveBaseName.py
 endfunction
 
-"установить величину отступа 2 и всегда вставлять пробелы, а не табы
+"СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІРµР»РёС‡РёРЅСѓ РѕС‚СЃС‚СѓРїР° 2 Рё РІСЃРµРіРґР° РІСЃС‚Р°РІР»СЏС‚СЊ РїСЂРѕР±РµР»С‹, Р° РЅРµ С‚Р°Р±С‹
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
 function! SaveRunCommand()
   execute "silent update"
-  " Три уровня закавычивания: одинарная кавычка - аргумент execute,
-  " двойная кавычка - аргумент system, и \" - аргумент cmd.exe /c
-  " Upd. Три уровня надо для Vim 7.3 - следующая строка предназначена для Vim 7.3
+  " РўСЂРё СѓСЂРѕРІРЅСЏ Р·Р°РєР°РІС‹С‡РёРІР°РЅРёСЏ: РѕРґРёРЅР°СЂРЅР°СЏ РєР°РІС‹С‡РєР° - Р°СЂРіСѓРјРµРЅС‚ execute,
+  " РґРІРѕР№РЅР°СЏ РєР°РІС‹С‡РєР° - Р°СЂРіСѓРјРµРЅС‚ system, Рё \" - Р°СЂРіСѓРјРµРЅС‚ cmd.exe /c
+  " Upd. РўСЂРё СѓСЂРѕРІРЅСЏ РЅР°РґРѕ РґР»СЏ Vim 7.3 - СЃР»РµРґСѓСЋС‰Р°СЏ СЃС‚СЂРѕРєР° РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅР° РґР»СЏ Vim 7.3
   " execute 'echo system("\"cd ..\\USER && nmake\"")'
-  " Upd. Для Vim 7.4 надо два уровня - следующая строка предназначена для Vim 7.4
+  " Upd. Р”Р»СЏ Vim 7.4 РЅР°РґРѕ РґРІР° СѓСЂРѕРІРЅСЏ - СЃР»РµРґСѓСЋС‰Р°СЏ СЃС‚СЂРѕРєР° РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅР° РґР»СЏ Vim 7.4
   " execute 'echo system("cd ..\\USER && nmake")'
   execute 'echo system("cmd /c build.cmd | iconv -f CP1251 -t UTF-8")'
 endfunction
@@ -154,7 +154,7 @@ iab pbi q.ParamByName('').AsInteger<Left><Left><Left><Left><Left><Left><Left><Le
 iab pbf q.ParamByName('').AsFloat<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 iab pbd q.ParamByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 iab sm vShowMessage();<Left><Left>
-iab mbe MessageBox(ErrMsg, 'Ошибка', mbOK or mbIconHand);
+iab mbe MessageBox(ErrMsg, 'РћС€РёР±РєР°', mbOK or mbIconHand);
 iab ffc Form.FindComponent('')<Left><Left>
 " iab ff Form.Fields.
 iab ffmt Fmt.Format('')<Left><Left>
@@ -194,7 +194,7 @@ iab tfe
 
 function! Sql2Bls() range
   for i in range(a:firstline, a:lastline)
-    " заменить одиночный апостроф на двойной
+    " Р·Р°РјРµРЅРёС‚СЊ РѕРґРёРЅРѕС‡РЅС‹Р№ Р°РїРѕСЃС‚СЂРѕС„ РЅР° РґРІРѕР№РЅРѕР№
     let src = substitute(getline(i), "'", "''", "g")
     if i == a:firstline
       let repl = "  '" . src . " '"
@@ -228,7 +228,7 @@ endfunction
 
 function! Xml2CSharp() range
   for i in range(a:firstline, a:lastline)
-    " эскейпить кавычки
+    " СЌСЃРєРµР№РїРёС‚СЊ РєР°РІС‹С‡РєРё
     let src = substitute(getline(i), '"', '\\"', "g")
     if i == a:firstline
       let repl = '  "' . src . ' "'
@@ -243,7 +243,7 @@ endfunction
 
 function! Bls2Sql() range
   for i in range(a:firstline, a:lastline)
-    " заменить двойной апостроф на одиночный
+    " Р·Р°РјРµРЅРёС‚СЊ РґРІРѕР№РЅРѕР№ Р°РїРѕСЃС‚СЂРѕС„ РЅР° РѕРґРёРЅРѕС‡РЅС‹Р№
     let src = substitute(getline(i), "''", "'", "g")
     if i == a:firstline
       let repl = substitute(src, "^\\s*'\\(.*\\) '$", "\\1", "g")
@@ -259,7 +259,7 @@ endfunction
 function! Strings2Delphi() range
   for i in range(a:firstline, a:lastline)
     let src = getline(i)
-    " заменить одиночный апостроф на двойной
+    " Р·Р°РјРµРЅРёС‚СЊ РѕРґРёРЅРѕС‡РЅС‹Р№ Р°РїРѕСЃС‚СЂРѕС„ РЅР° РґРІРѕР№РЅРѕР№
     let src = substitute(src, "'", "''", "g")
     if i == a:firstline
       let repl = "'" . src . "'+#13+#10"
@@ -275,7 +275,7 @@ endfunction
 function! Strings2DelphiRevert() range
   for i in range(a:firstline, a:lastline)
     let src = getline(i)
-    " заменить двойной апостроф на одиночный
+    " Р·Р°РјРµРЅРёС‚СЊ РґРІРѕР№РЅРѕР№ Р°РїРѕСЃС‚СЂРѕС„ РЅР° РѕРґРёРЅРѕС‡РЅС‹Р№
     let src = substitute(src, "''", "'", "g")
     if i == a:firstline
       let repl = substitute(src, "^\\s*'\\(.*\\)'+#13+#10$", "\\1", "g")
@@ -293,40 +293,40 @@ vnoremap ,Q :call Bls2Sql()<CR>
 vnoremap ,d :call Strings2Delphi()<CR>
 vnoremap ,D :call Strings2DelphiRevert()<CR>
 
-" отформатировать XML: сработает только, когда fenc=cp1251 (было)
+" РѕС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°С‚СЊ XML: СЃСЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ, РєРѕРіРґР° fenc=cp1251 (Р±С‹Р»Рѕ)
 " vnoremap ,f :!tidy -q -i -xml -raw -w 5000<CR>
 
-" Отформатировать XML: сработает только когда enc=utf-8 и fenc=utf-8 тоже
+" РћС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°С‚СЊ XML: СЃСЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РєРѕРіРґР° enc=utf-8 Рё fenc=utf-8 С‚РѕР¶Рµ
 vnoremap ,f :!tidy -q -i -xml -utf8 -w 5000 \| iconv -f UTF-8 -t CP1251<CR>
 
-" Отформатировать JSON: сработает только когда enc=utf-8 и fenc=utf-8 тоже
+" РћС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°С‚СЊ JSON: СЃСЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РєРѕРіРґР° enc=utf-8 Рё fenc=utf-8 С‚РѕР¶Рµ
 vnoremap ,j :! jq . \| iconv -f UTF-8 -t CP1251<CR>
 
-" Поднять текущий файл в Explorer
+" РџРѕРґРЅСЏС‚СЊ С‚РµРєСѓС‰РёР№ С„Р°Р№Р» РІ Explorer
 function! Exup()
   execute 'silent !start explorer /select, '.shellescape(expand('%:p'), 1)
 endfunction
 nnoremap <M-e> :call Exup()<CR>
 
-" поднимает диалог коммита файлов в svn (сейчас на корне модели)
+" РїРѕРґРЅРёРјР°РµС‚ РґРёР°Р»РѕРі РєРѕРјРјРёС‚Р° С„Р°Р№Р»РѕРІ РІ svn (СЃРµР№С‡Р°СЃ РЅР° РєРѕСЂРЅРµ РјРѕРґРµР»Рё)
 function! SvnCommit()
   execute 'silent update'
   execute 'silent !start cmd.exe /c C:\\BSRetail\\svn_commit_all.cmd'
-  " на текущем файле:
+  " РЅР° С‚РµРєСѓС‰РµРј С„Р°Р№Р»Рµ:
   " execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:commit /notempfile /path:'.shellescape(expand('%:p'), 1)
-  " на текущей директории (?) - не разобрался пока как сделать
+  " РЅР° С‚РµРєСѓС‰РµР№ РґРёСЂРµРєС‚РѕСЂРёРё (?) - РЅРµ СЂР°Р·РѕР±СЂР°Р»СЃСЏ РїРѕРєР° РєР°Рє СЃРґРµР»Р°С‚СЊ
   " execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:commit /notempfile /path:.'
 endfunction
 nnoremap <M-c> :call SvnCommit()<CR>
 
-" вызывает svn update на корне модели
+" РІС‹Р·С‹РІР°РµС‚ svn update РЅР° РєРѕСЂРЅРµ РјРѕРґРµР»Рё
 function! SvnUpdate()
   execute 'silent update'
   execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:update /notempfile /path:..'
 endfunction
 nnoremap <M-u> :call SvnUpdate()<CR>
 
-" Исполнить python'овский скрипт
+" РСЃРїРѕР»РЅРёС‚СЊ python'РѕРІСЃРєРёР№ СЃРєСЂРёРїС‚
 function! ExecPython()
   execute 'silent update'
   execute "echo system('python.exe ".shellescape(expand('%:p'), 1)."')"
@@ -363,14 +363,14 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 nnoremap <M-y> :let @*=expand("%:p")<CR>
 
-"END БСС Северо-Запад SECTION
+"END Р‘РЎРЎ РЎРµРІРµСЂРѕ-Р—Р°РїР°Рґ SECTION
 
-" Использовать сочетания клавиш для комментирования/раскомментирования визуальных блоков
+" РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРѕС‡РµС‚Р°РЅРёСЏ РєР»Р°РІРёС€ РґР»СЏ РєРѕРјРјРµРЅС‚РёСЂРѕРІР°РЅРёСЏ/СЂР°СЃРєРѕРјРјРµРЅС‚РёСЂРѕРІР°РЅРёСЏ РІРёР·СѓР°Р»СЊРЅС‹С… Р±Р»РѕРєРѕРІ
 vnoremap ,# :s/^/#/<CR>:noh<CR>
 vnoremap ,/ :s/^/\/\//<CR>:noh<CR>
 vnoremap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>:noh<CR>
 
-"по F2 инвертировать значение опции 'wrap'
+"РїРѕ F2 РёРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РѕРїС†РёРё 'wrap'
 nnoremap <F2> :execute RotateWrap()<CR>
 function! RotateWrap()
     let wrap_status = &wrap
@@ -383,23 +383,23 @@ function! RotateWrap()
     endif
 endfunction
 
-" по аккорду <C-Y> заменять слово под курсором на содержимое регистра "
-" (при этом содержание самого регистра " не изменяется)
+" РїРѕ Р°РєРєРѕСЂРґСѓ <C-Y> Р·Р°РјРµРЅСЏС‚СЊ СЃР»РѕРІРѕ РїРѕРґ РєСѓСЂСЃРѕСЂРѕРј РЅР° СЃРѕРґРµСЂР¶РёРјРѕРµ СЂРµРіРёСЃС‚СЂР° "
+" (РїСЂРё СЌС‚РѕРј СЃРѕРґРµСЂР¶Р°РЅРёРµ СЃР°РјРѕРіРѕ СЂРµРіРёСЃС‚СЂР° " РЅРµ РёР·РјРµРЅСЏРµС‚СЃСЏ)
 nnoremap <S-Y> "_diwPb
 nnoremap <C-Y> yiw
 
-" по Alt-5 изменять хвост текущего слова
+" РїРѕ Alt-5 РёР·РјРµРЅСЏС‚СЊ С…РІРѕСЃС‚ С‚РµРєСѓС‰РµРіРѕ СЃР»РѕРІР°
 nnoremap <M-5> cw
 
-" закрывать окно плагина TagList после выбота тэга
+" Р·Р°РєСЂС‹РІР°С‚СЊ РѕРєРЅРѕ РїР»Р°РіРёРЅР° TagList РїРѕСЃР»Рµ РІС‹Р±РѕС‚Р° С‚СЌРіР°
 let Tlist_Close_On_Select = 1
-" не показывать тэги для неактивных буферов
+" РЅРµ РїРѕРєР°Р·С‹РІР°С‚СЊ С‚СЌРіРё РґР»СЏ РЅРµР°РєС‚РёРІРЅС‹С… Р±СѓС„РµСЂРѕРІ
 let Tlist_File_Fold_Auto_Close = 1
-" переходить сразу в открытое окно плагина TagList
+" РїРµСЂРµС…РѕРґРёС‚СЊ СЃСЂР°Р·Сѓ РІ РѕС‚РєСЂС‹С‚РѕРµ РѕРєРЅРѕ РїР»Р°РіРёРЅР° TagList
 let Tlist_GainFocus_On_ToggleOpen = 1
-" использовать компактный формат списка тэгов (?)
+" РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєРѕРјРїР°РєС‚РЅС‹Р№ С„РѕСЂРјР°С‚ СЃРїРёСЃРєР° С‚СЌРіРѕРІ (?)
 " let Tlist_Compact_Format = 1
-" уширить окно со списком тэгов, чтобы помещались длинные имена
+" СѓС€РёСЂРёС‚СЊ РѕРєРЅРѕ СЃРѕ СЃРїРёСЃРєРѕРј С‚СЌРіРѕРІ, С‡С‚РѕР±С‹ РїРѕРјРµС‰Р°Р»РёСЃСЊ РґР»РёРЅРЅС‹Рµ РёРјРµРЅР°
 let Tlist_WinWidth = 50
 
 " <F12> - buffer explorer plugin
@@ -480,7 +480,7 @@ if !exists("my_auto_commands_loaded")
   endif
 colorscheme klvov
 
-" Утянул с http://stackoverflow.com/questions/4503748/remove-everything-except-regex-match-in-vim
+" РЈС‚СЏРЅСѓР» СЃ http://stackoverflow.com/questions/4503748/remove-everything-except-regex-match-in-vim
 "" Remove all text except what matches the current search result. Will put each
 "" match on its own line. This is the opposite of :%s///g (which clears all
 "" instances of the current search).
@@ -500,8 +500,8 @@ function! ClearAllButMatches() range
     let @c = old_c
 endfunction
 
-" для редактирования Upgrade(10).eif
-" включается командой :set stl=%!MyStatusLine()
+" РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Upgrade(10).eif
+" РІРєР»СЋС‡Р°РµС‚СЃСЏ РєРѕРјР°РЅРґРѕР№ :set stl=%!MyStatusLine()
 function! MyStatusLine()
   let cp = col(".")
   let currentLine = getline(".")
@@ -548,9 +548,9 @@ function! MyStatusLine()
   endif
 endfunction
 
-" заменяет содержимое текущего буфера на список недавно использованных файлов
-" затем их можно открывать, в режиме визуального выделения выделив полный путь к файлу и как обычно
-" по Ctrl-W gf
+" Р·Р°РјРµРЅСЏРµС‚ СЃРѕРґРµСЂР¶РёРјРѕРµ С‚РµРєСѓС‰РµРіРѕ Р±СѓС„РµСЂР° РЅР° СЃРїРёСЃРѕРє РЅРµРґР°РІРЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹С… С„Р°Р№Р»РѕРІ
+" Р·Р°С‚РµРј РёС… РјРѕР¶РЅРѕ РѕС‚РєСЂС‹РІР°С‚СЊ, РІ СЂРµР¶РёРјРµ РІРёР·СѓР°Р»СЊРЅРѕРіРѕ РІС‹РґРµР»РµРЅРёСЏ РІС‹РґРµР»РёРІ РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ Рё РєР°Рє РѕР±С‹С‡РЅРѕ
+" РїРѕ Ctrl-W gf
 function! Mrufiles()
   execute "redir @a"
   execute "silent oldfiles"
