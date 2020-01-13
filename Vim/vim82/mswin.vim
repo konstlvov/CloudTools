@@ -1,15 +1,15 @@
 " Set options and add mapping such that Vim behaves a lot like MS-Windows
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last Change:	2018 Dec 07
+" Maintainer:    Bram Moolenaar <Bram@vim.org>
+" Last change:    2006 Apr 02
 
-" Bail out if this isn't wanted.
+" bail out if this isn't wanted (mrsvim.vim uses this).
 if exists("g:skip_loading_mswin") && g:skip_loading_mswin
   finish
 endif
 
 " set the 'cpoptions' to its Vim default
-if 1	" only do this when compiled with expression evaluation
+if 1    " only do this when compiled with expression evaluation
   let s:save_cpo = &cpoptions
 endif
 set cpo&vim
@@ -23,45 +23,39 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 " backspace in Visual mode deletes selection
 vnoremap <BS> d
 
-if has("clipboard")
-    " CTRL-X and SHIFT-Del are Cut
-    vnoremap <C-X> "+x
-    vnoremap <S-Del> "+x
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
 
-    " CTRL-C and CTRL-Insert are Copy
-    vnoremap <C-C> "+y
-    vnoremap <C-Insert> "+y
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
 
-    " CTRL-V and SHIFT-Insert are Paste
-    map <C-V>		"+gP
-    map <S-Insert>		"+gP
+" CTRL-V and SHIFT-Insert are Paste
+"map <C-V>        "+gP
+map <S-Insert>        "+gP
 
-    cmap <C-V>		<C-R>+
-    cmap <S-Insert>		<C-R>+
-endif
+"cmap <C-V>        <C-R>+
+cmap <S-Insert>        <C-R>+
 
 " Pasting blockwise and linewise selections is not possible in Insert and
 " Visual mode without the +virtualedit feature.  They are pasted as if they
 " were characterwise instead.
 " Uses the paste.vim autoload script.
-" Use CTRL-G u to have CTRL-Z only undo the paste.
 
-if 1
-    exe 'inoremap <script> <C-V> <C-G>u' . paste#paste_cmd['i']
-    exe 'vnoremap <script> <C-V> ' . paste#paste_cmd['v']
-endif
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 
-imap <S-Insert>		<C-V>
-vmap <S-Insert>		<C-V>
+imap <S-Insert>        <C-V>
+vmap <S-Insert>        <C-V>
 
 " Use CTRL-Q to do what CTRL-V used to do
-noremap <C-Q>		<C-V>
+noremap <C-Q>        <C-V>
 
-" Use CTRL-S for saving, also in Insert mode (<C-O> doesn't work well when
-" using completions).
-noremap <C-S>		:update<CR>
-vnoremap <C-S>		<C-C>:update<CR>
-inoremap <C-S>		<Esc>:update<CR>gi
+" Use CTRL-S for saving, also in Insert mode
+noremap <C-S>        :update<CR>
+vnoremap <C-S>        <C-C>:update<CR>
+inoremap <C-S>        <C-O>:update<CR>
 
 " For CTRL-V to work autoselect must be off.
 " On Unix we have two selections, autoselect can be used.
@@ -74,8 +68,8 @@ noremap <C-Z> u
 inoremap <C-Z> <C-O>u
 
 " CTRL-Y is Redo (although not repeat); not in cmdline though
-noremap <C-Y> <C-R>
-inoremap <C-Y> <C-O><C-R>
+"noremap <C-Y> <C-R>
+"inoremap <C-Y> <C-O><C-R>
 
 " Alt-Space is System menu
 if has("gui")
@@ -84,38 +78,44 @@ if has("gui")
   cnoremap <M-Space> <C-C>:simalt ~<CR>
 endif
 
-" CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
-xnoremap <C-A> <C-C>ggVG
+" CTRL-A is Select all (klvov: disabled)
+"noremap <C-A> gggH<C-O>G
+"inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+"cnoremap <C-A> <C-C>gggH<C-O>G
+"onoremap <C-A> <C-C>gggH<C-O>G
+"snoremap <C-A> <C-C>gggH<C-O>G
+"xnoremap <C-A> <C-C>ggVG
 
-" CTRL-Tab is Next window
-noremap <C-Tab> <C-W>w
-inoremap <C-Tab> <C-O><C-W>w
-cnoremap <C-Tab> <C-C><C-W>w
-onoremap <C-Tab> <C-C><C-W>w
+" klvov: CTRL-Tab is Next tab
+nnoremap  <C-Tab> :tabnext<CR>
+inoremap <C-Tab> :tabnext<CR>
+cnoremap <C-Tab> :tabnext<CR>
+onoremap <C-Tab> :tabnext<CR>
 
-" CTRL-F4 is Close window
-noremap <C-F4> <C-W>c
-inoremap <C-F4> <C-O><C-W>c
-cnoremap <C-F4> <C-C><C-W>c
-onoremap <C-F4> <C-C><C-W>c
+"klvov: CTRL-Shift-Tab is Previous tab
+nnoremap  <C-S-Tab> :tabprevious<CR>
+inoremap <C-S-Tab> :tabprevious<CR>
+cnoremap <C-S-Tab> :tabprevious<CR>
+onoremap <C-S-Tab> :tabprevious<CR>
 
-if has("gui")
-  " CTRL-F is the search dialog
-  noremap  <expr> <C-F> has("gui_running") ? ":promptfind\<CR>" : "/"
-  inoremap <expr> <C-F> has("gui_running") ? "\<C-\>\<C-O>:promptfind\<CR>" : "\<C-\>\<C-O>/"
-  cnoremap <expr> <C-F> has("gui_running") ? "\<C-\>\<C-C>:promptfind\<CR>" : "\<C-\>\<C-O>/"
+" use Alt-Left and Alt-Right to move current tab to left or right
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
-  " CTRL-H is the replace dialog,
-  " but in console, it might be backspace, so don't map it there
-  nnoremap <expr> <C-H> has("gui_running") ? ":promptrepl\<CR>" : "\<C-H>"
-  inoremap <expr> <C-H> has("gui_running") ? "\<C-\>\<C-O>:promptrepl\<CR>" : "\<C-H>"
-  cnoremap <expr> <C-H> has("gui_running") ? "\<C-\>\<C-C>:promptrepl\<CR>" : "\<C-H>"
-endif
+" klvov: Tab is Next window
+nnoremap <Tab>       <C-W>w
+"inoremap <C-Tab> <C-O><C-W>w<C-W>_
+"cnoremap <C-Tab> <C-C><C-W>w<C-W>_
+"onoremap <C-Tab> <C-C><C-W>w<C-W>_
+"
+"klvov: Shift-Tab is Previous window
+nnoremap  <S-Tab>      <C-W>W
+"inoremap <C-S-Tab> <C-O><C-W>W<C-W>_
+"cnoremap <C-S-Tab> <C-C><C-W>W<C-W>_
+"onoremap <C-S-Tab> <C-C><C-W>W<C-W>_
+
+" CTRL-F4 is :tabclose
+nnoremap <C-F4> :tabclose<CR>
 
 " restore 'cpoptions'
 set cpo&
