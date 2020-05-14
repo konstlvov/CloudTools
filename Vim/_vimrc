@@ -478,6 +478,8 @@ if !exists("my_auto_commands_loaded")
     autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
     augroup END
   endif
+
+"unfortunately, need to specify colorscheme. Just writing "highlight Comment guifg=DarkGrey" does not work
 colorscheme klvov
 
 " Утянул с http://stackoverflow.com/questions/4503748/remove-everything-except-regex-match-in-vim
