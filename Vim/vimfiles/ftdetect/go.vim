@@ -1,1 +1,0 @@
-au BufRead,BufNewFile *.go		silent execute ":e ++enc=utf-8"

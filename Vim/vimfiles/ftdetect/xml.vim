@@ -1,1 +1,0 @@
-au BufRead,BufNewFile *.xml		silent execute ":e ++enc=utf-8"
