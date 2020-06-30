@@ -92,10 +92,9 @@ function! LeaveBaseName() range
   pyfile $VIM\vimfiles\python\LeaveBaseName.py
 endfunction
 
-"установить величину отступа 2 и всегда вставлять пробелы, а не табы
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
 
 function! SaveRunCommand()
   execute "silent update"
@@ -134,9 +133,21 @@ function! NMakeComplete()
 endfunction
 nnoremap <C-F9> :call NMakeComplete()<CR>
 
-function! ReplaceBackslashesWithSlashes(inp)
-  return substitute(a:inp, "\\", "\/", "g")
+function! ReplaceBackslashesWithSlashes() range
+  for i in range(a:firstline, a:lastline)
+    let repl = substitute(getline(i), "\\", "\/", "g")
+    call setline(i, repl)
+  endfor
 endfunction
+vnoremap ,\ :call ReplaceBackslashesWithSlashes()<CR>
+
+function! CommentHtml() range
+  for i in range(a:firstline, a:lastline)
+    let repl = "<!--" . getline(i) . "-->"
+    call setline(i, repl)
+  endfor
+endfunction
+vnoremap ,< :call CommentHtml()<CR>
 
 let pascal_delphi=1
 
@@ -368,7 +379,11 @@ nnoremap <M-y> :let @*=expand("%:p")<CR>
 " Использовать сочетания клавиш для комментирования/раскомментирования визуальных блоков
 vnoremap ,# :s/^/#/<CR>:noh<CR>
 vnoremap ,/ :s/^/\/\//<CR>:noh<CR>
-vnoremap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>:noh<CR>
+
+" убрать комментарий. Расшифровка регекспа:
+" несколько регекспов в ЧТО_ЗАМЕНЯТЬ разделяются через \\|
+" регексп НА_ЧТО_ЗАМЕНЯТЬ - пустая строка между последними //g (которые прямо перед <CR>
+vnoremap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]\\|^<!--\\|-->$//g<CR>:noh<CR>
 
 "по F2 инвертировать значение опции 'wrap'
 nnoremap <F2> :execute RotateWrap()<CR>
@@ -561,5 +576,5 @@ function! Mrufiles()
   normal! gg0"aP
 endfunction
 
-execute "cd C:\\BSRetail\\SOURCE"
+" execute "cd C:\\BSRetail\\SOURCE"
 set titlestring=%F%m%y%{&fileencoding}
