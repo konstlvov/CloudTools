@@ -139,15 +139,62 @@ function! ReplaceBackslashesWithSlashes() range
     call setline(i, repl)
   endfor
 endfunction
-vnoremap ,\ :call ReplaceBackslashesWithSlashes()<CR>
+vnoremap ,/ :call ReplaceBackslashesWithSlashes()<CR>
 
-function! CommentHtml() range
+function! ToggleLineComment() range
+  let ext = tolower(expand('%:e'))
+  let filenameWithExt = expand('%:t')
   for i in range(a:firstline, a:lastline)
-    let repl = "<!--" . getline(i) . "-->"
-    call setline(i, repl)
+	let src = getline(i)
+	let repl = src
+	if ext == 'xml'
+	  \|| ext == 'xsl'
+	  \|| ext == 'xslt'
+	  \|| ext == 'html'
+	  \|| ext == 'jrxml'
+		if match(src, '<!--') == 0
+			let repl = substitute(repl, '^<!--', '', 'g')
+			let repl = substitute(repl, '-->$', '', 'g')
+		else
+			let repl = '<!--' . repl . '-->'
+		endif
+	elseif ext == 'bls'
+			\|| ext == 'js'
+			\|| ext == 'json'
+	        \|| ext == 'pas'
+			\|| ext == 'cpp'
+			\|| ext == 'c'
+			\|| ext == 'java'
+			\|| ext == 'groovy'
+		if match(src, '//') == 0
+			let repl = substitute(repl, '^//', '', 'g')
+		else
+			let repl = '//' . repl
+		endif
+	elseif ext == 'sql'
+			\|| ext == 'hs'
+		if match(src, '--') == 0
+			let repl = substitute(repl, '^--', '', 'g')
+		else
+			let repl = '--' . repl
+		endif
+	elseif ext == 'vim'
+				\|| filenameWithExt == '_vimrc'
+				\|| filenameWithExt == '.vimrc'
+		if match(src, '"') == 0
+			let repl = substitute(repl, '^"', '', 'g')
+		else
+			let repl = '"' . repl
+		endif
+	else
+		let repl = src
+	endif
+	if repl != src
+      call setline(i, repl)
+	endif
   endfor
 endfunction
-vnoremap ,< :call CommentHtml()<CR>
+vnoremap ,, :call ToggleLineComment()<CR>
 
 let pascal_delphi=1
 
@@ -299,6 +346,79 @@ function! Strings2DelphiRevert() range
   endfor                               
 endfunction
 
+function! ToCamelCase() range
+  for i in range(a:firstline, a:lastline)
+    let src = getline(i) " line_like_this
+    let repl = substitute(src, '_\(\l\)', '\u\1', 'g') " will become lineLikeThis
+    call setline(i, repl)
+  endfor                               
+endfunction
+
+function! ToUnderscoreCase() range
+  for i in range(a:firstline, a:lastline)
+	let src = getline(i) " LineLikeThis
+    let repl = substitute(src, '\(\<\u\l\+\|\l\+\)\(\u\)', '\l\1_\l\2', 'g') " will become line_like_this
+    call setline(i, repl)
+  endfor                               
+endfunction
+
+function! MakeValueHolders() range
+  for i in range(a:firstline, a:lastline)
+	let src = getline(i)
+	let repl = getline(i)
+	if match(src, 'S ') == 0
+      let repl = 'private ValueHolder<String> ' . strpart(src, 2, strlen(src) - 2) . ' = ValueHolder.STRING_INSTANCE;'
+    elseif match(src, 'L ') == 0
+      let repl = 'private ValueHolder<Long> ' . strpart(src, 2, strlen(src) - 2) . ' = ValueHolder.LONG_INSTANCE;'
+    elseif match(src, 'BD ') == 0
+      let repl = 'private ValueHolder<BigDecimal> ' . strpart(src, 3, strlen(src) - 3) . ' = ValueHolder.BIG_DECIMAL_INSTANCE;'
+	endif
+    call setline(i, repl)
+  endfor                               
+endfunction
+
+function! MakeGetters() range
+  for i in range(a:firstline, a:lastline)
+	let src = getline(i)
+	let repl = getline(i)
+	if match(src, 'S ') == 0
+	  let fieldname = strpart(src, 2, strlen(src) - 2)
+	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
+      let repl = 'public String get' . fieldnameCap . '() { return ' . fieldname . '.getValue(); }'
+    elseif match(src, 'L ') == 0
+	  let fieldname = strpart(src, 2, strlen(src) - 2)
+	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
+      let repl = 'public Long get' . fieldnameCap . '() { return ' . fieldname . '.getValue(); }'
+    elseif match(src, 'BD ') == 0
+	  let fieldname = strpart(src, 3, strlen(src) - 3)
+	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
+      let repl = 'public BigDecimal get' . fieldnameCap . '() { return ' . fieldname . '.getValue(); }'
+	endif
+    call setline(i, repl)
+  endfor                               
+endfunction
+
+function! MakeSetters() range
+  for i in range(a:firstline, a:lastline)
+	let src = getline(i)
+	let repl = getline(i)
+	if match(src, 'S ') == 0
+	  let fieldname = strpart(src, 2, strlen(src) - 2)
+	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
+      let repl = 'public void set' . fieldnameCap . '(String ' . fieldname . ') { this.' . fieldname . ' = new ValueHolder<>(' . fieldname . '); }'
+    elseif match(src, 'L ') == 0
+	  let fieldname = strpart(src, 2, strlen(src) - 2)
+	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
+      let repl = 'public void set' . fieldnameCap . '(Long ' . fieldname . ') { this.' . fieldname . ' = new ValueHolder<>(' . fieldname . '); }'
+    elseif match(src, 'BD ') == 0
+	  let fieldname = strpart(src, 3, strlen(src) - 3)
+	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
+      let repl = 'public void set' . fieldnameCap . '(BigDecimal ' . fieldname . ') { this.' . fieldname . ' = new ValueHolder<>(' . fieldname . '); }'
+	endif
+    call setline(i, repl)
+  endfor                               
+endfunction
+
 vnoremap ,q :call Sql2Bls()<CR>
 vnoremap ,Q :call Bls2Sql()<CR>
 vnoremap ,d :call Strings2Delphi()<CR>
@@ -359,8 +479,13 @@ function! ExecHaskell()
   " execute "echo system('C:\\Users\\lvov_k\\CloudTools\\ghc-8.2.2\\bin\\runhaskell.exe ".shellescape(expand('%:p'), 1)."| iconv -f CP866 -t UTF-8')"
   let current_dir = shellescape(expand('%:p:h'))
   let file_full_path = shellescape(expand('%:p'), 1)
-  echo "about to pass following string to runhaskell.exe: ".file_full_path
-  execute "echo system('cd /D ".current_dir." && runhaskell.exe ".file_full_path." | iconv -f CP866 -t UTF-8')"
+  echo "about to pass following string to runhugs.exe: ".file_full_path
+  "execute "echo system('cd /D ".current_dir." && C:\\Users\\lvov_k\\WinHugs\\runhugs.exe ".file_full_path." | iconv -f CP866 -t UTF-8')"
+  " please use UTF-8 for Haskell sources, so there is no need for iconv
+  execute "redir @a"
+  execute "echo system('cd /D ".current_dir." && C:\\Users\\lvov_k\\WinHugs\\runhugs.exe ".file_full_path."')"
+  execute "redir END"
+  normal! "ap
 endfunction
 nnoremap <M-h> :call ExecHaskell()<CR>
 
@@ -375,15 +500,6 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap <M-y> :let @*=expand("%:p")<CR>
 
 "END БСС Северо-Запад SECTION
-
-" Использовать сочетания клавиш для комментирования/раскомментирования визуальных блоков
-vnoremap ,# :s/^/#/<CR>:noh<CR>
-vnoremap ,/ :s/^/\/\//<CR>:noh<CR>
-
-" убрать комментарий. Расшифровка регекспа:
-" несколько регекспов в ЧТО_ЗАМЕНЯТЬ разделяются через \\|
-" регексп НА_ЧТО_ЗАМЕНЯТЬ - пустая строка между последними //g (которые прямо перед <CR>
-vnoremap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]\\|^<!--\\|-->$//g<CR>:noh<CR>
 
 "по F2 инвертировать значение опции 'wrap'
 nnoremap <F2> :execute RotateWrap()<CR>
