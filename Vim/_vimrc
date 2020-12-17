@@ -160,8 +160,9 @@ function! ToggleLineComment() range
 		endif
 	elseif ext == 'bls'
 			\|| ext == 'js'
+			\|| ext == 'ts'
 			\|| ext == 'json'
-	        \|| ext == 'pas'
+			\|| ext == 'pas'
 			\|| ext == 'cpp'
 			\|| ext == 'c'
 			\|| ext == 'java'
