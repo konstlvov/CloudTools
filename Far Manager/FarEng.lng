@@ -1,6 +1,6 @@
 ﻿.Language=English,English
 
-//Version: 3.0 build 5400
+//Version: 3.0.5700.0 x64
 
 //[MYes]
 "Yes"
@@ -30,8 +30,6 @@
 "Ignore"
 //[MDelete]
 "Delete"
-//[MSplit]
-"Split"
 
 //[MHCancel]
 "&Cancel"
@@ -60,9 +58,9 @@
 //[MQuit]
 "Quit"
 //[MAskQuit]
-"Do you want to quit FAR?"
+"Do you want to quit Far?"
 
-//functional keys - 6 characters max
+// Panels: functional keys
 //[MF1]
 "Help"
 //[MF2]
@@ -95,7 +93,7 @@
 //[MShiftF3]
 "ArcCmd"
 //[MShiftF4]
-"Edit.."
+"Edit…"
 //[MShiftF5]
 "Copy"
 //[MShiftF6]
@@ -118,9 +116,9 @@
 //[MAltF2]
 "Right"
 //[MAltF3]
-"View.."
+"View…"
 //[MAltF4]
-"Edit.."
+"Edit…"
 //[MAltF5]
 "Print"
 //[MAltF6]
@@ -264,12 +262,16 @@
 ""
 //[MCtrlAltShiftF11]
 ""
-//End of functional keys
+// Panels: end of functional keys
 //[MCtrlAltShiftF12]
 ""
 
 //[MHistoryTitle]
 "History"
+//[MHistoryInfoTitle]
+"Information"
+//[MHistoryInfoFolder]
+"Folder:"
 //[MFolderHistoryTitle]
 "Folders history"
 //[MViewHistoryTitle]
@@ -299,7 +301,7 @@
 //[MConfigScanJunction]
 "Scan s&ymbolic links"
 //[MConfigSmartFolderMonitor]
-"Update panels only when Far is active"
+"&Update panels only when Far is active"
 //[MConfigSaveHistory]
 "Save commands &history"
 //[MConfigSaveFoldersHistory]
@@ -307,19 +309,19 @@
 //[MConfigSaveViewHistory]
 "Save &view and edit history"
 //[MConfigRegisteredTypes]
-"Use Windows &registered types"
+"Use Windows re&gistered types"
 //[MConfigUpdateEnvironment]
-"Automatic update of environment variables"
+"Automatic update of &environment variables"
 //[MConfigElevation]
 "Request administrator rights:"
 //[MConfigElevationModify]
-"for modification"
+"For &modification"
 //[MConfigElevationRead]
-"for read"
+"For &reading"
 //[MConfigElevationUsePrivileges]
-"use additional privileges"
+"Use additional &privileges"
 //[MConfigSortingCollation]
-"Sorting collation:"
+"Sorti&ng collation:"
 //[MConfigSortingOrdinal]
 "ordinal"
 //[MConfigSortingInvariant]
@@ -327,7 +329,7 @@
 //[MConfigSortingLinguistic]
 "linguistic"
 //[MConfigSortingDigitsAsNumbers]
-"Treat digits as numbers"
+"Treat digits &as numbers"
 //[MConfigSortingCase]
 "&Case sensitive"
 //[MConfigAutoSave]
@@ -367,15 +369,15 @@
 //[MConfigSelectFolders]
 "Select &folders"
 //[MConfigRightClickSelect]
-"Right click selects files"
+"Right clic&k selects files"
 //[MConfigSortFolderExt]
 "Sort folder names by e&xtension"
-//[MConfigReverseSort]
+//[MConfigAllowReverseSort]
 "Allow re&verse sort modes"
 //[MConfigAutoUpdateLimit]
 "&Disable automatic panel update"
 //[MConfigAutoUpdateLimit2]
-"if object count exceeds"
+"if ob&ject count exceeds"
 //[MConfigAutoUpdateRemoteDrive]
 "Network drives autor&efresh"
 //[MConfigShowColumns]
@@ -395,7 +397,7 @@
 //[MConfigShowSortMode]
 "Show sort &mode letter"
 //[MConfigShowDotsInRoot]
-"Show \"..\" in root folders"
+"Show \"&..\" in root folders"
 
 //[MConfigInterfaceTitle]
 "Interface settings"
@@ -412,7 +414,7 @@
 //[MConfigSaver]
 "&Screen saver"
 //[MConfigSaverMinutes]
-"minutes"
+"mi&nutes"
 //[MConfigCopyTotal]
 "Show &total copy progress indicator"
 //[MConfigCopyTimeRule]
@@ -422,13 +424,13 @@
 //[MConfigPgUpChangeDisk]
 "Use Ctrl+Pg&Up to change drive"
 //[MConfigUseVirtualTerminalForRendering]
-"Use Virtual Terminal for rendering"
+"Use &Virtual Terminal for rendering"
 //[MConfigClearType]
 "Cl&earType-friendly redraw (can be slow)"
 //[MConfigSetConsoleIcon]
-"Set console icon"
+"Сonsole &icon:"
 //[MConfigSetAdminConsoleIcon]
-"Alternate for Administrator"
+"Alternate for &Administrator"
 //[MConfigTitleAddons]
 "Far &window title addons:"
 
@@ -450,11 +452,11 @@
 //[MConfigVMenuTitle]
 "Menu settings"
 //[MConfigVMenuLBtnClick]
-"Left mouse click outside a menu"
+"&Left mouse click outside a menu"
 //[MConfigVMenuRBtnClick]
-"Right mouse click outside a menu"
+"&Right mouse click outside a menu"
 //[MConfigVMenuMBtnClick]
-"Middle mouse click outside a menu"
+"&Middle mouse click outside a menu"
 //[MConfigVMenuClickCancel]
 "Cancel menu"
 //[MConfigVMenuClickApply]
@@ -511,6 +513,8 @@
 "DNS fully-qualified"
 //[MConfigInfoPanelUNTitle]
 "&User name format"
+//[MConfigInfoPanelUNLogon]
+"Logon name"
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Fully Qualified Domain Name"
 //[MConfigInfoPanelUNSamCompatible]
@@ -527,6 +531,10 @@
 "Service Principal"
 //[MConfigInfoPanelUNDnsDomain]
 "DNS Domain"
+//[MConfigInfoPanelUNGivenName]
+"Given name"
+//[MConfigInfoPanelUNSurname]
+"Surname"
 //[MConfigInfoPanelShowPowerStatus]
 "Show &power status"
 //[MConfigInfoPanelShowCDInfo]
@@ -548,7 +556,7 @@
 //[MViewConfigTitle]
 "Viewer"
 //[MViewConfigExternalF3]
-"Use e&xternal viewer for F3 instead of Alt+F3"
+"Use external viewer for F&3 instead of Alt+F3"
 //[MViewConfigExternalCommand]
 "&Viewer command:"
 //[MViewConfigInternal]
@@ -587,7 +595,7 @@
 //[MEditConfigTitle]
 "Editor"
 //[MEditConfigEditorF4]
-"Use external editor for F4 instead of Alt+F4"
+"Use external editor for F&4 instead of Alt+F4"
 //[MEditConfigEditorCommand]
 "&Editor command:"
 //[MEditConfigInternal]
@@ -634,6 +642,8 @@
 "Cu&rsor at the end"
 //[MEditConfigDefaultCodePage]
 "Default code pa&ge:"
+//[MConfigEditor]
+"Configuration editor"
 
 //[MSaveSetupTitle]
 "Save setup"
@@ -652,12 +662,12 @@
 "Link"
 //[MCopySecurity]
 "&Access rights:"
+//[MCopySecurityDefault]
+"Defau&lt"
 //[MCopySecurityCopy]
 "Co&py"
 //[MCopySecurityInherit]
 "&Inherit"
-//[MCopySecurityLeave]
-"Defau&lt"
 //[MCopyIfFileExist]
 "Already e&xisting files:"
 //[MCopyAsk]
@@ -678,6 +688,8 @@
 "symbolic link (&file)"
 //[MLinkTypeSymlinkDirectory]
 "symbolic link (fol&der)"
+//[MCopyPreserveTimestamps]
+"Preserve timestamps"
 //[MCopySymLinkContents]
 "Cop&y contents of symbolic links"
 //[MCopyMultiActions]
@@ -695,7 +707,7 @@
 //[MCopyDlgTotal]
 "Total"
 //[MCopyPrepareSecury]
-"Applying access rights..."
+"Applying access rights…"
 //[MCopyUseFilter]
 "&Use filter"
 //[MCopySetFilter]
@@ -716,7 +728,7 @@
 //[MCMLTargetTO]
 "t&o"
 //[MCMLTargetIN]
-"in"
+"&in"
 //[MCMLItems0]
 ""
 //[MCMLItemsA]
@@ -742,8 +754,6 @@
 
 //[MCopyCannotCreateFolder]
 "Cannot create the folder"
-//[MCopyCannotChangeFolderAttr]
-"Failed to set folder attributes"
 //[MCopyCannotRenameFolder]
 "Cannot rename the folder"
 //[MCopyIgnore]
@@ -785,13 +795,13 @@
 "onto itself"
 
 //[MCopyStream1]
-"The source file contains more than one data stream."
+"The source file contains more than one data stream,"
 //[MCopyStream2]
-"but since you do not use a system copy routine."
+"but you're not using the system copy routine."
 //[MCopyStream3]
 "but the destination volume does not support this feature."
 //[MCopyStream4]
-"Some data will not be preserved as a result."
+"Some data will not be preserved."
 
 //[MCopyDirectoryOrFile]
 "Does it specify a folder name or file name?"
@@ -808,16 +818,10 @@
 "E&xisting"
 //[MCopyOverwrite]
 "&Overwrite"
-//[MCopySkipOvr]
-"&Skip"
 //[MCopyAppend]
 "A&ppend"
-//[MCopyResume]
-"&Resume"
 //[MCopyRename]
 "R&ename"
-//[MCopyCancelOvr]
-"&Cancel"
 //[MCopyRememberChoice]
 "&Remember choice"
 //[MCopyRenameTitle]
@@ -833,12 +837,6 @@
 "&Delete"
 //[MCopyDeleteAllRO]
 "&All"
-//[MCopySkipRO]
-"&Skip"
-//[MCopySkipAllRO]
-"S&kip all"
-//[MCopyCancelRO]
-"&Cancel"
 
 //[MCannotCopy]
 "Cannot copy"
@@ -896,10 +894,8 @@
 "Do you wish to wipe the file"
 //[MAskWipe]
 "Do you wish to wipe"
-//[MDeleteLinkTitle]
-"Delete link"
 //[MAskDeleteLink]
-"is a link to"
+"a link to"
 //[MAskDeleteLinkFolder]
 "folder"
 //[MAskDeleteLinkFile]
@@ -952,9 +948,6 @@
 //[MDeleteFileCancel]
 "&Cancel"
 
-//[MDeleteLinkDelete]
-"Delete link"
-
 //[MDeletingTitle]
 "Deleting"
 
@@ -993,6 +986,8 @@
 "Cannot move file to the Recycle Bin"
 //[MCannotRecycleFolder]
 "Cannot move folder to the Recycle Bin"
+//[MTryToDeletePermanently]
+"Try to delete it permanently?"
 
 //[MCannotGetSecurity]
 "Cannot get file access rights for"
@@ -1018,7 +1013,7 @@
 //[MEditAskSaveExt]
 "The file was changed by an external program. Save?"
 //[MEditBtnSaveAs]
-"Save &as..."
+"Save &as…"
 
 //[MEditRO]
 "is a read-only file"
@@ -1088,8 +1083,6 @@
 "Searching for"
 //[MEditSearchStatistics]
 "Occurrences: {0}, lines: {1}"
-//[MEditFindAllMenuFooter]
-"F1, F5, Ctrl+Enter, Ctrl+Up/Down, Add"
 //[MEditNotFound]
 "Could not find the string"
 
@@ -1119,10 +1112,6 @@
 
 //[MFolderShortcutsTitle]
 "Folder shortcuts"
-//[MFolderShortcutBottom]
-"Edit: Del,Ins,F4"
-//[MFolderShortcutBottomSub]
-"Edit: Del,Ins,F4"
 //[MShortcutNone]
 "<none>"
 //[MShortcutPlugin]
@@ -1140,7 +1129,7 @@
 //[MSaveThisShortcut]
 "Save this shortcut?"
 
-//functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
+// Editor: functional keys
 //[MEditF1]
 "Help"
 //[MEditF2]
@@ -1174,7 +1163,7 @@
 //[MEditShiftF3]
 ""
 //[MEditShiftF4]
-"Edit.."
+"Edit…"
 //[MEditShiftF5]
 ""
 //[MEditShiftF6]
@@ -1347,221 +1336,9 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-// End of functional keys (Editor)
-// it's a F8 another text
+// Editor: end of functional keys
+// This is another text for F8
 //[MEditF8DOS]
-"OEM"
-
-//Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
-//[MSingleEditF1]
-"Help"
-//[MSingleEditF2]
-"Save"
-//[MSingleEditF3]
-""
-//[MSingleEditF4]
-"Quit"
-//[MSingleEditF5]
-""
-//[MSingleEditF6]
-"View"
-//[MSingleEditF7]
-"Search"
-//[MSingleEditF8]
-"ANSI"
-//[MSingleEditF9]
-""
-//[MSingleEditF10]
-"Quit"
-//[MSingleEditF11]
-"Plugin"
-//[MSingleEditF12]
-"Screen"
-
-//Single Editor: Shift
-//[MSingleEditShiftF1]
-""
-//[MSingleEditShiftF2]
-"SaveAs"
-//[MSingleEditShiftF3]
-""
-//[MSingleEditShiftF4]
-""
-//[MSingleEditShiftF5]
-""
-//[MSingleEditShiftF6]
-""
-//[MSingleEditShiftF7]
-"Next"
-//[MSingleEditShiftF8]
-"CodePg"
-//[MSingleEditShiftF9]
-""
-//[MSingleEditShiftF10]
-"SaveQ"
-//[MSingleEditShiftF11]
-""
-//[MSingleEditShiftF12]
-""
-
-//Single Editor: Alt
-//[MSingleEditAltF1]
-""
-//[MSingleEditAltF2]
-""
-//[MSingleEditAltF3]
-""
-//[MSingleEditAltF4]
-""
-//[MSingleEditAltF5]
-""
-//[MSingleEditAltF6]
-""
-//[MSingleEditAltF7]
-""
-//[MSingleEditAltF8]
-"Goto"
-//[MSingleEditAltF9]
-"Video"
-//[MSingleEditAltF10]
-""
-//[MSingleEditAltF11]
-"ViewHs"
-//[MSingleEditAltF12]
-""
-
-//Single Editor: Ctrl
-//[MSingleEditCtrlF1]
-""
-//[MSingleEditCtrlF2]
-""
-//[MSingleEditCtrlF3]
-""
-//[MSingleEditCtrlF4]
-""
-//[MSingleEditCtrlF5]
-""
-//[MSingleEditCtrlF6]
-""
-//[MSingleEditCtrlF7]
-"Replac"
-//[MSingleEditCtrlF8]
-""
-//[MSingleEditCtrlF9]
-""
-//[MSingleEditCtrlF10]
-""
-//[MSingleEditCtrlF11]
-""
-//[MSingleEditCtrlF12]
-""
-
-//Single Editor: AltShift
-//[MSingleEditAltShiftF1]
-""
-//[MSingleEditAltShiftF2]
-""
-//[MSingleEditAltShiftF3]
-""
-//[MSingleEditAltShiftF4]
-""
-//[MSingleEditAltShiftF5]
-""
-//[MSingleEditAltShiftF6]
-""
-//[MSingleEditAltShiftF7]
-""
-//[MSingleEditAltShiftF8]
-""
-//[MSingleEditAltShiftF9]
-"Config"
-//[MSingleEditAltShiftF10]
-""
-//[MSingleEditAltShiftF11]
-""
-//[MSingleEditAltShiftF12]
-""
-
-//Single Editor: CtrlShift
-//[MSingleEditCtrlShiftF1]
-""
-//[MSingleEditCtrlShiftF2]
-""
-//[MSingleEditCtrlShiftF3]
-""
-//[MSingleEditCtrlShiftF4]
-""
-//[MSingleEditCtrlShiftF5]
-""
-//[MSingleEditCtrlShiftF6]
-""
-//[MSingleEditCtrlShiftF7]
-""
-//[MSingleEditCtrlShiftF8]
-""
-//[MSingleEditCtrlShiftF9]
-""
-//[MSingleEditCtrlShiftF10]
-""
-//[MSingleEditCtrlShiftF11]
-""
-//[MSingleEditCtrlShiftF12]
-""
-
-//Single Editor: CtrlAlt
-//[MSingleEditCtrlAltF1]
-""
-//[MSingleEditCtrlAltF2]
-""
-//[MSingleEditCtrlAltF3]
-""
-//[MSingleEditCtrlAltF4]
-""
-//[MSingleEditCtrlAltF5]
-""
-//[MSingleEditCtrlAltF6]
-""
-//[MSingleEditCtrlAltF7]
-""
-//[MSingleEditCtrlAltF8]
-""
-//[MSingleEditCtrlAltF9]
-""
-//[MSingleEditCtrlAltF10]
-""
-//[MSingleEditCtrlAltF11]
-""
-//[MSingleEditCtrlAltF12]
-""
-
-//Single Editor: CtrlAltShift
-//[MSingleEditCtrlAltShiftF1]
-""
-//[MSingleEditCtrlAltShiftF2]
-""
-//[MSingleEditCtrlAltShiftF3]
-""
-//[MSingleEditCtrlAltShiftF4]
-""
-//[MSingleEditCtrlAltShiftF5]
-""
-//[MSingleEditCtrlAltShiftF6]
-""
-//[MSingleEditCtrlAltShiftF7]
-""
-//[MSingleEditCtrlAltShiftF8]
-""
-//[MSingleEditCtrlAltShiftF9]
-""
-//[MSingleEditCtrlAltShiftF10]
-""
-//[MSingleEditCtrlAltShiftF11]
-""
-//[MSingleEditCtrlAltShiftF12]
-""
-// End of functional keys (Single Editor)
-// it's a F8 another text
-//[MSingleEditF8DOS]
 "OEM"
 
 //[MEditSaveAs]
@@ -1597,37 +1374,31 @@
 //[MEditNewPlugin1]
 "The name of the file to edit cannot be empty"
 //[MEditorLoadCPWarn1]
-"File contains characters that cannot be"
+"The file contains characters that cannot be"
 //[MEditorLoadCPWarn2]
-"correctly read using selected code page."
+"correctly read using the selected code page."
 //[MEditorReloadCPWarnLost1]
-"File has to be reloaded to change code page."
+"The file has to be reloaded to change the code page."
 //[MEditorReloadCPWarnLost2]
 "All unsaved changes will be lost."
 //[MEditorSaveCPWarn1]
 "Editor contains characters that cannot be"
 //[MEditorSaveCPWarn2]
-"correctly saved using selected code page."
+"correctly saved using the selected code page."
 //[MEditorSwitchCPWarn1]
 "Editor contains characters that cannot be"
 //[MEditorSwitchCPWarn2]
-"correctly translated using selected code page [{0}]"
+"correctly translated using the selected code page:"
 //[MEditorSwitchCPConfirm]
 "Continue?"
 //[MEditDataLostWarn]
-"During file editing some data were lost."
+"During the file editing some data was lost."
 //[MEditorSaveNotRecommended]
 "It is not recommended to save this file."
 //[MEditorSave]
 "Save"
 //[MEditorSaveCPWarnShow]
 "Show"
-//[MEditorSwitchUnicodeCPDisabled]
-"Unicode code page switch is not supported"
-//[MEditorTryReloadFile]
-"You can reload file using custom code page (ShiftF4)"
-//[MEditorSwitchToUnicodeCPDisabled]
-"Switch to unicode code page {0} is not supported"
 //[MEditorCPNotSupported]
 "Code page {0} is not supported in your system"
 
@@ -1676,26 +1447,6 @@
 "Junction"
 //[MListVolMount]
 "Volume"
-//[MListDFS]
-"DFS"
-//[MListDFSR]
-"DFSR"
-//[MListHSM]
-"HSM"
-//[MListHSM2]
-"HSM2"
-//[MListSIS]
-"SIS"
-//[MListWIM]
-"WIM"
-//[MListCSV]
-"CSV"
-//[MListDEDUP]
-"DEDUP"
-//[MListNFS]
-"NFS"
-//[MListPlaceholder]
-"Placeholder"
 //[MListUnknownReparsePoint]
 "?Symlink?"
 //[MListBrackets]
@@ -1750,8 +1501,6 @@
 
 //[MAssocTitle]
 "File associations"
-//[MAssocBottom]
-"Edit: Del,Ins,F4"
 //[MAskDelAssoc]
 "Do you wish to delete association for"
 
@@ -1774,10 +1523,9 @@
 //[MFileAssocAltEdit]
 "Edit comm&and (used for Alt+F4):"
 
-//Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
+// Viewer: functional keys
 //[MViewF1]
 "Help"
-// this is another text for F2
 //[MViewF2]
 "Wrap"
 //[MViewF3]
@@ -1990,227 +1738,9 @@
 // this is another text for F4
 //[MViewF4Dump]
 "Dump"
-// this is another text for F8
-// end of functional keys (Viewer)
+// Viewer: end of functional keys
+// This is another text for F8
 //[MViewF8DOS]
-"OEM"
-
-//Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
-//[MSingleViewF1]
-"Help"
-//[MSingleViewF2]
-"Wrap"
-//[MSingleViewF3]
-"Quit"
-//[MSingleViewF4]
-"Hex"
-//[MSingleViewF5]
-""
-//[MSingleViewF6]
-"Edit"
-//[MSingleViewF7]
-"Search"
-//[MSingleViewF8]
-"ANSI"
-//[MSingleViewF9]
-""
-//[MSingleViewF10]
-"Quit"
-//[MSingleViewF11]
-"Plugins"
-//[MSingleViewF12]
-"Screen"
-
-//Single Viewer: Shift
-//[MSingleViewShiftF1]
-""
-//[MSingleViewShiftF2]
-"WWrap"
-//[MSingleViewShiftF3]
-""
-//[MSingleViewShiftF4]
-""
-//[MSingleViewShiftF5]
-""
-//[MSingleViewShiftF6]
-""
-//[MSingleViewShiftF7]
-"Next"
-//[MSingleViewShiftF8]
-"CodePg"
-//[MSingleViewShiftF9]
-""
-//[MSingleViewShiftF10]
-""
-//[MSingleViewShiftF11]
-""
-//[MSingleViewShiftF12]
-""
-
-//Single Viewer: Alt
-//[MSingleViewAltF1]
-""
-//[MSingleViewAltF2]
-""
-//[MSingleViewAltF3]
-""
-//[MSingleViewAltF4]
-""
-//[MSingleViewAltF5]
-""
-//[MSingleViewAltF6]
-""
-//[MSingleViewAltF7]
-"Prev"
-//[MSingleViewAltF8]
-"Goto"
-//[MSingleViewAltF9]
-"Video"
-//[MSingleViewAltF10]
-""
-//[MSingleViewAltF11]
-"ViewHs"
-//[MSingleViewAltF12]
-""
-
-//Single Viewer: Ctrl
-//[MSingleViewCtrlF1]
-""
-//[MSingleViewCtrlF2]
-""
-//[MSingleViewCtrlF3]
-""
-//[MSingleViewCtrlF4]
-""
-//[MSingleViewCtrlF5]
-""
-//[MSingleViewCtrlF6]
-""
-//[MSingleViewCtrlF7]
-""
-//[MSingleViewCtrlF8]
-""
-//[MSingleViewCtrlF9]
-""
-//[MSingleViewCtrlF10]
-""
-//[MSingleViewCtrlF11]
-""
-//[MSingleViewCtrlF12]
-""
-
-//Single Viewer: AltShift
-//[MSingleViewAltShiftF1]
-""
-//[MSingleViewAltShiftF2]
-""
-//[MSingleViewAltShiftF3]
-""
-//[MSingleViewAltShiftF4]
-""
-//[MSingleViewAltShiftF5]
-""
-//[MSingleViewAltShiftF6]
-""
-//[MSingleViewAltShiftF7]
-""
-//[MSingleViewAltShiftF8]
-""
-//[MSingleViewAltShiftF9]
-"Config"
-//[MSingleViewAltShiftF10]
-""
-//[MSingleViewAltShiftF11]
-""
-//[MSingleViewAltShiftF12]
-""
-
-//Single Viewer: CtrlShift
-//[MSingleViewCtrlShiftF1]
-""
-//[MSingleViewCtrlShiftF2]
-""
-//[MSingleViewCtrlShiftF3]
-""
-//[MSingleViewCtrlShiftF4]
-""
-//[MSingleViewCtrlShiftF5]
-""
-//[MSingleViewCtrlShiftF6]
-""
-//[MSingleViewCtrlShiftF7]
-""
-//[MSingleViewCtrlShiftF8]
-""
-//[MSingleViewCtrlShiftF9]
-""
-//[MSingleViewCtrlShiftF10]
-""
-//[MSingleViewCtrlShiftF11]
-""
-//[MSingleViewCtrlShiftF12]
-""
-
-//Single Viewer: CtrlAlt
-//[MSingleViewCtrlAltF1]
-""
-//[MSingleViewCtrlAltF2]
-""
-//[MSingleViewCtrlAltF3]
-""
-//[MSingleViewCtrlAltF4]
-""
-//[MSingleViewCtrlAltF5]
-""
-//[MSingleViewCtrlAltF6]
-""
-//[MSingleViewCtrlAltF7]
-""
-//[MSingleViewCtrlAltF8]
-""
-//[MSingleViewCtrlAltF9]
-""
-//[MSingleViewCtrlAltF10]
-""
-//[MSingleViewCtrlAltF11]
-""
-//[MSingleViewCtrlAltF12]
-""
-
-//Single Viewer: CtrlAltShift
-//[MSingleViewCtrlAltShiftF1]
-""
-//[MSingleViewCtrlAltShiftF2]
-""
-//[MSingleViewCtrlAltShiftF3]
-""
-//[MSingleViewCtrlAltShiftF4]
-""
-//[MSingleViewCtrlAltShiftF5]
-""
-//[MSingleViewCtrlAltShiftF6]
-""
-//[MSingleViewCtrlAltShiftF7]
-""
-//[MSingleViewCtrlAltShiftF8]
-""
-//[MSingleViewCtrlAltShiftF9]
-""
-//[MSingleViewCtrlAltShiftF10]
-""
-//[MSingleViewCtrlAltShiftF11]
-""
-//[MSingleViewCtrlAltShiftF12]
-""
-// this is another text for F2
-//[MSingleViewF2Unwrap]
-"Unwrap"
-// this is another text for F4
-//[MSingleViewF4Text]
-"Text"
-// this is another text for F4
-// end of functional keys (Single Viewer)
-//[MSingleViewF8DOS]
 "OEM"
 //[MViewMode]
 "View mode"
@@ -2221,8 +1751,6 @@
 
 //[MFilterTitle]
 "Filters menu"
-//[MFilterBottom]
-"+,-,Space,I,X,BS,Shift+BS,Ins,Del,F4,F5,Ctrl+Up,Ctrl+Dn"
 //[MPanelFileType]
 "Panel file type"
 //[MFolderFileType]
@@ -2261,11 +1789,11 @@
 //[MFindSymLinks]
 "Search in symbolic lin&ks"
 //[MFindAlternateStreams]
-"Search in alternate streams"
+"Search in a&lternate streams"
 //[MSearchForHex]
 "Search for &hex"
 //[MSearchNotContaining]
-"Not containing"
+"&Not containing"
 //[MSearchWhere]
 "Select search &area:"
 //[MSearchAllDisks]
@@ -2341,10 +1869,6 @@
 "Favorites"
 //[MGetCodePageOther]
 "Other"
-//[MGetCodePageBottomTitle]
-"Ctrl+H, Del, Ins, F4"
-//[MGetCodePageBottomShortTitle]
-"Ctrl+H, Del, F4"
 //[MGetCodePageEditCodePageName]
 "Rename the code page"
 //[MGetCodePageResetCodePageName]
@@ -2352,8 +1876,6 @@
 
 //[MHighlightTitle]
 "Files highlighting"
-//[MHighlightBottom]
-"Ins,Del,F4,F5,Ctrl+Up,Ctrl+Down"
 //[MHighlightUpperSortGroup]
 "Upper sort group"
 //[MHighlightLowerSortGroup]
@@ -2426,16 +1948,34 @@
 "Network"
 //[MInfoCDROM]
 "CD-ROM"
-//[MInfoCD_RW]
+//[MInfoCDR]
+"CD-R"
+//[MInfoCDRW]
 "CD-RW"
-//[MInfoCD_RWDVD]
+//[MInfoCDRWDVD]
 "CD-RW/DVD"
-//[MInfoDVD_ROM]
+//[MInfoDVDROM]
 "DVD-ROM"
-//[MInfoDVD_RW]
+//[MInfoDVDR]
+"DVD-R"
+//[MInfoDVDRW]
 "DVD-RW"
-//[MInfoDVD_RAM]
+//[MInfoDVDRAM]
 "DVD-RAM"
+//[MInfoBDROM]
+"BD-ROM"
+//[MInfoBDR]
+"BD-R"
+//[MInfoBDRW]
+"BD-RW"
+//[MInfoHDDVDROM]
+"HDDVD-ROM"
+//[MInfoHDDVDR]
+"HDDVD-R"
+//[MInfoHDDVDRW]
+"HDDVD-RW"
+//[MInfoHDDVDRAM]
+"HDDVD-RAM"
 //[MInfoRAM]
 "RAM"
 //[MInfoSUBST]
@@ -2531,15 +2071,15 @@
 //[MCreateFolder]
 "Create the &folder:"
 //[MMakeFolderLinkType]
-"Link type:"
+"&Link type:"
 //[MMakeFolderLinkNone]
-"None"
+"&none"
 //[MMakeFolderLinkJunction]
-"directory junction"
+"directory &junction"
 //[MMakeFolderLinkSymlink]
-"symbolic link"
+"symbolic &link"
 //[MMakeFolderLinkTarget]
-"Target:"
+"&Target:"
 //[MMultiMakeDir]
 "Process &multiple names"
 //[MIncorrectDirList]
@@ -2670,7 +2210,7 @@
 //[MMenuPluginsConfig]
 "Pl&ugins configuration"
 //[MMenuPluginsManagerSettings]
-"Plugins manager settings"
+"Plugins manage&r settings"
 //[MMenuDialogSettings]
 "Di&alog settings"
 //[MMenuVMenuSettings]
@@ -2678,11 +2218,11 @@
 //[MMenuCmdlineSettings]
 "&Command line settings"
 //[MMenuAutoCompleteSettings]
-"AutoComplete settings"
+"Au&toComplete settings"
 //[MMenuInfoPanelSettings]
 "Inf&oPanel settings"
 //[MMenuMaskGroups]
-"Groups of file masks"
+"Groups of file mas&ks"
 //[MMenuConfirmation]
 "Co&nfirmations"
 //[MMenuFilePanelModes]
@@ -2749,18 +2289,16 @@
 "Number of st&reams"
 //[MMenuSortByStreamsSize]
 "Si&ze of streams"
-//[MMenuSortByFullName]
-"&Full name"
-//[MMenuSortByCustomData]
-"Cus&tom data"
+//[MMenuSortByNameOnly]
+"Name only"
 //[MMenuSortUseGroups]
 "Use sort &groups"
 //[MMenuSortSelectedFirst]
 "Show selected f&irst"
 //[MMenuSortDirectoriesFirst]
 "Sho&w directories first"
-//[MMaskGroupBottom]
-"Edit: Ins, Del, F4, F7, Ctrl+R"
+//[MMaskGroupTitle]
+"Groups of file masks"
 //[MMaskGroupName]
 "&Name:"
 //[MMaskGroupMasks]
@@ -2786,24 +2324,34 @@
 "disconnected"
 //[MChangeDriveCDROM]
 "CD-ROM"
-//[MChangeDriveCD_RW]
+//[MChangeDriveCDR]
+"CD-R"
+//[MChangeDriveCDRW]
 "CD-RW"
-//[MChangeDriveCD_RWDVD]
+//[MChangeDriveCDRWDVD]
 "CD-RW/DVD"
-//[MChangeDriveDVD_ROM]
+//[MChangeDriveDVDROM]
 "DVD-ROM"
-//[MChangeDriveDVD_RW]
+//[MChangeDriveDVDR]
+"DVD-R"
+//[MChangeDriveDVDRW]
 "DVD-RW"
-//[MChangeDriveDVD_RAM]
+//[MChangeDriveDVDRAM]
 "DVD-RAM"
-//[MChangeDriveBD_ROM]
+//[MChangeDriveBDROM]
 "BD-ROM"
-//[MChangeDriveBD_RW]
+//[MChangeDriveBDR]
+"BD-R"
+//[MChangeDriveBDRW]
 "BD-RW"
-//[MChangeDriveHDDVD_ROM]
+//[MChangeDriveHDDVDROM]
 "HDDVD-ROM"
-//[MChangeDriveHDDVD_RW]
+//[MChangeDriveHDDVDR]
+"HDDVD-R"
+//[MChangeDriveHDDVDRW]
 "HDDVD-RW"
+//[MChangeDriveHDDVDRAM]
+"HDDVD-RAM"
 //[MChangeDriveRAM]
 "RAM disk"
 //[MChangeDriveSUBST]
@@ -2839,7 +2387,7 @@
 //[MHotPlugDisks]
 "(disk(s): {0})"
 //[MChangeCouldNotEjectHotPlugMedia]
-"Cannot remove a device for drive {0}:"
+"Cannot remove a device for drive {0}"
 //[MChangeCouldNotEjectHotPlugMedia2]
 "Cannot remove a device:"
 //[MChangeHotPlugNotify1]
@@ -2848,24 +2396,22 @@
 "can now be safely removed"
 //[MHotPlugListTitle]
 "Hotplug devices list"
-//[MHotPlugListBottom]
-"Edit: Del,Ctrl+R"
 
 //[MChangeDriveDisconnectTitle]
 "Disconnect network drive"
 //[MChangeDriveDisconnectQuestion]
-"Do you want to disconnect from the drive {0}:?"
+"Do you want to disconnect from the drive {0}?"
 //[MChangeDriveDisconnectMapped]
-"The drive {0}: is mapped to:"
+"The drive is mapped to:"
 //[MChangeDriveDisconnectReconnect]
 "&Reconnect at logon"
 
 //[MChangeDriveAskDisconnect]
 "Do you want to disconnect the device anyway?"
 //[MChangeWaitingLoadDisk]
-"Waiting for disk to mount..."
+"Waiting for the disk to mount…"
 //[MChangeCouldNotEjectMedia]
-"Could not eject media from drive {0}:"
+"Could not eject media from drive"
 //[MChangeDriveConfigure]
 "Change Drive Menu Options"
 //[MChangeDriveShowDiskType]
@@ -2875,25 +2421,25 @@
 //[MChangeDriveShowLabel]
 "Show disk &label"
 //[MChangeDriveShowLabelUseShell]
-"Use shell name"
+"Use shell na&me"
 //[MChangeDriveShowFileSystem]
 "Show &file system type"
 //[MChangeDriveShowSize]
 "Show &size"
 //[MChangeDriveShowSizeFloat]
-"Show size as a decimal fraction"
+"Show si&ze as a decimal fraction"
 //[MChangeDriveShowRemovableDrive]
 "Show &removable drive parameters"
 //[MChangeDriveShowPlugins]
 "Show &plugins"
 //[MChangeDriveSortPluginsByHotkey]
-"Sort plugins by hotkey"
+"Sort plugins by &hotkey"
 //[MChangeDriveShowCD]
 "Show &CD drive parameters"
 //[MChangeDriveShowNetworkDrive]
 "Show n&etwork drive parameters"
-//[MChangeDriveMenuFooter]
-"Del,Shift+Del,F3,F4,F9"
+//[MChangeDriveShowVirtualDisk]
+"Detect virtual disks"
 
 //[MSearchFileTitle]
 "Search"
@@ -2911,8 +2457,6 @@
 
 //[MProcessListTitle]
 "Task list"
-//[MProcessListBottom]
-"Edit: Del,Ctrl+R,F2"
 //[MKillProcessTitle]
 "Kill task"
 //[MAskKillProcess]
@@ -2928,34 +2472,6 @@
 
 //[MQuickViewTitle]
 "Quick view"
-//[MQuickViewFolder]
-"Folder"
-//[MQuickViewJunction]
-"Junction"
-//[MQuickViewSymlink]
-"Symlink"
-//[MQuickViewVolMount]
-"Volume"
-//[MQuickViewDFS]
-"DFS"
-//[MQuickViewDFSR]
-"DFSR"
-//[MQuickViewHSM]
-"HSM"
-//[MQuickViewHSM2]
-"HSM2"
-//[MQuickViewSIS]
-"SIS"
-//[MQuickViewWIM]
-"WIM"
-//[MQuickViewCSV]
-"CSV"
-//[MQuickViewDEDUP]
-"DEDUP"
-//[MQuickViewNFS]
-"NFS"
-//[MQuickViewPlaceholder]
-"Placeholder"
 //[MQuickViewUnknownReparsePoint]
 "Unknown reparse point"
 //[MQuickViewNoData]
@@ -2984,16 +2500,16 @@
 //[MSetAttrHardLinks]
 "hard links"
 //[MSetAttrJunction]
-"Junction:"
+"&Junction:"
 //[MSetAttrSymlink]
 "Symlink:"
 //[MSetAttrVolMount]
 "Volume:"
 //[MSetAttrDfsTargets]
-"DFS Targets"
-//[MSetAttrUnknownJunction]
+"DFS Targets:"
+//[MSetAttrUnknownReparsePoint]
 "(data not available)"
-//[MSetAttrRO]
+//[MSetAttrReadOnly]
 "&Read only"
 //[MSetAttrArchive]
 "&Archive"
@@ -3008,25 +2524,35 @@
 //[MSetAttrNotIndexed]
 "Not &indexed"
 //[MSetAttrSparse]
-"Sparse"
-//[MSetAttrTemp]
-"Temporary"
+"&Sparse"
+//[MSetAttrTemporary]
+"&Temporary"
 //[MSetAttrOffline]
-"Offline"
+"&Offline"
 //[MSetAttrReparsePoint]
-"Reparse point"
+"&Reparse point"
 //[MSetAttrVirtual]
-"Virtual"
+"&Virtual"
 //[MSetAttrIntegrityStream]
-"Integrity stream"
+"&Integrity stream"
 //[MSetAttrNoScrubData]
-"No scrub data"
+"&No scrub data"
+//[MSetAttrPinned]
+"&Pinned"
+//[MSetAttrUnpinned]
+"&Unpinned"
+//[MSetAttrRecallOnOpen]
+"R&ecall on open"
+//[MSetAttrRecallOnDataAccess]
+"Rec&all on data access"
+//[MSetAttrStrictlySequential]
+"Strictly se&quential"
+//[MSetAttrMore]
+"&More"
 //[MSetAttrSubfolders]
 "Process sub&folders"
 //[MSetAttrOwner]
-"Owner:"
-//[MSetAttrOwnerMultiple]
-"(multiple values)"
+"Owner&:"
 //[MSetAttrModification]
 "Last &write time:"
 //[MSetAttrCreation]
@@ -3044,14 +2570,14 @@
 //[MSetAttrSet]
 "Set"
 
-//[MSetAttrDateTitle1]
+//[MSetAttrDateTitleMDY]
 "MM{0}DD{0}YYYYY"
-//[MSetAttrDateTitle2]
+//[MSetAttrDateTitleDMY]
 "DD{0}MM{0}YYYYY"
-//[MSetAttrDateTitle3]
+//[MSetAttrDateTitleYMD]
 "YYYYY{0}MM{0}DD"
 //[MSetAttrTimeTitle]
-"hh{0}mm{0}ss{1}ms"
+"hh{0}mm{0}ss"
 //[MSetAttrSystemDialog]
 "System &properties"
 
@@ -3069,6 +2595,8 @@
 "Cannot set file time for"
 //[MSetAttrOwnerCannotFor]
 "Cannot set owner for"
+//[MSetAttrReparsePointCannotFor]
+"Cannot remove reparse point for"
 
 //[MSetColorPanel]
 "&Panel"
@@ -3341,7 +2869,7 @@
 //[MSetConfirmRemoveSUBST]
 "Delete &SUBST-disk"
 //[MSetConfirmDetachVHD]
-"Detach virtual disk"
+"Detach &virtual disk"
 //[MSetConfirmRemoveHotPlug]
 "Hot&Plug-device removal"
 //[MSetConfirmAllowReedit]
@@ -3593,8 +3121,6 @@
 "Global"
 //[MLocalMenuTitle]
 "Local menu"
-//[MMainMenuBottomTitle]
-"Edit: Del,Ins,F4,Alt+F4"
 //[MAskDeleteMenuItem]
 "Do you wish to delete the menu item"
 //[MAskDeleteSubMenuItem]
@@ -3705,8 +3231,6 @@
 "Reading file descriptions"
 //[MCannotUpdateDiz]
 "Cannot update file descriptions"
-//[MCannotUpdateRODiz]
-"The description file is read only"
 
 //[MCfgDizTitle]
 "File descriptions"
@@ -3727,7 +3251,7 @@
 //[MCfgDizAnsiByDefault]
 "Use ANS&I code page by default"
 //[MCfgDizSaveInUTF]
-"Save in UTF8"
+"Save in UTF-&8"
 
 //[MReadingTitleFiles]
 "Update of panels"
@@ -3738,8 +3262,6 @@
 
 //[MEditPanelModes]
 "Edit panel modes"
-//[MEditPanelModesBottom]
-"Ins,Del,F4,Ctrl+Enter,Ctrl+Shift+Enter"
 
 //[MEditPanelModeName]
 "&Name"
@@ -3810,21 +3332,23 @@
 "Common macro key '{0}' will be removed."
 //[MMacroSequence]
 "Sequence:"
-//[MMacroDescription]
-"Description:"
 //[MMacroReDefinedKey2]
 "Redefine?"
 //[MMacroDeleteKey2]
 "Delete?"
 //[MMacroEditKey]
-"Change"
+"Chan&ge"
 
 //[MMacroSettingsTitle]
 "Macro settings for '{0}'"
+//[MMacroSettingsSequence]
+"Se&quence:"
+//[MMacroSettingsDescription]
+"&Description:"
 //[MMacroSettingsEnableOutput]
 "Allo&w screen output while executing macro"
 //[MMacroSettingsRunAfterStart]
-"Execute after FAR &start"
+"Execute after Far &start"
 //[MMacroSettingsActivePanel]
 "&Active panel"
 //[MMacroSettingsPassivePanel]
@@ -3865,17 +3389,12 @@
 "&Version:"
 //[MPluginModulePath]
 "&Module path:"
-//[MPluginGUID]
-"Plugin &GUID:"
-//[MPluginItemGUID]
-"Plugin &item GUID:"
+//[MPluginUUID]
+"Plugin &UUID:"
+//[MPluginItemUUID]
+"Plugin &item UUID:"
 //[MPluginPrefix]
 "Plugin &prefix:"
-//[MPluginHotKeyBottom]
-"F4 - set hot key, F3 - information"
-
-//[MRightCtrl]
-"RightCtrl"
 //[MExcTrappedException]
 "Exception occurred"
 //[MExcException]
@@ -3888,16 +3407,28 @@
 "Source:"
 //[MExcFunction]
 "Function:"
-//[MExcModule]
-"Module:"
+//[MExcFileName]
+"File:"
+//[MExcPlugin]
+"Plugin:"
+//[MExcFarVersion]
+"Far:"
+//[MExcOSVersion]
+"OS:"
+//[MExcKernelVersion]
+"Kernel:"
 //[MExcTerminate]
-"Terminate Far"
+"&Terminate Far"
 //[MExcUnload]
-"Unload plugin"
+"&Unload plugin"
+//[MExcCopy]
+"Copy"
 //[MExcStack]
-"Stack"
+"&Stack"
 //[MExcMinidump]
-"Minidump"
+"&Minidump"
+//[MExcMinidumpSuccess]
+"Minidump saved to"
 
 //[MNetUserName]
 "User name"
@@ -3915,9 +3446,6 @@
 "current Far version is {0}."
 //[MPlgLoadPluginError]
 "Error loading plugin"
-
-//[MCheckBox2State]
-"?"
 
 //[MHelpTitle]
 "Help"
@@ -4776,8 +4304,13 @@
 //[MKBTreeCtrlAltShiftF12]
 ""
 
-//[MCopyTimeInfo]
-"Time: {0}    Remaining: {1}    {2}B/s"
+//[MCopyTimeInfoElapsed]
+"Time:"
+//[MCopyTimeInfoRemaining]
+"Remaining:"
+// Bytes per second
+//[MCopyTimeInfoSpeed]
+"B/s"
 
 //[MKeyESCWasPressed]
 "Operation has been interrupted"
@@ -4815,19 +4348,21 @@
 //[MFileHilightTitle]
 "Files highlighting"
 //[MFileFilterName]
-"Filter &name:"
+"&Name:"
 //[MFileFilterMatchMask]
 "&Mask:"
 //[MFileFilterSize]
 "Si&ze:"
+// up to 4 characters
 //[MFileFilterSizeFromSign]
-">="
+">&="
+// up to 4 characters
 //[MFileFilterSizeToSign]
-"<="
+"&<="
 //[MFileHardLinksCount]
-"Has more than one hardlink"
+"Has more than one hardlin&k"
 //[MFileFilterDate]
-"Da&te/Time:"
+"Date&/Time:"
 //[MFileFilterWrited]
 "&write"
 //[MFileFilterCreated]
@@ -4838,8 +4373,10 @@
 "c&hange"
 //[MFileFilterDateRelative]
 "Relat&ive"
+// up to 4 characters
 //[MFileFilterDateAfterSign]
 ">="
+// up to 4 characters
 //[MFileFilterDateBeforeSign]
 "<="
 //[MFileFilterCurrent]
@@ -4848,42 +4385,54 @@
 "B&lank"
 //[MFileFilterAttr]
 "Attri&butes"
-//[MFileFilterAttrR]
+//[MFileFilterAttrChoose]
+"&..."
+//[MFileFilterAttrReadOnly]
 "&Read only"
-//[MFileFilterAttrA]
+//[MFileFilterAttrArcive]
 "&Archive"
-//[MFileFilterAttrH]
+//[MFileFilterAttrHidden]
 "&Hidden"
-//[MFileFilterAttrS]
+//[MFileFilterAttrSystem]
 "&System"
-//[MFileFilterAttrC]
+//[MFileFilterAttrCompressed]
 "&Compressed"
-//[MFileFilterAttrE]
+//[MFileFilterAttrEncrypted]
 "&Encrypted"
-//[MFileFilterAttrD]
+//[MFileFilterAttrDirectory]
 "&Directory"
-//[MFileFilterAttrNI]
+//[MFileFilterAttrNotIndexed]
 "Not &indexed"
 //[MFileFilterAttrSparse]
 "S&parse"
-//[MFileFilterAttrT]
+//[MFileFilterAttrTemporary]
 "Temporar&y"
 //[MFileFilterAttrReparse]
-"Reparse point"
+"Reparse poin&t"
 //[MFileFilterAttrOffline]
 "O&ffline"
 //[MFileFilterAttrVirtual]
 "&Virtual"
 //[MFileFilterAttrIntegrityStream]
-"Integrity stream"
+"Inte&grity stream"
 //[MFileFilterAttrNoScrubData]
-"No scrub data"
+"No scru&b data"
+//[MFileFilterAttrPinned]
+"Pi&nned"
+//[MFileFilterAttrUnpinned]
+"&Unpinned"
+//[MFileFilterAttrRecallOnOpen]
+"Recal&l on open"
+//[MFileFilterAttrRecallOnDataAccess]
+"Recall &on data access"
+//[MFileFilterAttrStrictlySequential]
+"Strictly se&quential"
 //[MFileFilterReset]
-"Reset"
+"&Reset"
+//[MFileFilterMakeTransparent]
+"Make &transparent"
 //[MFileFilterCancel]
 "Cancel"
-//[MFileFilterMakeTransparent]
-"Make transparent"
 //[MBadFileSizeFormat]
 "File size field is incorrectly filled"
 
@@ -4895,14 +4444,14 @@
 "Additional privileges required"
 //[MElevationRequiredProcess]
 "to process this object:"
-//[MElevationRequiredCreate]
-"to open this object:"
 //[MElevationRequiredDelete]
 "to delete this object:"
 //[MElevationRequiredCopy]
 "to copy this object:"
 //[MElevationRequiredMove]
 "to move this object:"
+//[MElevationRequiredReplace]
+"to replace this object:"
 //[MElevationRequiredGetAttributes]
 "to get attributes of this object:"
 //[MElevationRequiredSetAttributes]

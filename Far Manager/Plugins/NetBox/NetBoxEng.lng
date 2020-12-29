@@ -215,7 +215,7 @@
 "SFTP"
 "FTP"
 "WebDAV"
-"Allow SCP &fallback"
+"Allow &SCP fallback"
 "Insecure"
 "Use buttons on top or Ctrl+PgUp and Ctrl+PgDn keys to "
 "display additional session options."
@@ -1043,6 +1043,7 @@
 "FileZilla site '%s' was not found."
 "You cannot connect to an SFTP server using an FTP protocol. Please select the correct protocol."
 "Error occurred during logging. Cannot continue."
+"Server sent a file that was not requested."
 
 "CORE_CONFIRMATION"
 "Host is not communicating for %d seconds.\n\nWait for another %d seconds?"

@@ -1,10 +1,10 @@
 {
   PluginW.pas
 
-  Plugin API for FAR Manager 3.0 build 5400
+  Plugin API for FAR Manager 3.0.5700.0
 
-  Статус готовности: ~95%
-  Недоделанные структуры помечены !!!
+  РЎС‚Р°С‚СѓСЃ РіРѕС‚РѕРІРЅРѕСЃС‚Рё: ~95%
+  РќРµРґРѕРґРµР»Р°РЅРЅС‹Рµ СЃС‚СЂСѓРєС‚СѓСЂС‹ РїРѕРјРµС‡РµРЅС‹ !!!
 }
 
 {
@@ -57,10 +57,10 @@ uses Windows;
 
 {$ifndef ApiImpl}
 const
-  FARMANAGERVERSION_MAJOR = 3;
-  FARMANAGERVERSION_MINOR = 0;
-  FARMANAGERVERSION_REVISION = 0;
-  FARMANAGERVERSION_BUILD = 2903;
+  FARMANAGERVERSION_MAJOR 3
+  FARMANAGERVERSION_MINOR 0
+  FARMANAGERVERSION_REVISION 0
+  FARMANAGERVERSION_BUILD 5700
 
 type
 //TFarChar = AnsiChar;

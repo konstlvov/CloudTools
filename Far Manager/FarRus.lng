@@ -1,6 +1,6 @@
 ﻿.Language=Russian,Russian (Русский)
 
-//Version: 3.0 build 5400
+//Version: 3.0.5700.0 x64
 
 //[MYes]
 "Да"
@@ -30,8 +30,6 @@
 "Игнорировать"
 //[MDelete]
 "Удалить"
-//[MSplit]
-"Разделить"
 
 //[MHCancel]
 "&Отмена"
@@ -60,9 +58,9 @@
 //[MQuit]
 "Выход"
 //[MAskQuit]
-"Вы хотите завершить работу в FAR?"
+"Вы хотите завершить работу в Far?"
 
-//functional keys - 6 characters max
+// Panels: functional keys
 //[MF1]
 "Помощь"
 //[MF2]
@@ -95,7 +93,7 @@
 //[MShiftF3]
 "АрхКом"
 //[MShiftF4]
-"Редак."
+"Редак…"
 //[MShiftF5]
 "Копир"
 //[MShiftF6]
@@ -118,9 +116,9 @@
 //[MAltF2]
 "Правая"
 //[MAltF3]
-"Смотр."
+"Смотр…"
 //[MAltF4]
-"Редак."
+"Редак…"
 //[MAltF5]
 "Печать"
 //[MAltF6]
@@ -264,12 +262,16 @@
 ""
 //[MCtrlAltShiftF11]
 ""
-//End of functional keys
+// Panels: end of functional keys
 //[MCtrlAltShiftF12]
 ""
 
 //[MHistoryTitle]
 "История команд"
+//[MHistoryInfoTitle]
+"Информация"
+//[MHistoryInfoFolder]
+"Папка:"
 //[MFolderHistoryTitle]
 "История папок"
 //[MViewHistoryTitle]
@@ -313,11 +315,11 @@
 //[MConfigElevation]
 "Запрос прав администратора:"
 //[MConfigElevationModify]
-"д&ля изменения"
+"Д&ля изменения"
 //[MConfigElevationRead]
-"для &чтения"
+"Для &чтения"
 //[MConfigElevationUsePrivileges]
-"исп&ользовать дополнительные привилегии"
+"Исп&ользовать дополнительные привилегии"
 //[MConfigSortingCollation]
 "Сортировочное сравнение:"
 //[MConfigSortingOrdinal]
@@ -370,7 +372,7 @@
 "Правый клик помечает файлы"
 //[MConfigSortFolderExt]
 "Сортировать имена папок по рас&ширению"
-//[MConfigReverseSort]
+//[MConfigAllowReverseSort]
 "Разрешить &обратную сортировку"
 //[MConfigAutoUpdateLimit]
 "Отключать автооб&новление панелей,"
@@ -426,7 +428,7 @@
 //[MConfigClearType]
 "Перер&исовка с поддержкой ClearType (может быть медленной)"
 //[MConfigSetConsoleIcon]
-"Выставлять иконку консоли"
+"Иконка консоли:"
 //[MConfigSetAdminConsoleIcon]
 "Альтернативная для администратора"
 //[MConfigTitleAddons]
@@ -511,6 +513,8 @@
 "Полное DNS имя"
 //[MConfigInfoPanelUNTitle]
 "Формат вывода имени &пользователя"
+//[MConfigInfoPanelUNLogon]
+"Имя для входа"
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Полностью определённое имя домена"
 //[MConfigInfoPanelUNSamCompatible]
@@ -524,9 +528,13 @@
 //[MConfigInfoPanelUNUserPrincipal]
 "Основное имя пользователя"
 //[MConfigInfoPanelUNServicePrincipal]
-"Сбъект-служба"
+"Субъект-служба"
 //[MConfigInfoPanelUNDnsDomain]
 "Имя домена DNS"
+//[MConfigInfoPanelUNGivenName]
+"Собственное имя"
+//[MConfigInfoPanelUNSurname]
+"Фамилия"
 //[MConfigInfoPanelShowPowerStatus]
 "Показывать состояние п&итания"
 //[MConfigInfoPanelShowCDInfo]
@@ -548,7 +556,7 @@
 //[MViewConfigTitle]
 "Программа просмотра"
 //[MViewConfigExternalF3]
-"Запускать вне&шнюю программу просмотра по F3 вместо Alt+F3"
+"Запускать внешнюю программу просмотра по F&3 вместо Alt+F3"
 //[MViewConfigExternalCommand]
 "&Команда просмотра:"
 //[MViewConfigInternal]
@@ -587,7 +595,7 @@
 //[MEditConfigTitle]
 "Редактор"
 //[MEditConfigEditorF4]
-"Запускать внешний редактор по F4 вместо Alt+F4"
+"Запускать внешний редактор по F&4 вместо Alt+F4"
 //[MEditConfigEditorCommand]
 "&Команда редактирования:"
 //[MEditConfigInternal]
@@ -634,6 +642,8 @@
 "Курсор в ко&нце"
 //[MEditConfigDefaultCodePage]
 "Кодовая стран&ица по умолчанию:"
+//[MConfigEditor]
+"Редактор конфигурации"
 
 //[MSaveSetupTitle]
 "Конфигурация"
@@ -652,12 +662,12 @@
 "Ссылка"
 //[MCopySecurity]
 "П&рава доступа:"
+//[MCopySecurityDefault]
+"По умол&чанию"
 //[MCopySecurityCopy]
 "Копироват&ь"
 //[MCopySecurityInherit]
 "Нас&ледовать"
-//[MCopySecurityLeave]
-"По умол&чанию"
 //[MCopyIfFileExist]
 "Уже су&ществующие файлы:"
 //[MCopyAsk]
@@ -678,6 +688,8 @@
 "символическая ссылка (&файл)"
 //[MLinkTypeSymlinkDirectory]
 "символическая ссылка (&папка)"
+//[MCopyPreserveTimestamps]
+"Сохранять метки времени"
 //[MCopySymLinkContents]
 "Копировать содерж&имое символических ссылок"
 //[MCopyMultiActions]
@@ -695,7 +707,7 @@
 //[MCopyDlgTotal]
 "Всего"
 //[MCopyPrepareSecury]
-"Применение прав доступа..."
+"Применение прав доступа…"
 //[MCopyUseFilter]
 "Исполь&зовать фильтр"
 //[MCopySetFilter]
@@ -742,8 +754,6 @@
 
 //[MCopyCannotCreateFolder]
 "Ошибка создания папки"
-//[MCopyCannotChangeFolderAttr]
-"Невозможно установить атрибуты для папки"
 //[MCopyCannotRenameFolder]
 "Невозможно переименовать папку"
 //[MCopyIgnore]
@@ -808,16 +818,10 @@
 "Су&ществующий"
 //[MCopyOverwrite]
 "В&место"
-//[MCopySkipOvr]
-"&Пропустить"
 //[MCopyAppend]
 "&Добавить"
-//[MCopyResume]
-"Возоб&новить"
 //[MCopyRename]
 "&Имя"
-//[MCopyCancelOvr]
-"&Отменить"
 //[MCopyRememberChoice]
 "&Запомнить выбор"
 //[MCopyRenameTitle]
@@ -833,12 +837,6 @@
 "&Удалить"
 //[MCopyDeleteAllRO]
 "&Все"
-//[MCopySkipRO]
-"&Пропустить"
-//[MCopySkipAllRO]
-"П&ропустить все"
-//[MCopyCancelRO]
-"&Отменить"
 
 //[MCannotCopy]
 "Ошибка копирования"
@@ -896,10 +894,8 @@
 "Вы хотите уничтожить файл"
 //[MAskWipe]
 "Вы хотите уничтожить"
-//[MDeleteLinkTitle]
-"Удаление ссылки"
 //[MAskDeleteLink]
-"является ссылкой на"
+"cсылка на"
 //[MAskDeleteLinkFolder]
 "папку"
 //[MAskDeleteLinkFile]
@@ -952,9 +948,6 @@
 //[MDeleteFileCancel]
 "&Отменить"
 
-//[MDeleteLinkDelete]
-"Удалить ссылку"
-
 //[MDeletingTitle]
 "Удаление"
 
@@ -993,6 +986,8 @@
 "Не удалось переместить файл в Корзину"
 //[MCannotRecycleFolder]
 "Не удалось переместить папку в Корзину"
+//[MTryToDeletePermanently]
+"Попробовать удалить окончательно?"
 
 //[MCannotGetSecurity]
 "Ошибка получения прав доступа к файлу"
@@ -1018,7 +1013,7 @@
 //[MEditAskSaveExt]
 "Файл был изменён внешней программой. Сохранить?"
 //[MEditBtnSaveAs]
-"Сохр&анить как..."
+"Сохр&анить как…"
 
 //[MEditRO]
 "имеет атрибут \"Только для чтения\""
@@ -1088,8 +1083,6 @@
 "Искать"
 //[MEditSearchStatistics]
 "Вхождений: {0}, строк: {1}"
-//[MEditFindAllMenuFooter]
-"F1, F5, Ctrl+Enter, Ctrl+Up/Down, Add"
 //[MEditNotFound]
 "Строка не найдена"
 
@@ -1119,10 +1112,6 @@
 
 //[MFolderShortcutsTitle]
 "Ссылки на папки"
-//[MFolderShortcutBottom]
-"Редактирование: Del,Ins,F4"
-//[MFolderShortcutBottomSub]
-"Редактирование: Del,Ins,F4"
 //[MShortcutNone]
 "<отсутствует>"
 //[MShortcutPlugin]
@@ -1140,7 +1129,7 @@
 //[MSaveThisShortcut]
 "Запомнить эту ссылку?"
 
-//functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
+// Editor: functional keys
 //[MEditF1]
 "Помощь"
 //[MEditF2]
@@ -1174,7 +1163,7 @@
 //[MEditShiftF3]
 ""
 //[MEditShiftF4]
-"Редак."
+"Редак…"
 //[MEditShiftF5]
 ""
 //[MEditShiftF6]
@@ -1347,221 +1336,9 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-// End of functional keys (Editor)
-// it's a F8 another text
+// Editor: end of functional keys
+// This is another text for F8
 //[MEditF8DOS]
-"OEM"
-
-//Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
-//[MSingleEditF1]
-"Помощь"
-//[MSingleEditF2]
-"Сохран"
-//[MSingleEditF3]
-""
-//[MSingleEditF4]
-"Выход"
-//[MSingleEditF5]
-""
-//[MSingleEditF6]
-"Просм"
-//[MSingleEditF7]
-"Поиск"
-//[MSingleEditF8]
-"ANSI"
-//[MSingleEditF9]
-""
-//[MSingleEditF10]
-"Выход"
-//[MSingleEditF11]
-"Плагины"
-//[MSingleEditF12]
-"Экраны"
-
-//Single Editor: Shift
-//[MSingleEditShiftF1]
-""
-//[MSingleEditShiftF2]
-"Сохр.в"
-//[MSingleEditShiftF3]
-""
-//[MSingleEditShiftF4]
-""
-//[MSingleEditShiftF5]
-""
-//[MSingleEditShiftF6]
-""
-//[MSingleEditShiftF7]
-"Дальше"
-//[MSingleEditShiftF8]
-"КодСтр"
-//[MSingleEditShiftF9]
-""
-//[MSingleEditShiftF10]
-"СхрВых"
-//[MSingleEditShiftF11]
-""
-//[MSingleEditShiftF12]
-""
-
-//Single Editor: Alt
-//[MSingleEditAltF1]
-""
-//[MSingleEditAltF2]
-""
-//[MSingleEditAltF3]
-""
-//[MSingleEditAltF4]
-""
-//[MSingleEditAltF5]
-""
-//[MSingleEditAltF6]
-""
-//[MSingleEditAltF7]
-""
-//[MSingleEditAltF8]
-"Строка"
-//[MSingleEditAltF9]
-"Видео"
-//[MSingleEditAltF10]
-""
-//[MSingleEditAltF11]
-"ИстПр"
-//[MSingleEditAltF12]
-""
-
-//Single Editor: Ctrl
-//[MSingleEditCtrlF1]
-""
-//[MSingleEditCtrlF2]
-""
-//[MSingleEditCtrlF3]
-""
-//[MSingleEditCtrlF4]
-""
-//[MSingleEditCtrlF5]
-""
-//[MSingleEditCtrlF6]
-""
-//[MSingleEditCtrlF7]
-"Замена"
-//[MSingleEditCtrlF8]
-""
-//[MSingleEditCtrlF9]
-""
-//[MSingleEditCtrlF10]
-""
-//[MSingleEditCtrlF11]
-""
-//[MSingleEditCtrlF12]
-""
-
-//Single Editor: AltShift
-//[MSingleEditAltShiftF1]
-""
-//[MSingleEditAltShiftF2]
-""
-//[MSingleEditAltShiftF3]
-""
-//[MSingleEditAltShiftF4]
-""
-//[MSingleEditAltShiftF5]
-""
-//[MSingleEditAltShiftF6]
-""
-//[MSingleEditAltShiftF7]
-""
-//[MSingleEditAltShiftF8]
-""
-//[MSingleEditAltShiftF9]
-"Конфиг"
-//[MSingleEditAltShiftF10]
-""
-//[MSingleEditAltShiftF11]
-""
-//[MSingleEditAltShiftF12]
-""
-
-//Single Editor: CtrlShift
-//[MSingleEditCtrlShiftF1]
-""
-//[MSingleEditCtrlShiftF2]
-""
-//[MSingleEditCtrlShiftF3]
-""
-//[MSingleEditCtrlShiftF4]
-""
-//[MSingleEditCtrlShiftF5]
-""
-//[MSingleEditCtrlShiftF6]
-""
-//[MSingleEditCtrlShiftF7]
-""
-//[MSingleEditCtrlShiftF8]
-""
-//[MSingleEditCtrlShiftF9]
-""
-//[MSingleEditCtrlShiftF10]
-""
-//[MSingleEditCtrlShiftF11]
-""
-//[MSingleEditCtrlShiftF12]
-""
-
-//Single Editor: CtrlAlt
-//[MSingleEditCtrlAltF1]
-""
-//[MSingleEditCtrlAltF2]
-""
-//[MSingleEditCtrlAltF3]
-""
-//[MSingleEditCtrlAltF4]
-""
-//[MSingleEditCtrlAltF5]
-""
-//[MSingleEditCtrlAltF6]
-""
-//[MSingleEditCtrlAltF7]
-""
-//[MSingleEditCtrlAltF8]
-""
-//[MSingleEditCtrlAltF9]
-""
-//[MSingleEditCtrlAltF10]
-""
-//[MSingleEditCtrlAltF11]
-""
-//[MSingleEditCtrlAltF12]
-""
-
-//Single Editor: CtrlAltShift
-//[MSingleEditCtrlAltShiftF1]
-""
-//[MSingleEditCtrlAltShiftF2]
-""
-//[MSingleEditCtrlAltShiftF3]
-""
-//[MSingleEditCtrlAltShiftF4]
-""
-//[MSingleEditCtrlAltShiftF5]
-""
-//[MSingleEditCtrlAltShiftF6]
-""
-//[MSingleEditCtrlAltShiftF7]
-""
-//[MSingleEditCtrlAltShiftF8]
-""
-//[MSingleEditCtrlAltShiftF9]
-""
-//[MSingleEditCtrlAltShiftF10]
-""
-//[MSingleEditCtrlAltShiftF11]
-""
-//[MSingleEditCtrlAltShiftF12]
-""
-// End of functional keys (Single Editor)
-// it's a F8 another text
-//[MSingleEditF8DOS]
 "OEM"
 
 //[MEditSaveAs]
@@ -1611,7 +1388,7 @@
 //[MEditorSwitchCPWarn1]
 "Редактор содержит символы, которые невозможно"
 //[MEditorSwitchCPWarn2]
-"корректно преобразовать, используя выбранную кодовую страницу [{0}]"
+"корректно преобразовать, используя выбранную кодовую страницу:"
 //[MEditorSwitchCPConfirm]
 "Продолжить?"
 //[MEditDataLostWarn]
@@ -1622,12 +1399,6 @@
 "Сохранить"
 //[MEditorSaveCPWarnShow]
 "Показать"
-//[MEditorSwitchUnicodeCPDisabled]
-"Нельзя изменить юникодную кодовую страницу"
-//[MEditorTryReloadFile]
-"Можно перечитать файл, указав нужную кодовую страницу (ShiftF4)"
-//[MEditorSwitchToUnicodeCPDisabled]
-"Переключение на юникодную кодовую страницу {0} не поддерживается"
 //[MEditorCPNotSupported]
 "Кодовая страница {0} не поддерживается вашей системой"
 
@@ -1676,26 +1447,6 @@
 "Связь"
 //[MListVolMount]
 "Том"
-//[MListDFS]
-"DFS"
-//[MListDFSR]
-"DFSR"
-//[MListHSM]
-"HSM"
-//[MListHSM2]
-"HSM2"
-//[MListSIS]
-"SIS"
-//[MListWIM]
-"WIM"
-//[MListCSV]
-"CSV"
-//[MListDEDUP]
-"DEDUP"
-//[MListNFS]
-"NFS"
-//[MListPlaceholder]
-"Заполнитель"
 //[MListUnknownReparsePoint]
 "?Ссылка?"
 //[MListBrackets]
@@ -1750,8 +1501,6 @@
 
 //[MAssocTitle]
 "Ассоциации для файлов"
-//[MAssocBottom]
-"Редактирование: Del,Ins,F4"
 //[MAskDelAssoc]
 "Вы хотите удалить ассоциацию для"
 
@@ -1774,10 +1523,9 @@
 //[MFileAssocAltEdit]
 "Команда редактировани&я, выполняемая по Alt+F4:"
 
-//Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
+// Viewer: functional keys
 //[MViewF1]
 "Помощь"
-// this is another text for F2
 //[MViewF2]
 "Сверн"
 //[MViewF3]
@@ -1990,227 +1738,9 @@
 // this is another text for F4
 //[MViewF4Dump]
 "Дамп"
-// this is another text for F8
-// end of functional keys (Viewer)
+// Viewer: end of functional keys
+// This is another text for F8
 //[MViewF8DOS]
-"OEM"
-
-//Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
-//[MSingleViewF1]
-"Помощь"
-//[MSingleViewF2]
-"Сверн"
-//[MSingleViewF3]
-"Выход"
-//[MSingleViewF4]
-"Код"
-//[MSingleViewF5]
-""
-//[MSingleViewF6]
-"Редакт"
-//[MSingleViewF7]
-"Поиск"
-//[MSingleViewF8]
-"ANSI"
-//[MSingleViewF9]
-""
-//[MSingleViewF10]
-"Выход"
-//[MSingleViewF11]
-"Плагины"
-//[MSingleViewF12]
-"Экраны"
-
-//Single Viewer: Shift
-//[MSingleViewShiftF1]
-""
-//[MSingleViewShiftF2]
-"Слова"
-//[MSingleViewShiftF3]
-""
-//[MSingleViewShiftF4]
-""
-//[MSingleViewShiftF5]
-""
-//[MSingleViewShiftF6]
-""
-//[MSingleViewShiftF7]
-"Дальше"
-//[MSingleViewShiftF8]
-"КодСтр"
-//[MSingleViewShiftF9]
-""
-//[MSingleViewShiftF10]
-""
-//[MSingleViewShiftF11]
-""
-//[MSingleViewShiftF12]
-""
-
-//Single Viewer: Alt
-//[MSingleViewAltF1]
-""
-//[MSingleViewAltF2]
-""
-//[MSingleViewAltF3]
-""
-//[MSingleViewAltF4]
-""
-//[MSingleViewAltF5]
-""
-//[MSingleViewAltF6]
-""
-//[MSingleViewAltF7]
-"Назад"
-//[MSingleViewAltF8]
-"Перейт"
-//[MSingleViewAltF9]
-"Видео"
-//[MSingleViewAltF10]
-""
-//[MSingleViewAltF11]
-"ИстПр"
-//[MSingleViewAltF12]
-""
-
-//Single Viewer: Ctrl
-//[MSingleViewCtrlF1]
-""
-//[MSingleViewCtrlF2]
-""
-//[MSingleViewCtrlF3]
-""
-//[MSingleViewCtrlF4]
-""
-//[MSingleViewCtrlF5]
-""
-//[MSingleViewCtrlF6]
-""
-//[MSingleViewCtrlF7]
-""
-//[MSingleViewCtrlF8]
-""
-//[MSingleViewCtrlF9]
-""
-//[MSingleViewCtrlF10]
-""
-//[MSingleViewCtrlF11]
-""
-//[MSingleViewCtrlF12]
-""
-
-//Single Viewer: AltShift
-//[MSingleViewAltShiftF1]
-""
-//[MSingleViewAltShiftF2]
-""
-//[MSingleViewAltShiftF3]
-""
-//[MSingleViewAltShiftF4]
-""
-//[MSingleViewAltShiftF5]
-""
-//[MSingleViewAltShiftF6]
-""
-//[MSingleViewAltShiftF7]
-""
-//[MSingleViewAltShiftF8]
-""
-//[MSingleViewAltShiftF9]
-"Конфиг"
-//[MSingleViewAltShiftF10]
-""
-//[MSingleViewAltShiftF11]
-""
-//[MSingleViewAltShiftF12]
-""
-
-//Single Viewer: CtrlShift
-//[MSingleViewCtrlShiftF1]
-""
-//[MSingleViewCtrlShiftF2]
-""
-//[MSingleViewCtrlShiftF3]
-""
-//[MSingleViewCtrlShiftF4]
-""
-//[MSingleViewCtrlShiftF5]
-""
-//[MSingleViewCtrlShiftF6]
-""
-//[MSingleViewCtrlShiftF7]
-""
-//[MSingleViewCtrlShiftF8]
-""
-//[MSingleViewCtrlShiftF9]
-""
-//[MSingleViewCtrlShiftF10]
-""
-//[MSingleViewCtrlShiftF11]
-""
-//[MSingleViewCtrlShiftF12]
-""
-
-//Single Viewer: CtrlAlt
-//[MSingleViewCtrlAltF1]
-""
-//[MSingleViewCtrlAltF2]
-""
-//[MSingleViewCtrlAltF3]
-""
-//[MSingleViewCtrlAltF4]
-""
-//[MSingleViewCtrlAltF5]
-""
-//[MSingleViewCtrlAltF6]
-""
-//[MSingleViewCtrlAltF7]
-""
-//[MSingleViewCtrlAltF8]
-""
-//[MSingleViewCtrlAltF9]
-""
-//[MSingleViewCtrlAltF10]
-""
-//[MSingleViewCtrlAltF11]
-""
-//[MSingleViewCtrlAltF12]
-""
-
-//Single Viewer: CtrlAltShift
-//[MSingleViewCtrlAltShiftF1]
-""
-//[MSingleViewCtrlAltShiftF2]
-""
-//[MSingleViewCtrlAltShiftF3]
-""
-//[MSingleViewCtrlAltShiftF4]
-""
-//[MSingleViewCtrlAltShiftF5]
-""
-//[MSingleViewCtrlAltShiftF6]
-""
-//[MSingleViewCtrlAltShiftF7]
-""
-//[MSingleViewCtrlAltShiftF8]
-""
-//[MSingleViewCtrlAltShiftF9]
-""
-//[MSingleViewCtrlAltShiftF10]
-""
-//[MSingleViewCtrlAltShiftF11]
-""
-//[MSingleViewCtrlAltShiftF12]
-""
-// this is another text for F2
-//[MSingleViewF2Unwrap]
-"Развер"
-// this is another text for F4
-//[MSingleViewF4Text]
-"Текст"
-// this is another text for F4
-// end of functional keys (Single Viewer)
-//[MSingleViewF8DOS]
 "OEM"
 //[MViewMode]
 "Режим просмотра"
@@ -2221,8 +1751,6 @@
 
 //[MFilterTitle]
 "Меню фильтров"
-//[MFilterBottom]
-"+,-,Пробел,I,X,BS,Shift+BS,Ins,Del,F4,F5,Ctrl+Up,Ctrl+Dn"
 //[MPanelFileType]
 "Файлы панели"
 //[MFolderFileType]
@@ -2341,10 +1869,6 @@
 "Избранные"
 //[MGetCodePageOther]
 "Прочие"
-//[MGetCodePageBottomTitle]
-"Ctrl+H, Del, Ins, F4"
-//[MGetCodePageBottomShortTitle]
-"Ctrl+H, Del, F4"
 //[MGetCodePageEditCodePageName]
 "Переименование кодовой страницы"
 //[MGetCodePageResetCodePageName]
@@ -2352,8 +1876,6 @@
 
 //[MHighlightTitle]
 "Раскраска файлов"
-//[MHighlightBottom]
-"Ins,Del,F4,F5,Ctrl+Up,Ctrl+Down"
 //[MHighlightUpperSortGroup]
 "Верхняя группа сортировки"
 //[MHighlightLowerSortGroup]
@@ -2426,16 +1948,34 @@
 "Сетевой"
 //[MInfoCDROM]
 "CD-ROM"
-//[MInfoCD_RW]
+//[MInfoCDR]
+"CD-R"
+//[MInfoCDRW]
 "CD-RW"
-//[MInfoCD_RWDVD]
+//[MInfoCDRWDVD]
 "CD-RW/DVD"
-//[MInfoDVD_ROM]
+//[MInfoDVDROM]
 "DVD-ROM"
-//[MInfoDVD_RW]
+//[MInfoDVDR]
+"DVD-R"
+//[MInfoDVDRW]
 "DVD-RW"
-//[MInfoDVD_RAM]
+//[MInfoDVDRAM]
 "DVD-RAM"
+//[MInfoBDROM]
+"BD-ROM"
+//[MInfoBDR]
+"BD-R"
+//[MInfoBDRW]
+"BD-RW"
+//[MInfoHDDVDROM]
+"HDDVD-ROM"
+//[MInfoHDDVDR]
+"HDDVD-R"
+//[MInfoHDDVDRW]
+"HDDVD-RW"
+//[MInfoHDDVDRAM]
+"HDDVD-RAM"
 //[MInfoRAM]
 "RAM"
 //[MInfoSUBST]
@@ -2749,18 +2289,16 @@
 "Количество &потоков"
 //[MMenuSortByStreamsSize]
 "Размер по&токов"
-//[MMenuSortByFullName]
-"&Полное имя"
-//[MMenuSortByCustomData]
-"Пользовательские данные"
+//[MMenuSortByNameOnly]
+"Только имя"
 //[MMenuSortUseGroups]
 "Использовать &группы сортировки"
 //[MMenuSortSelectedFirst]
 "Помеченные &файлы вперёд"
 //[MMenuSortDirectoriesFirst]
 "&Каталоги вперёд"
-//[MMaskGroupBottom]
-"Редактирование: Ins, Del, F4, F7, Ctrl+R"
+//[MMaskGroupTitle]
+"Группы масок файлов"
 //[MMaskGroupName]
 "&Имя:"
 //[MMaskGroupMasks]
@@ -2786,24 +2324,34 @@
 "отключенный"
 //[MChangeDriveCDROM]
 "CD-ROM"
-//[MChangeDriveCD_RW]
+//[MChangeDriveCDR]
+"CD-R"
+//[MChangeDriveCDRW]
 "CD-RW"
-//[MChangeDriveCD_RWDVD]
+//[MChangeDriveCDRWDVD]
 "CD-RW/DVD"
-//[MChangeDriveDVD_ROM]
+//[MChangeDriveDVDROM]
 "DVD-ROM"
-//[MChangeDriveDVD_RW]
+//[MChangeDriveDVDR]
+"DVD-R"
+//[MChangeDriveDVDRW]
 "DVD-RW"
-//[MChangeDriveDVD_RAM]
+//[MChangeDriveDVDRAM]
 "DVD-RAM"
-//[MChangeDriveBD_ROM]
+//[MChangeDriveBDROM]
 "BD-ROM"
-//[MChangeDriveBD_RW]
+//[MChangeDriveBDR]
+"BD-R"
+//[MChangeDriveBDRW]
 "BD-RW"
-//[MChangeDriveHDDVD_ROM]
+//[MChangeDriveHDDVDROM]
 "HDDVD-ROM"
-//[MChangeDriveHDDVD_RW]
+//[MChangeDriveHDDVDR]
+"HDDVD-R"
+//[MChangeDriveHDDVDRW]
 "HDDVD-RW"
+//[MChangeDriveHDDVDRAM]
+"HDDVD-RAM"
 //[MChangeDriveRAM]
 "RAM диск"
 //[MChangeDriveSUBST]
@@ -2839,7 +2387,7 @@
 //[MHotPlugDisks]
 "(диск(и): {0})"
 //[MChangeCouldNotEjectHotPlugMedia]
-"Невозможно удалить устройство для диска {0}:"
+"Невозможно удалить устройство для диска {0}"
 //[MChangeCouldNotEjectHotPlugMedia2]
 "Невозможно удалить устройство:"
 //[MChangeHotPlugNotify1]
@@ -2848,24 +2396,22 @@
 "может быть безопасно извлечено из компьютера"
 //[MHotPlugListTitle]
 "Hotplug-устройства"
-//[MHotPlugListBottom]
-"Редактирование: Del,Ctrl+R"
 
 //[MChangeDriveDisconnectTitle]
 "Отсоединение сетевого диска"
 //[MChangeDriveDisconnectQuestion]
-"Вы хотите удалить соединение с устройством {0}:?"
+"Вы хотите удалить соединение с устройством {0}?"
 //[MChangeDriveDisconnectMapped]
-"На устройство {0}: отображена папка:"
+"На устройство отображена папка:"
 //[MChangeDriveDisconnectReconnect]
 "&Восстанавливать при входе в систему"
 
 //[MChangeDriveAskDisconnect]
 "Вы хотите в любом случае отключиться от устройства?"
 //[MChangeWaitingLoadDisk]
-"Ожидание чтения диска..."
+"Ожидание чтения диска…"
 //[MChangeCouldNotEjectMedia]
-"Невозможно извлечь диск из привода {0}:"
+"Невозможно извлечь диск из привода"
 //[MChangeDriveConfigure]
 "Настройка меню выбора диска"
 //[MChangeDriveShowDiskType]
@@ -2892,8 +2438,8 @@
 "Показывать параметры &компакт-дисков"
 //[MChangeDriveShowNetworkDrive]
 "Показывать параметры се&тевых дисков"
-//[MChangeDriveMenuFooter]
-"Del,Shift+Del,F3,F4,F9"
+//[MChangeDriveShowVirtualDisk]
+"Определять виртуальные диски"
 
 //[MSearchFileTitle]
 "Поиск"
@@ -2911,8 +2457,6 @@
 
 //[MProcessListTitle]
 "Список задач"
-//[MProcessListBottom]
-"Редактирование: Del,Ctrl+R,F2"
 //[MKillProcessTitle]
 "Удаление задачи"
 //[MAskKillProcess]
@@ -2928,34 +2472,6 @@
 
 //[MQuickViewTitle]
 "Быстрый просмотр"
-//[MQuickViewFolder]
-"Папка"
-//[MQuickViewJunction]
-"Связь"
-//[MQuickViewSymlink]
-"Ссылка"
-//[MQuickViewVolMount]
-"Том"
-//[MQuickViewDFS]
-"DFS"
-//[MQuickViewDFSR]
-"DFSR"
-//[MQuickViewHSM]
-"HSM"
-//[MQuickViewHSM2]
-"HSM2"
-//[MQuickViewSIS]
-"SIS"
-//[MQuickViewWIM]
-"WIM"
-//[MQuickViewCSV]
-"CSV"
-//[MQuickViewDEDUP]
-"DEDUP"
-//[MQuickViewNFS]
-"NFS"
-//[MQuickViewPlaceholder]
-"Заполнитель"
 //[MQuickViewUnknownReparsePoint]
 "Неизвестная точка повторного анализа"
 //[MQuickViewNoData]
@@ -2990,10 +2506,10 @@
 //[MSetAttrVolMount]
 "Том:"
 //[MSetAttrDfsTargets]
-"DFS цели"
-//[MSetAttrUnknownJunction]
+"DFS цели:"
+//[MSetAttrUnknownReparsePoint]
 "(нет данных)"
-//[MSetAttrRO]
+//[MSetAttrReadOnly]
 "&Только для чтения"
 //[MSetAttrArchive]
 "&Архивный"
@@ -3009,7 +2525,7 @@
 "Неиндексируемый"
 //[MSetAttrSparse]
 "Разреженный"
-//[MSetAttrTemp]
+//[MSetAttrTemporary]
 "Временный"
 //[MSetAttrOffline]
 "Автономный"
@@ -3021,12 +2537,25 @@
 "Поток целостности"
 //[MSetAttrNoScrubData]
 "Нет данных очистки"
+//[MSetAttrPinned]
+"Закреплённый"
+//[MSetAttrUnpinned]
+"Откреплённый"
+// need translation:
+//[MSetAttrRecallOnOpen]
+"Recall on open"
+// need translation:
+//[MSetAttrRecallOnDataAccess]
+"Recall on data access"
+// need translation:
+//[MSetAttrStrictlySequential]
+"Strictly sequential"
+//[MSetAttrMore]
+"Ещё"
 //[MSetAttrSubfolders]
 "Обрабатывать &вложенные папки"
 //[MSetAttrOwner]
 "Владелец:"
-//[MSetAttrOwnerMultiple]
-"(несколько значений)"
 //[MSetAttrModification]
 "Время последней за&писи:"
 //[MSetAttrCreation]
@@ -3044,14 +2573,14 @@
 //[MSetAttrSet]
 "Установить"
 
-//[MSetAttrDateTitle1]
+//[MSetAttrDateTitleMDY]
 "ММ{0}ДД{0}ГГГГГ"
-//[MSetAttrDateTitle2]
+//[MSetAttrDateTitleDMY]
 "ДД{0}ММ{0}ГГГГГ"
-//[MSetAttrDateTitle3]
+//[MSetAttrDateTitleYMD]
 "ГГГГГ{0}ММ{0}ДД"
 //[MSetAttrTimeTitle]
-"чч{0}мм{0}сс{1}мс"
+"чч{0}мм{0}сс"
 //[MSetAttrSystemDialog]
 "Системные &свойства"
 
@@ -3069,6 +2598,8 @@
 "Не удалось установить время файла для"
 //[MSetAttrOwnerCannotFor]
 "Не удалось установить владельца для"
+//[MSetAttrReparsePointCannotFor]
+"Не удалось удалить точку повторного анализа для"
 
 //[MSetColorPanel]
 "&Панель"
@@ -3593,8 +3124,6 @@
 "Глобальное"
 //[MLocalMenuTitle]
 "Местное меню"
-//[MMainMenuBottomTitle]
-"Редактирование: Del,Ins,F4,Alt+F4"
 //[MAskDeleteMenuItem]
 "Вы хотите удалить пункт меню"
 //[MAskDeleteSubMenuItem]
@@ -3705,8 +3234,6 @@
 "Чтение описаний файлов"
 //[MCannotUpdateDiz]
 "Не удалось обновить описания файлов"
-//[MCannotUpdateRODiz]
-"Файл описаний защищён от записи"
 
 //[MCfgDizTitle]
 "Описания файлов"
@@ -3727,7 +3254,7 @@
 //[MCfgDizAnsiByDefault]
 "&Использовать кодовую страницу ANSI по умолчанию"
 //[MCfgDizSaveInUTF]
-"Сохранять в UTF8"
+"Сохранять в UTF-&8"
 
 //[MReadingTitleFiles]
 "Обновление панелей"
@@ -3738,8 +3265,6 @@
 
 //[MEditPanelModes]
 "Режимы панели"
-//[MEditPanelModesBottom]
-"Ins,Del,F4,Ctrl+Enter,Ctrl+Shift+Enter"
 
 //[MEditPanelModeName]
 "Имя"
@@ -3810,8 +3335,6 @@
 "Общая макроклавиша '{0}' будет удалена."
 //[MMacroSequence]
 "Последовательность:"
-//[MMacroDescription]
-"Описание:"
 //[MMacroReDefinedKey2]
 "Переопределить?"
 //[MMacroDeleteKey2]
@@ -3821,10 +3344,14 @@
 
 //[MMacroSettingsTitle]
 "Параметры макрокоманды для '{0}'"
+//[MMacroSettingsSequence]
+"Последовательность:"
+//[MMacroSettingsDescription]
+"Описание:"
 //[MMacroSettingsEnableOutput]
 "Разрешить во время &выполнения вывод на экран"
 //[MMacroSettingsRunAfterStart]
-"В&ыполнять после запуска FAR"
+"В&ыполнять после запуска Far"
 //[MMacroSettingsActivePanel]
 "&Активная панель"
 //[MMacroSettingsPassivePanel]
@@ -3865,17 +3392,12 @@
 "&Версия:"
 //[MPluginModulePath]
 "&Файл плагина:"
-//[MPluginGUID]
-"&GUID плагина:"
-//[MPluginItemGUID]
-"GU&ID пункта:"
+//[MPluginUUID]
+"&UUID плагина:"
+//[MPluginItemUUID]
+"UU&ID пункта:"
 //[MPluginPrefix]
 "&Префикс плагина:"
-//[MPluginHotKeyBottom]
-"F4 - задать горячую клавишу, F3 - информация"
-
-//[MRightCtrl]
-"ПравыйCtrl"
 //[MExcTrappedException]
 "Исключительная ситуация"
 //[MExcException]
@@ -3888,16 +3410,28 @@
 "Источник:"
 //[MExcFunction]
 "Функция:"
-//[MExcModule]
-"Модуль:"
+//[MExcFileName]
+"Файл:"
+//[MExcPlugin]
+"Плагин:"
+//[MExcFarVersion]
+"Far:"
+//[MExcOSVersion]
+"ОС:"
+//[MExcKernelVersion]
+"Ядро:"
 //[MExcTerminate]
 "Завершить Far"
 //[MExcUnload]
 "Выгрузить плагин"
+//[MExcCopy]
+"Копировать"
 //[MExcStack]
 "Стек"
 //[MExcMinidump]
 "Минидамп"
+//[MExcMinidumpSuccess]
+"Минидамп сохранён в"
 
 //[MNetUserName]
 "Имя пользователя"
@@ -3915,9 +3449,6 @@
 "текущая версия Far - {0}."
 //[MPlgLoadPluginError]
 "Ошибка при загрузке плагина"
-
-//[MCheckBox2State]
-"?"
 
 //[MHelpTitle]
 "Помощь"
@@ -4776,8 +4307,13 @@
 //[MKBTreeCtrlAltShiftF12]
 ""
 
-//[MCopyTimeInfo]
-"Время: {0}    Осталось: {1}    {2}Б/с"
+//[MCopyTimeInfoElapsed]
+"Время:"
+//[MCopyTimeInfoRemaining]
+"Осталось:"
+// Bytes per second
+//[MCopyTimeInfoSpeed]
+"Б/с"
 
 //[MKeyESCWasPressed]
 "Действие было прервано"
@@ -4815,15 +4351,17 @@
 //[MFileHilightTitle]
 "Раскраска файлов"
 //[MFileFilterName]
-"Имя &фильтра:"
+"Им&я:"
 //[MFileFilterMatchMask]
 "&Маска:"
 //[MFileFilterSize]
 "Разм&ер:"
+// up to 4 characters
 //[MFileFilterSizeFromSign]
-">="
+">&="
+// up to 4 characters
 //[MFileFilterSizeToSign]
-"<="
+"&<="
 //[MFileHardLinksCount]
 "Болee одной жёсткой ссылки"
 //[MFileFilterDate]
@@ -4838,8 +4376,10 @@
 "&изменения"
 //[MFileFilterDateRelative]
 "Относительна&я"
+// up to 4 characters
 //[MFileFilterDateAfterSign]
 ">="
+// up to 4 characters
 //[MFileFilterDateBeforeSign]
 "<="
 //[MFileFilterCurrent]
@@ -4848,25 +4388,27 @@
 "С&брос"
 //[MFileFilterAttr]
 "Атрибут&ы"
-//[MFileFilterAttrR]
+//[MFileFilterAttrChoose]
+"&..."
+//[MFileFilterAttrReadOnly]
 "&Только для чтения"
-//[MFileFilterAttrA]
+//[MFileFilterAttrArcive]
 "&Архивный"
-//[MFileFilterAttrH]
+//[MFileFilterAttrHidden]
 "&Скрытый"
-//[MFileFilterAttrS]
+//[MFileFilterAttrSystem]
 "С&истемный"
-//[MFileFilterAttrC]
+//[MFileFilterAttrCompressed]
 "С&жатый"
-//[MFileFilterAttrE]
+//[MFileFilterAttrEncrypted]
 "&Зашифрованный"
-//[MFileFilterAttrD]
+//[MFileFilterAttrDirectory]
 "&Каталог"
-//[MFileFilterAttrNI]
+//[MFileFilterAttrNotIndexed]
 "&Неиндексируемый"
 //[MFileFilterAttrSparse]
 "&Разрежённый"
-//[MFileFilterAttrT]
+//[MFileFilterAttrTemporary]
 "&Временный"
 //[MFileFilterAttrReparse]
 "Точка повторного анализа"
@@ -4878,12 +4420,25 @@
 "Поток целостности"
 //[MFileFilterAttrNoScrubData]
 "Нет данных очистки"
+//[MFileFilterAttrPinned]
+"Закреплённый"
+//[MFileFilterAttrUnpinned]
+"Откреплённый"
+// need translation:
+//[MFileFilterAttrRecallOnOpen]
+"Recall on open"
+// need translation:
+//[MFileFilterAttrRecallOnDataAccess]
+"Recall on data access"
+// need translation:
+//[MFileFilterAttrStrictlySequential]
+"Strictly sequential"
 //[MFileFilterReset]
 "Очистит&ь"
-//[MFileFilterCancel]
-"Отмена"
 //[MFileFilterMakeTransparent]
 "Выставить прозрачность"
+//[MFileFilterCancel]
+"Отмена"
 //[MBadFileSizeFormat]
 "Неправильно заполнено поле размера"
 
@@ -4895,14 +4450,14 @@
 "Требуются дополнительные привилегии"
 //[MElevationRequiredProcess]
 "для обработки этого объекта:"
-//[MElevationRequiredCreate]
-"для открытия этого объекта:"
 //[MElevationRequiredDelete]
 "для удаления этого объекта:"
 //[MElevationRequiredCopy]
 "для копирования этого объекта:"
 //[MElevationRequiredMove]
 "для перемещения этого объекта:"
+//[MElevationRequiredReplace]
+"для замещения этого объекта:"
 //[MElevationRequiredGetAttributes]
 "для получения атрибутов этого объекта:"
 //[MElevationRequiredSetAttributes]

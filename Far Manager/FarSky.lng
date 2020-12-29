@@ -1,6 +1,6 @@
 ﻿.Language=Slovak,Slovak (Slovenčina)
 
-//Version: 3.0 build 5400
+//Version: 3.0.5700.0 x64
 
 //[MYes]
 "Áno"
@@ -30,8 +30,6 @@
 "Ignorovať"
 //[MDelete]
 "Zmazať"
-//[MSplit]
-"Rozdeliť"
 
 //[MHCancel]
 "&Storno"
@@ -60,9 +58,9 @@
 //[MQuit]
 "Koniec"
 //[MAskQuit]
-"Chcete ukončiť FAR?"
+"Chcete ukončiť Far?"
 
-//functional keys - 6 characters max
+// Panels: functional keys
 //[MF1]
 "Pomoc"
 //[MF2]
@@ -95,7 +93,7 @@
 //[MShiftF3]
 "PríkPk"
 //[MShiftF4]
-"Úpravy"
+"Úpravy…"
 //[MShiftF5]
 "Kopír."
 //[MShiftF6]
@@ -118,9 +116,9 @@
 //[MAltF2]
 "Pravý"
 //[MAltF3]
-"Zobr.."
+"Zobr…"
 //[MAltF4]
-"Uprav."
+"Uprav…"
 //[MAltF5]
 "Tlač"
 //[MAltF6]
@@ -264,12 +262,16 @@
 ""
 //[MCtrlAltShiftF11]
 ""
-//End of functional keys
+// Panels: end of functional keys
 //[MCtrlAltShiftF12]
 ""
 
 //[MHistoryTitle]
 "História"
+//[MHistoryInfoTitle]
+"Informácie"
+//[MHistoryInfoFolder]
+"Priečinok:"
 //[MFolderHistoryTitle]
 "História priečinkov"
 //[MViewHistoryTitle]
@@ -299,7 +301,7 @@
 //[MConfigScanJunction]
 "Prehľadávať s&ymbolické odkazy"
 //[MConfigSmartFolderMonitor]
-"Aktualizovať panely, len ak je FAR aktívny"
+"Aktualizovať panely, len ak je Far aktívny"
 //[MConfigSaveHistory]
 "Ukladať históriu &príkazov"
 //[MConfigSaveFoldersHistory]
@@ -313,11 +315,11 @@
 //[MConfigElevation]
 "Vyžiadať práva správcu:"
 //[MConfigElevationModify]
-"na úpravy"
+"Na úpravy"
 //[MConfigElevationRead]
-"na čítanie"
+"Na čítanie"
 //[MConfigElevationUsePrivileges]
-"použiť ďalšie privilégiá"
+"Použiť ďalšie privilégiá"
 //[MConfigSortingCollation]
 "Spôsob triedenia:"
 //[MConfigSortingOrdinal]
@@ -370,7 +372,7 @@
 "Voliť súbory pravým kliknutím"
 //[MConfigSortFolderExt]
 "Triediť priečinky podľa prípony"
-//[MConfigReverseSort]
+//[MConfigAllowReverseSort]
 "Po&voliť opačné triedenie"
 //[MConfigAutoUpdateLimit]
 "Zrušiť a&utomatickú aktualizáciu panelov"
@@ -427,11 +429,11 @@
 //[MConfigClearType]
 "Použiť &ClearType (pomalšie)"
 //[MConfigSetConsoleIcon]
-"Nastaviť ikonu konzoly"
+"Ikona konzoly:"
 //[MConfigSetAdminConsoleIcon]
 "Alternatívne pre správcu"
 //[MConfigTitleAddons]
-"Doplnky názvu okna &FAR:"
+"Doplnky názvu okna &Far:"
 
 //[MConfigDlgSetsTitle]
 "Nastavenia dialógov"
@@ -512,6 +514,8 @@
 "DNS fully-qualified"
 //[MConfigInfoPanelUNTitle]
 "Formát &užívateľského mena"
+//[MConfigInfoPanelUNLogon]
+"Prihlasovacie meno"
 //[MConfigInfoPanelUNFullyQualifiedDN]
 "Fully Qualified Domain Name"
 //[MConfigInfoPanelUNSamCompatible]
@@ -528,6 +532,10 @@
 "Service Principal"
 //[MConfigInfoPanelUNDnsDomain]
 "DNS Domain"
+//[MConfigInfoPanelUNGivenName]
+"Meno"
+//[MConfigInfoPanelUNSurname]
+"Priezvisko"
 //[MConfigInfoPanelShowPowerStatus]
 "Zobraziť stav na&pájania"
 //[MConfigInfoPanelShowCDInfo]
@@ -549,7 +557,7 @@
 //[MViewConfigTitle]
 "Zobrazovač"
 //[MViewConfigExternalF3]
-"Použiť externý zobrazovač pre F3 namiesto Alt+F3"
+"Použiť externý zobrazovač pre F&3 namiesto Alt+F3"
 //[MViewConfigExternalCommand]
 "&Príkaz zobrazovača:"
 //[MViewConfigInternal]
@@ -590,7 +598,7 @@
 //[MEditConfigTitle]
 "Editor"
 //[MEditConfigEditorF4]
-"Použiť externý editor pre F4 namiesto Alt+F4"
+"Použiť externý editor pre F&4 namiesto Alt+F4"
 //[MEditConfigEditorCommand]
 "&Príkaz editora:"
 //[MEditConfigInternal]
@@ -637,6 +645,9 @@
 "Kurzor na konci"
 //[MEditConfigDefaultCodePage]
 "Predvolená tabuľka znakov:"
+// need translation:
+//[MConfigEditor]
+"Configuration editor"
 
 //[MSaveSetupTitle]
 "Uloženie nastavení"
@@ -655,12 +666,12 @@
 "Prepojenie"
 //[MCopySecurity]
 "&Prístupové práva:"
+//[MCopySecurityDefault]
+"Vých&odiskové"
 //[MCopySecurityCopy]
 "S&kopírovať"
 //[MCopySecurityInherit]
 "&Zdediť"
-//[MCopySecurityLeave]
-"Vých&odiskové"
 //[MCopyIfFileExist]
 "Už e&xistujúce súbory:"
 //[MCopyAsk]
@@ -681,6 +692,9 @@
 "symbolické prepoj. (&súbor)"
 //[MLinkTypeSymlinkDirectory]
 "symbolické prepoj. (prie&činok)"
+// need translation:
+//[MCopyPreserveTimestamps]
+"Preserve timestamps"
 //[MCopySymLinkContents]
 "Kopírovať obsah sym&bolic. prepoj."
 //[MCopyMultiActions]
@@ -698,7 +712,7 @@
 //[MCopyDlgTotal]
 "Spolu"
 //[MCopyPrepareSecury]
-"Aplikujem prístupové práva..."
+"Aplikujem prístupové práva…"
 //[MCopyUseFilter]
 "Pou&žiť filter"
 //[MCopySetFilter]
@@ -745,8 +759,6 @@
 
 //[MCopyCannotCreateFolder]
 "Nemôžem vytvoriť priečinok"
-//[MCopyCannotChangeFolderAttr]
-"Nepodarilo sa nastaviť atribúty priečinka"
 //[MCopyCannotRenameFolder]
 "Nemôžem premenovať priečinok"
 //[MCopyIgnore]
@@ -788,9 +800,9 @@
 "sám na seba"
 
 //[MCopyStream1]
-"Zdrojový súbor obsahuje viac než jeden dátový prúd."
+"Zdrojový súbor obsahuje viac než jeden dátový prúd,"
 //[MCopyStream2]
-"lebo nepoužívate systémovú kopírovaciu rutinu."
+"ale nepoužívate systémovú kopírovaciu rutinu."
 //[MCopyStream3]
 "lebo cieľová jednotka nepodporuje túto funkciu."
 //[MCopyStream4]
@@ -811,16 +823,10 @@
 "E&xistujúci"
 //[MCopyOverwrite]
 "&Prepísať"
-//[MCopySkipOvr]
-"Pres&kočiť"
 //[MCopyAppend]
 "Pr&ipojiť"
-//[MCopyResume]
-"Pok&račovať"
 //[MCopyRename]
 "Pr&emenovať"
-//[MCopyCancelOvr]
-"&Zrušiť"
 //[MCopyRememberChoice]
 "Zapamä&tať si voľbu"
 //[MCopyRenameTitle]
@@ -836,12 +842,6 @@
 "Z&mazať"
 //[MCopyDeleteAllRO]
 "&Všetko"
-//[MCopySkipRO]
-"Pres&kočiť"
-//[MCopySkipAllRO]
-"Pr&eskočiť všetky"
-//[MCopyCancelRO]
-"&Storno"
 
 //[MCannotCopy]
 "Nemôžem kopírovať"
@@ -899,10 +899,9 @@
 "Chcete vymazať súbor"
 //[MAskWipe]
 "Chcete vymazať"
-//[MDeleteLinkTitle]
-"Zmazať prepojenie"
+// need translation:
 //[MAskDeleteLink]
-"je prepojenie na"
+"prepojenie na"
 //[MAskDeleteLinkFolder]
 "priečinok"
 //[MAskDeleteLinkFile]
@@ -955,9 +954,6 @@
 //[MDeleteFileCancel]
 "&Storno"
 
-//[MDeleteLinkDelete]
-"Zmazať prepojenie"
-
 //[MDeletingTitle]
 "Mazanie"
 
@@ -996,6 +992,9 @@
 "Nemôžem premiestniť súbor do Koša"
 //[MCannotRecycleFolder]
 "Nemôžem premiestniť priečinok do Koša"
+// need translation:
+//[MTryToDeletePermanently]
+"Try to delete it permanently?"
 
 //[MCannotGetSecurity]
 "Nemôžem získať prístupové práva pre"
@@ -1021,7 +1020,7 @@
 //[MEditAskSaveExt]
 "Súbor bol zmenený externým programom. Uložiť?"
 //[MEditBtnSaveAs]
-"Ulož&iť ako..."
+"Ulož&iť ako…"
 
 //[MEditRO]
 "je len na čítanie"
@@ -1091,8 +1090,6 @@
 "Vyhľadávam"
 //[MEditSearchStatistics]
 "Nájdených: {0}, riadky: {1}"
-//[MEditFindAllMenuFooter]
-"F1, F5, Ctrl+Enter, Ctrl+Up/Down, Add"
 //[MEditNotFound]
 "Nemôžem nájsť reťazec"
 
@@ -1122,10 +1119,6 @@
 
 //[MFolderShortcutsTitle]
 "Skratky priečinkov"
-//[MFolderShortcutBottom]
-"Upraviť: Del,Ins,F4"
-//[MFolderShortcutBottomSub]
-"Upraviť: Del,Ins,F4"
 //[MShortcutNone]
 "<nie je>"
 //[MShortcutPlugin]
@@ -1143,7 +1136,7 @@
 //[MSaveThisShortcut]
 "Uložiť tieto skratky?"
 
-//functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
+// Editor: functional keys
 //[MEditF1]
 "Pomocník"
 //[MEditF2]
@@ -1177,7 +1170,7 @@
 //[MEditShiftF3]
 ""
 //[MEditShiftF4]
-"Uprav."
+"Uprav…"
 //[MEditShiftF5]
 ""
 //[MEditShiftF6]
@@ -1350,221 +1343,9 @@
 ""
 //[MEditCtrlAltShiftF12]
 ""
-// End of functional keys (Editor)
-// it's a F8 another text
+// Editor: end of functional keys
+// This is another text for F8
 //[MEditF8DOS]
-"OEM"
-
-//Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
-//[MSingleEditF1]
-"Pomocn"
-//[MSingleEditF2]
-"Uložiť"
-//[MSingleEditF3]
-""
-//[MSingleEditF4]
-"Koniec"
-//[MSingleEditF5]
-""
-//[MSingleEditF6]
-"Zobraz"
-//[MSingleEditF7]
-"Hľadať"
-//[MSingleEditF8]
-"WIN"
-//[MSingleEditF9]
-""
-//[MSingleEditF10]
-"Koniec"
-//[MSingleEditF11]
-"Modul"
-//[MSingleEditF12]
-"Okno"
-
-//Single Editor: Shift
-//[MSingleEditShiftF1]
-""
-//[MSingleEditShiftF2]
-"UložAko"
-//[MSingleEditShiftF3]
-""
-//[MSingleEditShiftF4]
-""
-//[MSingleEditShiftF5]
-""
-//[MSingleEditShiftF6]
-""
-//[MSingleEditShiftF7]
-"Nasl."
-//[MSingleEditShiftF8]
-"TabZn"
-//[MSingleEditShiftF9]
-""
-//[MSingleEditShiftF10]
-"UložKon"
-//[MSingleEditShiftF11]
-""
-//[MSingleEditShiftF12]
-""
-
-//Single Editor: Alt
-//[MSingleEditAltF1]
-""
-//[MSingleEditAltF2]
-""
-//[MSingleEditAltF3]
-""
-//[MSingleEditAltF4]
-""
-//[MSingleEditAltF5]
-""
-//[MSingleEditAltF6]
-""
-//[MSingleEditAltF7]
-""
-//[MSingleEditAltF8]
-"Ísť na"
-//[MSingleEditAltF9]
-"Video"
-//[MSingleEditAltF10]
-""
-//[MSingleEditAltF11]
-"ZobrHs"
-//[MSingleEditAltF12]
-""
-
-//Single Editor: Ctrl
-//[MSingleEditCtrlF1]
-""
-//[MSingleEditCtrlF2]
-""
-//[MSingleEditCtrlF3]
-""
-//[MSingleEditCtrlF4]
-""
-//[MSingleEditCtrlF5]
-""
-//[MSingleEditCtrlF6]
-""
-//[MSingleEditCtrlF7]
-"Nahraď"
-//[MSingleEditCtrlF8]
-""
-//[MSingleEditCtrlF9]
-""
-//[MSingleEditCtrlF10]
-""
-//[MSingleEditCtrlF11]
-""
-//[MSingleEditCtrlF12]
-""
-
-//Single Editor: AltShift
-//[MSingleEditAltShiftF1]
-""
-//[MSingleEditAltShiftF2]
-""
-//[MSingleEditAltShiftF3]
-""
-//[MSingleEditAltShiftF4]
-""
-//[MSingleEditAltShiftF5]
-""
-//[MSingleEditAltShiftF6]
-""
-//[MSingleEditAltShiftF7]
-""
-//[MSingleEditAltShiftF8]
-""
-//[MSingleEditAltShiftF9]
-"Konfig"
-//[MSingleEditAltShiftF10]
-""
-//[MSingleEditAltShiftF11]
-""
-//[MSingleEditAltShiftF12]
-""
-
-//Single Editor: CtrlShift
-//[MSingleEditCtrlShiftF1]
-""
-//[MSingleEditCtrlShiftF2]
-""
-//[MSingleEditCtrlShiftF3]
-""
-//[MSingleEditCtrlShiftF4]
-""
-//[MSingleEditCtrlShiftF5]
-""
-//[MSingleEditCtrlShiftF6]
-""
-//[MSingleEditCtrlShiftF7]
-""
-//[MSingleEditCtrlShiftF8]
-""
-//[MSingleEditCtrlShiftF9]
-""
-//[MSingleEditCtrlShiftF10]
-""
-//[MSingleEditCtrlShiftF11]
-""
-//[MSingleEditCtrlShiftF12]
-""
-
-//Single Editor: CtrlAlt
-//[MSingleEditCtrlAltF1]
-""
-//[MSingleEditCtrlAltF2]
-""
-//[MSingleEditCtrlAltF3]
-""
-//[MSingleEditCtrlAltF4]
-""
-//[MSingleEditCtrlAltF5]
-""
-//[MSingleEditCtrlAltF6]
-""
-//[MSingleEditCtrlAltF7]
-""
-//[MSingleEditCtrlAltF8]
-""
-//[MSingleEditCtrlAltF9]
-""
-//[MSingleEditCtrlAltF10]
-""
-//[MSingleEditCtrlAltF11]
-""
-//[MSingleEditCtrlAltF12]
-""
-
-//Single Editor: CtrlAltShift
-//[MSingleEditCtrlAltShiftF1]
-""
-//[MSingleEditCtrlAltShiftF2]
-""
-//[MSingleEditCtrlAltShiftF3]
-""
-//[MSingleEditCtrlAltShiftF4]
-""
-//[MSingleEditCtrlAltShiftF5]
-""
-//[MSingleEditCtrlAltShiftF6]
-""
-//[MSingleEditCtrlAltShiftF7]
-""
-//[MSingleEditCtrlAltShiftF8]
-""
-//[MSingleEditCtrlAltShiftF9]
-""
-//[MSingleEditCtrlAltShiftF10]
-""
-//[MSingleEditCtrlAltShiftF11]
-""
-//[MSingleEditCtrlAltShiftF12]
-""
-// End of functional keys (Single Editor)
-// it's a F8 another text
-//[MSingleEditF8DOS]
 "OEM"
 
 //[MEditSaveAs]
@@ -1614,7 +1395,7 @@
 //[MEditorSwitchCPWarn1]
 "Editor obsahuje znaky, ktoré sa nedajú"
 //[MEditorSwitchCPWarn2]
-"správne preložiť so zvolenou tabuľkou znakov [{0}]"
+"správne preložiť so zvolenou tabuľkou znakov:"
 //[MEditorSwitchCPConfirm]
 "Pokračovať?"
 //[MEditDataLostWarn]
@@ -1625,12 +1406,6 @@
 "Uložiť"
 //[MEditorSaveCPWarnShow]
 "Zobraziť"
-//[MEditorSwitchUnicodeCPDisabled]
-"Prepínač Unicode nie je podporovaný"
-//[MEditorTryReloadFile]
-"Môžete znova načítať súbor s užívateľskou tabuľkou znakov (ShiftF4)"
-//[MEditorSwitchToUnicodeCPDisabled]
-"Prepínač na tabuľku Unicode {0} nie je podporovaný"
 //[MEditorCPNotSupported]
 "Tabuľka znakov {0} nie je podporovaná vo vašom systéme"
 
@@ -1679,26 +1454,6 @@
 "Kríženie"
 //[MListVolMount]
 "Zväzok"
-//[MListDFS]
-"DFS"
-//[MListDFSR]
-"DFSR"
-//[MListHSM]
-"HSM"
-//[MListHSM2]
-"HSM2"
-//[MListSIS]
-"SIS"
-//[MListWIM]
-"WIM"
-//[MListCSV]
-"CSV"
-//[MListDEDUP]
-"DEDUP"
-//[MListNFS]
-"NFS"
-//[MListPlaceholder]
-"Zástupca"
 //[MListUnknownReparsePoint]
 "?Prepojenie?"
 //[MListBrackets]
@@ -1753,8 +1508,6 @@
 
 //[MAssocTitle]
 "Asociácie súborov"
-//[MAssocBottom]
-"Upraviť: Del,Ins,F4"
 //[MAskDelAssoc]
 "Chcete zmazať asociáciu pre"
 
@@ -1777,10 +1530,9 @@
 //[MFileAssocAltEdit]
 "Príkaz Upra&v (platí pre Alt+F4):"
 
-//Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
+// Viewer: functional keys
 //[MViewF1]
 "Pomocník"
-// this is another text for F2
 //[MViewF2]
 "Zalomiť"
 //[MViewF3]
@@ -1993,227 +1745,9 @@
 // this is another text for F4
 //[MViewF4Dump]
 "Dump"
-// this is another text for F8
-// end of functional keys (Viewer)
+// Viewer: end of functional keys
+// This is another text for F8
 //[MViewF8DOS]
-"OEM"
-
-//Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
-//[MSingleViewF1]
-"Pomocník"
-//[MSingleViewF2]
-"Zalomiť"
-//[MSingleViewF3]
-"Koniec"
-//[MSingleViewF4]
-"Hex"
-//[MSingleViewF5]
-""
-//[MSingleViewF6]
-"Upraviť"
-//[MSingleViewF7]
-"Hľadať"
-//[MSingleViewF8]
-"WIN"
-//[MSingleViewF9]
-""
-//[MSingleViewF10]
-"Koniec"
-//[MSingleViewF11]
-"Moduly"
-//[MSingleViewF12]
-"Okno"
-
-//Single Viewer: Shift
-//[MSingleViewShiftF1]
-""
-//[MSingleViewShiftF2]
-"ZalSlo"
-//[MSingleViewShiftF3]
-""
-//[MSingleViewShiftF4]
-""
-//[MSingleViewShiftF5]
-""
-//[MSingleViewShiftF6]
-""
-//[MSingleViewShiftF7]
-"Nasl."
-//[MSingleViewShiftF8]
-"TabZn"
-//[MSingleViewShiftF9]
-""
-//[MSingleViewShiftF10]
-""
-//[MSingleViewShiftF11]
-""
-//[MSingleViewShiftF12]
-""
-
-//Single Viewer: Alt
-//[MSingleViewAltF1]
-""
-//[MSingleViewAltF2]
-""
-//[MSingleViewAltF3]
-""
-//[MSingleViewAltF4]
-""
-//[MSingleViewAltF5]
-""
-//[MSingleViewAltF6]
-""
-//[MSingleViewAltF7]
-"Predch"
-//[MSingleViewAltF8]
-"Ísť na"
-//[MSingleViewAltF9]
-"Video"
-//[MSingleViewAltF10]
-""
-//[MSingleViewAltF11]
-"ZobrHs"
-//[MSingleViewAltF12]
-""
-
-//Single Viewer: Ctrl
-//[MSingleViewCtrlF1]
-""
-//[MSingleViewCtrlF2]
-""
-//[MSingleViewCtrlF3]
-""
-//[MSingleViewCtrlF4]
-""
-//[MSingleViewCtrlF5]
-""
-//[MSingleViewCtrlF6]
-""
-//[MSingleViewCtrlF7]
-""
-//[MSingleViewCtrlF8]
-""
-//[MSingleViewCtrlF9]
-""
-//[MSingleViewCtrlF10]
-""
-//[MSingleViewCtrlF11]
-""
-//[MSingleViewCtrlF12]
-""
-
-//Single Viewer: AltShift
-//[MSingleViewAltShiftF1]
-""
-//[MSingleViewAltShiftF2]
-""
-//[MSingleViewAltShiftF3]
-""
-//[MSingleViewAltShiftF4]
-""
-//[MSingleViewAltShiftF5]
-""
-//[MSingleViewAltShiftF6]
-""
-//[MSingleViewAltShiftF7]
-""
-//[MSingleViewAltShiftF8]
-""
-//[MSingleViewAltShiftF9]
-"Konfig"
-//[MSingleViewAltShiftF10]
-""
-//[MSingleViewAltShiftF11]
-""
-//[MSingleViewAltShiftF12]
-""
-
-//Single Viewer: CtrlShift
-//[MSingleViewCtrlShiftF1]
-""
-//[MSingleViewCtrlShiftF2]
-""
-//[MSingleViewCtrlShiftF3]
-""
-//[MSingleViewCtrlShiftF4]
-""
-//[MSingleViewCtrlShiftF5]
-""
-//[MSingleViewCtrlShiftF6]
-""
-//[MSingleViewCtrlShiftF7]
-""
-//[MSingleViewCtrlShiftF8]
-""
-//[MSingleViewCtrlShiftF9]
-""
-//[MSingleViewCtrlShiftF10]
-""
-//[MSingleViewCtrlShiftF11]
-""
-//[MSingleViewCtrlShiftF12]
-""
-
-//Single Viewer: CtrlAlt
-//[MSingleViewCtrlAltF1]
-""
-//[MSingleViewCtrlAltF2]
-""
-//[MSingleViewCtrlAltF3]
-""
-//[MSingleViewCtrlAltF4]
-""
-//[MSingleViewCtrlAltF5]
-""
-//[MSingleViewCtrlAltF6]
-""
-//[MSingleViewCtrlAltF7]
-""
-//[MSingleViewCtrlAltF8]
-""
-//[MSingleViewCtrlAltF9]
-""
-//[MSingleViewCtrlAltF10]
-""
-//[MSingleViewCtrlAltF11]
-""
-//[MSingleViewCtrlAltF12]
-""
-
-//Single Viewer: CtrlAltShift
-//[MSingleViewCtrlAltShiftF1]
-""
-//[MSingleViewCtrlAltShiftF2]
-""
-//[MSingleViewCtrlAltShiftF3]
-""
-//[MSingleViewCtrlAltShiftF4]
-""
-//[MSingleViewCtrlAltShiftF5]
-""
-//[MSingleViewCtrlAltShiftF6]
-""
-//[MSingleViewCtrlAltShiftF7]
-""
-//[MSingleViewCtrlAltShiftF8]
-""
-//[MSingleViewCtrlAltShiftF9]
-""
-//[MSingleViewCtrlAltShiftF10]
-""
-//[MSingleViewCtrlAltShiftF11]
-""
-//[MSingleViewCtrlAltShiftF12]
-""
-// this is another text for F2
-//[MSingleViewF2Unwrap]
-"Nezalom."
-// this is another text for F4
-//[MSingleViewF4Text]
-"Text"
-// this is another text for F4
-// end of functional keys (Single Viewer)
-//[MSingleViewF8DOS]
 "OEM"
 //[MViewMode]
 "View mode"
@@ -2224,8 +1758,6 @@
 
 //[MFilterTitle]
 "Menu filtrov"
-//[MFilterBottom]
-"+,-,Medzera,I,X,BS,Shift+BS,Ins,Del,F4,F5,Ctrl+Up,Ctrl+Dn"
 //[MPanelFileType]
 "Typ panela súborov"
 //[MFolderFileType]
@@ -2344,10 +1876,6 @@
 "Obľúbené"
 //[MGetCodePageOther]
 "Iné"
-//[MGetCodePageBottomTitle]
-"Ctrl+H, Del, Ins, F4"
-//[MGetCodePageBottomShortTitle]
-"Ctrl+H, Del, F4"
 //[MGetCodePageEditCodePageName]
 "Upraviť názov tabuľky znakov"
 //[MGetCodePageResetCodePageName]
@@ -2355,8 +1883,6 @@
 
 //[MHighlightTitle]
 "Zvýrazňovanie súborov"
-//[MHighlightBottom]
-"Ins,Del,F4,F5,Ctrl+Nahor,Ctrl+Nadol"
 //[MHighlightUpperSortGroup]
 "Vzostupné triedenie"
 //[MHighlightLowerSortGroup]
@@ -2429,16 +1955,34 @@
 "Sieťový"
 //[MInfoCDROM]
 "CD-ROM"
-//[MInfoCD_RW]
+//[MInfoCDR]
+"CD-R"
+//[MInfoCDRW]
 "CD-RW"
-//[MInfoCD_RWDVD]
+//[MInfoCDRWDVD]
 "CD-RW/DVD"
-//[MInfoDVD_ROM]
+//[MInfoDVDROM]
 "DVD-ROM"
-//[MInfoDVD_RW]
+//[MInfoDVDR]
+"DVD-R"
+//[MInfoDVDRW]
 "DVD-RW"
-//[MInfoDVD_RAM]
+//[MInfoDVDRAM]
 "DVD-RAM"
+//[MInfoBDROM]
+"BD-ROM"
+//[MInfoBDR]
+"BD-R"
+//[MInfoBDRW]
+"BD-RW"
+//[MInfoHDDVDROM]
+"HDDVD-ROM"
+//[MInfoHDDVDR]
+"HDDVD-R"
+//[MInfoHDDVDRW]
+"HDDVD-RW"
+//[MInfoHDDVDRAM]
+"HDDVD-RAM"
 //[MInfoRAM]
 "RAM"
 //[MInfoSUBST]
@@ -2752,18 +2296,16 @@
 "Počtu toko&v"
 //[MMenuSortByStreamsSize]
 "Veľkos&ti tokov"
-//[MMenuSortByFullName]
-"&Úplneho názvu"
-//[MMenuSortByCustomData]
-"U&žívateľských dát"
+//[MMenuSortByNameOnly]
+"Iba názvu"
 //[MMenuSortUseGroups]
 "Skup&inového triedenia"
 //[MMenuSortSelectedFirst]
 "Najprv zobraziť vy&brané"
 //[MMenuSortDirectoriesFirst]
 "Najpr&v zobraziť priečinky"
-//[MMaskGroupBottom]
-"Upraviť: Ins, Del, F4, F7, Ctrl+R"
+//[MMaskGroupTitle]
+"Skupiny masiek súborov"
 //[MMaskGroupName]
 "Me&no:"
 //[MMaskGroupMasks]
@@ -2789,24 +2331,34 @@
 "odpojený"
 //[MChangeDriveCDROM]
 "CD-ROM"
-//[MChangeDriveCD_RW]
+//[MChangeDriveCDR]
+"CD-R"
+//[MChangeDriveCDRW]
 "CD-RW"
-//[MChangeDriveCD_RWDVD]
+//[MChangeDriveCDRWDVD]
 "CD-RW/DVD"
-//[MChangeDriveDVD_ROM]
+//[MChangeDriveDVDROM]
 "DVD-ROM"
-//[MChangeDriveDVD_RW]
-"DWD-RW"
-//[MChangeDriveDVD_RAM]
+//[MChangeDriveDVDR]
+"DVD-R"
+//[MChangeDriveDVDRW]
+"DVD-RW"
+//[MChangeDriveDVDRAM]
 "DVD-RAM"
-//[MChangeDriveBD_ROM]
+//[MChangeDriveBDROM]
 "BD-ROM"
-//[MChangeDriveBD_RW]
+//[MChangeDriveBDR]
+"BD-R"
+//[MChangeDriveBDRW]
 "BD-RW"
-//[MChangeDriveHDDVD_ROM]
+//[MChangeDriveHDDVDROM]
 "HDDVD-ROM"
-//[MChangeDriveHDDVD_RW]
+//[MChangeDriveHDDVDR]
+"HDDVD-R"
+//[MChangeDriveHDDVDRW]
 "HDDVD-RW"
+//[MChangeDriveHDDVDRAM]
+"HDDVD-RAM"
 //[MChangeDriveRAM]
 "RAM disk"
 //[MChangeDriveSUBST]
@@ -2842,7 +2394,7 @@
 //[MHotPlugDisks]
 "(disk(y): {0})"
 //[MChangeCouldNotEjectHotPlugMedia]
-"Nemôžem odstrániť zariadenie pre jednotku {0}:"
+"Nemôžem odstrániť zariadenie pre jednotku {0}"
 //[MChangeCouldNotEjectHotPlugMedia2]
 "Nemôžem odstrániť zariadenie."
 //[MChangeHotPlugNotify1]
@@ -2851,24 +2403,22 @@
 "môže byť teraz bezpečne odstránené"
 //[MHotPlugListTitle]
 "Zoznam vyberateľných zariadení"
-//[MHotPlugListBottom]
-"Edit: Del,Ctrl+R"
 
 //[MChangeDriveDisconnectTitle]
 "Odpojiť sieťový disk"
 //[MChangeDriveDisconnectQuestion]
-"Chcete odpojiť od jednotky {0}:?"
+"Chcete odpojiť od jednotky {0}?"
 //[MChangeDriveDisconnectMapped]
-"Jednotka {0}: je namapovaná na:"
+"Jednotka je namapovaná na:"
 //[MChangeDriveDisconnectReconnect]
 "&Znova pripojiť pri prihlásení"
 
 //[MChangeDriveAskDisconnect]
 "Aj tak chcete odpojiť zariadenie?"
 //[MChangeWaitingLoadDisk]
-"Čakám na disk na pripojenie..."
+"Čakám na disk na pripojenie…"
 //[MChangeCouldNotEjectMedia]
-"Nemôžem vysunúť médium v jednotke {0}:"
+"Nemôžem vysunúť médium v jednotke"
 //[MChangeDriveConfigure]
 "Možnosti menu zmeny disku"
 //[MChangeDriveShowDiskType]
@@ -2896,8 +2446,9 @@
 "Zobraziť parametre jednotky &CD"
 //[MChangeDriveShowNetworkDrive]
 "Zobraziť parametre sie&ťovej jednotky"
-//[MChangeDriveMenuFooter]
-"Del,Shift+Del,F3,F4,F9"
+// need translation:
+//[MChangeDriveShowVirtualDisk]
+"Detect virtual disks"
 
 //[MSearchFileTitle]
 "Hľadať"
@@ -2915,8 +2466,6 @@
 
 //[MProcessListTitle]
 "Zoznam úloh"
-//[MProcessListBottom]
-"Upraviť: Del,Ctrl+R,F2"
 //[MKillProcessTitle]
 "Zrušiť úlohu"
 //[MAskKillProcess]
@@ -2932,34 +2481,6 @@
 
 //[MQuickViewTitle]
 "Rýchle info"
-//[MQuickViewFolder]
-"Priečinok"
-//[MQuickViewJunction]
-"Kríženie"
-//[MQuickViewSymlink]
-"Symbolické prepojenie"
-//[MQuickViewVolMount]
-"Zväzok"
-//[MQuickViewDFS]
-"DFS"
-//[MQuickViewDFSR]
-"DFSR"
-//[MQuickViewHSM]
-"HSM"
-//[MQuickViewHSM2]
-"HSM2"
-//[MQuickViewSIS]
-"SIS"
-//[MQuickViewWIM]
-"WIM"
-//[MQuickViewCSV]
-"CSV"
-//[MQuickViewDEDUP]
-"DEDUP"
-//[MQuickViewNFS]
-"NFS"
-//[MQuickViewPlaceholder]
-"Zástupca"
 //[MQuickViewUnknownReparsePoint]
 "Neznáme rozšírené informácie (ReparsePoint)"
 //[MQuickViewNoData]
@@ -2994,10 +2515,10 @@
 //[MSetAttrVolMount]
 "Zväzok:"
 //[MSetAttrDfsTargets]
-"DFS ciele"
-//[MSetAttrUnknownJunction]
+"DFS ciele:"
+//[MSetAttrUnknownReparsePoint]
 "(dáta nie sú k dispozícii)"
-//[MSetAttrRO]
+//[MSetAttrReadOnly]
 "&Len na čítanie"
 //[MSetAttrArchive]
 "&Archivovať"
@@ -3013,7 +2534,7 @@
 "Neinde&xovaný"
 //[MSetAttrSparse]
 "Rozptýlený"
-//[MSetAttrTemp]
+//[MSetAttrTemporary]
 "Dočasný"
 //[MSetAttrOffline]
 "Offline"
@@ -3025,12 +2546,27 @@
 "Integrita dát"
 //[MSetAttrNoScrubData]
 "Žiadne dáta pre skener integrity dát"
+// need translation:
+//[MSetAttrPinned]
+"Pinned"
+// need translation:
+//[MSetAttrUnpinned]
+"Unpinned"
+// need translation:
+//[MSetAttrRecallOnOpen]
+"Recall on open"
+// need translation:
+//[MSetAttrRecallOnDataAccess]
+"Recall on data access"
+// need translation:
+//[MSetAttrStrictlySequential]
+"Strictly sequential"
+//[MSetAttrMore]
+"Viac"
 //[MSetAttrSubfolders]
 "Spracovať aj po&dpriečinky"
 //[MSetAttrOwner]
 "Vlastník:"
-//[MSetAttrOwnerMultiple]
-"(viacero hodnôt)"
 //[MSetAttrModification]
 "Čas posle&dného zápisu:"
 //[MSetAttrCreation]
@@ -3048,14 +2584,15 @@
 //[MSetAttrSet]
 "Nastaviť"
 
-//[MSetAttrDateTitle1]
+//[MSetAttrDateTitleMDY]
 "MM{0}DD{0}RRRRR"
-//[MSetAttrDateTitle2]
+//[MSetAttrDateTitleDMY]
 "DD{0}MM{0}RRRRR"
-//[MSetAttrDateTitle3]
+//[MSetAttrDateTitleYMD]
 "RRRRR{0}MM{0}DD"
+// need translation:
 //[MSetAttrTimeTitle]
-"hh{0}mm{0}ss{1}ms"
+"hh{0}mm{0}ss"
 //[MSetAttrSystemDialog]
 "Vlastnosti systému"
 
@@ -3073,6 +2610,9 @@
 "Nemôžem nastaviť čas súboru pre"
 //[MSetAttrOwnerCannotFor]
 "Nemôžem nastaviť vlastníka pre"
+// need translation:
+//[MSetAttrReparsePointCannotFor]
+"Cannot remove reparse point for"
 
 //[MSetColorPanel]
 "&Panel"
@@ -3597,8 +3137,6 @@
 "Global"
 //[MLocalMenuTitle]
 "Miestne menu"
-//[MMainMenuBottomTitle]
-"Upraviť: Del,Ins,F4,Alt+F4"
 //[MAskDeleteMenuItem]
 "chcete zmazať položku v menu"
 //[MAskDeleteSubMenuItem]
@@ -3709,8 +3247,6 @@
 "Načítavam popisy súboru"
 //[MCannotUpdateDiz]
 "Nemôžem aktualizovať popisy súboru"
-//[MCannotUpdateRODiz]
-"Súbor popisov je len na čítanie"
 
 //[MCfgDizTitle]
 "Popisy súborov"
@@ -3731,7 +3267,7 @@
 //[MCfgDizAnsiByDefault]
 "Automaticky otvárať súbory v kódovaní &WIN"
 //[MCfgDizSaveInUTF]
-"Uložiť v UTF8"
+"Uložiť v UTF-&8"
 
 //[MReadingTitleFiles]
 "Aktualizácia panelov"
@@ -3742,8 +3278,6 @@
 
 //[MEditPanelModes]
 "Upraviť módy panelov"
-//[MEditPanelModesBottom]
-"Ins,Del,F4,Ctrl+Enter,Ctrl+Shift+Enter"
 
 //[MEditPanelModeName]
 "Meno"
@@ -3814,8 +3348,6 @@
 "Kláves pre bežné makro '{0}' bude odstránený."
 //[MMacroSequence]
 "Postupnosť:"
-//[MMacroDescription]
-"Popis:"
 //[MMacroReDefinedKey2]
 "Predefinovať?"
 //[MMacroDeleteKey2]
@@ -3825,10 +3357,14 @@
 
 //[MMacroSettingsTitle]
 "Nastavenia makra pre '{0}'"
+//[MMacroSettingsSequence]
+"Postupnosť:"
+//[MMacroSettingsDescription]
+"Popis:"
 //[MMacroSettingsEnableOutput]
 "Povoliť &výstup na obrazovku, kým sa vykonáva makro"
 //[MMacroSettingsRunAfterStart]
-"&Spustiť po spustení FARu"
+"&Spustiť po spustení Faru"
 //[MMacroSettingsActivePanel]
 "&Aktívny panel"
 //[MMacroSettingsPassivePanel]
@@ -3869,17 +3405,12 @@
 "&Verzia:"
 //[MPluginModulePath]
 "Cesta k &modulu:"
-//[MPluginGUID]
-"&GUID modulu:"
-//[MPluginItemGUID]
-"GUID položky m&odulu:"
+//[MPluginUUID]
+"&UUID modulu:"
+//[MPluginItemUUID]
+"UUID položky m&odulu:"
 //[MPluginPrefix]
 "Predpona mo&dulu:"
-//[MPluginHotKeyBottom]
-"F4 - nastavenie skratkového klávesu, F3 - informácia"
-
-//[MRightCtrl]
-"PravýCtrl"
 //[MExcTrappedException]
 "Vyskytla sa výnimka"
 //[MExcException]
@@ -3892,16 +3423,31 @@
 "Zdroje:"
 //[MExcFunction]
 "Funkcia:"
-//[MExcModule]
+//[MExcFileName]
+"Súbor:"
+//[MExcPlugin]
 "Modul:"
+//[MExcFarVersion]
+"Far:"
+// need translation:
+//[MExcOSVersion]
+"OS:"
+// need translation:
+//[MExcKernelVersion]
+"Kernel:"
 //[MExcTerminate]
-"Ukončiť FAR"
+"Ukončiť Far"
 //[MExcUnload]
 "Zatvoriť modul"
+//[MExcCopy]
+"Skopírovať"
 //[MExcStack]
 "Halda"
 //[MExcMinidump]
 "Minivýpis"
+// need translation:
+//[MExcMinidumpSuccess]
+"Minidump saved to"
 
 //[MNetUserName]
 "Meno užívateľa"
@@ -3912,16 +3458,13 @@
 "Nemôžem načítať obsah priečinka"
 
 //[MPlgBadVers]
-"Tento modul si vyžaduje vyššiu verziu FARu"
+"Tento modul si vyžaduje vyššiu verziu Faru"
 //[MPlgRequired]
-"Požadovaná verzia FARu je {0},"
+"Požadovaná verzia Faru je {0},"
 //[MPlgRequired2]
-"terajšia verzia FARu je {0}."
+"terajšia verzia Faru je {0}."
 //[MPlgLoadPluginError]
 "Chyba pri nahrávaní zásuvného modulu"
-
-//[MCheckBox2State]
-"?"
 
 //[MHelpTitle]
 "Pomocník"
@@ -4780,8 +4323,13 @@
 //[MKBTreeCtrlAltShiftF12]
 ""
 
-//[MCopyTimeInfo]
-"Čas: {0}      Zostáva: {1}     {2}B/s"
+//[MCopyTimeInfoElapsed]
+"Čas:"
+//[MCopyTimeInfoRemaining]
+"Zostáva:"
+// Bytes per second
+//[MCopyTimeInfoSpeed]
+"B/s"
 
 //[MKeyESCWasPressed]
 "Operácia bola prerušená"
@@ -4819,15 +4367,17 @@
 //[MFileHilightTitle]
 "Zvýrazňovanie súborov"
 //[MFileFilterName]
-"&Názov filtra:"
+"&Názov:"
 //[MFileFilterMatchMask]
 "&Maska"
 //[MFileFilterSize]
 "Ve&ľkosť"
+// up to 4 characters
 //[MFileFilterSizeFromSign]
-">="
+">&="
+// up to 4 characters
 //[MFileFilterSizeToSign]
-"<="
+"&<="
 //[MFileHardLinksCount]
 "Má viac než jedno pevné prepojenie"
 //[MFileFilterDate]
@@ -4842,8 +4392,10 @@
 "z&meny"
 //[MFileFilterDateRelative]
 "Relatí&vny"
+// up to 4 characters
 //[MFileFilterDateAfterSign]
 ">="
+// up to 4 characters
 //[MFileFilterDateBeforeSign]
 "<="
 //[MFileFilterCurrent]
@@ -4852,25 +4404,27 @@
 "Práz&dny"
 //[MFileFilterAttr]
 "Atri&búty"
-//[MFileFilterAttrR]
+//[MFileFilterAttrChoose]
+"&..."
+//[MFileFilterAttrReadOnly]
 "Len na čít&anie"
-//[MFileFilterAttrA]
+//[MFileFilterAttrArcive]
 "Arc&hivovať"
-//[MFileFilterAttrH]
+//[MFileFilterAttrHidden]
 "Skry&tý"
-//[MFileFilterAttrS]
+//[MFileFilterAttrSystem]
 "Systémo&vý"
-//[MFileFilterAttrC]
+//[MFileFilterAttrCompressed]
 "Kompri&movaný"
-//[MFileFilterAttrE]
+//[MFileFilterAttrEncrypted]
 "Ši&frovaný"
-//[MFileFilterAttrD]
+//[MFileFilterAttrDirectory]
 "Pri&ečinok"
-//[MFileFilterAttrNI]
+//[MFileFilterAttrNotIndexed]
 "Neinde&xovaný"
 //[MFileFilterAttrSparse]
 "Ried&ky"
-//[MFileFilterAttrT]
+//[MFileFilterAttrTemporary]
 "Doča&sný"
 //[MFileFilterAttrReparse]
 "Reparse point"
@@ -4882,12 +4436,27 @@
 "Integrita dát"
 //[MFileFilterAttrNoScrubData]
 "Žiadne dáta pre skener integrity dát"
+// need translation:
+//[MFileFilterAttrPinned]
+"Pinned"
+// need translation:
+//[MFileFilterAttrUnpinned]
+"Unpinned"
+// need translation:
+//[MFileFilterAttrRecallOnOpen]
+"Recall on open"
+// need translation:
+//[MFileFilterAttrRecallOnDataAccess]
+"Recall on data access"
+// need translation:
+//[MFileFilterAttrStrictlySequential]
+"Strictly sequential"
 //[MFileFilterReset]
 "Reset"
-//[MFileFilterCancel]
-"Storno"
 //[MFileFilterMakeTransparent]
 "Spriehľadniť"
+//[MFileFilterCancel]
+"Storno"
 //[MBadFileSizeFormat]
 "Veľkosť súboru neobsahuje správnu hodnotu"
 
@@ -4899,14 +4468,15 @@
 "Ďalšie práva sa vyžadujú na"
 //[MElevationRequiredProcess]
 "spracovanie tohto objektu:"
-//[MElevationRequiredCreate]
-"otvorenie tohto objektu:"
 //[MElevationRequiredDelete]
 "zmazanie tohto objektu:"
 //[MElevationRequiredCopy]
 "kopírovanie tohto objektu:"
 //[MElevationRequiredMove]
 "presunutie tohto objektu:"
+// need translation:
+//[MElevationRequiredReplace]
+"nahradenie tohto objektu:"
 //[MElevationRequiredGetAttributes]
 "získanie atribútov tohto objektu:"
 //[MElevationRequiredSetAttributes]

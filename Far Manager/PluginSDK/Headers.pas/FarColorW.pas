@@ -1,12 +1,12 @@
 {
   FarColorW.pas
 
-  Colors Index for Far Manager 3.0 build 5400
+  Colors Index for Far Manager 3.0.5700.0
 }
 
 {
-Copyright © 1996 Eugene Roshal
-Copyright © 2000 Far Group
+Copyright (c) 1996 Eugene Roshal
+Copyright (c) 2000 Far Group
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

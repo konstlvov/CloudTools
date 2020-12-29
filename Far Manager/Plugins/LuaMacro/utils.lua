@@ -1,3 +1,5 @@
+-- coding: utf-8
+
 local Shared = ...
 local Msg, ErrMsg, pack, ExpandEnv = Shared.Msg, Shared.ErrMsg, Shared.pack, Shared.ExpandEnv
 
@@ -42,7 +44,7 @@ end
 
 local SomeAreaNames = {
   "other", "viewer", "editor", "dialog", "menu", "help", "dialogautocompletion",
-  "grabber", "desktop", "common" -- "common" должен идти последним
+  "grabber", "desktop", "common" -- "common" РґРѕР»Р¶РµРЅ РёРґС‚Рё РїРѕСЃР»РµРґРЅРёРј
 }
 
 local function GetTrueAreaName(Mode) return TrueAreaNames[Mode] end
@@ -66,6 +68,7 @@ local AddedMenuItems
 local AddedPrefixes
 local IdSet
 local LoadedPanelModules
+local ContentColumns
 
 package.nounload = {lpeg=true}
 local initial_modules = {}
@@ -171,7 +174,7 @@ end
 local function AddId (trg, src)
   trg.id = "<no id>"
   if type(src.id)=="string" then
-    local lstr = src.id:lower()
+    local lstr = string.lower(src.id)
     if not IdSet[lstr] then
       IdSet[lstr] = true
       trg.id = src.id
@@ -269,7 +272,28 @@ local function export_ProcessConsoleInput (Rec, Flags)
   return EV_Handler(Events.consoleinput, nil, Rec, Flags)
 end
 
-local ExpandKey do -- измеренное время исполнения на ключе "CtrlAltShiftF12" = ??? (Lua); 2.3uS (LuaJIT);
+local function export_GetContentFields (colnames)
+  for _,m in ipairs(ContentColumns) do
+    if m.GetContentFields(colnames) then return true end
+  end
+end
+
+local function export_GetContentData (filename, colnames)
+  local tOut = {}
+  for _,m in ipairs(ContentColumns) do
+    if m.filemask==nil or CheckFileName(m.filemask, filename) then
+      local data = m.GetContentData(filename, colnames)
+      if type(data) == "table" then
+        for i in ipairs(colnames) do
+          tOut[i] = tOut[i] or (type(data[i])=="string" and data[i])
+        end
+      end
+    end
+  end
+  return tOut
+end
+
+local ExpandKey do -- РёР·РјРµСЂРµРЅРЅРѕРµ РІСЂРµРјСЏ РёСЃРїРѕР»РЅРµРЅРёСЏ РЅР° РєР»СЋС‡Рµ "CtrlAltShiftF12" = ??? (Lua); 2.3uS (LuaJIT);
   local t={}
 
   ExpandKey = function (key)
@@ -318,14 +342,14 @@ local ExpandKey do -- измеренное время исполнения на ключе "CtrlAltShiftF12" = ?
 end
 
 local function AddRegularMacro (srctable, FileName)
-  local macro = {}
-  if type(srctable)=="table" and type(srctable.area)=="string" then
-    macro.area = srctable.area
-    macro.key = type(srctable.key)=="string" and srctable.key or "none"
-    if not macro.key:find("%S") then macro.key = "none" end
-  else
+  if not (type(srctable)=="table" and type(srctable.area)=="string") then
     return
   end
+
+  local macro = {}
+  macro.area = srctable.area
+  macro.key = type(srctable.key)=="string" and srctable.key or "none"
+  if not macro.key:find("%S") then macro.key = "none" end
 
   local keyregex, ok = macro.key:match("^/(.+)/$"), nil
   if keyregex then
@@ -348,7 +372,7 @@ local function AddRegularMacro (srctable, FileName)
       if f then
         macro.action = f
       else
-        if FileName then ErrMsg(msg, isMoonScript and "MoonScript") end
+        if FileName then ErrMsg(FileName..":\n"..msg, isMoonScript and "MoonScript"); end
         return
       end
     end
@@ -408,6 +432,8 @@ local function AddRegularMacro (srctable, FileName)
       macro.language = srctable.language
     end
 
+    macro.data = {}
+    for k,v in pairs(srctable) do macro.data[k]=v; end
     macro.index = #LoadedMacros+1
     LoadedMacros[macro.index] = macro
     return macro
@@ -551,6 +577,16 @@ local function AddPanelModule (srctable, FileName)
   end
 end
 
+local function AddContentColumns (srctable, FileName)
+  if    type(srctable) == "table"
+    and type(srctable.GetContentFields) == "function"
+    and type(srctable.GetContentData) == "function"
+  then
+     if type(srctable.filemask)~="string" then srctable.filemask=nil; end
+     table.insert(ContentColumns, srctable)
+  end
+end
+
 local function EnumMacros (strArea, resetEnum)
   local area = strArea:lower()
   if Areas[area] then
@@ -642,8 +678,12 @@ local function LoadMacros (unload, paths)
   LoadingInProgress = true
 
   if LoadMacrosDone then
-    local ok, msg = pcall(export_ExitFAR, true)
-    if not ok then ErrMsg(msg) end
+    local ok, msg = xpcall(function() return export_ExitFAR(true) end,
+                           function(msg) return debug.traceback(msg,2) end)
+    if not ok then
+      msg = string.gsub(msg, "\t", "   ")
+      ErrMsg(msg)
+    end
     LoadMacrosDone = false
   end
 
@@ -652,6 +692,8 @@ local function LoadMacros (unload, paths)
   export.ProcessEditorInput = nil
   export.ProcessViewerEvent = nil
   export.ProcessConsoleInput = nil
+  export.GetContentFields = nil
+  export.GetContentData = nil
 
   local allAreas = band(MacroCallFar(MCODE_F_GETOPTIONS),0x3) == 0
   local numerrors=0
@@ -663,6 +705,7 @@ local function LoadMacros (unload, paths)
   AddedPrefixes = { [1]="" }
   IdSet = {}
   LoadedPanelModules = {}
+  ContentColumns = {}
   if Shared.panelsort then Shared.panelsort.DeleteSortModes() end
 
   local AreaNames = allAreas and AllAreaNames or SomeAreaNames
@@ -708,8 +751,8 @@ local function LoadMacros (unload, paths)
 
     local moonscript = require "moonscript"
 
-    local FuncList1 = {"Macro",  "Event",  "MenuItem",  "CommandLine",  "PanelModule"}
-    local FuncList2 = {"NoMacro","NoEvent","NoMenuItem","NoCommandLine","NoPanelModule"}
+    local FuncList1 = {"Macro",  "Event",  "MenuItem",  "CommandLine",  "PanelModule",  "ContentColumns"}
+    local FuncList2 = {"NoMacro","NoEvent","NoMenuItem","NoCommandLine","NoPanelModule","NoContentColumns"}
 
     local function LoadRegularFile (FindData, FullPath, macroinit)
       if FindData.FileAttributes:find("d") then return end
@@ -724,11 +767,12 @@ local function LoadMacros (unload, paths)
         return
       end
       local env = {
-        Macro       = function(t) return not not AddRegularMacro(t,FullPath) end;
-        Event       = function(t) return not not AddEvent(t,FullPath) end;
-        MenuItem    = function(t) return AddMenuItem(t,FullPath) end;
-        CommandLine = function(t) return AddPrefixes(t,FullPath) end;
-        PanelModule = function(t) return AddPanelModule(t,FullPath) end;
+        Macro          = function(t) return not not AddRegularMacro(t,FullPath) end;
+        Event          = function(t) return not not AddEvent(t,FullPath) end;
+        MenuItem       = function(t) return AddMenuItem(t,FullPath) end;
+        CommandLine    = function(t) return AddPrefixes(t,FullPath) end;
+        PanelModule    = function(t) return AddPanelModule(t,FullPath) end;
+        ContentColumns = function(t) return AddContentColumns(t,FullPath) end;
       }
       for _,name in ipairs(FuncList2) do env[name]=DummyFunc; end
       setmetatable(env,gmeta)
@@ -739,7 +783,7 @@ local function LoadMacros (unload, paths)
         for _,name in ipairs(FuncList2) do env[name]=nil; end
       else
         numerrors=numerrors+1
-        msg = msg:gsub("\n\t","\n   ")
+        msg = string.gsub(msg,"\n\t","\n   ")
         ErrMsgLoad(msg,FullPath,isMoonScript,"run")
       end
     end
@@ -812,6 +856,10 @@ local function LoadMacros (unload, paths)
     export.ProcessEditorInput = Events.editorinput[1] and export_ProcessEditorInput
     export.ProcessViewerEvent = Events.viewerevent[1] and export_ProcessViewerEvent
     export.ProcessConsoleInput = Events.consoleinput[1] and export_ProcessConsoleInput
+    if ContentColumns[1] then
+      export.GetContentFields = export_GetContentFields
+      export.GetContentData   = export_GetContentData
+    end
 
     LoadMacrosDone = true
   end
@@ -937,7 +985,7 @@ local function GetMacro (argMode, argKey, argUseCommon, argCheckOnly)
   if LoadingInProgress then return end
 
   local area = GetAreaName(argMode)
-  if not area then return end -- трюк используется в CheckForEscSilent() в Фаре
+  if not area then return end -- С‚СЂСЋРє РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ CheckForEscSilent() РІ Р¤Р°СЂРµ
 
   local key = argKey:lower()
   do
@@ -1014,7 +1062,7 @@ local function GetMacro (argMode, argKey, argUseCommon, argCheckOnly)
   local nummacros = 0
   for m,p in pairs(Collector) do
     if m.condition then
-      local pr = m.condition(argKey) -- unprotected call
+      local pr = m.condition(argKey, m.data) -- unprotected call
       if pr then
         if type(pr)=="number" then
           CInfo[p] = pr>100 and 100 or pr<0 and 0 or pr
@@ -1074,7 +1122,7 @@ local function ProcessRecordedMacro (Mode, Key, code, flags, description)
 
   local keys,numkeys = ExpandKey(Key)
 
-  if code == "" then -- удаление
+  if code == "" then -- СѓРґР°Р»РµРЅРёРµ
     for i=1,numkeys do
       local k = keys[i]
       local m = Areas[area][k] and Areas[area][k].recorded or
@@ -1148,7 +1196,7 @@ local function RunStartMacro()
         if not m.disabled and m.flags and band(m.flags,0x8)~=0 and not m.autostartdone then
           m.autostartdone=true
           if MacroCallFar(MCODE_F_CHECKALL, mode, m.flags) then
-            if not m.condition or m.condition() then
+            if not m.condition or m.condition(nil, m.data) then
               Shared.keymacro.PostNewMacro(m, m.flags, nil, true)
             end
           end
