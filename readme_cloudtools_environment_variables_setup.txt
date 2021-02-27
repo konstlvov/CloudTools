@@ -1,4 +1,4 @@
-В User environment variables надо добавить
+В USER (не SYSTEM) environment variables надо добавить:
 
-CLOUDTOOLS=C:\Users\%USERNAME%\CloudTools
-PATH=%CLOUDTOOLS%\TOOLS
+%CT%=%USERPROFILE%\CloudTools (или куда скачан репозиторий)
+PATH=%CT%\TOOLS
