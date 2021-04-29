@@ -65,8 +65,8 @@ vnoremap p "_dP
 " старая версия - все равно может прыгать по тексту и сбивать позицию
 nnoremap * *N
 
-" выключить подсветку: пока повешу на Ctrl-F8, а вообще хочу на Ctrl-8
-nnoremap <C-F8> :noh<CR>
+" выключить подсветку
+nnoremap ,z :noh<CR>
 
 " в визуальном режиме по команде * подсвечивать выделение
 vnoremap * y :execute ":let @/=@\""<CR> :execute "set hlsearch"<CR>
