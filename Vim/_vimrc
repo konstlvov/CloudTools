@@ -179,6 +179,13 @@ function! ToggleLineComment() range
 		else
 			let repl = '--' . repl
 		endif
+	elseif ext == 'cmd'
+			\|| ext == 'bat'
+		if match(src, 'rem ') == 0
+			let repl = substitute(repl, '^rem ', '', 'g')
+		else
+			let repl = 'rem ' . repl
+		endif
 	elseif ext == 'vim'
 				\|| filenameWithExt == '_vimrc'
 				\|| filenameWithExt == '.vimrc'
