@@ -4,7 +4,7 @@ F2:  Explorer
      @explorer.exe /select, "!\!.!"
 :    grep search
      grep -ir --include=!?$GrepInclude$Только в файлах?! --context=!?$GrepContext$Строк контекста?! --line-number !?$GrepHist$Искать?! * > %TEMP%\_grep_search_results.txt
-     "%DROPBOX%\Vim\vim80\gvim.exe" --remote-tab-silent "%TEMP%\_grep_search_results.txt"
+     "%CTX%\Vim\vim82\gvim.exe" --remote-tab-silent "%TEMP%\_grep_search_results.txt"
 :    Сравнение файлов
 {
 :    Сравнить файл с таким же в другой панели
@@ -63,31 +63,11 @@ G:   Git
      wscript //D //X "!\!.!"
 :    Generate png from dot
      "C:\Program Files (x86)\Graphviz2.38\bin\dot.exe" "!\!.!" -Tpng > !.png
-:    Просмотр с помощью Eif_File
-     start /B java -jar \\SRV\utils\Upgrade\Tools\Eif_File.jar "!\!.!"
 :    Exec &python script
      python.exe "!\!.!"
-:    Загрузить eif-ки
-     del /f /q ..\Temp\EifImport\*.eif
-     for %I in (!&~) do (copy %I ..\Temp\EifImport)
-     cd ..
-     .\loadeif_from_temp_eifimport.bat
 :    Открыть в EditPadLite7.exe (для больших логов)
-     C:\Users\lvov_k\CloudTools\TOOLS\EditPadLite7.exe !&
-:    Sort eif
-     eif /Parse /Sort "!\!.!"
-:    Выкусить Response
-     java -jar "D:\models\RussiaRet\trunk_clean\UTILS\ABR3CardResponseExtractor\dist\ABR3CardResponseExtractor.jar" !& UseXmlNS=false
-:    Выкусить Компасовые ответы
-     java -jar "D:\models\RussiaRet\trunk_clean\UTILS\ABRCompassResponseExtractor\dist\ABRCompassResponseExtractor.jar" !&
+     %ct%\TOOLS\EditPadLite7.exe !&
 :    Open with hiew
      hiew32demo.exe !&
-:    RTSDebugViewer
-     RTSDebugViewer.exe
 :    Execute Haskell .hs file
      runhaskell.exe !&
-:    Добавить каталог в RussiaRetUpgrades
-     svn mkdir https://bsssource.abr.loc/svn/RussiaRetUpgrades/!& -m "Added upgrade !&"
-     svn checkout https://bsssource.abr.loc/svn/RussiaRetUpgrades/!& .\!&
-:    Start notepad
-     notepad.exe !&
