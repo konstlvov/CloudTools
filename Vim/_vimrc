@@ -522,6 +522,19 @@ function! RotateWrap()
     endif
 endfunction
 
+"по Ctrl-F2 инвертировать значение опции 'list'
+nnoremap <C-F2> :execute RotateList()<CR>
+function! RotateList()
+    let list_status = &list
+    if list_status == 0
+        echo "set list"
+        return ":set list"
+    else
+        echo "set nolist"
+        return ":set nolist"
+    endif
+endfunction
+
 " по аккорду <C-Y> заменять слово под курсором на содержимое регистра "
 " (при этом содержание самого регистра " не изменяется)
 nnoremap <S-Y> "_diwPb
