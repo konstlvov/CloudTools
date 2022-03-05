@@ -375,11 +375,15 @@ function! MakeValueHolders() range
 	let src = getline(i)
 	let repl = getline(i)
 	if match(src, 'S ') == 0
-      let repl = 'private ValueHolder<String> ' . strpart(src, 2, strlen(src) - 2) . ' = ValueHolder.STRING_INSTANCE;'
+      let repl = 'private ValueHolder<String> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.STRING_INSTANCE;'
     elseif match(src, 'L ') == 0
-      let repl = 'private ValueHolder<Long> ' . strpart(src, 2, strlen(src) - 2) . ' = ValueHolder.LONG_INSTANCE;'
+      let repl = 'private ValueHolder<Long> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.LONG_INSTANCE;'
     elseif match(src, 'BD ') == 0
-      let repl = 'private ValueHolder<BigDecimal> ' . strpart(src, 3, strlen(src) - 3) . ' = ValueHolder.BIG_DECIMAL_INSTANCE;'
+      let repl = 'private ValueHolder<BigDecimal> ' . strpart(src, 3, strlen(src)) . ' = ValueHolder.BIG_DECIMAL_INSTANCE;'
+    elseif match(src, 'B ') == 0
+      let repl = 'private ValueHolder<Boolean> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.BOOLEAN_INSTANCE;'
+    elseif match(src, 'D ') == 0
+      let repl = 'private ValueHolder<Date> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.DATE_INSTANCE;'
 	endif
     call setline(i, repl)
   endfor                               
