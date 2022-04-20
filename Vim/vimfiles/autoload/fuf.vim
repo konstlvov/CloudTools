@@ -160,7 +160,7 @@ function fuf#openFile(path, mode, reuse)
           \   s:OPEN_TYPE_SPLIT   : 'split '  ,
           \   s:OPEN_TYPE_VSPLIT  : 'vsplit ' ,
           \   s:OPEN_TYPE_TAB     : 'tabedit ',
-          \ }[a:mode] . ReplaceBackslashesWithSlashes(fnameescape(fnamemodify(a:path, ':~:.')))
+          \ }[a:mode] . fnameescape(fnamemodify(a:path, ':~:.'))
   endif
 endfunction
 
