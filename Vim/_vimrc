@@ -431,6 +431,16 @@ function! MakeSetters() range
   endfor                               
 endfunction
 
+function! MakeResponse() range
+  for i in range(a:firstline, a:lastline)
+	let src = getline(i)
+	let repl = substitute(src, '&lt;\|&gt;\|&quot;\|&amp;', '', 'g')
+	let repl = substitute(repl, '<', '\&lt;', 'g')
+	let repl = substitute(repl, '>', '\&gt;', 'g')
+    call setline(i, repl)
+  endfor                               
+endfunction
+
 vnoremap ,q :call Sql2Bls()<CR>
 vnoremap ,Q :call Bls2Sql()<CR>
 vnoremap ,d :call Strings2Delphi()<CR>
