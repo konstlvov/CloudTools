@@ -453,7 +453,7 @@ function! MakeLtGt() range
     call setline(i, repl)
   endfor                               
   for i in range(a:firstline, a:lastline)
-		.-1join!
+		.join!
   endfor
 endfunction
 
