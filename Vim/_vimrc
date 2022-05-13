@@ -441,6 +441,32 @@ function! MakeResponse() range
   endfor                               
 endfunction
 
+function! MakeLtGt() range
+  for i in range(a:firstline, a:lastline)
+	let repl = getline(i)
+	let repl = substitute(repl, '&', '\&amp;', 'g')
+	let repl = substitute(repl, '<', '\&lt;', 'g')
+	let repl = substitute(repl, '<', '\&lt;', 'g')
+	let repl = substitute(repl, '>', '\&gt;', 'g')
+	let repl = substitute(repl, '^\s\+', '', 'g')
+	let repl = substitute(repl, '\s\+$', '', 'g')
+    call setline(i, repl)
+  endfor                               
+  for i in range(a:firstline, a:lastline)
+		.-1join!
+  endfor
+endfunction
+
+function! UnmakeLtGt() range
+  for i in range(a:firstline, a:lastline)
+	let repl = getline(i)
+	let repl = substitute(repl, '&lt;', '<', 'g')
+	let repl = substitute(repl, '&gt;', '>', 'g')
+	let repl = substitute(repl, '&amp;amp;', '\&amp;', 'g')
+    call setline(i, repl)
+  endfor
+endfunction
+
 vnoremap ,q :call Sql2Bls()<CR>
 vnoremap ,Q :call Bls2Sql()<CR>
 vnoremap ,d :call Strings2Delphi()<CR>
