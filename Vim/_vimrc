@@ -446,7 +446,7 @@ function! MakeLtGt() range
 	let repl = getline(i)
 	let repl = substitute(repl, '&', '\&amp;', 'g')
 	let repl = substitute(repl, '<', '\&lt;', 'g')
-	let repl = substitute(repl, '<', '\&lt;', 'g')
+	let repl = substitute(repl, '\s\+\/>', '\/>', 'g')
 	let repl = substitute(repl, '>', '\&gt;', 'g')
 	let repl = substitute(repl, '^\s\+', '', 'g')
 	let repl = substitute(repl, '\s\+$', '', 'g')
@@ -463,6 +463,7 @@ function! UnmakeLtGt() range
 	let repl = substitute(repl, '&lt;', '<', 'g')
 	let repl = substitute(repl, '&gt;', '>', 'g')
 	let repl = substitute(repl, '&amp;amp;', '\&amp;', 'g')
+	let repl = substitute(repl, '&amp;quot;', '\&quot;', 'g')
     call setline(i, repl)
   endfor
 endfunction
