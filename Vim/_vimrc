@@ -754,5 +754,17 @@ function! Mrufiles()
   normal! gg0"aP
 endfunction
 
-" execute "cd C:\\BSRetail\\SOURCE"
+function! MakeSession()
+  exe "mksession! ._Session.vim"
+endfunction
+
+function! LoadSession()
+	exe "source ._Session.vim"
+endfunction
+
+au VimEnter * nested :call LoadSession()
+au VimLeave * :call MakeSession()
+
+" on Windows it's better to specify working dir in shortcut properties
+" execute "cd C:\\Users\\lvov_k\\work"
 set titlestring=%F%m%y%{&fileencoding}
