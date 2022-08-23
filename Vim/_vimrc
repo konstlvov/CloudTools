@@ -1,6 +1,6 @@
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
+source $VIM/mswin.vim
 behave mswin
 
 " klvov: мои настройки
