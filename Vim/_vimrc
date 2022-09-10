@@ -81,15 +81,15 @@ nnoremap <A-0> :TlistToggle<CR>
 nnoremap <M-1> ciw
 
 " по Alt-t открыть новую вкладку
-nnoremap <M-t> :tabnew<CR>
+" nnoremap <M-t> :tabnew<CR>
 
 "показывать только имена файлов в заголовках вкладок
 set guitablabel=%t
 
 nnoremap ,t :tabnew<CR>
-nnoremap ,<Tab> :execute 'silent! tabmove +1'<CR>
-nnoremap <Leader><Tab> :execute 'silent! tabmove -1'<CR>
-nnoremap <silent> ,l :tabnext<CR>
+nnoremap ,l :execute 'silent! tabmove +1'<CR>
+nnoremap ,j :execute 'silent! tabmove -1'<CR>
+nnoremap <silent> ,. :tabnext<CR>
 nnoremap <silent> ,m :tabprevious<CR>
 
 "BEGIN БСС Северо-Запад SECTION
