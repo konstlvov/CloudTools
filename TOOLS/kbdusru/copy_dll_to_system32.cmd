@@ -1,0 +1,1 @@
+copy /Y /B kbdusru_undead.dll C:\Windows\System32
