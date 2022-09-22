@@ -78,41 +78,11 @@ if has("gui")
   cnoremap <M-Space> <C-C>:simalt ~<CR>
 endif
 
-" CTRL-A is Select all (klvov: disabled)
-"noremap <C-A> gggH<C-O>G
-"inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-"cnoremap <C-A> <C-C>gggH<C-O>G
-"onoremap <C-A> <C-C>gggH<C-O>G
-"snoremap <C-A> <C-C>gggH<C-O>G
-"xnoremap <C-A> <C-C>ggVG
-
-" klvov: CTRL-Tab is Next tab
-nnoremap  <C-Tab> :tabnext<CR>
-inoremap <C-Tab> :tabnext<CR>
-cnoremap <C-Tab> :tabnext<CR>
-onoremap <C-Tab> :tabnext<CR>
-
-"klvov: CTRL-Shift-Tab is Previous tab
-nnoremap  <C-S-Tab> :tabprevious<CR>
-inoremap <C-S-Tab> :tabprevious<CR>
-cnoremap <C-S-Tab> :tabprevious<CR>
-onoremap <C-S-Tab> :tabprevious<CR>
-
-" use Alt-Left and Alt-Right to move current tab to left or right
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
-
 " klvov: Tab is Next window
 nnoremap <Tab>       <C-W>w
-"inoremap <C-Tab> <C-O><C-W>w<C-W>_
-"cnoremap <C-Tab> <C-C><C-W>w<C-W>_
-"onoremap <C-Tab> <C-C><C-W>w<C-W>_
 "
 "klvov: Shift-Tab is Previous window
 nnoremap  <S-Tab>      <C-W>W
-"inoremap <C-S-Tab> <C-O><C-W>W<C-W>_
-"cnoremap <C-S-Tab> <C-C><C-W>W<C-W>_
-"onoremap <C-S-Tab> <C-C><C-W>W<C-W>_
 
 " CTRL-F4 is :tabclose
 nnoremap <C-F4> :tabclose<CR>

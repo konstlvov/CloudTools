@@ -228,25 +228,9 @@ iab pbd q.ParamByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><L
 iab sm vShowMessage();<Left><Left>
 iab mbe MessageBox(ErrMsg, 'Ошибка', mbOK or mbIconHand);
 iab ffc Form.FindComponent('')<Left><Left>
-" iab ff Form.Fields.
 iab ffmt Fmt.Format('')<Left><Left>
 iab fdoc {**<CR><DESCRIBE FUNCTION HERE><CR>@author k.lvov<CR>@param <DESCRIBE PARAM HERE><CR>@return <DESCRIBE RETURN VALUE HERE><CR>*}<Left><Left>
 iab cst try raise('call stack'); except vShowMessage(Exception.CallStack); end;<Esc>^
-iab jsfunc function(){}<Left>
-
-iab tpltest 
-\<Home>procedure Test_<TESTNAME>(path : string);
-\<CR><Home>begin
-\<CR><Home>  TestHeader('Test_<TESTNAME>', path);
-\<CR><Home>  CheckEquals('expected', 'actual', '');
-\<CR><Home>end;<Home><Esc>
-
-iab tplsuite 
-\<Home>procedure TestSuite_<SUITENAME>(path: string);
-\<CR><Home>begin
-\<CR><Home>  TestSuiteHeader('TestSuite_<SUITENAME>', path);
-\<CR><Home>  //try TestExample1(path); except TestCatchException; end;
-\<CR><Home>end;<Home><Esc>
 
 iab getq 
 \<Home>try
@@ -601,8 +585,6 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 " уширить окно со списком тэгов, чтобы помещались длинные имена
 let Tlist_WinWidth = 50
 
-" <F12> - buffer explorer plugin
-" map <F12> :BufExplorer<CR>
 " <F12> - Fuzzy finder plugin
 map <F12> :FufBuffer<CR>
 " <C-F12> - Fuzzy finder plugin (search for tags)
