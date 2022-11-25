@@ -39,8 +39,8 @@ set textwidth=100 " у нас в БСС решили пока так
 " минимальная высота окна пусть будет 0 (по умолчанию - 1)
 set winminheight=0
 " установить шрифт Consolas
-set guifont=consolas:h12:cRUSSIAN
-set printfont=consolas:h12:cRUSSIAN
+set guifont=consolas:h10:cRUSSIAN
+set printfont=consolas:h10:cRUSSIAN
 " настраиваю для работы с русскими словами (чтобы w, b, * понимали
 " русские слова)
 set iskeyword=@,48-57,_,192-255
@@ -74,25 +74,15 @@ vnoremap * y :execute ":let @/=@\""<CR> :execute "set hlsearch"<CR>
 " переключать на другой буфер, даже если в текущем буфере есть несохраненные изменения
 set hidden
 
-" по Alt+0 показать окно навигации по функциям
-nnoremap <A-0> :TlistToggle<CR>
-
-" по Alt-1 редактировать текущее слово
-nnoremap <M-1> ciw
-
-" по Alt-t открыть новую вкладку
-" nnoremap <M-t> :tabnew<CR>
-
 "показывать только имена файлов в заголовках вкладок
 set guitablabel=%t
 
+" управление вкладками
 nnoremap ,t :tabnew<CR>
 nnoremap ,l :execute 'silent! tabmove +1'<CR>
 nnoremap ,j :execute 'silent! tabmove -1'<CR>
 nnoremap <silent> ,. :tabnext<CR>
 nnoremap <silent> ,m :tabprevious<CR>
-
-"BEGIN БСС Северо-Запад SECTION
 
 function! LeaveBaseName() range
   pyfile $VIM\vimfiles\python\LeaveBaseName.py
@@ -101,43 +91,6 @@ endfunction
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
-
-function! SaveRunCommand()
-  execute "silent update"
-  " Три уровня закавычивания: одинарная кавычка - аргумент execute,
-  " двойная кавычка - аргумент system, и \" - аргумент cmd.exe /c
-  " Upd. Три уровня надо для Vim 7.3 - следующая строка предназначена для Vim 7.3
-  " execute 'echo system("\"cd ..\\USER && nmake\"")'
-  " Upd. Для Vim 7.4 надо два уровня - следующая строка предназначена для Vim 7.4
-  " execute 'echo system("cd ..\\USER && nmake")'
-  execute 'echo system("cmd /c build.cmd | iconv -f CP1251 -t UTF-8")'
-endfunction
-nnoremap <F9> :call SaveRunCommand()<CR>
-inoremap <F9> <Esc>:call SaveRunCommand()<CR>
-
-function! NMakeMake()
-  execute "silent update"
-  execute 'echo system("\"cd ..\\USER && nmake make\"")'
-endfunction
-
-function! NMakeFull()
-  execute "silent update"
-  execute 'echo system("\"cd ..\\USER && nmake full\"")'
-endfunction
-
-function! MakeTags()
-  execute "silent update"
-  execute "echo system('ctags --recurse=yes --language-force=Pascal ABS Admin Crypto Operations Packages Phone Plugins Print rts Schemes SN20 SQL test upgrade Utils')"
-endfunction
-
-function! NMakeComplete()
-  execute "silent update"
-  " works, but blocks Vim window until build process finishes
-  "execute 'echo system("\"cd ..\\USER && nmake complete\"")'
-  " starts build process in separate window
-  execute '!start cmd /c "cd ..\\USER && nmake complete && cd ..\\SOURCE && ctags --recurse=yes --language-force=Pascal ABS Admin Crypto Operations Packages Phone Plugins Print rts Schemes SN20 SQL test upgrade Utils && pause" '
-endfunction
-nnoremap <C-F9> :call NMakeComplete()<CR>
 
 function! ReplaceBackslashesWithSlashes() range
   for i in range(a:firstline, a:lastline)
@@ -212,42 +165,6 @@ vnoremap ,, :call ToggleLineComment()<CR>
 
 let pascal_delphi=1
 
-iab qfi q.FieldByName('').AsInteger<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab qff q.FieldByName('').AsFloat<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab qfs q.FieldByName('').AsString<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab qfd q.FieldByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab ffi Form.Fields.FieldByName('').AsInteger<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab fff Form.Fields.FieldByName('').AsFloat<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab ffs Form.Fields.FieldByName('').AsString<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab ffd Form.Fields.FieldByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab ift if then<CR>begin<Left><Left><Left><Left><Left><Backspace><End><CR>end;<Left><Left><Left><Left><Backspace>
-iab pbs q.ParamByName('').AsString<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab pbi q.ParamByName('').AsInteger<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab pbf q.ParamByName('').AsFloat<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab pbd q.ParamByName('').AsDateTime<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-iab sm vShowMessage();<Left><Left>
-iab mbe MessageBox(ErrMsg, 'Ошибка', mbOK or mbIconHand);
-iab ffc Form.FindComponent('')<Left><Left>
-iab ffmt Fmt.Format('')<Left><Left>
-iab fdoc {**<CR><DESCRIBE FUNCTION HERE><CR>@author k.lvov<CR>@param <DESCRIBE PARAM HERE><CR>@return <DESCRIBE RETURN VALUE HERE><CR>*}<Left><Left>
-iab cst try raise('call stack'); except vShowMessage(Exception.CallStack); end;<Esc>^
-
-iab getq 
-\<Home>try
-\<CR><Home>  q := ma_GetQuery_v0('select * from MyTable');
-\<CR><Home>  while q.Next do
-\<CR><Home>  begin
-\<CR><Home>  end;
-\<CR><Home>finally
-\<CR><Home>  FreeObject(q);
-\<CR><Home>end;<Home><Esc>
-
-iab tfe 
-\<Home>try
-\<CR><Home>finally
-\<CR><Home>  //FreeObject(q);
-\<CR><Home>end;<Home><Esc>
-
 function! Sql2Bls() range
   for i in range(a:firstline, a:lastline)
     " заменить одиночный апостроф на двойной
@@ -258,25 +175,6 @@ function! Sql2Bls() range
       let repl = "+ '" . src . "';"
     else
       let repl = "+ '" . src . " '"
-    endif
-    call setline(i, repl)
-  endfor
-endfunction
-
-function! XttMake() range
-  for i in range(a:firstline, a:lastline)
-    let src = getline(i)
-    call setline(i, '<'.src.'>[['.src.']]</'.src.'>')
-  endfor
-endfunction
-
-function! AuthMake() range
-  for i in range(a:firstline, a:lastline)
-    let src = getline(i)
-    if i == a:firstline
-      let repl = '<tr><td class="aut-h-l">CAPTION</td><td><xsl:value-of select="'.src.'" /></td></tr>'
-    else
-      let repl = '<tr><td class="aut-h">CAPTION</td><td><xsl:value-of select="'.src.'" /></td></tr>'
     endif
     call setline(i, repl)
   endfor
@@ -360,67 +258,6 @@ function! ToUnderscoreCase() range
   endfor                               
 endfunction
 
-function! MakeValueHolders() range
-  for i in range(a:firstline, a:lastline)
-	let src = getline(i)
-	let repl = getline(i)
-	if match(src, 'S ') == 0
-      let repl = 'private ValueHolder<String> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.STRING_INSTANCE;'
-    elseif match(src, 'L ') == 0
-      let repl = 'private ValueHolder<Long> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.LONG_INSTANCE;'
-    elseif match(src, 'BD ') == 0
-      let repl = 'private ValueHolder<BigDecimal> ' . strpart(src, 3, strlen(src)) . ' = ValueHolder.BIG_DECIMAL_INSTANCE;'
-    elseif match(src, 'B ') == 0
-      let repl = 'private ValueHolder<Boolean> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.BOOLEAN_INSTANCE;'
-    elseif match(src, 'D ') == 0
-      let repl = 'private ValueHolder<Date> ' . strpart(src, 2, strlen(src)) . ' = ValueHolder.DATE_INSTANCE;'
-	endif
-    call setline(i, repl)
-  endfor                               
-endfunction
-
-function! MakeGetters() range
-  for i in range(a:firstline, a:lastline)
-	let src = getline(i)
-	let repl = getline(i)
-	if match(src, 'S ') == 0
-	  let fieldname = strpart(src, 2, strlen(src) - 2)
-	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
-      let repl = 'public String get' . fieldnameCap . '() { return ' . fieldname . '.getValue(); }'
-    elseif match(src, 'L ') == 0
-	  let fieldname = strpart(src, 2, strlen(src) - 2)
-	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
-      let repl = 'public Long get' . fieldnameCap . '() { return ' . fieldname . '.getValue(); }'
-    elseif match(src, 'BD ') == 0
-	  let fieldname = strpart(src, 3, strlen(src) - 3)
-	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
-      let repl = 'public BigDecimal get' . fieldnameCap . '() { return ' . fieldname . '.getValue(); }'
-	endif
-    call setline(i, repl)
-  endfor                               
-endfunction
-
-function! MakeSetters() range
-  for i in range(a:firstline, a:lastline)
-	let src = getline(i)
-	let repl = getline(i)
-	if match(src, 'S ') == 0
-	  let fieldname = strpart(src, 2, strlen(src) - 2)
-	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
-      let repl = 'public void set' . fieldnameCap . '(String ' . fieldname . ') { this.' . fieldname . ' = new ValueHolder<>(' . fieldname . '); }'
-    elseif match(src, 'L ') == 0
-	  let fieldname = strpart(src, 2, strlen(src) - 2)
-	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
-      let repl = 'public void set' . fieldnameCap . '(Long ' . fieldname . ') { this.' . fieldname . ' = new ValueHolder<>(' . fieldname . '); }'
-    elseif match(src, 'BD ') == 0
-	  let fieldname = strpart(src, 3, strlen(src) - 3)
-	  let fieldnameCap = toupper(strpart(fieldname, 0, 1)) . strpart(fieldname, 1, strlen(fieldname) - 1)
-      let repl = 'public void set' . fieldnameCap . '(BigDecimal ' . fieldname . ') { this.' . fieldname . ' = new ValueHolder<>(' . fieldname . '); }'
-	endif
-    call setline(i, repl)
-  endfor                               
-endfunction
-
 function! MakeResponse() range
   for i in range(a:firstline, a:lastline)
 	let src = getline(i)
@@ -478,24 +315,6 @@ function! Exup()
 endfunction
 nnoremap <M-e> :call Exup()<CR>
 
-" поднимает диалог коммита файлов в svn (сейчас на корне модели)
-function! SvnCommit()
-  execute 'silent update'
-  execute 'silent !start cmd.exe /c C:\\BSRetail\\svn_commit_all.cmd'
-  " на текущем файле:
-  " execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:commit /notempfile /path:'.shellescape(expand('%:p'), 1)
-  " на текущей директории (?) - не разобрался пока как сделать
-  " execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:commit /notempfile /path:.'
-endfunction
-nnoremap <M-c> :call SvnCommit()<CR>
-
-" вызывает svn update на корне модели
-function! SvnUpdate()
-  execute 'silent update'
-  execute 'silent !start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:update /notempfile /path:..'
-endfunction
-nnoremap <M-u> :call SvnUpdate()<CR>
-
 " Исполнить python'овский скрипт
 function! ExecPython()
   execute 'silent update'
@@ -528,17 +347,8 @@ function! ExecHaskell()
 endfunction
 nnoremap <M-h> :call ExecHaskell()<CR>
 
-function! OpenFileInSublime()
-  execute 'silent update'
-  execute 'silent !start D:\SublimeText2\sublime_text.exe '.shellescape(expand('%:p'), 1).':'.getpos('.')[1].':'.getpos('.')[2]
-endfunction
-nnoremap <M-s> :call OpenFileInSublime()<CR>
-
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
+" Alt-y копирует полный путь к текущему файлу в буфер
 nnoremap <M-y> :let @*=expand("%:p")<CR>
-
-"END БСС Северо-Запад SECTION
 
 "по F2 инвертировать значение опции 'wrap'
 nnoremap <F2> :execute RotateWrap()<CR>
@@ -566,14 +376,6 @@ function! RotateList()
     endif
 endfunction
 
-" по аккорду <C-Y> заменять слово под курсором на содержимое регистра "
-" (при этом содержание самого регистра " не изменяется)
-nnoremap <S-Y> "_diwPb
-nnoremap <C-Y> yiw
-
-" по Alt-5 изменять хвост текущего слова
-nnoremap <M-5> cw
-
 " закрывать окно плагина TagList после выбота тэга
 let Tlist_Close_On_Select = 1
 " не показывать тэги для неактивных буферов
@@ -593,8 +395,6 @@ map <C-F12> :FufCoverageFile<CR>
 " <F8> File encoding for open
 " ucs-2le - MS Windows unicode encoding
 map <F8>    :execute RotateEnc()<CR>
-vmap <F8>    <C-C><F8>
-imap <F8>    <C-O><F8>
 function! RotateEnc()
 	if !exists("b:encindex")
 	  let b:encindex = 0
@@ -615,50 +415,7 @@ function! RotateEnc()
   endwhile
 endfunction
 
-set diffexpr=MyDiff()
-function! MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      let cmd = '""' . $VIMRUNTIME . '\diff"'
-      let eq = '"'
-    else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
-
 let javaScript_fold = 1
-
-" Protect large files from sourcing and other overhead.
-" Files become read only
-if !exists("my_auto_commands_loaded")
-  let my_auto_commands_loaded = 1
-  " Large files are > 10M
-  " Set options:
-  " eventignore+=FileType (no syntax highlighting etc
-  " assumes FileType always on)
-  " noswapfile (save copy of file)
-  " bufhidden=unload (save memory when other file is viewed)
-  " buftype=nowritefile (is read-only)
-  " undolevels=-1 (no undo possible)
-  let g:LargeFile = 1024 * 1024 * 10
-  augroup LargeFile
-    autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
-    augroup END
-  endif
 
 "unfortunately, need to specify colorscheme. Just writing "highlight Comment guifg=DarkGrey" does not work
 colorscheme klvov
@@ -683,65 +440,6 @@ function! ClearAllButMatches() range
     let @c = old_c
 endfunction
 
-" для редактирования Upgrade(10).eif
-" включается командой :set stl=%!MyStatusLine()
-function! MyStatusLine()
-  let cp = col(".")
-  let currentLine = getline(".")
-  " let len = strlen(currentLine)
-  let i = 0
-  let sepsBeforeCursorCount = 0
-  while i < cp - 1
-    let symbol = currentLine[i]
-    if symbol == "|"
-      let sepsBeforeCursorCount += 1
-    endif
-    let i += 1
-  endwhile
-  if sepsBeforeCursorCount == 0
-    return "Autokey"
-  elseif sepsBeforeCursorCount == 1
-    return "BackupData"
-  elseif sepsBeforeCursorCount == 2
-    return "Description"
-  elseif sepsBeforeCursorCount == 3
-    return "ImportData"
-  elseif sepsBeforeCursorCount == 4
-    return "ImportStructure"
-  elseif sepsBeforeCursorCount == 5
-    return "IndexFields"
-  elseif sepsBeforeCursorCount == 6
-    return "NtClearRoot"
-  elseif sepsBeforeCursorCount == 7
-    return "OperationResult"
-  elseif sepsBeforeCursorCount == 8
-    return "ParentFor"
-  elseif sepsBeforeCursorCount == 9
-    return "ReCreate"
-  elseif sepsBeforeCursorCount == 10
-    return "StructureName"
-  elseif sepsBeforeCursorCount == 11
-    return "StructureType"
-  elseif sepsBeforeCursorCount == 12
-    return "SubstFields"
-  elseif sepsBeforeCursorCount == 13
-    return "UpdateFound"
-  elseif sepsBeforeCursorCount == 14
-    return "UseTransit"
-  endif
-endfunction
-
-" заменяет содержимое текущего буфера на список недавно использованных файлов
-" затем их можно открывать, в режиме визуального выделения выделив полный путь к файлу и как обычно
-" по Ctrl-W gf
-function! Mrufiles()
-  execute "redir @a"
-  execute "silent oldfiles"
-  execute "redir END"
-  normal! ggdG
-  normal! gg0"aP
-endfunction
-
 function! MakeSession()
   exe "mksession! ._Session.vim"
 endfunction
@@ -755,4 +453,4 @@ au VimLeave * :call MakeSession()
 
 " on Windows it's better to specify working dir in shortcut properties
 " execute "cd C:\\Users\\lvov_k\\work"
-set titlestring=%F%m%y%{&fileencoding}
+set titlestring=%F%m\ %y\ %{&fileencoding}\ [0x%B]
