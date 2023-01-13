@@ -1,0 +1,1 @@
+The existence of this file forces portable applications installed by DeployMaster in this folder to treat the drive as removable, even if it isn't.
