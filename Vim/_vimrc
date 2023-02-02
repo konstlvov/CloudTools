@@ -347,8 +347,8 @@ function! ExecHaskell()
 endfunction
 nnoremap <M-h> :call ExecHaskell()<CR>
 
-" Alt-y копирует полный путь к текущему файлу в буфер
-nnoremap <M-y> :let @*=expand("%:p")<CR>
+" ,y копирует полный путь к текущему файлу в буфер (было Alt-y, переделал на leader key для универсальности)
+nnoremap ,y :let @*=expand("%:p")<CR>
 
 "по F2 инвертировать значение опции 'wrap'
 nnoremap <F2> :execute RotateWrap()<CR>
