@@ -82,7 +82,9 @@ nnoremap ,t :tabnew<CR>
 nnoremap ,l :execute 'silent! tabmove +1'<CR>
 nnoremap ,j :execute 'silent! tabmove -1'<CR>
 nnoremap <silent> ,. :tabnext<CR>
+nnoremap <silent> <C-Tab> :tabnext<CR>
 nnoremap <silent> ,m :tabprevious<CR>
+nnoremap <silent> <C-S-Tab> :tabprevious<CR>
 
 function! LeaveBaseName() range
   pyfile $VIM\vimfiles\python\LeaveBaseName.py
@@ -439,6 +441,12 @@ function! ClearAllButMatches() range
     endif
     let @c = old_c
 endfunction
+
+" Исполняет текущую строку, в ней должны использоваться двойные кавычки
+nnoremap ,e :exec "echo system('".getline(".")."')"<CR>
+
+" Исполняет текущую строку и пишет вывод в то место, где стоит курсор
+nnoremap ,E :exec 'r!'.getline('.')<CR>
 
 function! MakeSession()
   exe "mksession! ._Session.vim"
