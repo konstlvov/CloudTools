@@ -442,6 +442,16 @@ function! ClearAllButMatches() range
     let @c = old_c
 endfunction
 
+function! DeleteHiddenBuffers()
+    redir => buffersoutput
+    buffers
+    redir END
+    let buflist = split(buffersoutput,"\n")
+    for item in filter(buflist,"v:val[5] == 'h'")
+            exec 'bdelete ' . item[:2]
+    endfor
+endfunction
+
 " Исполняет текущую строку, в ней должны использоваться двойные кавычки
 nnoremap ,e :exec "echo system('".getline(".")."')"<CR>
 
