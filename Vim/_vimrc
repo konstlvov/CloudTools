@@ -458,6 +458,9 @@ nnoremap ,e :exec "echo system('".getline(".")."')"<CR>
 " Исполняет текущую строку и пишет вывод в то место, где стоит курсор
 nnoremap ,E :exec 'r!'.getline('.')<CR>
 
+" Исполнить текущее выделение в shell
+vnoremap ,e "xy:!<C-r>x<CR>
+
 function! MakeSession()
   exe "mksession! ._Session.vim"
 endfunction
