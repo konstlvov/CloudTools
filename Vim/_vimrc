@@ -461,6 +461,10 @@ nnoremap ,E :exec 'r!'.getline('.')<CR>
 " Исполнить текущее выделение в shell
 vnoremap ,e "xy:!<C-r>x<CR>
 
+" Исполнить текущее выделение в shell (windows-версия)
+" vnoremap ,e "xy:echo system('<C-r>x \| iconv -f cp866 -t utf-8')<CR>
+" vnoremap ,E "xy:r !<C-r>x \| iconv -f cp866 -t utf-8<CR>
+
 function! MakeSession()
   exe "mksession! ._Session.vim"
 endfunction
